@@ -8,6 +8,8 @@
     "node": ">=20"
   },
   "scripts": {
-    "build": "node update.mjs"
+    "build":  "node update.mjs",
+    "update": "node update.mjs --src=index.html --out=index.html --data=data.json",
+    "dev":    "npx -y serve . -p 8080"
   }
 }
