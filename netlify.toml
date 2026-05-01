@@ -2,7 +2,11 @@
 # Site: painel-lumen-posto.netlify.app
 
 [build]
+  command = "node update.mjs"
   publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
 
 [[headers]]
   for = "/*"
@@ -12,7 +16,6 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-# index.html sempre fresco — manchete muda diariamente
 [[headers]]
   for = "/index.html"
   [headers.values]
