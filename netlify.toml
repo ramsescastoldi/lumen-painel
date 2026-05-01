@@ -1,0 +1,19 @@
+# Configuração Netlify para o painel Posto em Dia
+# Site: painel-lumen-posto.netlify.app
+
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# index.html sempre fresco — manchete muda diariamente
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=60, must-revalidate"

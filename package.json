@@ -1,0 +1,16 @@
+{
+  "name": "lumen-posto-club-painel",
+  "version": "1.0.0",
+  "description": "Painel diário Posto em Dia · Lumen Posto Club",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "update":         "node update.mjs --src=index.html --out=index.html --data=data.json",
+    "deploy":         "npm run update && netlify deploy --prod --dir=. --site=painel-lumen-posto",
+    "deploy-preview": "npm run update && netlify deploy --dir=. --site=painel-lumen-posto",
+    "dev":            "npx -y serve . -p 8080"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.x"
+  }
+}
