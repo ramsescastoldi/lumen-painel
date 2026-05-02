@@ -147,7 +147,7 @@ tbody tr:hover td{background:rgba(201,168,76,.03)}
 .manchete-status{font-size:64px;line-height:1}
 .manchete-body{min-width:0;position:relative;z-index:1}
 .manchete-tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--text-2);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:10px}
-.manchete-titulo{font-weight:300;font-size:38px;line-height:1.1;letter-spacing:-.02em;color:var(--text);margin:0 0 12px;max-width:1100px;overflow-wrap:anywhere;hyphens:auto}
+.manchete-titulo{font-weight:300;font-size:38px;line-height:1.1;letter-spacing:-.02em;color:var(--text);margin:0 0 12px;max-width:1100px;word-wrap:break-word}
 .manchete-corpo{font-size:15px;line-height:1.6;color:var(--text);max-width:1000px;font-weight:400}
 .manchete-corpo b{color:var(--gold);font-weight:600}
 @media(max-width:760px){
@@ -160,7 +160,7 @@ tbody tr:hover td{background:rgba(201,168,76,.03)}
 .manch-mini{
   font-size:16px;line-height:1.4;font-weight:400;color:var(--text);
   margin:0;letter-spacing:-.005em;
-  overflow-wrap:anywhere;hyphens:auto;
+  word-wrap:break-word;
 }
 .manch-tag{
   font-size:11px;letter-spacing:.14em;text-transform:uppercase;
@@ -170,22 +170,25 @@ tbody tr:hover td{background:rgba(201,168,76,.03)}
 
 /* AÇÃO DO DIA — list */
 .acao-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
-.acao-list li{display:grid;grid-template-columns:32px 1fr;gap:12px;padding:12px 14px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:8px;font-size:14px;line-height:1.5;min-height:56px;align-items:flex-start;overflow-wrap:anywhere;hyphens:auto}
-.acao-list li .num{font-weight:300;font-size:22px;color:var(--gold);line-height:1}
+.acao-list li{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:8px;font-size:14px;line-height:1.5;min-height:56px}
+.acao-list li > span:last-child{flex:1 1 auto;min-width:0;word-wrap:break-word}
+.acao-list li .num{font-weight:300;font-size:22px;color:var(--gold);line-height:1;flex:0 0 32px}
 .acao-list li b{color:var(--text);font-weight:600}
 
 /* RADAR */
 .radar{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
-.radar li{display:grid;grid-template-columns:14px 1fr;gap:10px;font-size:14px;line-height:1.5;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.05);overflow-wrap:anywhere;hyphens:auto}
+.radar li{display:flex;align-items:flex-start;gap:10px;font-size:14px;line-height:1.5;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.05)}
 .radar li:last-child{border-bottom:none}
-.radar li::before{content:"●";color:var(--gold);font-size:10px;line-height:1.5}
+.radar li::before{content:"●";color:var(--gold);font-size:10px;line-height:1.5;flex:0 0 auto;padding-top:4px}
+.radar li > span,.radar li{min-width:0}
+.radar li b{display:inline;color:var(--gold);font-weight:600}
 
 /* AGENDA */
 .agenda{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
-.agenda li{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.05)}
+.agenda li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px;align-items:center;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.05)}
 .agenda li:last-child{border-bottom:none}
 .agenda .day{font-weight:300;font-size:18px;color:var(--text);min-width:70px;letter-spacing:-.01em}
-.agenda .ev{color:var(--text);font-size:13px;overflow-wrap:anywhere;hyphens:auto}
+.agenda .ev{color:var(--text);font-size:13px;min-width:0;word-wrap:break-word}
 
 /* VERIMO BLOCK */
 .verimo{display:flex;flex-direction:column;height:100%;gap:14px;padding:6px 4px}
@@ -317,7 +320,7 @@ footer b{color:var(--text-2);font-weight:600}
   <!-- 2. AÇÃO DO DIA (col-7) + RADAR (col-5) -->
   <section class="card alert-red col-7" id="cardAcao">
     <div class="card-h"><div class="ico">⚡</div><h2>Ação do dia</h2><span class="src" id="acaoTag">Véspera de feriado</span></div>
-    <p style="font-size:14px;color:var(--text);line-height:1.5;margin:0 0 14px;overflow-wrap:anywhere" id="acaoLead">—</p>
+    <p style="font-size:14px;color:var(--text);line-height:1.5;margin:0 0 14px;word-wrap:break-word" id="acaoLead">—</p>
     <ol class="acao-list" id="acaoList"></ol>
   </section>
 
@@ -693,7 +696,7 @@ const DATA = {
     </li>`).join("");
 
   // Radar
-  $("radarList").innerHTML = (DATA.radar||[]).map(r=>`<li>${r}</li>`).join("");
+  $("radarList").innerHTML = (DATA.radar||[]).map(r=>`<li><span>${r}</span></li>`).join("");
 
   // Ação
   const ac = DATA.acao || {items:[]};
