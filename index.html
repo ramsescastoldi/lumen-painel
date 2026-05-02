@@ -867,4 +867,75 @@ const DATA = {
 
   // CEPEA
   const arrowFor = d => d==="up"?"▲":(d==="down"?"▼":"•");
-  $("cepe
+  $("cepeaRows").innerHTML = DATA.cepea.hidratado.map(r=>`
+    <tr>
+      <td class="region">${r.uf}</td>
+      <td><span class="cell-num">${r.preco}</span></td>
+      <td style="color:${r.dir==='up'?'var(--up)':r.dir==='down'?'var(--down)':'var(--text-2)'};font-weight:600">${arrowFor(r.dir)}</td>
+    </tr>`).join("");
+  $("anidroVal").textContent = DATA.cepea.anidro_sp.val;
+  $("anidroDelta").textContent = DATA.cepea.anidro_sp.delta;
+  $("anidroDelta").className = "delta " + DATA.cepea.anidro_sp.dir;
+  $("acucarVal").textContent = DATA.cepea.acucar.val;
+  $("acucarDelta").textContent = DATA.cepea.acucar.delta;
+  $("acucarDelta").className = "delta " + DATA.cepea.acucar.dir;
+  $("cepeaNota").innerHTML = "🟢 " + DATA.cepea.nota;
+
+  // E/G
+  $("egPct").textContent = DATA.eg.paridade_sp;
+  $("mandatoE").textContent = DATA.eg.mandato_e;
+  $("mandatoB").textContent = DATA.eg.mandato_b;
+  $("egNota").innerHTML = "🟡 " + DATA.eg.nota;
+
+  // Safra
+  const sf = DATA.safra;
+  $("moagemVal").textContent = sf.moagem.val;
+  $("moagemDelta").textContent = sf.moagem.delta;
+  $("atrVal").textContent = sf.atr.val;
+  $("atrDelta").textContent = sf.atr.delta;
+  $("mixVal").textContent = sf.mix.val;
+  $("ofertaVal").textContent = sf.oferta.val;
+  $("ofertaDelta").textContent = sf.oferta.delta;
+  $("safraNota").innerHTML = "🟢 " + sf.nota;
+
+  // Agenda
+  $("agendaList").innerHTML = DATA.agenda.map(a=>`
+    <li>
+      <span class="day">${a.day}</span>
+      <span class="ev">${a.evento}</span>
+      <span class="pill ${a.tag||'gray'}">${a.tag_label||''}</span>
+    </li>`).join("");
+
+  // Radar
+  $("radarList").innerHTML = DATA.radar.map(r=>`<li>${r}</li>`).join("");
+
+  // Ação
+  $("acaoTag").textContent = DATA.acao.tag;
+  $("acaoLead").innerHTML = DATA.acao.lead;
+  $("acaoList").innerHTML = DATA.acao.items.map((it,i)=>`<li><span class="num">${String(i+1).padStart(2,'0')}</span><span>${it}</span></li>`).join("");
+
+  // Resumo
+  $("resumo").innerHTML = DATA.resumo.map(p=>`<p${p.lead?' class="lead"':''}>${p.html}</p>`).join("");
+
+  // Ticker — gerado a partir dos dados
+  const tickerItems = [
+    ["BRENT", p.brent.val, p.brent.delta, p.brent.dir],
+    ["WTI",   p.wti.val,   p.wti.delta,   p.wti.dir],
+    ["USD/BRL", md.usdbrl.val, md.usdbrl.delta, md.usdbrl.dir],
+    ["EUR/BRL", md.eurbrl.val, md.eurbrl.delta, md.eurbrl.dir],
+    ["DXY",     md.dxy.val,    md.dxy.delta,    md.dxy.dir],
+    ["IBOV",    b.ibov.val,    b.ibov.delta,    b.ibov.dir],
+    ["S&P 500", b.sp.val,      b.sp.delta,      b.sp.dir],
+    ["NASDAQ",  b.nasdaq.val,  b.nasdaq.delta,  b.nasdaq.dir],
+    ["SELIC",   j.selic.val,   j.selic.delta,   j.selic.dir],
+    ["DEFAS. DIESEL",   ab.diesel_pct,   ab.diesel_tag,   "down"],
+    ["DEFAS. GASOLINA", ab.gasolina_pct, ab.gasolina_tag, "down"],
+    ["HIDRATADO SP",    DATA.cepea.hidratado[0].preco, "▲", "up"],
+    ["E/G SP",          DATA.eg.paridade_sp, "acima 70%", "down"]
+  ];
+  const tplOne = it => `<span><span class="sym">${it[0]}</span><span class="v">${it[1]}</span><span class="${it[3]}">${it[2]}</span></span>`;
+  $("tickerTrack").innerHTML = tickerItems.map(tplOne).join("") + tickerItems.map(tplOne).join("");
+})();
+</script>
+</body>
+</html>
