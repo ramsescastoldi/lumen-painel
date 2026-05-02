@@ -1,143 +1,226 @@
 {
-  "_comentario": "FONTE DE VERDADE diária do painel Posto em Dia. Edite somente este arquivo todo dia e rode `npm run deploy`.",
-
-  "meta": {
-    "date_iso": "2026-04-30",
-    "date_label": "Quinta · 30 abr 2026",
-    "last_update": "08:00",
-    "next_update": "amanhã (feriado) ou segunda · 04 mai · 07:30"
-  },
-
-  "manchete": {
-    "severity": "red",
-    "status_emoji": "🔴",
-    "severity_label": "Crítico",
-    "titulo": "Brent tocou US$ 126 — máxima de guerra",
-    "corpo": "EUA estuda ação militar contra o Irã. Trump recebe briefing do Comando Central. Brent recuou para <b>US$ 114</b> após notícia. Sexta é feriado — atenção máxima."
-  },
-
-  "petroleo": {
-    "brent": {"val":"US$ 114,70","delta":"▼ -2,8%","dir":"down","sub":"máx do dia US$ 126"},
-    "wti":   {"val":"US$ 105,12","delta":"▼ -1,7%","dir":"down","sub":"−20% em 1 semana"},
-    "nota":    "Máxima do dia: <b>US$ 126</b> (Brent), nível de guerra desde 2022. Mercado devolveu parte dos ganhos com possibilidade de ação militar EUA.",
-    "citacao": "<b>Goldman:</b> cenário US$ 140-150 se conflito persistir. <b>IEA:</b> maior choque da história."
-  },
-
-  "moedas": {
-    "usdbrl": {"val":"R$ 4,9700","delta":"▼ leve queda","dir":"down"},
-    "eurbrl": {"val":"R$ 5,6800","delta":"▼ -0,12%","dir":"down"},
-    "dxy":    {"val":"98,69",    "delta":"▲ +0,22%",  "dir":"up"},
-    "btc":    {"val":"US$ 76 mil","delta":"▼ semana ruim","dir":"down"},
-    "nota":   "Real recuperou patamar abaixo de R$ 5 com Selic em 14,50% e diferencial de juros atraindo capital."
-  },
-
-  "bolsas": {
-    "ibov":   {"val":"188.000","delta":"▼ 6º pregão em queda","dir":"down"},
-    "sp":     {"val":"7.119",  "delta":"▼ -0,28%","dir":"down"},
-    "nasdaq": {"val":"24.599", "delta":"▼ -0,26%","dir":"down"},
-    "dow":    {"val":"48.771", "delta":"▼ -0,75%","dir":"down"},
-    "nota":   "Ibov no 6º pregão consecutivo em queda — pior sequência desde julho/25. Petrobras sobe com barril."
-  },
-
-  "juros": {
-    "selic":  {"val":"14,50% a.a.","delta":"▼ cortada ontem","dir":"down"},
-    "fed":    {"val":"3,50–3,75%", "delta":"mantido","dir":"flat"},
-    "ust10y": {"val":"~4,40%",     "sub":"estável"},
-    "nota":   "Comunicado Copom de tom <b>cauteloso</b>. Próxima reunião 17 jun. Focus: Selic 13,0% fim/26."
-  },
-
-  "inflacao": {
-    "ipca15":     "0,89%",
-    "ipca15_12m": "4,37%",
-    "ipca_mar":   "0,88%",
-    "focus_2026": "4,86%",
-    "nota":       "IPCA-15 abr veio abaixo da projeção (0,98%), mas qualitativo ruim. Choque do petróleo deve aparecer em maio."
-  },
-
-  "abicom": {
-    "diesel_pct":    "80%+",
-    "gasolina_pct":  "70%+",
-    "dias_diesel":   47,
-    "dias_gasolina": 94,
-    "diesel_tag":    "Recorde",
-    "gasolina_tag":  "Recorde",
-    "nota": "Brent US$ 114 + dólar R$ 4,97 = <b>maior defasagem da história</b>. Janelas de importação fechadas. Reajuste pós-feriado é praticamente certo."
-  },
-
-  "anp": {
-    "semana": "Última 12-18/abr · próxima sex 01/mai (feriado, pode atrasar)",
-    "rows": [
-      {"produto":"Gasolina C","preco":"a confirmar","status":"blue","status_label":"pendente"},
-      {"produto":"Etanol hidr.","preco":"a confirmar","status":"blue","status_label":"pendente"},
-      {"produto":"Diesel S-10","preco":"a confirmar","status":"blue","status_label":"pendente"},
-      {"produto":"Diesel comum","preco":"a confirmar","status":"blue","status_label":"pendente"},
-      {"produto":"GLP P-13","preco":"a confirmar","status":"blue","status_label":"pendente"}
-    ],
-    "nota": "Próxima síntese: amanhã sex (feriado) — pode atrasar para segunda."
-  },
-
-  "cepea": {
-    "hidratado": [
-      {"uf":"SP","preco":"R$ 2,7398","dir":"up"},
-      {"uf":"PR","preco":"R$ 2,8120","dir":"up"},
-      {"uf":"GO","preco":"R$ 2,6850","dir":"flat"},
-      {"uf":"MG","preco":"R$ 2,7200","dir":"up"},
-      {"uf":"MT","preco":"R$ 2,5900","dir":"up"}
-    ],
-    "anidro_sp": {"val":"R$ 3,1591","delta":"▲ alta","dir":"up"},
-    "acucar":    {"val":"—","delta":"▼ recua","dir":"down"},
-    "nota": "Brent em US$ 114 fortalece muito a competitividade do hidratado."
-  },
-
-  "eg": {
-    "paridade_sp": "72%",
-    "mandato_e":   "E30",
-    "mandato_b":   "B15",
-    "nota": "Reajuste Petrobras + safra alcooleira = condições para inverter o jogo do flex."
-  },
-
-  "safra": {
-    "moagem": {"val":"635 Mt","delta":"▲ +4%"},
-    "atr":    {"val":"139,4 kg/t","delta":"▲ +1%"},
-    "mix":    {"val":"48,5%"},
-    "oferta": {"val":"+10%","delta":"▲ UNICA"},
-    "nota":   "Safra alcooleira já em curso desde 1º/abr."
-  },
-
-  "agenda": [
-    {"day":"Sex 01/mai","evento":"🇧🇷 Feriado (Dia do Trabalho)","tag":"red","tag_label":"feriado"},
-    {"day":"Seg 04/mai","evento":"Abertura pós-feriado · reajuste Petrobras provável","tag":"yellow","tag_label":"atenção"},
-    {"day":"Sex 09/mai","evento":"IPCA abril (IBGE)","tag":"blue","tag_label":"dado"}
-  ],
-
-  "radar": [
-    "Brent tocou <b>US$ 126</b> (máx de guerra desde 2022); recuou com possibilidade de ação militar EUA.",
-    "Selic cortada para <b>14,50%</b> ontem; comunicado cauteloso.",
-    "Defasagem Abicom em <b>recorde histórico</b> (80%+ no diesel).",
-    "Ibov no <b>6º dia</b> em queda; pior sequência desde julho/25.",
-    "Sexta é feriado: <b>reajuste Petrobras</b> pode sair entre hoje à noite e domingo."
-  ],
-
-  "acao": {
-    "tag":  "Véspera de feriado",
-    "lead": "<b>Última janela antes do reajuste.</b> Reajuste Petrobras deve sair entre hoje à noite e domingo. Não fique no automático.",
-    "items": [
-      "<b>Diesel:</b> estoque pleno HOJE para 10–15 dias. Caminhão na pista antes do feriado.",
-      "<b>Gasolina:</b> tenha 3 cenários prontos para o abre de segunda (+R$ 0,30 / +R$ 0,50 / +R$ 0,80).",
-      "<b>Etanol:</b> hidratado em volume — migração flex deve ser explosiva pós-reajuste.",
-      "<b>Equipe:</b> alinhe discurso para o feriado e segunda. Frentista, caixa e gerente com mesma narrativa.",
-      "<b>Comunicação:</b> placa pré-pronta no PDV (\"acompanhamos a Petrobras\").",
-      "<b>Verimo:</b> estoque máximo + cenário de guerra = exposição máxima. Revise apólices antes do feriado."
-    ]
-  },
-
-  "resumo": [
-    {"lead":true,"html":"O fato do dia voltou a ser geopolítico em escala extrema. O Brent tocou <b>US$ 126</b> nesta manhã — maior nível desde 2022 — depois que reportagem do Axios indicou que o Comando Central dos EUA prepara opções de ação militar contra o Irã para apresentar a Trump."},
-    {"html":"O barril recuou para <b>US$ 114,70</b> (−2,8%) com a precificação do risco. Em uma semana, o Brent saiu de US$ 105 e tocou US$ 126 — variação de 20%."},
-    {"html":"No câmbio, o real seguiu surpreendendo. O dólar recuou para <b>R$ 4,97</b>, sustentado pelo diferencial de juros depois do corte da Selic ontem (de 14,75% para 14,50%, decisão unânime). No acumulado do ano, real lidera moedas globais."},
-    {"html":"O nó do posto chegou ao recorde histórico. Defasagem Abicom passou de <b>80% no diesel</b> e <b>70% na gasolina</b> nos polos Petrobras. Diesel sem reajuste há <b>47 dias</b>; gasolina, há <b>94</b>. Reajuste é praticamente certo no fim de semana ou na segunda."},
-    {"html":"Do lado do etanol, a safra 2026/27 segue forte com mix de 48,5% açúcar e 51,5% etanol e oferta +10% (UNICA). Cepea aponta hidratado firme: SP R$ 2,7398, PR R$ 2,8120, GO R$ 2,6850, MG R$ 2,7200, MT R$ 2,5900. A relação E/G em SP segue em 72% — mas o reajuste vai inverter a equação na bomba imediatamente."},
-    {"html":"Bolsas: Ibov fechou em 188 mil ontem, no 6º pregão em queda. Wall Street em queda no dia (S&P −0,28%, Dow −0,75%). Selic agora em 14,50% com Copom cauteloso. Focus mantém IPCA/26 em 4,86% (acima do teto)."},
-    {"html":"Para o posto: hoje é a <b>última janela antes do reajuste</b>. Diesel cheio para o feriado, gasolina precificada com 3 cenários para segunda, hidratado em volume e equipe alinhada."}
-  ]
+ "meta": {
+   "edicao": "Edição diária",
+   "data_extenso": "Sexta · 01 mai 2026 · Dia do Trabalho",
+   "atualizado_em": "01/05/2026",
+   "proxima_atualizacao": "Segunda · 04 mai 2026"
+ },
+ "manchete": {
+   "severidade": "red",
+   "titulo": "Petróleo recua, mas tensão segue no teto",
+   "texto": "Brent fechou US$ 108,17 (−2%) com nova proposta iraniana via Paquistão. Trump não aceitou. Hoje vence o prazo de 60 dias da War Powers — escalada militar pode voltar a qualquer momento."
+ },
+ "petroleo": {
+   "fonte": "ICE / NYMEX · fechamento ontem",
+   "brent": {
+     "valor": "US$ 108,17",
+     "delta": "▼ −2,0%"
+   },
+   "wti": {
+     "valor": "US$ 101,94",
+     "delta": "▼ −3,0%"
+   },
+   "observacoes": [
+     "Semana: Brent ▲ +6,4% (2ª seguida)",
+     "Abril fechado: Brent ▲ +12%"
+   ]
+ },
+ "moedas": {
+   "fonte": "Spot · BCB / B3 / global",
+   "usd_brl": {
+     "valor": "R$ 4,98",
+     "delta": "• estável"
+   },
+   "eur_brl": {
+     "valor": "R$ 5,68",
+     "delta": "▼"
+   },
+   "dxy": {
+     "valor": "98,21",
+     "delta": "▼ mín. 2 meses"
+   },
+   "btc_usd": {
+     "valor": "US$ 76k",
+     "delta": "▼ semana ruim"
+   }
+ },
+ "bolsas": {
+   "fonte": "B3 fechada hoje · NYSE aberta",
+   "ibovespa": {
+     "valor": "188.618",
+     "delta": "▼ 6º pregão (qua)"
+   },
+   "sp500": {
+     "valor": "7.119",
+     "delta": "▼ −0,28%"
+   },
+   "nasdaq": {
+     "valor": "24.599",
+     "delta": "▼ −0,26%"
+   },
+   "dow": {
+     "valor": "48.771",
+     "delta": "▼ −0,75%"
+   }
+ },
+ "juros": {
+   "fonte": "BCB · Fed · UST",
+   "selic": {
+     "valor": "14,50% a.a.",
+     "delta": "cortada 29/abr"
+   },
+   "fed_funds": {
+     "valor": "3,50%-3,75%",
+     "delta": "mantido"
+   },
+   "ust_10y": {
+     "valor": "~4,40%",
+     "delta": "•"
+   },
+   "observacoes": [
+     "Próximo Copom: 17/jun",
+     "Próximo Fed: 17/jun"
+   ]
+ },
+ "inflacao": {
+   "fonte": "IBGE · Focus",
+   "ipca15_abr": {
+     "valor": "0,89%",
+     "delta": "•"
+   },
+   "ipca15_12m": {
+     "valor": "4,37%",
+     "delta": "▲ perto do teto"
+   },
+   "ipca_mar26": {
+     "valor": "0,88%",
+     "delta": "•"
+   },
+   "focus_2026": {
+     "valor": "4,86%",
+     "delta": "🔴 acima do teto"
+   }
+ },
+ "abicom": {
+   "fonte": "Indicador diário · Abicom",
+   "diesel_s10": {
+     "valor": "80%+",
+     "status": "🔴 RECORDE"
+   },
+   "gasolina_a": {
+     "valor": "70%+",
+     "status": "🔴 RECORDE"
+   },
+   "sem_reajuste": {
+     "diesel_dias": "48",
+     "gasolina_dias": "95"
+   }
+ },
+ "anp": {
+   "sintese_semana": "12-18/abr",
+   "produtos": [
+     {
+       "produto": "Gasolina C",
+       "preco": "R$ 6,29/L",
+       "status": "ref. semana 05-11/abr"
+     },
+     {
+       "produto": "Etanol hidratado",
+       "preco": "—",
+       "status": "a confirmar"
+     },
+     {
+       "produto": "Diesel S-10",
+       "preco": "—",
+       "status": "a confirmar"
+     },
+     {
+       "produto": "Diesel comum",
+       "preco": "R$ 7,58/L",
+       "status": "ref. semana 05-11/abr"
+     },
+     {
+       "produto": "GLP P-13",
+       "preco": "—",
+       "status": "a confirmar"
+     }
+   ],
+   "novidade_regulatoria": "ANP alterou ontem cálculo da subvenção do diesel — agora usa só USGC como referência. Fiscalização ativa: 16 distribuidoras e 2 postos já autuados por abuso de preço (multa até R$ 500 mi).",
+   "proxima_sintese": "Segunda 04/mai"
+ },
+ "cepea": {
+   "fonte": "CEPEA/ESALQ · R$/L sem impostos · 30 abr",
+   "hidratado": [
+     { "uf": "SP", "preco": "R$ 2,7398", "delta": "▲" },
+     { "uf": "PR", "preco": "R$ 2,8120", "delta": "▲" },
+     { "uf": "GO", "preco": "R$ 2,6850", "delta": "•" },
+     { "uf": "MG", "preco": "R$ 2,7200", "delta": "▲" },
+     { "uf": "MT", "preco": "R$ 2,5900", "delta": "▲" }
+   ],
+   "anidro_sp": {
+     "valor": "R$ 3,1591",
+     "delta": "▲"
+   },
+   "acucar_cristal": {
+     "valor": "—",
+     "delta": "▼ recua com safra"
+   }
+ },
+ "eg": {
+   "bomba_sp": "~72%",
+   "status": "🔴 acima de 70%",
+   "regra": "Gasolina compensa enquanto E/G > 70%",
+   "mandatos": ["E30", "B15"]
+ },
+ "safra": {
+   "fonte": "UNICA · Conab",
+   "ciclo": "Centro-Sul 26/27",
+   "moagem_proj": {
+     "valor": "635 mi t",
+     "delta": "▲ +4%"
+   },
+   "atr_proj": {
+     "valor": "139,4 kg/t",
+     "delta": "▲ +1%"
+   },
+   "mix_acucar": "48,5%",
+   "mix_etanol": "51,5%",
+   "oferta_etanol": {
+     "valor": "+10%",
+     "delta": "▲ UNICA"
+   }
+ },
+ "agenda": [
+   { "data": "Seg 04/mai", "evento": "Reabre B3 · Síntese ANP" },
+   { "data": "Qua 06/mai", "evento": "EIA estoques semanais" },
+   { "data": "Sex 09/mai", "evento": "IPCA abril (IBGE)" },
+   { "data": "Dom 10/mai", "evento": "Dia das Mães" }
+ ],
+ "radar": {
+   "titulo": "Síntese rápida",
+   "itens": [
+     "Brent recuou para US$ 108,17 (−2%); WTI a US$ 101,94 (−3%).",
+     "Hoje vence prazo War Powers (60 dias da notificação ao Congresso).",
+     "ANP mudou ontem a metodologia da subvenção do diesel.",
+     "Defasagem Abicom em recorde histórico.",
+     "Bolsa BR fechada (feriado); reabre segunda 04/mai."
+   ]
+ },
+ "acao": {
+   "titulo": "Véspera de reabertura",
+   "severidade": "red",
+   "texto": "Use o feriado para preparar segunda. Estoque pleno de diesel, 3 cenários de preço da gasolina prontos no celular, margem documentada e equipe alinhada. Reajuste Petrobras é certo na próxima semana.",
+   "passos": [
+     "Diesel: confirme estoque pleno para 10-15 dias.",
+     "Gasolina: planilha com 3 cenários (+R$ 0,30 / +R$ 0,50 / +R$ 0,80).",
+     "Etanol: hidratado em volume — migração flex será forte.",
+     "Margem: documente preço de compra e repasse para defesa contra autuação ANP/Procon.",
+     "Equipe: alinhe discurso de frentista e caixa para repasse imediato.",
+     "Verimo: revise apólices antes do feriado."
+   ]
+ },
+ "resumo": {
+   "autoria": "Editorial · Ramsés Castoldi",
+   "texto": "O 1º de Maio começou com leve respiro no petróleo. O Brent fechou ontem em US$ 108,17 (−2%) e o WTI em US$ 101,94 (−3%) depois que o Paquistão confirmou que mediadores receberam uma nova proposta de paz do Irã. Trump disse \"não estar satisfeito\" com a oferta, mas evitou rechaçá-la. Hoje vence o prazo de 60 dias da War Powers Resolution — a administração argumenta que o cessar-fogo de 3 semanas atrás \"encerrou\" as hostilidades.\n\nNo câmbio, o real terminou abril como destaque global. O dólar fechou em R$ 4,98 e o DXY caiu à mínima de 2 meses. Selic em 14,50% mantém o carry trade brasileiro atrativo.\n\nO nó do posto segue em recorde histórico. Mesmo com Brent em US$ 108, a defasagem Abicom passa de 80% no diesel e 70% na gasolina. Diesel sem reajuste há 48 dias, gasolina há 95. Reajuste Petrobras é certo na próxima semana — entre domingo e terça é o intervalo mais provável.\n\nA ANP alterou ontem a metodologia da subvenção do diesel, passando a usar apenas USGC como referência. Fiscalização da agência segue ativa: 16 distribuidoras e 2 postos já autuados por abuso de preço, multas até R$ 500 milhões. Documente sua margem.\n\nPara o posto: feriado é descanso, mas não no cenário. Segunda abre em modo defesa. Estoque pleno, 3 cenários de preço da gasolina prontos, margem documentada e equipe alinhada. Reajuste Petrobras está chegando."
+ }
 }
