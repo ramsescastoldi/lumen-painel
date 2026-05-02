@@ -114,7 +114,7 @@ tbody tr:hover td{background:rgba(201,168,76,.03)}
 @media(max-width:560px){.mgrid.c3,.mgrid.c4,.mgrid.c5{grid-template-columns:1fr 1fr}}
 
 .metric{padding:14px;border-radius:var(--r-sm);background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);display:flex;flex-direction:column;gap:6px;min-width:0}
-.metric .name{font-size:11px;color:var(--text-2);letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.metric .name{font-size:11px;color:var(--text-2);letter-spacing:.1em;text-transform:uppercase;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .metric .val{font-weight:300;font-size:22px;letter-spacing:-.01em;font-feature-settings:"tnum" 1}
 .metric .sub{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 
@@ -147,7 +147,7 @@ tbody tr:hover td{background:rgba(201,168,76,.03)}
 .manchete-status{font-size:64px;line-height:1}
 .manchete-body{min-width:0;position:relative;z-index:1}
 .manchete-tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--text-2);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:10px}
-.manchete-titulo{font-weight:300;font-size:38px;line-height:1.1;letter-spacing:-.02em;color:var(--text);margin:0 0 12px;max-width:1100px}
+.manchete-titulo{font-weight:300;font-size:38px;line-height:1.1;letter-spacing:-.02em;color:var(--text);margin:0 0 12px;max-width:1100px;overflow-wrap:anywhere;hyphens:auto}
 .manchete-corpo{font-size:15px;line-height:1.6;color:var(--text);max-width:1000px;font-weight:400}
 .manchete-corpo b{color:var(--gold);font-weight:600}
 @media(max-width:760px){
@@ -156,15 +156,27 @@ tbody tr:hover td{background:rgba(201,168,76,.03)}
   .manchete-status{font-size:42px}
 }
 
+/* MANCHETES SECUNDÁRIAS (3 cards menores) */
+.manch-mini{
+  font-size:16px;line-height:1.4;font-weight:400;color:var(--text);
+  margin:0;letter-spacing:-.005em;
+  overflow-wrap:anywhere;hyphens:auto;
+}
+.manch-tag{
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--text-2);font-weight:600;margin:0;
+}
+.manch-emoji{font-size:18px;line-height:1}
+
 /* AÇÃO DO DIA — list */
 .acao-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
-.acao-list li{display:grid;grid-template-columns:32px 1fr;gap:12px;padding:12px 14px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:8px;font-size:14px;line-height:1.5}
+.acao-list li{display:grid;grid-template-columns:32px 1fr;gap:12px;padding:12px 14px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:8px;font-size:14px;line-height:1.5;min-height:56px;align-items:flex-start;overflow-wrap:anywhere;hyphens:auto}
 .acao-list li .num{font-weight:300;font-size:22px;color:var(--gold);line-height:1}
 .acao-list li b{color:var(--text);font-weight:600}
 
 /* RADAR */
 .radar{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
-.radar li{display:grid;grid-template-columns:14px 1fr;gap:10px;font-size:14px;line-height:1.5;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.05)}
+.radar li{display:grid;grid-template-columns:14px 1fr;gap:10px;font-size:14px;line-height:1.5;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.05);overflow-wrap:anywhere;hyphens:auto}
 .radar li:last-child{border-bottom:none}
 .radar li::before{content:"●";color:var(--gold);font-size:10px;line-height:1.5}
 
@@ -173,7 +185,7 @@ tbody tr:hover td{background:rgba(201,168,76,.03)}
 .agenda li{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.05)}
 .agenda li:last-child{border-bottom:none}
 .agenda .day{font-weight:300;font-size:18px;color:var(--text);min-width:70px;letter-spacing:-.01em}
-.agenda .ev{color:var(--text);font-size:13px}
+.agenda .ev{color:var(--text);font-size:13px;overflow-wrap:anywhere;hyphens:auto}
 
 /* VERIMO BLOCK */
 .verimo{display:flex;flex-direction:column;height:100%;gap:14px;padding:6px 4px}
@@ -259,13 +271,13 @@ footer b{color:var(--text-2);font-weight:600}
 <!-- ================= GRID ================= -->
 <main class="wrap" id="grid">
 
-  <!-- 1. MANCHETE DO DIA (col-12) -->
+  <!-- 1. MANCHETE PRINCIPAL (col-12) -->
   <section class="col-12">
     <div class="manchete" id="manchete">
       <div class="manchete-status" id="mancheteStatus">🔴</div>
       <div class="manchete-body">
         <div class="manchete-tag">
-          <span>◆ Manchete do dia</span>
+          <span>◆ Manchete principal</span>
           <span class="pill red" id="mancheteSeverity">Crítico</span>
         </div>
         <h2 class="manchete-titulo" id="mancheteTitulo">—</h2>
@@ -274,10 +286,38 @@ footer b{color:var(--text-2);font-weight:600}
     </div>
   </section>
 
+  <!-- 1b. MANCHETES SECUNDÁRIAS (3 cards · col-4 cada) -->
+  <section class="card col-4" id="manch2">
+    <div class="card-h">
+      <div class="ico"><span class="manch-emoji" id="manch2Emoji">🟡</span></div>
+      <h2 class="manch-tag" id="manch2Tag">—</h2>
+      <span class="src">#2</span>
+    </div>
+    <p class="manch-mini" id="manch2Titulo">—</p>
+  </section>
+
+  <section class="card col-4" id="manch3">
+    <div class="card-h">
+      <div class="ico"><span class="manch-emoji" id="manch3Emoji">🟡</span></div>
+      <h2 class="manch-tag" id="manch3Tag">—</h2>
+      <span class="src">#3</span>
+    </div>
+    <p class="manch-mini" id="manch3Titulo">—</p>
+  </section>
+
+  <section class="card col-4" id="manch4">
+    <div class="card-h">
+      <div class="ico"><span class="manch-emoji" id="manch4Emoji">🟢</span></div>
+      <h2 class="manch-tag" id="manch4Tag">—</h2>
+      <span class="src">#4</span>
+    </div>
+    <p class="manch-mini" id="manch4Titulo">—</p>
+  </section>
+
   <!-- 2. AÇÃO DO DIA (col-7) + RADAR (col-5) -->
   <section class="card alert-red col-7" id="cardAcao">
     <div class="card-h"><div class="ico">⚡</div><h2>Ação do dia</h2><span class="src" id="acaoTag">Véspera de feriado</span></div>
-    <p style="font-size:14px;color:var(--text);line-height:1.5;margin:0 0 14px" id="acaoLead">—</p>
+    <p style="font-size:14px;color:var(--text);line-height:1.5;margin:0 0 14px;overflow-wrap:anywhere" id="acaoLead">—</p>
     <ol class="acao-list" id="acaoList"></ol>
   </section>
 
@@ -397,7 +437,7 @@ footer b{color:var(--text-2);font-weight:600}
   </section>
 
   <section class="card col-6">
-    <div class="card-h"><div class="ico">🌱</div><h2>CEPEA — Hidratado produtor</h2><span class="src">R$/litro · sem impostos · 30 abr</span></div>
+    <div class="card-h"><div class="ico">🌱</div><h2>CEPEA — Hidratado produtor</h2><span class="src">R$/litro · sem impostos</span></div>
     <div style="overflow-x:auto">
     <table>
       <thead><tr><th>UF</th><th>Hidratado (R$/L)</th><th>Var.</th></tr></thead>
@@ -468,7 +508,7 @@ footer b{color:var(--text-2);font-weight:600}
       </div>
       <div class="phone">📲 (65) 99265-7008</div>
       <div style="font-size:11px;color:var(--text-2);line-height:1.5;margin-top:auto">
-        Defasagem recorde + cenário de guerra + feriado → revise apólices antes do feriado.
+        Defasagem recorde + cenário de guerra → revise apólices.
       </div>
     </div>
   </section>
@@ -483,293 +523,14 @@ footer b{color:var(--text-2);font-weight:600}
 <script>
 /* ============================================================
    POSTO EM DIA — Lumen Posto Club
-   *** dados mock para demonstração; substituir por feed real ***
-
-   ► COMO ATUALIZAR DIARIAMENTE
-   Edite SOMENTE o objeto DATA abaixo. A função render() reescreve
-   todas as seções automaticamente. Não precisa mexer no HTML.
-
-   ► AUTOMAÇÃO
-   1) Mantenha esse arquivo como `index.html` num repositório.
-   2) Diariamente, regenere o objeto DATA (manualmente, ou via
-      script Node a partir do bulletin de texto, ou via skill
-      `lumen-newsletter` em Cowork).
-   3) Faça deploy no Netlify (drag & drop, CLI, ou git push em
-      site conectado).
+   Schema:
+   - meta · manchete (principal + secundarias[]) · petroleo
+   - moedas · bolsas · juros · inflacao · abicom
+   - anp · cepea · eg · safra · agenda · radar · acao · resumo
    ============================================================ */
 
 const DATA = {
-  "meta": {
-    "date_iso": "2026-04-30",
-    "date_label": "Quinta · 30 abr 2026",
-    "last_update": "07:42",
-    "next_update": "amanhã (feriado) ou segunda · 04 mai · 07:30"
-  },
-  "manchete": {
-    "severity": "red",
-    "status_emoji": "🔴",
-    "severity_label": "Crítico",
-    "titulo": "Brent tocou US$ 126 — máxima de guerra",
-    "corpo": "EUA estuda ação militar contra o Irã. Trump recebe briefing do Comando Central. Brent recuou para <b>US$ 114</b> após notícia. Sexta é feriado — atenção máxima."
-  },
-  "petroleo": {
-    "brent": {
-      "val": "US$ 114,70",
-      "delta": "▼ -2,8%",
-      "dir": "down",
-      "sub": "máx do dia US$ 126"
-    },
-    "wti": {
-      "val": "US$ 105,12",
-      "delta": "▼ -1,7%",
-      "dir": "down",
-      "sub": "−20% em 1 semana"
-    },
-    "nota": "Máxima do dia: <b>US$ 126</b> (Brent), nível de guerra desde 2022. Mercado devolveu parte dos ganhos com possibilidade de ação militar EUA.",
-    "citacao": "<b>Goldman:</b> cenário US$ 140-150 se conflito persistir. <b>IEA:</b> maior choque da história."
-  },
-  "moedas": {
-    "usdbrl": {
-      "val": "R$ 4,9700",
-      "delta": "▼ leve queda",
-      "dir": "down"
-    },
-    "eurbrl": {
-      "val": "R$ 5,6800",
-      "delta": "▼ -0,12%",
-      "dir": "down"
-    },
-    "dxy": {
-      "val": "98,69",
-      "delta": "▲ +0,22%",
-      "dir": "up"
-    },
-    "btc": {
-      "val": "US$ 76 mil",
-      "delta": "▼ semana ruim",
-      "dir": "down"
-    },
-    "nota": "Real recuperou patamar abaixo de R$ 5 com Selic em 14,50% e diferencial de juros atraindo capital."
-  },
-  "bolsas": {
-    "ibov": {
-      "val": "188.000",
-      "delta": "▼ 6º pregão em queda",
-      "dir": "down"
-    },
-    "sp": {
-      "val": "7.119",
-      "delta": "▼ -0,28%",
-      "dir": "down"
-    },
-    "nasdaq": {
-      "val": "24.599",
-      "delta": "▼ -0,26%",
-      "dir": "down"
-    },
-    "dow": {
-      "val": "48.771",
-      "delta": "▼ -0,75%",
-      "dir": "down"
-    },
-    "nota": "Ibov no 6º pregão consecutivo em queda — pior sequência desde julho/25. Petrobras sobe com barril."
-  },
-  "juros": {
-    "selic": {
-      "val": "14,50% a.a.",
-      "delta": "▼ cortada ontem",
-      "dir": "down"
-    },
-    "fed": {
-      "val": "3,50–3,75%",
-      "delta": "mantido",
-      "dir": "flat"
-    },
-    "ust10y": {
-      "val": "~4,40%",
-      "sub": "estável"
-    },
-    "nota": "Comunicado Copom de tom <b>cauteloso</b>. Próxima reunião 17 jun. Focus: Selic 13,0% fim/26."
-  },
-  "inflacao": {
-    "ipca15": "0,89%",
-    "ipca15_12m": "4,37%",
-    "ipca_mar": "0,88%",
-    "focus_2026": "4,86%",
-    "nota": "IPCA-15 abr veio abaixo da projeção (0,98%), mas qualitativo ruim. Choque do petróleo deve aparecer em maio."
-  },
-  "abicom": {
-    "diesel_pct": "80%+",
-    "gasolina_pct": "70%+",
-    "dias_diesel": 47,
-    "dias_gasolina": 94,
-    "diesel_tag": "Recorde",
-    "gasolina_tag": "Recorde",
-    "nota": "Brent US$ 114 + dólar R$ 4,97 = <b>maior defasagem da história</b>. Janelas de importação fechadas. Reajuste pós-feriado é praticamente certo."
-  },
-  "anp": {
-    "semana": "Última 12-18/abr · próxima sex 01/mai (feriado, pode atrasar)",
-    "rows": [
-      {
-        "produto": "Gasolina C",
-        "preco": "a confirmar",
-        "status": "blue",
-        "status_label": "pendente"
-      },
-      {
-        "produto": "Etanol hidr.",
-        "preco": "a confirmar",
-        "status": "blue",
-        "status_label": "pendente"
-      },
-      {
-        "produto": "Diesel S-10",
-        "preco": "a confirmar",
-        "status": "blue",
-        "status_label": "pendente"
-      },
-      {
-        "produto": "Diesel comum",
-        "preco": "a confirmar",
-        "status": "blue",
-        "status_label": "pendente"
-      },
-      {
-        "produto": "GLP P-13",
-        "preco": "a confirmar",
-        "status": "blue",
-        "status_label": "pendente"
-      }
-    ],
-    "nota": "Próxima síntese: amanhã sex (feriado) — pode atrasar para segunda."
-  },
-  "cepea": {
-    "hidratado": [
-      {
-        "uf": "SP",
-        "preco": "R$ 2,7398",
-        "dir": "up"
-      },
-      {
-        "uf": "PR",
-        "preco": "R$ 2,8120",
-        "dir": "up"
-      },
-      {
-        "uf": "GO",
-        "preco": "R$ 2,6850",
-        "dir": "flat"
-      },
-      {
-        "uf": "MG",
-        "preco": "R$ 2,7200",
-        "dir": "up"
-      },
-      {
-        "uf": "MT",
-        "preco": "R$ 2,5900",
-        "dir": "up"
-      }
-    ],
-    "anidro_sp": {
-      "val": "R$ 3,1591",
-      "delta": "▲ alta",
-      "dir": "up"
-    },
-    "acucar": {
-      "val": "—",
-      "delta": "▼ recua",
-      "dir": "down"
-    },
-    "nota": "Brent em US$ 114 fortalece muito a competitividade do hidratado."
-  },
-  "eg": {
-    "paridade_sp": "72%",
-    "mandato_e": "E30",
-    "mandato_b": "B15",
-    "nota": "Reajuste Petrobras + safra alcooleira = condições para inverter o jogo do flex."
-  },
-  "safra": {
-    "moagem": {
-      "val": "635 Mt",
-      "delta": "▲ +4%"
-    },
-    "atr": {
-      "val": "139,4 kg/t",
-      "delta": "▲ +1%"
-    },
-    "mix": {
-      "val": "48,5%"
-    },
-    "oferta": {
-      "val": "+10%",
-      "delta": "▲ UNICA"
-    },
-    "nota": "Safra alcooleira já em curso desde 1º/abr."
-  },
-  "agenda": [
-    {
-      "day": "Sex 01/mai",
-      "evento": "🇧🇷 Feriado (Dia do Trabalho)",
-      "tag": "red",
-      "tag_label": "feriado"
-    },
-    {
-      "day": "Seg 04/mai",
-      "evento": "Abertura pós-feriado · reajuste Petrobras provável",
-      "tag": "yellow",
-      "tag_label": "atenção"
-    },
-    {
-      "day": "Sex 09/mai",
-      "evento": "IPCA abril (IBGE)",
-      "tag": "blue",
-      "tag_label": "dado"
-    }
-  ],
-  "radar": [
-    "Brent tocou <b>US$ 126</b> (máx de guerra desde 2022); recuou com possibilidade de ação militar EUA.",
-    "Selic cortada para <b>14,50%</b> ontem; comunicado cauteloso.",
-    "Defasagem Abicom em <b>recorde histórico</b> (80%+ no diesel).",
-    "Ibov no <b>6º dia</b> em queda; pior sequência desde julho/25.",
-    "Sexta é feriado: <b>reajuste Petrobras</b> pode sair entre hoje à noite e domingo."
-  ],
-  "acao": {
-    "tag": "Véspera de feriado",
-    "lead": "<b>Última janela antes do reajuste.</b> Reajuste Petrobras deve sair entre hoje à noite e domingo. Não fique no automático.",
-    "items": [
-      "<b>Diesel:</b> estoque pleno HOJE para 10–15 dias. Caminhão na pista antes do feriado.",
-      "<b>Gasolina:</b> tenha 3 cenários prontos para o abre de segunda (+R$ 0,30 / +R$ 0,50 / +R$ 0,80).",
-      "<b>Etanol:</b> hidratado em volume — migração flex deve ser explosiva pós-reajuste.",
-      "<b>Equipe:</b> alinhe discurso para o feriado e segunda. Frentista, caixa e gerente com mesma narrativa.",
-      "<b>Comunicação:</b> placa pré-pronta no PDV (\"acompanhamos a Petrobras\").",
-      "<b>Verimo:</b> estoque máximo + cenário de guerra = exposição máxima. Revise apólices antes do feriado."
-    ]
-  },
-  "resumo": [
-    {
-      "lead": true,
-      "html": "O fato do dia voltou a ser geopolítico em escala extrema. O Brent tocou <b>US$ 126</b> nesta manhã — maior nível desde 2022 — depois que reportagem do Axios indicou que o Comando Central dos EUA prepara opções de ação militar contra o Irã para apresentar a Trump."
-    },
-    {
-      "html": "O barril recuou para <b>US$ 114,70</b> (−2,8%) com a precificação do risco. Em uma semana, o Brent saiu de US$ 105 e tocou US$ 126 — variação de 20%."
-    },
-    {
-      "html": "No câmbio, o real seguiu surpreendendo. O dólar recuou para <b>R$ 4,97</b>, sustentado pelo diferencial de juros depois do corte da Selic ontem (de 14,75% para 14,50%, decisão unânime). No acumulado do ano, real lidera moedas globais."
-    },
-    {
-      "html": "O nó do posto chegou ao recorde histórico. Defasagem Abicom passou de <b>80% no diesel</b> e <b>70% na gasolina</b> nos polos Petrobras. Diesel sem reajuste há <b>47 dias</b>; gasolina, há <b>94</b>. Reajuste é praticamente certo no fim de semana ou na segunda."
-    },
-    {
-      "html": "Do lado do etanol, a safra 2026/27 segue forte com mix de 48,5% açúcar e 51,5% etanol e oferta +10% (UNICA). Cepea aponta hidratado firme: SP R$ 2,7398, PR R$ 2,8120, GO R$ 2,6850, MG R$ 2,7200, MT R$ 2,5900. A relação E/G em SP segue em 72% — mas o reajuste vai inverter a equação na bomba imediatamente."
-    },
-    {
-      "html": "Bolsas: Ibov fechou em 188 mil ontem, no 6º pregão em queda. Wall Street em queda no dia (S&P −0,28%, Dow −0,75%). Selic agora em 14,50% com Copom cauteloso. Focus mantém IPCA/26 em 4,86% (acima do teto)."
-    },
-    {
-      "html": "Para o posto: hoje é a <b>última janela antes do reajuste</b>. Diesel cheio para o feriado, gasolina precificada com 3 cenários para segunda, hidratado em volume e equipe alinhada."
-    }
-  ]
+  "_comentario": "Substituído pelo update.mjs no build do Netlify"
 };
 
 /* ============================================================
@@ -780,158 +541,183 @@ const DATA = {
   const ev = (val) => (val==null?"—":val);
 
   // Header
-  $("hdate").textContent = DATA.meta.date_label;
-  $("lastup").textContent = DATA.meta.last_update;
-  $("nextUpdate").textContent = DATA.meta.next_update;
+  $("hdate").textContent = DATA.meta?.date_label || "—";
+  $("lastup").textContent = DATA.meta?.last_update || "—";
+  $("nextUpdate").textContent = DATA.meta?.next_update || "—";
 
-  // Manchete
-  const m = DATA.manchete;
+  // Manchete principal (compat com formato antigo)
+  const m = DATA.manchete?.principal || DATA.manchete || {};
   const mEl = document.querySelector(".manchete");
   mEl.classList.remove("red","yellow","green");
-  if(m.severity!=="red") mEl.classList.add(m.severity);
-  $("mancheteStatus").textContent = m.status_emoji;
-  $("mancheteSeverity").textContent = m.severity_label;
-  $("mancheteSeverity").className = "pill " + m.severity;
-  $("mancheteTitulo").textContent = m.titulo;
-  $("mancheteCorpo").innerHTML = m.corpo;
+  if(m.severity && m.severity !== "red") mEl.classList.add(m.severity);
+  $("mancheteStatus").textContent = m.status_emoji || "🔴";
+  $("mancheteSeverity").textContent = m.severity_label || "—";
+  $("mancheteSeverity").className = "pill " + (m.severity || "red");
+  $("mancheteTitulo").textContent = m.titulo || "—";
+  $("mancheteCorpo").innerHTML = m.corpo || "—";
+
+  // Manchetes secundárias (3 cards)
+  const secs = (DATA.manchete && Array.isArray(DATA.manchete.secundarias)) ? DATA.manchete.secundarias : [];
+  for(let i=0;i<3;i++){
+    const idx = i + 2; // manch2, manch3, manch4
+    const card = $("manch" + idx);
+    if(!card) continue;
+    const sec = secs[i];
+    card.classList.remove("alert-red","alert-yellow","alert-green");
+    if(sec){
+      card.classList.add("alert-" + (sec.severity || "yellow"));
+      $("manch" + idx + "Emoji").textContent = sec.status_emoji || "🟡";
+      $("manch" + idx + "Tag").textContent = sec.tag || "";
+      $("manch" + idx + "Titulo").textContent = sec.titulo || "—";
+    } else {
+      card.style.display = "none";
+    }
+  }
 
   // Petróleo
-  const p = DATA.petroleo;
-  $("brentVal").textContent = p.brent.val;
-  $("brentDelta").textContent = p.brent.delta;
-  $("brentDelta").className = "delta " + p.brent.dir;
-  $("brentSub").textContent = p.brent.sub || "";
-  $("wtiVal").textContent = p.wti.val;
-  $("wtiDelta").textContent = p.wti.delta;
-  $("wtiDelta").className = "delta " + p.wti.dir;
-  $("wtiSub").textContent = p.wti.sub || "";
-  $("petroleoNota").innerHTML = p.nota;
-  $("petroleoCit").innerHTML = "🔴 " + p.citacao;
+  const p = DATA.petroleo || {brent:{},wti:{}};
+  $("brentVal").textContent = p.brent?.val || "—";
+  $("brentDelta").textContent = p.brent?.delta || "—";
+  $("brentDelta").className = "delta " + (p.brent?.dir || "flat");
+  $("brentSub").textContent = p.brent?.sub || "";
+  $("wtiVal").textContent = p.wti?.val || "—";
+  $("wtiDelta").textContent = p.wti?.delta || "—";
+  $("wtiDelta").className = "delta " + (p.wti?.dir || "flat");
+  $("wtiSub").textContent = p.wti?.sub || "";
+  $("petroleoNota").innerHTML = p.nota || "—";
+  $("petroleoCit").innerHTML = "🔴 " + (p.citacao || "—");
 
   // Moedas
-  const md = DATA.moedas;
+  const md = DATA.moedas || {};
   ["usdbrl","eurbrl","dxy","btc"].forEach(k=>{
-    $(k+"Val").textContent = md[k].val;
-    $(k+"Delta").textContent = md[k].delta;
-    $(k+"Delta").className = "delta " + md[k].dir;
+    if(md[k]){
+      $(k+"Val").textContent = md[k].val || "—";
+      $(k+"Delta").textContent = md[k].delta || "—";
+      $(k+"Delta").className = "delta " + (md[k].dir || "flat");
+    }
   });
-  $("moedasNota").innerHTML = "🟡 " + md.nota;
+  $("moedasNota").innerHTML = "🟡 " + (md.nota || "—");
 
   // Bolsas
-  const b = DATA.bolsas;
+  const b = DATA.bolsas || {};
   ["ibov","sp","nasdaq","dow"].forEach(k=>{
-    $(k+"Val").textContent = b[k].val;
-    $(k+"Delta").textContent = b[k].delta;
-    $(k+"Delta").className = "delta " + b[k].dir;
+    if(b[k]){
+      $(k+"Val").textContent = b[k].val || "—";
+      $(k+"Delta").textContent = b[k].delta || "—";
+      $(k+"Delta").className = "delta " + (b[k].dir || "flat");
+    }
   });
-  $("bolsasNota").innerHTML = "🔵 " + b.nota;
+  $("bolsasNota").innerHTML = "🔵 " + (b.nota || "—");
 
   // Juros
-  const j = DATA.juros;
-  $("selicVal").textContent = j.selic.val;
-  $("selicDelta").textContent = j.selic.delta;
-  $("selicDelta").className = "delta " + j.selic.dir;
-  $("fedVal").textContent = j.fed.val;
-  $("fedDelta").textContent = j.fed.delta;
-  $("ust10Val").textContent = j.ust10y.val;
-  $("ust10Sub").textContent = j.ust10y.sub || "";
-  $("jurosNota").innerHTML = "🟡 " + j.nota;
+  const j = DATA.juros || {selic:{},fed:{},ust10y:{}};
+  $("selicVal").textContent = j.selic?.val || "—";
+  $("selicDelta").textContent = j.selic?.delta || "—";
+  $("selicDelta").className = "delta " + (j.selic?.dir || "flat");
+  $("fedVal").textContent = j.fed?.val || "—";
+  $("fedDelta").textContent = j.fed?.delta || "—";
+  $("ust10Val").textContent = j.ust10y?.val || "—";
+  $("ust10Sub").textContent = j.ust10y?.sub || "";
+  $("jurosNota").innerHTML = "🟡 " + (j.nota || "—");
 
   // Inflação
-  const inf = DATA.inflacao;
-  $("ipca15Val").textContent = inf.ipca15;
-  $("ipca15_12mVal").textContent = inf.ipca15_12m;
-  $("ipcaMarVal").textContent = inf.ipca_mar;
-  $("focusVal").textContent = inf.focus_2026;
-  $("inflacaoNota").innerHTML = "🔴 " + inf.nota;
+  const inf = DATA.inflacao || {};
+  $("ipca15Val").textContent = inf.ipca15 || "—";
+  $("ipca15_12mVal").textContent = inf.ipca15_12m || "—";
+  $("ipcaMarVal").textContent = inf.ipca_mar || "—";
+  $("focusVal").textContent = inf.focus_2026 || "—";
+  $("inflacaoNota").innerHTML = "🔴 " + (inf.nota || "—");
 
   // Abicom
-  const ab = DATA.abicom;
-  $("abicomDiesel").textContent = ab.diesel_pct;
-  $("abicomGasolina").textContent = ab.gasolina_pct;
-  $("abicomDieselTag").textContent = ab.diesel_tag;
-  $("abicomGasolinaTag").textContent = ab.gasolina_tag;
-  $("diasDiesel").textContent = ab.dias_diesel;
-  $("diasGasolina").textContent = ab.dias_gasolina;
-  $("abicomNota").innerHTML = "🔴 " + ab.nota;
+  const ab = DATA.abicom || {};
+  $("abicomDiesel").textContent = ab.diesel_pct || "—";
+  $("abicomGasolina").textContent = ab.gasolina_pct || "—";
+  $("abicomDieselTag").textContent = ab.diesel_tag || "—";
+  $("abicomGasolinaTag").textContent = ab.gasolina_tag || "—";
+  $("diasDiesel").textContent = ab.dias_diesel ?? "—";
+  $("diasGasolina").textContent = ab.dias_gasolina ?? "—";
+  $("abicomNota").innerHTML = "🔴 " + (ab.nota || "—");
 
   // ANP
-  $("anpSemana").textContent = DATA.anp.semana;
-  $("anpRows").innerHTML = DATA.anp.rows.map(r=>`
+  const anp = DATA.anp || {rows:[]};
+  $("anpSemana").textContent = anp.semana || "—";
+  $("anpRows").innerHTML = (anp.rows||[]).map(r=>`
     <tr>
-      <td class="region">${r.produto}</td>
-      <td><span class="cell-num">${r.preco}</span></td>
+      <td class="region">${r.produto||""}</td>
+      <td><span class="cell-num">${r.preco||"—"}</span></td>
       <td><span class="pill ${r.status||'gray'}">${r.status_label||'—'}</span></td>
     </tr>`).join("");
-  $("anpNota").innerHTML = "🔵 " + DATA.anp.nota;
+  $("anpNota").innerHTML = "🔵 " + (anp.nota || "—");
 
   // CEPEA
+  const cp = DATA.cepea || {hidratado:[],anidro_sp:{},acucar:{}};
   const arrowFor = d => d==="up"?"▲":(d==="down"?"▼":"•");
-  $("cepeaRows").innerHTML = DATA.cepea.hidratado.map(r=>`
+  $("cepeaRows").innerHTML = (cp.hidratado||[]).map(r=>`
     <tr>
-      <td class="region">${r.uf}</td>
-      <td><span class="cell-num">${r.preco}</span></td>
+      <td class="region">${r.uf||""}</td>
+      <td><span class="cell-num">${r.preco||"—"}</span></td>
       <td style="color:${r.dir==='up'?'var(--up)':r.dir==='down'?'var(--down)':'var(--text-2)'};font-weight:600">${arrowFor(r.dir)}</td>
     </tr>`).join("");
-  $("anidroVal").textContent = DATA.cepea.anidro_sp.val;
-  $("anidroDelta").textContent = DATA.cepea.anidro_sp.delta;
-  $("anidroDelta").className = "delta " + DATA.cepea.anidro_sp.dir;
-  $("acucarVal").textContent = DATA.cepea.acucar.val;
-  $("acucarDelta").textContent = DATA.cepea.acucar.delta;
-  $("acucarDelta").className = "delta " + DATA.cepea.acucar.dir;
-  $("cepeaNota").innerHTML = "🟢 " + DATA.cepea.nota;
+  $("anidroVal").textContent = cp.anidro_sp?.val || "—";
+  $("anidroDelta").textContent = cp.anidro_sp?.delta || "—";
+  $("anidroDelta").className = "delta " + (cp.anidro_sp?.dir || "flat");
+  $("acucarVal").textContent = cp.acucar?.val || "—";
+  $("acucarDelta").textContent = cp.acucar?.delta || "—";
+  $("acucarDelta").className = "delta " + (cp.acucar?.dir || "flat");
+  $("cepeaNota").innerHTML = "🟢 " + (cp.nota || "—");
 
   // E/G
-  $("egPct").textContent = DATA.eg.paridade_sp;
-  $("mandatoE").textContent = DATA.eg.mandato_e;
-  $("mandatoB").textContent = DATA.eg.mandato_b;
-  $("egNota").innerHTML = "🟡 " + DATA.eg.nota;
+  const eg = DATA.eg || {};
+  $("egPct").textContent = eg.paridade_sp || "—";
+  $("mandatoE").textContent = eg.mandato_e || "—";
+  $("mandatoB").textContent = eg.mandato_b || "—";
+  $("egNota").innerHTML = "🟡 " + (eg.nota || "—");
 
   // Safra
-  const sf = DATA.safra;
-  $("moagemVal").textContent = sf.moagem.val;
-  $("moagemDelta").textContent = sf.moagem.delta;
-  $("atrVal").textContent = sf.atr.val;
-  $("atrDelta").textContent = sf.atr.delta;
-  $("mixVal").textContent = sf.mix.val;
-  $("ofertaVal").textContent = sf.oferta.val;
-  $("ofertaDelta").textContent = sf.oferta.delta;
-  $("safraNota").innerHTML = "🟢 " + sf.nota;
+  const sf = DATA.safra || {moagem:{},atr:{},mix:{},oferta:{}};
+  $("moagemVal").textContent = sf.moagem?.val || "—";
+  $("moagemDelta").textContent = sf.moagem?.delta || "—";
+  $("atrVal").textContent = sf.atr?.val || "—";
+  $("atrDelta").textContent = sf.atr?.delta || "—";
+  $("mixVal").textContent = sf.mix?.val || "—";
+  $("ofertaVal").textContent = sf.oferta?.val || "—";
+  $("ofertaDelta").textContent = sf.oferta?.delta || "—";
+  $("safraNota").innerHTML = "🟢 " + (sf.nota || "—");
 
   // Agenda
-  $("agendaList").innerHTML = DATA.agenda.map(a=>`
+  $("agendaList").innerHTML = (DATA.agenda||[]).map(a=>`
     <li>
-      <span class="day">${a.day}</span>
-      <span class="ev">${a.evento}</span>
+      <span class="day">${a.day||""}</span>
+      <span class="ev">${a.evento||""}</span>
       <span class="pill ${a.tag||'gray'}">${a.tag_label||''}</span>
     </li>`).join("");
 
   // Radar
-  $("radarList").innerHTML = DATA.radar.map(r=>`<li>${r}</li>`).join("");
+  $("radarList").innerHTML = (DATA.radar||[]).map(r=>`<li>${r}</li>`).join("");
 
   // Ação
-  $("acaoTag").textContent = DATA.acao.tag;
-  $("acaoLead").innerHTML = DATA.acao.lead;
-  $("acaoList").innerHTML = DATA.acao.items.map((it,i)=>`<li><span class="num">${String(i+1).padStart(2,'0')}</span><span>${it}</span></li>`).join("");
+  const ac = DATA.acao || {items:[]};
+  $("acaoTag").textContent = ac.tag || "—";
+  $("acaoLead").innerHTML = ac.lead || "—";
+  $("acaoList").innerHTML = (ac.items||[]).map((it,i)=>`<li><span class="num">${String(i+1).padStart(2,'0')}</span><span>${it}</span></li>`).join("");
 
   // Resumo
-  $("resumo").innerHTML = DATA.resumo.map(p=>`<p${p.lead?' class="lead"':''}>${p.html}</p>`).join("");
+  $("resumo").innerHTML = (DATA.resumo||[]).map(p=>`<p${p.lead?' class="lead"':''}>${p.html||""}</p>`).join("");
 
-  // Ticker — gerado a partir dos dados
+  // Ticker
   const tickerItems = [
-    ["BRENT", p.brent.val, p.brent.delta, p.brent.dir],
-    ["WTI",   p.wti.val,   p.wti.delta,   p.wti.dir],
-    ["USD/BRL", md.usdbrl.val, md.usdbrl.delta, md.usdbrl.dir],
-    ["EUR/BRL", md.eurbrl.val, md.eurbrl.delta, md.eurbrl.dir],
-    ["DXY",     md.dxy.val,    md.dxy.delta,    md.dxy.dir],
-    ["IBOV",    b.ibov.val,    b.ibov.delta,    b.ibov.dir],
-    ["S&P 500", b.sp.val,      b.sp.delta,      b.sp.dir],
-    ["NASDAQ",  b.nasdaq.val,  b.nasdaq.delta,  b.nasdaq.dir],
-    ["SELIC",   j.selic.val,   j.selic.delta,   j.selic.dir],
-    ["DEFAS. DIESEL",   ab.diesel_pct,   ab.diesel_tag,   "down"],
-    ["DEFAS. GASOLINA", ab.gasolina_pct, ab.gasolina_tag, "down"],
-    ["HIDRATADO SP",    DATA.cepea.hidratado[0].preco, "▲", "up"],
-    ["E/G SP",          DATA.eg.paridade_sp, "acima 70%", "down"]
+    ["BRENT", p.brent?.val||"—", p.brent?.delta||"—", p.brent?.dir||"flat"],
+    ["WTI",   p.wti?.val||"—",   p.wti?.delta||"—",   p.wti?.dir||"flat"],
+    ["USD/BRL", md.usdbrl?.val||"—", md.usdbrl?.delta||"—", md.usdbrl?.dir||"flat"],
+    ["EUR/BRL", md.eurbrl?.val||"—", md.eurbrl?.delta||"—", md.eurbrl?.dir||"flat"],
+    ["DXY",     md.dxy?.val||"—",    md.dxy?.delta||"—",    md.dxy?.dir||"flat"],
+    ["IBOV",    b.ibov?.val||"—",    b.ibov?.delta||"—",    b.ibov?.dir||"flat"],
+    ["S&P 500", b.sp?.val||"—",      b.sp?.delta||"—",      b.sp?.dir||"flat"],
+    ["NASDAQ",  b.nasdaq?.val||"—",  b.nasdaq?.delta||"—",  b.nasdaq?.dir||"flat"],
+    ["SELIC",   j.selic?.val||"—",   j.selic?.delta||"—",   j.selic?.dir||"flat"],
+    ["DEFAS. DIESEL",   ab.diesel_pct||"—",   ab.diesel_tag||"—",   "down"],
+    ["DEFAS. GASOLINA", ab.gasolina_pct||"—", ab.gasolina_tag||"—", "down"],
+    ["E/G SP",          eg.paridade_sp||"—", "acima 70%", "down"]
   ];
   const tplOne = it => `<span><span class="sym">${it[0]}</span><span class="v">${it[1]}</span><span class="${it[3]}">${it[2]}</span></span>`;
   $("tickerTrack").innerHTML = tickerItems.map(tplOne).join("") + tickerItems.map(tplOne).join("");
