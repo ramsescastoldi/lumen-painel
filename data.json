@@ -1,8 +1,8 @@
 {
   "meta": {
-    "date_iso": "2026-05-02",
-    "date_label": "Sábado · 02 mai 2026",
-    "last_update": "08:30",
+    "date_iso": "2026-05-03",
+    "date_label": "Domingo · 03 mai 2026",
+    "last_update": "10:00",
     "next_update": "segunda · 04 mai · 07:30"
   },
   "manchete": {
@@ -10,166 +10,49 @@
       "severity": "yellow",
       "status_emoji": "🟡",
       "severity_label": "Atenção",
-      "titulo": "Brent abaixo de US$ 110 com proposta iraniana sob análise",
-      "corpo": "Sexta fechou em <b>US$ 108,94</b>, recuo após Irã responder às emendas dos EUA via Paquistão. 2ª semana seguida de alta (+6%). Goldman vê maio entre <b>US$ 115 e US$ 135</b>."
+      "titulo": "Irã envia proposta de 14 pontos; Trump diz que houve progresso",
+      "corpo": "Brent fechou sexta em <b>US$ 108,17</b>. Trump: \"fizemos progresso, não tenho certeza se chegaremos lá\". Tehran analisa resposta dos EUA. <b>OPEP+ subiu cota de junho</b> mesmo sem o EAU."
     },
     "secundarias": [
       {
         "severity": "yellow",
         "status_emoji": "🟡",
         "tag": "Geopolítica",
-        "titulo": "EAU saiu oficialmente da OPEP em 1º/mai — cartel mais frágil"
+        "titulo": "Irã apresenta proposta de 14 pontos; Trump abre porta ao diálogo"
       },
       {
         "severity": "red",
         "status_emoji": "🔴",
-        "tag": "Regulatório",
-        "titulo": "ANP muda subvenção do diesel: agora só USGC como referência"
+        "tag": "Califórnia",
+        "titulo": "Gasolina rompe US$ 6/galão na Califórnia — choque global no varejo"
       },
       {
         "severity": "green",
         "status_emoji": "🟢",
-        "tag": "Mercados",
-        "titulo": "S&P, Nasdaq e Dow encerram abril em recordes históricos"
+        "tag": "OPEP+",
+        "titulo": "OPEP+ eleva cota de junho mesmo após saída do EAU do cartel"
       }
     ]
   },
   "petroleo": {
     "brent": {
-      "val": "US$ 108,94",
+      "val": "US$ 108,17",
       "delta": "▼ -1,3% (sex)",
       "dir": "down",
       "sub": "semana ▲ +6%"
     },
     "wti": {
-      "val": "US$ 101,69",
-      "delta": "▼ -1,5% (sex)",
+      "val": "US$ 101,94",
+      "delta": "▼ -3,0% (sex)",
       "dir": "down",
       "sub": "máx. semana US$ 111"
     },
-    "nota": "<b>Irã enviou emenda</b> via Paquistão; mercado precificou trégua. Mas Khamenei manteve postura dura e EAU saiu da OPEP — fato estrutural que reordena o cartel.",
-    "citacao": "<b>Goldman:</b> exportações por Ormuz em 4% do normal. <b>BCA Research:</b> guerra Irã deve reescalar até fim de 2026."
+    "nota": "Recuo na sexta com proposta iraniana de 14 pontos. <b>Trump:</b> \"fizemos progresso, não sei se chegaremos lá\". Range semanal: US$ 106-112. Mercado físico ainda apertado.",
+    "citacao": "<b>Goldman:</b> Ormuz em 4% do normal. <b>ING:</b> mercado saiu da euforia para a realidade da disrupção. <b>Yardeni:</b> demanda global -3,6 mi b/d em abril."
   },
   "moedas": {
     "usdbrl": {"val":"R$ 4,98","delta":"• estável (qui)","dir":"flat"},
     "eurbrl": {"val":"R$ 5,68","delta":"▼","dir":"down"},
-    "dxy": {"val":"98,21","delta":"▼ mín. 2 meses","dir":"down"},
+    "dxy": {"val":"98,01","delta":"▼ mín. 2 meses","dir":"down"},
     "btc": {"val":"US$ 76 mil","delta":"▼ semana ruim","dir":"down"},
-    "nota": "Real liderou moedas globais em abril. DXY na mínima de 2 meses. Selic em 14,50% mantém o carry trade brasileiro atrativo apesar da crise."
-  },
-  "bolsas": {
-    "ibov": {"val":"188.618","delta":"▼ 6º pregão (qua)","dir":"down"},
-    "sp": {"val":"7.130+","delta":"▲ recorde (sex)","dir":"up"},
-    "nasdaq": {"val":"24.700+","delta":"▲ recorde","dir":"up"},
-    "dow": {"val":"49.000+","delta":"▲ recorde","dir":"up"},
-    "nota": "B3 fechada (feriado prolongado). NYSE encerrou abril com S&P, Nasdaq e Dow em <b>recordes históricos</b> — descolamento total do petróleo."
-  },
-  "juros": {
-    "selic": {"val":"14,50% a.a.","delta":"▼ cortada 29/abr","dir":"down"},
-    "fed": {"val":"3,50–3,75%","delta":"mantido","dir":"flat"},
-    "ust10y": {"val":"~4,35%","sub":"▼ leve recuo"},
-    "nota": "Próximo Copom: 17/jun. Mercado precifica novo corte para <b>14,25%</b> em junho. Treasury 10Y recuou levemente com Dollar Index fraco."
-  },
-  "inflacao": {
-    "ipca15": "0,89%",
-    "ipca15_12m": "4,37%",
-    "ipca_mar": "0,88%",
-    "focus_2026": "4,86%",
-    "nota": "Choque do petróleo de abril deve aparecer no IPCA cheio de abril (sai sex 09/mai). Combustíveis ainda devem puxar o número."
-  },
-  "abicom": {
-    "diesel_pct": "75%+",
-    "gasolina_pct": "65%+",
-    "dias_diesel": 49,
-    "dias_gasolina": 96,
-    "diesel_tag": "Recorde",
-    "gasolina_tag": "Recorde",
-    "nota": "Recuo do Brent para US$ 109 alivia ligeiramente, mas defasagem segue em <b>recorde histórico</b>. Reajuste é certo — janela: <b>domingo à noite ou segunda cedo</b>."
-  },
-  "anp": {
-    "semana": "Última 12-18/abr · próxima sai segunda 04/mai",
-    "rows": [
-      {"produto":"Gasolina C","preco":"R$ 6,29/L","status":"gray","status_label":"ref. 05-11"},
-      {"produto":"Etanol hidr.","preco":"a confirmar","status":"blue","status_label":"pendente"},
-      {"produto":"Diesel S-10","preco":"a confirmar","status":"blue","status_label":"pendente"},
-      {"produto":"Diesel comum","preco":"R$ 7,58/L","status":"gray","status_label":"ref. 05-11"},
-      {"produto":"GLP P-13","preco":"a confirmar","status":"blue","status_label":"pendente"}
-    ],
-    "nota": "<b>Mudança regulatória:</b> ANP passou a usar só USGC como referência da subvenção do diesel (30/abr). Fiscalização ativa: 16 distribuidoras e 2 postos autuados; multas até R$ 500 mi."
-  },
-  "cepea": {
-    "hidratado": [
-      {"uf":"SP","preco":"R$ 2,7398","dir":"up"},
-      {"uf":"PR","preco":"R$ 2,8120","dir":"up"},
-      {"uf":"GO","preco":"R$ 2,6850","dir":"flat"},
-      {"uf":"MG","preco":"R$ 2,7200","dir":"up"},
-      {"uf":"MT","preco":"R$ 2,5900","dir":"up"}
-    ],
-    "anidro_sp": {"val":"R$ 3,1591","delta":"▲ alta","dir":"up"},
-    "acucar": {"val":"—","delta":"▼ recua com safra","dir":"down"},
-    "nota": "Hidratado firme em todas as praças. Brent acima de US$ 100 sustenta competitividade — segunda pode ser ponto de virada se Petrobras reajustar gasolina."
-  },
-  "eg": {
-    "paridade_sp": "72%",
-    "mandato_e": "E30",
-    "mandato_b": "B15",
-    "nota": "Paridade ainda favorece gasolina, mas reajuste pós-feriado deve inverter rapidamente — flex deve migrar para hidratado em 24-48h."
-  },
-  "safra": {
-    "moagem": {"val":"635 Mt","delta":"▲ +4%"},
-    "atr": {"val":"139,4 kg/t","delta":"▲ +1%"},
-    "mix": {"val":"48,5%"},
-    "oferta": {"val":"+10%","delta":"▲ UNICA"},
-    "nota": "Safra alcooleira em curso (mix etanol 51,5%). Oferta robusta dá ao revendedor margem para a migração flex que deve começar segunda."
-  },
-  "agenda": [
-    {"day":"Dom 03/mai","evento":"Janela do reajuste Petrobras","tag":"red","tag_label":"atenção"},
-    {"day":"Seg 04/mai","evento":"Reabre B3 · Síntese ANP","tag":"yellow","tag_label":"abertura"},
-    {"day":"Qua 06/mai","evento":"EIA estoques semanais","tag":"blue","tag_label":"dado"},
-    {"day":"Sex 09/mai","evento":"IPCA abril (IBGE)","tag":"blue","tag_label":"dado"},
-    {"day":"Dom 10/mai","evento":"Dia das Mães","tag":"gray","tag_label":"comercial"}
-  ],
-  "radar": [
-    "Brent fechou sexta em <b>US$ 108,94</b> com Irã enviando emenda à proposta dos EUA.",
-    "<b>EAU saiu da OPEP</b> em 1º/mai — fato estrutural; cartel mais frágil.",
-    "S&P, Nasdaq e Dow em <b>recordes históricos</b> — descolamento do petróleo.",
-    "Forecast maio: Brent <b>US$ 115-135</b>; cenário-base US$ 120 (Goldman).",
-    "<b>Domingo à noite ou segunda cedo</b> = janela do reajuste Petrobras."
-  ],
-  "acao": {
-    "tag": "Fim de semana",
-    "lead": "<b>Domingo é o dia decisivo.</b> Reajuste Petrobras pode sair entre hoje à noite e segunda cedo. Use o sábado para fechar o último checkpoint.",
-    "items": [
-      "<b>Diesel:</b> confirme estoque pleno HOJE; checagem física de tanques.",
-      "<b>Gasolina:</b> 3 cenários prontos no celular (+R$ 0,30 / +R$ 0,50 / +R$ 0,80).",
-      "<b>Etanol:</b> hidratado em volume — segunda deve abrir com migração flex.",
-      "<b>Margem documentada:</b> planilha compra × venda salva em PDF/foto.",
-      "<b>Equipe:</b> grupo no WhatsApp aberto pra alinhar repasse no domingo.",
-      "<b>Verimo:</b> última oportunidade de revisar apólices antes da virada do mês."
-    ]
-  },
-  "resumo": [
-    {
-      "lead": true,
-      "html": "Sábado abre com leve respiro no petróleo. Brent fechou sexta em <b>US$ 108,94</b> (−1,3%) e WTI em <b>US$ 101,69</b> (−1,5%) depois que o Paquistão confirmou que o Irã respondeu às emendas dos EUA. Apesar do recuo, semana fechou em alta de 6% — segunda seguida de ganhos."
-    },
-    {
-      "html": "O grande fato estrutural foi a saída oficial dos <b>Emirados Árabes Unidos da OPEP em 1º/mai</b>. EAU sai para ganhar flexibilidade, mas o cartel fica mais frágil em momento que precisaria estar coordenado. Goldman e BCA projetam <b>Brent entre US$ 115 e US$ 135 em maio</b>; cenário-base US$ 120."
-    },
-    {
-      "html": "No câmbio, real lidera moedas globais. Dólar fechou sexta em <b>R$ 4,98</b> e DXY caiu à mínima de 2 meses. Selic em 14,50% mantém atratividade do carry trade. Wall Street encerrou abril com <b>S&P, Nasdaq e Dow em recordes históricos</b> — descolamento total do petróleo."
-    },
-    {
-      "html": "O nó do posto segue em <b>recorde histórico</b>. Mesmo com Brent em US$ 109, defasagem Abicom passa de <b>75% no diesel</b> e <b>65% na gasolina</b>. Diesel sem reajuste há 49 dias, gasolina há 96. Reajuste Petrobras é praticamente certo — janela: <b>domingo à noite ou segunda cedo</b>."
-    },
-    {
-      "html": "Etanol em momento favorável. Cepea aponta hidratado firme em todas as praças. Anidro SP em R$ 3,1591. Safra 26/27 com mix alcooleiro (51,5% etanol) e oferta +10%. E/G em SP em 72% — qualquer reajuste inverte a equação imediatamente."
-    },
-    {
-      "html": "<b>Movimento da ANP (30/abr):</b> agência alterou metodologia da subvenção do diesel, passando a usar apenas USGC. Fiscalização ativa: 16 distribuidoras e 2 postos autuados; multas até R$ 500 milhões. <b>Documente sua margem.</b>"
-    },
-    {
-      "html": "<b>Para o posto:</b> sábado é último checkpoint. Diesel cheio, gasolina com 3 cenários prontos, hidratado em volume, margem documentada e equipe alinhada via WhatsApp. <b>Domingo à noite é decisivo.</b>"
-    }
-  ]
-}
+    "nota": "Real liderou moedas globais em abril. Dólar caiu 10% em 2026 — \"imposto oculto\" segundo analistas. Selic em 14,50% sust
