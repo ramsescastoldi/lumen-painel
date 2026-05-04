@@ -10,8 +10,8 @@
       "severity": "yellow",
       "status_emoji": "🟡",
       "severity_label": "Atenção",
-      "titulo": "Brent recua para US$ 102 e Project Freedom começa hoje",
-      "corpo": "Operação dos EUA escolta navios civis fora de Ormuz a partir de hoje. <b>Irã revisa proposta dos EUA</b>. Brent perdeu 9,5% no mês. Mas Petrobras já reajustou QAV em <b>+18%</b> — gasolina e diesel são próximos."
+      "titulo": "Brent em US$ 107 e Project Freedom começa hoje",
+      "corpo": "Operação dos EUA escolta navios civis fora de Ormuz a partir de hoje. <b>Irã revisa proposta dos EUA</b>. Mas Petrobras já reajustou QAV em <b>+18%</b> em 1º/mai — gasolina e diesel são próximos."
     },
     "secundarias": [
       {
@@ -36,33 +36,33 @@
   },
   "petroleo": {
     "brent": {
-      "val": "US$ 101,87",
-      "delta": "▼ -5,8% (24h)",
+      "val": "US$ 107,42",
+      "delta": "▼ -0,69%",
+      "dir": "down",
+      "sub": "range hoje 105,66-108,80"
+    },
+    "wti": {
+      "val": "US$ 100,99",
+      "delta": "▼ -0,93%",
       "dir": "down",
       "sub": "mês ▼ -9,5%"
     },
-    "wti": {
-      "val": "US$ 98,42",
-      "delta": "▼ -3,5%",
-      "dir": "down",
-      "sub": "ainda 60% acima de fev"
-    },
-    "nota": "Maior queda diária em 3 semanas. <b>Project Freedom</b> começa hoje (EUA escoltam navios civis fora de Ormuz). <b>Irã revisa proposta</b> de 14 pontos enviada aos EUA.",
+    "nota": "<b>Project Freedom</b> começa hoje (EUA escoltam navios civis fora de Ormuz). <b>Irã revisa proposta</b> de 14 pontos enviada aos EUA. Range diário estreito sugere acomodação.",
     "citacao": "<b>Goldman:</b> Ormuz ainda em 4% do normal. <b>ING:</b> mercado precifica trégua mas oferta física segue apertada. <b>EIA:</b> exportações dos EUA em recorde."
   },
   "moedas": {
     "usdbrl": {"val": "R$ 4,98", "delta": "• abertura", "dir": "flat"},
     "eurbrl": {"val": "R$ 5,68", "delta": "▼", "dir": "down"},
-    "dxy": {"val": "98,01", "delta": "▼ mín. 2 meses", "dir": "down"},
-    "btc": {"val": "US$ 76 mil", "delta": "▼ semana ruim", "dir": "down"},
-    "nota": "Real liderou abril. Dólar caiu 10% em 2026 — efeito imposto oculto para os EUA, vento favorável aqui. Selic em 14,50% sustenta carry."
+    "dxy": {"val": "97,96", "delta": "▼ -0,04%", "dir": "down"},
+    "btc": {"val": "US$ 78.441", "delta": "▲ recupera", "dir": "up"},
+    "nota": "Real lidera moedas globais em 2026. Dólar Ptax acumula -9,34% no ano. Bitcoin teve melhor mês desde fev/25 (+8,42% em abril)."
   },
   "bolsas": {
     "ibov": {"val": "~189 mil", "delta": "reabre hoje", "dir": "flat"},
-    "sp": {"val": "7.130+", "delta": "▲ recorde (sex)", "dir": "up"},
-    "nasdaq": {"val": "24.700+", "delta": "▲ recorde", "dir": "up"},
-    "dow": {"val": "49.000+", "delta": "▲ recorde", "dir": "up"},
-    "nota": "B3 reabre após feriado prolongado. PETR4 fechou em R$ 49,08 (próx. máx hist). Wall Street fechou abril em <b>recordes históricos</b>."
+    "sp": {"val": "7.230,12", "delta": "▲ +0,29%", "dir": "up"},
+    "nasdaq": {"val": "25.114,44", "delta": "▲ +0,89% recorde", "dir": "up"},
+    "dow": {"val": "49.499,27", "delta": "▼ -0,31%", "dir": "down"},
+    "nota": "B3 reabre após feriado. Ibov acumula <b>+13,5% em 2026</b> — 18 máximas históricas no ano. Wall Street em recordes (Nasdaq notch)."
   },
   "juros": {
     "selic": {"val": "14,50% a.a.", "delta": "▼ cortada 29/abr", "dir": "down"},
@@ -84,7 +84,7 @@
     "dias_gasolina": 98,
     "diesel_tag": "Alívio leve",
     "gasolina_tag": "Pressão alta",
-    "nota": "Brent em US$ 102 alivia, mas defasagem segue alta. <b>Reajuste QAV (+18%) em 1º/mai indica que gasolina e diesel vêm em seguida</b> — pode sair esta semana."
+    "nota": "Brent em US$ 107 alivia, mas defasagem segue alta. <b>Reajuste QAV (+18%) em 1º/mai indica que gasolina e diesel vêm em seguida</b> — pode sair esta semana."
   },
   "anp": {
     "semana": "Síntese da semana 19-25/abr sai HOJE à tarde",
@@ -107,7 +107,7 @@
     ],
     "anidro_sp": {"val": "R$ 3,1591", "delta": "▲ alta", "dir": "up"},
     "acucar": {"val": "—", "delta": "▼ recua com safra", "dir": "down"},
-    "nota": "Hidratado firme. Com Brent recuando, etanol perde competitividade relativa — mas reajuste Petrobras pode reabrir a janela rapidamente."
+    "nota": "Hidratado firme. Com Brent em US$ 107, etanol mantém competitividade — reajuste Petrobras pode reabrir a janela rapidamente."
   },
   "eg": {
     "paridade_sp": "72%",
@@ -130,15 +130,15 @@
     {"day": "Dom 10/mai", "evento": "Dia das Mães", "tag": "gray", "tag_label": "comercial"}
   ],
   "radar": [
-    "Brent caiu para <b>US$ 101,87</b> (−5,8%) com diplomacia avançando.",
+    "Brent em <b>US$ 107,42</b> com diplomacia avançando — range estreito hoje.",
     "<b>Project Freedom começa hoje:</b> EUA escoltam navios civis fora de Ormuz.",
     "Irã está <b>revisando proposta de 14 pontos</b> enviada de volta pelos EUA.",
     "<b>Petrobras reajustou QAV em +18%</b> em 1º/mai — sinal claro de movimento.",
-    "B3 reabre hoje · síntese ANP semanal sai à tarde."
+    "Wall Street em recordes (Nasdaq +0,89%); Ibov reabre hoje."
   ],
   "acao": {
     "tag": "Reabertura — atenção dupla",
-    "lead": "<b>Cenário ambíguo:</b> Brent caiu mas Petrobras já reajustou QAV em 18%. Gasolina e diesel são os próximos da fila — pode sair ainda esta semana.",
+    "lead": "<b>Cenário ambíguo:</b> Brent em US$ 107 mas Petrobras já reajustou QAV em 18%. Gasolina e diesel são os próximos da fila — pode sair ainda esta semana.",
     "items": [
       "<b>Diesel:</b> mantém estoque pleno; reajuste virá com QAV já fora.",
       "<b>Gasolina:</b> reveja preço no abre; QAV +18% sinaliza patamar do repasse.",
@@ -151,25 +151,25 @@
   "resumo": [
     {
       "lead": true,
-      "html": "Segunda abre com cenário ambíguo. O Brent recuou para <b>US$ 101,87</b> (−5,8% em 24h) e WTI para <b>US$ 98,42</b> (−3,5%) com diplomacia avançando: o Irã está revisando a proposta de 14 pontos que mandou aos EUA, e a operação <b>Project Freedom</b> começa hoje — Marinha americana escolta navios civis para fora de Ormuz."
+      "html": "Segunda abre com cenário ambíguo. O Brent opera em <b>US$ 107,42</b> (-0,69%) e WTI em <b>US$ 100,99</b> (-0,93%) com diplomacia avançando: o Irã está revisando a proposta de 14 pontos que mandou aos EUA, e a operação <b>Project Freedom</b> começa hoje — Marinha americana escolta navios civis para fora de Ormuz."
     },
     {
-      "html": "Mas há um sinal vermelho discreto: a <b>Petrobras reajustou o QAV (querosene de aviação) em +18% em 1º/mai</b>. O QAV é o canário na mina — quando ele sobe, gasolina e diesel são os próximos da fila. Reajuste dos derivados-chave pode sair ainda esta semana, antes que o Brent se estabilize."
+      "html": "Mas há um sinal vermelho discreto: a <b>Petrobras reajustou o QAV (querosene de aviação) em +18% em 1º/mai</b>. O QAV é o canário na mina — quando ele sobe, gasolina e diesel são os próximos da fila. Reajuste dos derivados-chave pode sair ainda esta semana."
     },
     {
-      "html": "No câmbio, o real lidera moedas globais. Dólar abre em R$ 4,98. DXY na mínima de 2 meses (98,01). Selic em 14,50% mantém atratividade do carry trade. Wall Street fechou abril em <b>recordes históricos</b> (S&P, Nasdaq, Dow). PETR4 fechou em R$ 49,08, próximo do máximo histórico."
+      "html": "No câmbio, o real lidera moedas globais em 2026 (-9,34% acumulado do dólar Ptax). Dólar abre em R$ 4,98. DXY em 97,96. Selic em 14,50% mantém atratividade do carry trade. Bitcoin em US$ 78.441 — teve melhor mês desde fev (+8,42% em abril)."
     },
     {
-      "html": "Defasagem Abicom recuou: agora em <b>~60% no diesel</b> e <b>~50% na gasolina</b> com Brent em US$ 102 — mas ainda alta. Diesel sem reajuste há 51 dias, gasolina há 98. O movimento do QAV mostra que a Petrobras está se preparando."
+      "html": "Wall Street em <b>recordes históricos</b>: Nasdaq +0,89% (25.114 pts), S&P +0,29% (7.230 pts), Dow -0,31% (49.499 pts). B3 reabre hoje após feriado prolongado — Ibov acumula +13,5% em 2026 com 18 máximas históricas no ano."
     },
     {
-      "html": "Etanol firme. Cepea aponta hidratado mantendo: SP R$ 2,7398, PR R$ 2,8120, GO R$ 2,6850, MG R$ 2,7200, MT R$ 2,5900. Anidro SP em R$ 3,1591. Safra 26/27 com mix alcooleiro (51,5%) e oferta +10%. E/G em SP em 72%. Com queda do Brent, etanol perde competitividade temporária — mas reajuste Petrobras reabre a janela."
+      "html": "Defasagem Abicom recuou: agora em <b>~60% no diesel</b> e <b>~50% na gasolina</b> com Brent em US$ 107 — mas ainda alta. Diesel sem reajuste há 51 dias, gasolina há 98. O movimento do QAV mostra que a Petrobras está se preparando."
     },
     {
-      "html": "Agenda da semana: hoje sai a síntese ANP semanal e a B3 reabre. Quarta tem EIA. Quinta sai FENABRAVE de abril (primeiro dado pós-Selic 14,50). Sexta vem o IPCA cheio de abril."
+      "html": "Etanol firme. Cepea aponta hidratado mantendo: SP R$ 2,7398, PR R$ 2,8120, GO R$ 2,6850, MG R$ 2,7200, MT R$ 2,5900. Anidro SP em R$ 3,1591. Safra 26/27 com mix alcooleiro (51,5%) e oferta +10%. E/G em SP em 72%."
     },
     {
-      "html": "<b>Para o posto:</b> reabertura em modo atenção dupla. O Brent recuou — bom para a margem futura — mas o QAV +18% diz que o reajuste dos combustíveis-chave já está no forno. Mantenha estoque, reveja a precificação, monitore a síntese ANP de hoje à tarde."
+      "html": "<b>Para o posto:</b> reabertura em modo atenção dupla. O Brent em US$ 107 — alívio relativo — mas o QAV +18% diz que o reajuste dos combustíveis-chave já está no forno. Mantenha estoque, reveja a precificação, monitore a síntese ANP de hoje à tarde."
     }
   ]
 }
