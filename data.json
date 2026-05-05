@@ -1,101 +1,101 @@
 {
   "meta": {
-    "date_iso": "2026-05-04",
-    "date_label": "Segunda · 04 mai 2026",
+    "date_iso": "2026-05-05",
+    "date_label": "Terça · 05 mai 2026",
     "last_update": "08:30",
-    "next_update": "amanhã · 05 mai · 07:30"
+    "next_update": "amanhã · 06 mai · 07:30"
   },
   "manchete": {
     "principal": {
-      "severity": "yellow",
-      "status_emoji": "🟡",
-      "severity_label": "Atenção",
-      "titulo": "Brent em US$ 107 e Project Freedom começa hoje",
-      "corpo": "Operação dos EUA escolta navios civis fora de Ormuz a partir de hoje. <b>Irã revisa proposta dos EUA</b>. Mas Petrobras já reajustou QAV em <b>+18%</b> em 1º/mai — gasolina e diesel são próximos."
+      "severity": "red",
+      "status_emoji": "🔴",
+      "severity_label": "Crítico",
+      "titulo": "Irã ataca EAU, EUA afundam navios — Brent dispara para US$ 113",
+      "corpo": "Mísseis iranianos atingiram os <b>Emirados Árabes</b> ontem (incêndio em Fujairah). EUA afundaram navios iranianos no Estreito. Trump: <b>Irã será apagado da face da Terra</b> se atacar tropas. Brent +6% ontem; Ibov caiu 0,92%."
     },
     "secundarias": [
       {
         "severity": "red",
         "status_emoji": "🔴",
-        "tag": "Petrobras",
-        "titulo": "QAV subiu 18% em 1º/mai — sinal do reajuste de gasolina e diesel"
+        "tag": "Geopolítica",
+        "titulo": "Irã atinge Fujairah; EUA afundam navios — guerra escala no Estreito"
       },
       {
-        "severity": "green",
-        "status_emoji": "🟢",
-        "tag": "Geopolítica",
-        "titulo": "Project Freedom: EUA escoltam navios civis fora de Ormuz a partir de hoje"
+        "severity": "red",
+        "status_emoji": "🔴",
+        "tag": "Petróleo",
+        "titulo": "Brent saltou +6% ontem (US$ 114,44); hoje recua para US$ 113"
       },
       {
         "severity": "yellow",
         "status_emoji": "🟡",
-        "tag": "OPEP+",
-        "titulo": "OPEP+ aumenta cota de junho mesmo com EAU fora — sinal cauteloso"
+        "tag": "Brasil",
+        "titulo": "Ibov fechou em 185.600 (-0,92%); aversão a risco volta forte"
       }
     ]
   },
   "petroleo": {
     "brent": {
-      "val": "US$ 107,42",
-      "delta": "▼ -0,69%",
+      "val": "US$ 113,24",
+      "delta": "▼ -1,2% (hoje)",
       "dir": "down",
-      "sub": "range hoje 105,66-108,80"
+      "sub": "ontem: ▲ +6% fech US$ 114,44"
     },
     "wti": {
-      "val": "US$ 100,99",
-      "delta": "▼ -0,93%",
+      "val": "US$ 104,57",
+      "delta": "▼ -1,8% (hoje)",
       "dir": "down",
-      "sub": "mês ▼ -9,5%"
+      "sub": "ontem: ▲ +4% fech US$ 106,42"
     },
-    "nota": "<b>Project Freedom</b> começa hoje (EUA escoltam navios civis fora de Ormuz). <b>Irã revisa proposta</b> de 14 pontos enviada aos EUA. Range diário estreito sugere acomodação.",
-    "citacao": "<b>Goldman:</b> Ormuz ainda em 4% do normal. <b>ING:</b> mercado precifica trégua mas oferta física segue apertada. <b>EIA:</b> exportações dos EUA em recorde."
+    "nota": "Recuo técnico após salto de 6% ontem. <b>Iran atacou EAU</b>: 12 mísseis balísticos + 3 cruise + 4 drones. Fogo em Fujairah. EUA afundaram navios iranianos. <b>Trump:</b> Irã será apagado se atacar tropas dos EUA.",
+    "citacao": "<b>Goldman:</b> estoques globais em 101 dias, podem cair para 98 até fim de maio. <b>ING:</b> mercado precifica conflito por mais 2-3 semanas."
   },
   "moedas": {
-    "usdbrl": {"val": "R$ 4,98", "delta": "• abertura", "dir": "flat"},
+    "usdbrl": {"val": "R$ 4,98", "delta": "• estável", "dir": "flat"},
     "eurbrl": {"val": "R$ 5,68", "delta": "▼", "dir": "down"},
-    "dxy": {"val": "97,96", "delta": "▼ -0,04%", "dir": "down"},
-    "btc": {"val": "US$ 78.441", "delta": "▲ recupera", "dir": "up"},
-    "nota": "Real lidera moedas globais em 2026. Dólar Ptax acumula -9,34% no ano. Bitcoin teve melhor mês desde fev/25 (+8,42% em abril)."
+    "dxy": {"val": "97,96", "delta": "▼ leve", "dir": "down"},
+    "btc": {"val": "US$ 78.441", "delta": "▼ pressionado", "dir": "down"},
+    "nota": "Dólar segue abaixo de R$ 5 mesmo com escalada — Selic 14,50% sustenta carry. Mas pressão pode aumentar se cenário piorar."
   },
   "bolsas": {
-    "ibov": {"val": "~189 mil", "delta": "reabre hoje", "dir": "flat"},
-    "sp": {"val": "7.230,12", "delta": "▲ +0,29%", "dir": "up"},
-    "nasdaq": {"val": "25.114,44", "delta": "▲ +0,89% recorde", "dir": "up"},
-    "dow": {"val": "49.499,27", "delta": "▼ -0,31%", "dir": "down"},
-    "nota": "B3 reabre após feriado. Ibov acumula <b>+13,5% em 2026</b> — 18 máximas históricas no ano. Wall Street em recordes (Nasdaq notch)."
+    "ibov": {"val": "185.600", "delta": "▼ -0,92%", "dir": "down"},
+    "sp": {"val": "7.230", "delta": "▼ ajuste", "dir": "down"},
+    "nasdaq": {"val": "25.067,80", "delta": "▼ -0,19%", "dir": "down"},
+    "dow": {"val": "48.941,90", "delta": "▼ -1,13%", "dir": "down"},
+    "nota": "Ibov ontem em 185.600 (-0,92%) — volume R$ 26,38 bi. Realização de lucros + aversão a risco. Bancos e mineradoras lideraram queda; energia limitou perdas."
   },
   "juros": {
-    "selic": {"val": "14,50% a.a.", "delta": "▼ cortada 29/abr", "dir": "down"},
+    "selic": {"val": "14,50% a.a.", "delta": "cortada 29/abr", "dir": "down"},
     "fed": {"val": "3,50–3,75%", "delta": "mantido", "dir": "flat"},
-    "ust10y": {"val": "~4,35%", "sub": "▼ leve recuo"},
-    "nota": "Próximo Copom: 17/jun. Mercado precifica novo corte para <b>14,25%</b>. Treasury 10Y em queda com DXY fraco."
+    "ust10y": {"val": "~4,40%", "sub": "▲ leve alta"},
+    "nota": "Próximo Copom: 17/jun. Choque do petróleo pode complicar próxima decisão. Mercado avalia se BC mantém ou pausa cortes."
   },
   "inflacao": {
     "ipca15": "0,89%",
     "ipca15_12m": "4,37%",
     "ipca_mar": "0,88%",
     "focus_2026": "4,86%",
-    "nota": "IPCA cheio de abril sai sex 09/mai. Choque do petróleo deve aparecer — combustíveis ainda devem puxar."
+    "nota": "IPCA cheio de abril sai sex 09/mai. Choque do petróleo desta semana já deve aparecer no IPCA-15 maio (sai 27/mai)."
   },
   "abicom": {
-    "diesel_pct": "60%+",
-    "gasolina_pct": "50%+",
-    "dias_diesel": 51,
-    "dias_gasolina": 98,
-    "diesel_tag": "Alívio leve",
+    "diesel_pct": "70%+",
+    "gasolina_pct": "60%+",
+    "dias_diesel": 52,
+    "dias_gasolina": 99,
+    "diesel_tag": "Pressão alta",
     "gasolina_tag": "Pressão alta",
-    "nota": "Brent em US$ 107 alivia, mas defasagem segue alta. <b>Reajuste QAV (+18%) em 1º/mai indica que gasolina e diesel vêm em seguida</b> — pode sair esta semana."
+    "nota": "Brent voltou aos US$ 113 — defasagem voltou a subir. <b>Reajuste Petrobras é praticamente certo esta semana</b>. Sem decisão até hoje à tarde, pode sair em comunicado de fim de tarde."
   },
   "anp": {
-    "semana": "Síntese da semana 19-25/abr sai HOJE à tarde",
+    "semana": "Síntese semana 19-25/abr publicada ontem",
     "rows": [
-      {"produto": "Gasolina C", "preco": "a confirmar", "status": "yellow", "status_label": "hoje"},
-      {"produto": "Etanol hidr.", "preco": "a confirmar", "status": "yellow", "status_label": "hoje"},
-      {"produto": "Diesel S-10", "preco": "a confirmar", "status": "yellow", "status_label": "hoje"},
-      {"produto": "Diesel comum", "preco": "a confirmar", "status": "yellow", "status_label": "hoje"},
-      {"produto": "GLP P-13", "preco": "a confirmar", "status": "yellow", "status_label": "hoje"}
+      {"produto": "Gasolina C", "preco": "R$ 6,29/L", "status": "gray", "status_label": "última"},
+      {"produto": "Etanol hidr.", "preco": "a confirmar", "status": "blue", "status_label": "pendente"},
+      {"produto": "Diesel S-10", "preco": "a confirmar", "status": "blue", "status_label": "pendente"},
+      {"produto": "Diesel comum", "preco": "R$ 7,58/L", "status": "gray", "status_label": "última"},
+      {"produto": "GLP P-13", "preco": "a confirmar", "status": "blue", "status_label": "pendente"}
     ],
-    "nota": "<b>Mudança regulatória (30/abr):</b> ANP usa só USGC como referência da subvenção do diesel. Fiscalização ativa: 16 distribuidoras + 2 postos autuados; multas até R$ 500 mi."
+    "nota": "<b>Mudança regulatória:</b> ANP usa só USGC como referência da subvenção. Fiscalização ativa: 16 distribuidoras + 2 postos autuados; multas até R$ 500 mi."
   },
   "cepea": {
     "hidratado": [
@@ -107,69 +107,69 @@
     ],
     "anidro_sp": {"val": "R$ 3,1591", "delta": "▲ alta", "dir": "up"},
     "acucar": {"val": "—", "delta": "▼ recua com safra", "dir": "down"},
-    "nota": "Hidratado firme. Com Brent em US$ 107, etanol mantém competitividade — reajuste Petrobras pode reabrir a janela rapidamente."
+    "nota": "Brent acima de US$ 113 sustenta o etanol. Reajuste da gasolina pela Petrobras (esperado esta semana) reabre janela competitiva forte para o hidratado."
   },
   "eg": {
     "paridade_sp": "72%",
     "mandato_e": "E30",
     "mandato_b": "B15",
-    "nota": "Paridade ainda favorece gasolina. Reajuste pós-QAV deve inverter — flex tende a migrar para hidratado."
+    "nota": "Paridade ainda favorece gasolina. Reajuste pós-escalada deve inverter rapidamente — flex deve migrar."
   },
   "safra": {
     "moagem": {"val": "635 Mt", "delta": "▲ +4%"},
     "atr": {"val": "139,4 kg/t", "delta": "▲ +1%"},
     "mix": {"val": "48,5%"},
     "oferta": {"val": "+10%", "delta": "▲ UNICA"},
-    "nota": "Safra alcooleira em curso (mix etanol 51,5%). Oferta robusta sustenta margem na migração flex."
+    "nota": "Safra alcooleira em curso (mix etanol 51,5%). Oferta robusta sustenta margem do revendedor na migração flex."
   },
   "agenda": [
-    {"day": "Seg 04/mai", "evento": "B3 reabre · Síntese ANP semanal", "tag": "yellow", "tag_label": "hoje"},
+    {"day": "Ter 05/mai", "evento": "Petróleo recua mas tensão segue alta", "tag": "red", "tag_label": "hoje"},
     {"day": "Qua 06/mai", "evento": "EIA estoques semanais (EUA)", "tag": "blue", "tag_label": "dado"},
     {"day": "Qui 07/mai", "evento": "FENABRAVE: emplacamentos abril", "tag": "blue", "tag_label": "dado"},
     {"day": "Sex 09/mai", "evento": "IPCA abril (IBGE)", "tag": "blue", "tag_label": "dado"},
     {"day": "Dom 10/mai", "evento": "Dia das Mães", "tag": "gray", "tag_label": "comercial"}
   ],
   "radar": [
-    "Brent em <b>US$ 107,42</b> com diplomacia avançando — range estreito hoje.",
-    "<b>Project Freedom começa hoje:</b> EUA escoltam navios civis fora de Ormuz.",
-    "Irã está <b>revisando proposta de 14 pontos</b> enviada de volta pelos EUA.",
-    "<b>Petrobras reajustou QAV em +18%</b> em 1º/mai — sinal claro de movimento.",
-    "Wall Street em recordes (Nasdaq +0,89%); Ibov reabre hoje."
+    "<b>Irã atacou EAU</b> ontem: 12 mísseis + drones; fogo em Fujairah.",
+    "<b>EUA afundaram navios iranianos</b> no Estreito — escalada militar.",
+    "Brent saltou <b>+6% ontem</b> (US$ 114,44); recua para US$ 113 hoje.",
+    "Ibov fechou em 185.600 (-0,92%) com aversão a risco.",
+    "<b>Reajuste Petrobras</b> é praticamente certo esta semana."
   ],
   "acao": {
-    "tag": "Reabertura — atenção dupla",
-    "lead": "<b>Cenário ambíguo:</b> Brent em US$ 107 mas Petrobras já reajustou QAV em 18%. Gasolina e diesel são os próximos da fila — pode sair ainda esta semana.",
+    "tag": "Cenário crítico — alerta vermelho",
+    "lead": "<b>A guerra voltou.</b> Mísseis iranianos atingiram EAU; EUA afundaram navios. Trump ameaça resposta dura. Reajuste Petrobras pode sair a qualquer momento esta semana.",
     "items": [
-      "<b>Diesel:</b> mantém estoque pleno; reajuste virá com QAV já fora.",
-      "<b>Gasolina:</b> reveja preço no abre; QAV +18% sinaliza patamar do repasse.",
-      "<b>Etanol:</b> hidratado em volume — migração flex segue provável.",
-      "<b>Síntese ANP hoje à tarde:</b> primeira leitura pós-IPCA-15.",
-      "<b>FENABRAVE quinta:</b> primeiro dado de emplacamentos pós-Selic 14,50.",
-      "<b>Verimo:</b> nova janela aberta para revisar apólices da operação."
+      "<b>Diesel:</b> estoque pleno HOJE; pressão de reajuste no teto.",
+      "<b>Gasolina:</b> 3 cenários prontos (+R$ 0,30 / +R$ 0,50 / +R$ 0,80).",
+      "<b>Etanol:</b> hidratado em volume — janela competitiva está reabrindo.",
+      "<b>Comunicação:</b> placa pré-pronta no PDV para repasse imediato.",
+      "<b>Equipe:</b> alinhamento total via grupo WhatsApp para reagir em horas.",
+      "<b>Verimo:</b> escalada de guerra = exposição máxima. Revise apólices."
     ]
   },
   "resumo": [
     {
       "lead": true,
-      "html": "Segunda abre com cenário ambíguo. O Brent opera em <b>US$ 107,42</b> (-0,69%) e WTI em <b>US$ 100,99</b> (-0,93%) com diplomacia avançando: o Irã está revisando a proposta de 14 pontos que mandou aos EUA, e a operação <b>Project Freedom</b> começa hoje — Marinha americana escolta navios civis para fora de Ormuz."
+      "html": "Terça abre com a guerra de volta no centro do tabuleiro. Ontem (segunda 04/mai), o <b>Irã atacou os Emirados Árabes Unidos</b> com 12 mísseis balísticos, 3 cruise e 4 drones, causando incêndio no terminal de Fujairah — primeiro grande golpe a infraestrutura em semanas. <b>Os EUA afundaram navios iranianos</b> no Estreito de Hormuz. <b>Trump prometeu</b> que o Irã \"será apagado da face da Terra\" se atacar tropas americanas."
     },
     {
-      "html": "Mas há um sinal vermelho discreto: a <b>Petrobras reajustou o QAV (querosene de aviação) em +18% em 1º/mai</b>. O QAV é o canário na mina — quando ele sobe, gasolina e diesel são os próximos da fila. Reajuste dos derivados-chave pode sair ainda esta semana."
+      "html": "O Brent saltou <b>+6%</b> ontem para fechar em <b>US$ 114,44</b> (máxima desde maio/22), e o WTI subiu 4% para US$ 106,42. Hoje pela manhã, leve recuo técnico: Brent em US$ 113,24 (-1,2%) e WTI em US$ 104,57 (-1,8%). Mercado precifica que o conflito segue por mais 2-3 semanas — não é mais cenário de pacificação rápida."
     },
     {
-      "html": "No câmbio, o real lidera moedas globais em 2026 (-9,34% acumulado do dólar Ptax). Dólar abre em R$ 4,98. DXY em 97,96. Selic em 14,50% mantém atratividade do carry trade. Bitcoin em US$ 78.441 — teve melhor mês desde fev (+8,42% em abril)."
+      "html": "No Brasil, <b>Ibovespa caiu 0,92% ontem</b> e fechou em 185.600 — pior desempenho desde 8 de abril. Volume forte (R$ 26,38 bi) mostra realização de lucros + aversão a risco. Bancos e mineradoras lideraram queda; energia (Petrobras, Prio) limitou perdas com barril em alta. Wall Street também caiu: Dow -1,13%, Nasdaq -0,19%."
     },
     {
-      "html": "Wall Street em <b>recordes históricos</b>: Nasdaq +0,89% (25.114 pts), S&P +0,29% (7.230 pts), Dow -0,31% (49.499 pts). B3 reabre hoje após feriado prolongado — Ibov acumula +13,5% em 2026 com 18 máximas históricas no ano."
+      "html": "No câmbio, o real surpreende ao resistir abaixo de R$ 5 mesmo com a escalada. Dólar em R$ 4,98. DXY em 97,96. Selic em 14,50% sustenta o carry trade — mas a pressão pode aumentar se o cenário piorar mais."
     },
     {
-      "html": "Defasagem Abicom recuou: agora em <b>~60% no diesel</b> e <b>~50% na gasolina</b> com Brent em US$ 107 — mas ainda alta. Diesel sem reajuste há 51 dias, gasolina há 98. O movimento do QAV mostra que a Petrobras está se preparando."
+      "html": "O nó do posto voltou ao limite. Defasagem Abicom subiu de novo para <b>~70% no diesel</b> e <b>~60% na gasolina</b> com Brent em US$ 113. Diesel sem reajuste há 52 dias, gasolina há 99. <b>Reajuste Petrobras é praticamente certo esta semana</b> — pode sair a qualquer momento, inclusive em comunicado de fim de tarde."
     },
     {
-      "html": "Etanol firme. Cepea aponta hidratado mantendo: SP R$ 2,7398, PR R$ 2,8120, GO R$ 2,6850, MG R$ 2,7200, MT R$ 2,5900. Anidro SP em R$ 3,1591. Safra 26/27 com mix alcooleiro (51,5%) e oferta +10%. E/G em SP em 72%."
+      "html": "Etanol em momento favorável. Cepea aponta hidratado firme: SP R$ 2,7398, PR R$ 2,8120, GO R$ 2,6850, MG R$ 2,7200, MT R$ 2,5900. Anidro SP em R$ 3,1591. Safra 26/27 com mix alcooleiro (51,5%) e oferta +10% (UNICA). Reajuste da gasolina abre janela explosiva para o hidratado."
     },
     {
-      "html": "<b>Para o posto:</b> reabertura em modo atenção dupla. O Brent em US$ 107 — alívio relativo — mas o QAV +18% diz que o reajuste dos combustíveis-chave já está no forno. Mantenha estoque, reveja a precificação, monitore a síntese ANP de hoje à tarde."
+      "html": "<b>Para o posto:</b> alerta vermelho retomado. Diesel em estoque pleno hoje. Gasolina com 3 cenários prontos para reagir em minutos. Hidratado em volume para a migração flex. Equipe alinhada via WhatsApp para repasse imediato. Sexta sai o IPCA cheio de abril; quinta o FENABRAVE de abril."
     }
   ]
 }
