@@ -1,101 +1,101 @@
 {
   "meta": {
-    "date_iso": "2026-05-08",
-    "date_label": "Sexta · 08 mai 2026",
+    "date_iso": "2026-05-11",
+    "date_label": "Segunda · 11 mai 2026",
     "last_update": "08:30",
-    "next_update": "segunda · 11 mai · 07:30"
+    "next_update": "amanhã · 12 mai · 07:30"
   },
   "manchete": {
     "principal": {
-      "severity": "yellow",
-      "status_emoji": "🟡",
-      "severity_label": "Atenção",
-      "titulo": "CENTCOM repele ataques em Hormuz; IEA aponta 14 mi b/d em risco",
-      "corpo": "Confronto naval renovado em Hormuz. <b>IEA:</b> guerra disrupta 14 mi b/d de oferta global. EUA: estoques de gasolina caem há 12 semanas. Tehran responde proposta em 48h. Hoje: <b>IPCA cheio de abril</b> e síntese ANP."
+      "severity": "red",
+      "status_emoji": "🔴",
+      "severity_label": "Crítico",
+      "titulo": "Trump rejeita contraproposta do Irã: \"TOTALMENTE INACEITÁVEL\"",
+      "corpo": "Trump rejeitou frontalmente a contraoferta iraniana. Netanyahu: <b>\"guerra não acabou\"</b>. Brent salta para US$ 103,80 (+2,5%); WTI US$ 97,40 (+2%). Mercado teme nova escalada militar."
     },
     "secundarias": [
       {
-        "severity": "yellow",
-        "status_emoji": "🟡",
+        "severity": "red",
+        "status_emoji": "🔴",
         "tag": "Geopolítica",
-        "titulo": "CENTCOM repele novos ataques iranianos em Hormuz; resposta em 48h"
+        "titulo": "Trump: \"TOTALMENTE INACEITÁVEL\" — rejeita contraproposta do Irã"
       },
       {
         "severity": "red",
         "status_emoji": "🔴",
-        "tag": "IEA",
-        "titulo": "IEA alerta: guerra disrupta 14 milhões de barris/dia de oferta global"
+        "tag": "Israel",
+        "titulo": "Netanyahu alerta: guerra não acabou — risco de reescalada volta"
       },
       {
-        "severity": "yellow",
-        "status_emoji": "🟡",
+        "severity": "green",
+        "status_emoji": "🟢",
         "tag": "Brasil",
-        "titulo": "IPCA cheio de abril sai hoje 9h — gasolina deve puxar índice"
+        "titulo": "Dólar fechou sex em R$ 4,8961 — mínima de 2 anos resiste"
       }
     ]
   },
   "petroleo": {
     "brent": {
-      "val": "US$ 100,54",
-      "delta": "▲ +0,48%",
+      "val": "US$ 103,80",
+      "delta": "▲ +2,5% (hoje)",
       "dir": "up",
-      "sub": "mês ▲ +4,82%"
+      "sub": "range 96,93-110,93"
     },
     "wti": {
-      "val": "US$ 95,46",
-      "delta": "▲ +0,69%",
+      "val": "US$ 97,40",
+      "delta": "▲ +2,0% (hoje)",
       "dir": "up",
-      "sub": "12 semanas estoques EUA ▼"
+      "sub": "semana -7%"
     },
-    "nota": "<b>CENTCOM repeliu ataques iranianos novamente</b> em Hormuz; Tehran responde proposta dos EUA em até 48h via Paquistão. <b>IEA:</b> guerra disrupta ~14 mi b/d de oferta global. Recuperação pós-guerra deve ser gradual.",
-    "citacao": "<b>EIA:</b> estoques de gasolina nos EUA caíram pela 12ª semana seguida. <b>IEA:</b> guerra disrupta 14 mi b/d. <b>Goldman:</b> oferta tight mesmo com cessar-fogo."
+    "nota": "<b>Trump rejeitou contraproposta iraniana</b> ontem à noite. <b>Netanyahu:</b> \"guerra não acabou\". Brent e WTI subiram cerca de 40% desde início da guerra (28/fev). Volatilidade extrema deve continuar.",
+    "citacao": "<b>Sparta:</b> mercado precisa destruir 9 mi b/d de demanda — só países ricos vão pagar. <b>Goldman:</b> Brent pode chegar a US$ 200 nos produtos refinados. <b>ING:</b> oferta tight enquanto Hormuz fechado."
   },
   "moedas": {
-    "usdbrl": {"val": "R$ 4,9123", "delta": "▼ mín. 2 anos", "dir": "down"},
+    "usdbrl": {"val": "R$ 4,8961", "delta": "▼ -0,55% (sex)", "dir": "down"},
     "eurbrl": {"val": "R$ 5,68", "delta": "▼", "dir": "down"},
-    "dxy": {"val": "97,80", "delta": "▼ mín. 9 sem", "dir": "down"},
-    "btc": {"val": "US$ 79.500", "delta": "▲ recupera", "dir": "up"},
-    "nota": "Real <b>menor desde janeiro/2024</b>. Em 2026, USD acumula -10,51% ante o real. Bradesco revisou Selic 2026 para 12,75% (era 13,0%) com fim previsto da guerra ainda neste tri."
+    "dxy": {"val": "97,85", "delta": "▲ leve", "dir": "up"},
+    "btc": {"val": "US$ 80.808", "delta": "▲ +0,71%", "dir": "up"},
+    "nota": "<b>Dólar abaixo de R$ 4,90 pela 1ª vez em 2 anos.</b> Semana -1,13% ante real. Selic 14,50% sustenta carry. Bitcoin volta para US$ 80 mil — melhor patamar desde fev."
   },
   "bolsas": {
-    "ibov": {"val": "186.753", "delta": "▲ +0,62% (ter)", "dir": "up"},
-    "sp": {"val": "7.288", "delta": "▲ recorde (ter)", "dir": "up"},
-    "nasdaq": {"val": "25.325", "delta": "▲ recorde (ter)", "dir": "up"},
-    "dow": {"val": "49.300", "delta": "▲ +0,73% (ter)", "dir": "up"},
-    "nota": "Ibov puxado por Ambev e melhor humor global. <b>S&P e Nasdaq em novas máximas históricas</b>. Ibov acumula +15,8% em 2026. Hoje: mercado aguarda IPCA + resposta iraniana."
+    "ibov": {"val": "184.108", "delta": "▲ +0,49% (sex)", "dir": "up"},
+    "sp": {"val": "7.398,93", "delta": "▲ +0,84% recorde", "dir": "up"},
+    "nasdaq": {"val": "26.247,08", "delta": "▲ +1,71% recorde", "dir": "up"},
+    "dow": {"val": "49.609,16", "delta": "▲ +0,02%", "dir": "up"},
+    "nota": "Ibov sexta puxado por Localiza (resultados fortes), Vale e Itaú. Semana -1,71% (4ª queda seguida). Wall Street em <b>novos recordes históricos</b> — descolamento absoluto do petróleo."
   },
   "juros": {
     "selic": {"val": "14,50% a.a.", "delta": "cortada 29/abr", "dir": "down"},
     "fed": {"val": "3,50–3,75%", "delta": "mantido", "dir": "flat"},
-    "ust10y": {"val": "~4,30%", "sub": "▼ leve recuo"},
-    "nota": "<b>Bradesco revisou Selic 2026 para 12,75%</b> assumindo fim da guerra ainda neste tri. Ata Copom: tom cauteloso mas BC confiante. Próximo Copom: 17/jun."
+    "ust10y": {"val": "~4,30%", "sub": "estável"},
+    "nota": "Próximo Copom: 17/jun. Bradesco vê Selic 12,75% fim/26. Choque do petróleo desta semana pode complicar próximas decisões do BC."
   },
   "inflacao": {
     "ipca15": "0,89%",
     "ipca15_12m": "4,37%",
     "ipca_mar": "0,88%",
     "focus_2026": "4,86%",
-    "nota": "<b>IPCA cheio de abril sai HOJE 9h.</b> Mercado projeta 0,80%-0,90%. Gasolina deve aparecer com força (no IPCA-15 puxou +6,23% no mês; diesel +16%)."
+    "nota": "IPCA cheio de abril divulgado sex 09/mai (resultado a confirmar). Choque do petróleo desta semana já é tema para IPCA-15 maio (27/mai). Pressão sobre Focus pode voltar."
   },
   "abicom": {
-    "diesel_pct": "50%+",
-    "gasolina_pct": "40%+",
-    "dias_diesel": 55,
-    "dias_gasolina": 102,
-    "diesel_tag": "Aliviou",
-    "gasolina_tag": "Aliviou",
-    "nota": "Defasagem aliviada com Brent abaixo de US$ 102. Petrobras vai segurar enquanto trégua avançar. <b>Mas confronto naval renovado em Hormuz pode mudar o jogo</b> rapidamente."
+    "diesel_pct": "55%+",
+    "gasolina_pct": "45%+",
+    "dias_diesel": 58,
+    "dias_gasolina": 105,
+    "diesel_tag": "Pressão volta",
+    "gasolina_tag": "Pressão volta",
+    "nota": "Brent voltou para US$ 103 — defasagem volta a subir. Petrobras pode voltar a estudar reajuste se Brent passar US$ 105 com firmeza. <b>Diesel: 58 dias sem reajuste; gasolina: 105 dias.</b>"
   },
   "anp": {
-    "semana": "Síntese semana 26/abr-02/mai sai HOJE à tarde",
+    "semana": "Síntese semana 03-09/mai sai sex 15/mai",
     "rows": [
-      {"produto": "Gasolina C", "preco": "R$ 6,29/L", "status": "gray", "status_label": "ref. 05-11"},
-      {"produto": "Etanol hidr.", "preco": "a confirmar", "status": "yellow", "status_label": "hoje"},
-      {"produto": "Diesel S-10", "preco": "a confirmar", "status": "yellow", "status_label": "hoje"},
-      {"produto": "Diesel comum", "preco": "R$ 7,58/L", "status": "gray", "status_label": "ref. 05-11"},
-      {"produto": "GLP P-13", "preco": "a confirmar", "status": "yellow", "status_label": "hoje"}
+      {"produto": "Gasolina C", "preco": "R$ 6,29/L", "status": "gray", "status_label": "ref. ant."},
+      {"produto": "Etanol hidr.", "preco": "a confirmar", "status": "blue", "status_label": "pendente"},
+      {"produto": "Diesel S-10", "preco": "a confirmar", "status": "blue", "status_label": "pendente"},
+      {"produto": "Diesel comum", "preco": "R$ 7,58/L", "status": "gray", "status_label": "ref. ant."},
+      {"produto": "GLP P-13", "preco": "a confirmar", "status": "blue", "status_label": "pendente"}
     ],
-    "nota": "<b>Síntese semanal sai hoje à tarde</b> — primeira semana pós-feriado. <b>FENABRAVE abr (ontem):</b> emplacamentos +14,9% no quadrimestre; caminhões -3,2% a/a (preocupação para o diesel)."
+    "nota": "Última síntese de fato divulgada: 12-18/abr. Síntese de 26/abr-02/mai esperada para hoje ou amanhã. <b>Fiscalização ANP ativa</b>: documente sua margem."
   },
   "cepea": {
     "hidratado": [
@@ -106,73 +106,70 @@
       {"uf": "MT", "preco": "R$ 2,5900", "dir": "flat"}
     ],
     "anidro_sp": {"val": "R$ 3,1591", "delta": "• estável", "dir": "flat"},
-    "acucar": {"val": "—", "delta": "▼ recua com safra", "dir": "down"},
-    "nota": "Hidratado estável, mas perdendo competitividade com queda do Brent. Usinas avaliam mix — açúcar pode ganhar espaço se petróleo continuar abaixo de US$ 102."
+    "acucar": {"val": "—", "delta": "▼ recua", "dir": "down"},
+    "nota": "Hidratado estável. Com Brent voltando para US$ 103, etanol recupera competitividade marginal — mas reajuste Petrobras ainda incerto."
   },
   "eg": {
     "paridade_sp": "72%",
     "mandato_e": "E30",
     "mandato_b": "B15",
-    "nota": "Petrobras segurando reajuste = paridade pode ficar acima de 72% mais tempo. Vantagem da gasolina no flex se mantém."
+    "nota": "Paridade ainda favorece gasolina. Se Brent persistir acima de US$ 105 e Petrobras reajustar, jogo inverte rapidamente."
   },
   "safra": {
     "moagem": {"val": "635 Mt", "delta": "▲ +4%"},
     "atr": {"val": "139,4 kg/t", "delta": "▲ +1%"},
     "mix": {"val": "48,5%"},
     "oferta": {"val": "+10%", "delta": "▲ UNICA"},
-    "nota": "UNICA divulga 1ª quinz mai em 15/mai. Com Brent abaixo de US$ 102, usinas podem revisar mix levemente para açúcar — atenção ao próximo número."
+    "nota": "UNICA divulga 1ª quinz mai em qui 15/mai. Com Brent voltando, mix pode permanecer alcooleiro (51,5% etanol)."
   },
   "agenda": [
-    {"day": "Sex 08/mai", "evento": "IPCA abril 9h · Síntese ANP tarde", "tag": "red", "tag_label": "hoje"},
-    {"day": "Dom 10/mai", "evento": "Dia das Mães", "tag": "gray", "tag_label": "comercial"},
+    {"day": "Seg 11/mai", "evento": "Mercado reage à rejeição de Trump", "tag": "red", "tag_label": "hoje"},
     {"day": "Qui 15/mai", "evento": "UNICA 1ª quinz mai · IBC-Br março", "tag": "blue", "tag_label": "dado"},
+    {"day": "Sex 15/mai", "evento": "Síntese ANP semanal", "tag": "blue", "tag_label": "dado"},
     {"day": "Qua 21/mai", "evento": "EIA estoques semanais (EUA)", "tag": "blue", "tag_label": "dado"},
     {"day": "Ter 27/mai", "evento": "IPCA-15 maio (IBGE)", "tag": "blue", "tag_label": "dado"}
   ],
   "radar": [
-    "<b>CENTCOM repeliu ataques iranianos</b> em Hormuz novamente.",
-    "<b>IEA:</b> guerra disrupta 14 mi b/d de oferta global.",
-    "<b>EUA:</b> estoques de gasolina em queda há 12 semanas seguidas.",
-    "<b>Tehran:</b> resposta à proposta dos EUA em 48h via Paquistão.",
-    "<b>FENABRAVE:</b> mercado +14,9% no quadrimestre; caminhões -3,2%."
+    "<b>Trump:</b> \"TOTALMENTE INACEITÁVEL\" — rejeita Irã.",
+    "<b>Netanyahu:</b> guerra não acabou — risco de reescalada.",
+    "Brent salta <b>+2,5%</b> para US$ 103,80 (range 96,93-110,93).",
+    "Dólar fechou sex em <b>R$ 4,8961</b> — mín. 2 anos resiste.",
+    "Wall Street em <b>novos recordes</b>: S&P, Nasdaq, Dow."
   ],
   "acao": {
-    "tag": "Volatilidade — IPCA decisivo",
-    "lead": "<b>Cenário ainda favorável mas frágil.</b> Confronto naval em Hormuz renovado, IEA confirma disrupção de 14 mi b/d. IPCA hoje pode mudar tudo — monitore às 9h.",
+    "tag": "Volta a vermelho — atenção máxima",
+    "lead": "<b>Trump rejeitou Irã frontalmente.</b> Netanyahu alerta para escalada. Brent volta a subir. Cenário virou em 24h — Petrobras pode reabrir gatilho de reajuste se Brent firmar acima US$ 105.",
     "items": [
-      "<b>Diesel:</b> mantenha estoque normal — não compre agressivamente.",
-      "<b>Gasolina:</b> precificação atual segura; Petrobras vai segurar.",
-      "<b>Etanol:</b> hidratado em estoque mínimo necessário.",
-      "<b>IPCA 9h:</b> monitor crítico — afeta próximas decisões da Petrobras.",
-      "<b>Síntese ANP tarde:</b> primeira semana pós-feriado.",
-      "<b>Verimo:</b> janela aberta para revisar apólices com volatilidade alta."
+      "<b>Diesel:</b> volte a reforçar estoque — pressão de reajuste retorna.",
+      "<b>Gasolina:</b> 3 cenários novamente prontos no celular.",
+      "<b>Etanol:</b> hidratado recupera competitividade — reabra pedido.",
+      "<b>Documente margem:</b> fiscalização ANP segue ativa — proteção total.",
+      "<b>Equipe:</b> alinhamento WhatsApp ativo para reagir em horas.",
+      "<b>Verimo:</b> cenário de volatilidade extrema = revise apólices HOJE."
     ]
   },
   "resumo": [
     {
       "lead": true,
-      "html": "Sexta abre com tensão renovada no Estreito de Hormuz e dois indicadores brasileiros importantes pela frente. <b>O CENTCOM (Comando Central dos EUA)</b> confirmou que repeliu novos ataques iranianos enquanto destróieres americanos passavam pelo Estreito. Tehran segue revisando o memorando de 1 página enviado pelos EUA via Paquistão; resposta esperada em até 48 horas."
+      "html": "Segunda abre com cenário virado de volta ao vermelho. Trump rejeitou frontalmente a contraproposta iraniana: <b>\"Acabei de ler a resposta dos 'Representantes' do Irã. Não gostei — TOTALMENTE INACEITÁVEL!\"</b>. Netanyahu reforçou: a guerra não acabou. O Brent saltou +2,5% para <b>US$ 103,80</b> e WTI +2% para <b>US$ 97,40</b>."
     },
     {
-      "html": "<b>O alerta veio da IEA</b> (Agência Internacional de Energia): a guerra está disruptando aproximadamente <b>14 milhões de barris/dia</b> de oferta global. Recuperação pós-conflito deve ser gradual mesmo com cessar-fogo, porque seguradoras estão relutantes em servir tankers no Estreito após relatos de ataques. Brent volta a subir hoje (US$ 100,54, +0,48%); WTI em US$ 95,46 (+0,69%)."
+      "html": "Tanto Brent quanto WTI subiram cerca de <b>40% desde o início da guerra em 28/fev</b>. Goldman estima que exportações por Hormuz seguem em apenas 4% do normal. Sparta Commodities compara à pandemia: <b>a guerra está retirando 9 milhões de b/d de oferta</b> — mesmo nível da demanda perdida em 2020. Para o equilíbrio voltar, demanda terá que ser destruída."
     },
     {
-      "html": "Sinal estrutural negativo: <b>os estoques de gasolina nos EUA caíram pela 12ª semana consecutiva</b>. Estoques de diesel caem há 9 semanas. Mesmo com a maior produção americana da história, o consumidor sente o aperto — California passou de US$ 6/galão na média estatal."
+      "html": "No câmbio, real continua firme. <b>Dólar fechou sexta em R$ 4,8961</b> — primeira cotação abaixo de R$ 4,90 em mais de 2 anos. Na semana, USD caiu 1,13% ante real. Em 2026, acumula -10,51%. Selic 14,50% sustenta carry. Bitcoin volta para US$ 80 mil — recuperação."
     },
     {
-      "html": "<b>HOJE 9h: IPCA cheio de abril.</b> O IPCA-15 já veio em 0,89% (12m em 4,37%, perto do teto). O mercado projeta o cheio entre 0,80% e 0,90%. <b>Combustíveis devem puxar com força:</b> no IPCA-15 abril, gasolina subiu 6,23% no mês (impacto 0,32 p.p.) e diesel 16% (0,04 p.p.)."
+      "html": "<b>Bolsas em movimento contrário:</b> Ibov fechou sexta em 184.108 (+0,49%), puxado por Localiza, Vale e Itaú. Mas a semana acumula -1,71% — 4ª queda seguida. Wall Street fez <b>novos recordes históricos</b>: S&P 7.398 (+0,84%), Nasdaq 26.247 (+1,71%), Dow 49.609. Descolamento absoluto do petróleo."
     },
     {
-      "html": "No câmbio, real continua liderando moedas globais. <b>Dólar fechou terça em R$ 4,9123</b>, menor desde janeiro/2024. <b>Bradesco revisou Selic 2026 para 12,75%</b> (era 13,0%), assumindo fim da guerra ainda neste tri. Wall Street fez novos recordes (S&P, Nasdaq, Dow). Ibov +15,8% em 2026."
+      "html": "<b>Defasagem Abicom volta a subir.</b> Diesel saiu de ~50% para ~55%; gasolina de ~40% para ~45%. Diesel sem reajuste há 58 dias, gasolina 105. Se Brent persistir acima de US$ 105, Petrobras pode voltar a estudar reajuste — quinta-feira (14/05) ou sexta (15/05) são janelas prováveis."
     },
     {
-      "html": "Defasagem Abicom segue aliviada: diesel ~50%, gasolina ~40%. Petrobras vai segurar reajuste enquanto trégua avançar — diesel sem reajuste há 55 dias, gasolina 102. <b>Mas confronto naval renovado em Hormuz pode mudar o jogo rapidamente</b>. FENABRAVE abr (ontem): emplacamentos +14,9% no quadrimestre; caminhões -3,2% a/a (preocupação para o diesel)."
+      "html": "Etanol em momento marginal favorável. Cepea aponta hidratado estável: SP R$ 2,7398, PR R$ 2,8120, GO R$ 2,6850, MG R$ 2,7200, MT R$ 2,5900. Anidro SP R$ 3,1591. Com Brent voltando, competitividade marginal melhora. UNICA divulga 1ª quinz mai em quinta 15/05 — atenção ao mix."
     },
     {
-      "html": "Etanol perde competitividade. Cepea aponta hidratado estável: SP R$ 2,7398, PR R$ 2,8120, GO R$ 2,6850, MG R$ 2,7200, MT R$ 2,5900. Anidro SP R$ 3,1591. E/G em SP segue em 72%. Síntese ANP semanal sai hoje à tarde — primeira leitura pós-feriado prolongado."
-    },
-    {
-      "html": "<b>Para o posto:</b> sexta de monitoramento intenso. IPCA às 9h é o evento do dia. Síntese ANP à tarde traz cenário pós-feriado. Mantenha estoques normais, precificação atual e equipe alinhada via WhatsApp. Confronto em Hormuz pode reverter cenário a qualquer momento."
+      "html": "<b>Para o posto:</b> volta a vermelho. Diesel em estoque pleno — pressão de reajuste retorna. Gasolina com 3 cenários prontos para reagir em minutos. Hidratado em volume — recupera competitividade. Equipe alinhada via WhatsApp para reação em horas. <b>Verimo: revise apólices HOJE</b> — cenário de volatilidade extrema continua."
     }
   ]
 }
