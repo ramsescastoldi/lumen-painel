@@ -161,14 +161,14 @@ async function callClaude() {
     },
     body: JSON.stringify({
       model: MODEL,
-      max_tokens: 16000,
+      max_tokens: 8000,
       system: SYSTEM_PROMPT,
       messages: [{ role: "user", content: USER_PROMPT }],
       tools: [
         {
           type: "web_search_20250305",
           name: "web_search",
-          max_uses: 30
+          max_uses: 12
         }
       ]
     })
