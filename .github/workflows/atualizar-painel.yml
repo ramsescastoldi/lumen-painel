@@ -2,8 +2,8 @@ name: Atualiza painel diariamente
 
 on:
   schedule:
-    # 07:30 BRT (UTC-3) = 10:30 UTC. Roda só em dias úteis (seg-sex)
-    - cron: '30 10 * * 1-5'
+    # 06:30 BRT (UTC-3) = 09:30 UTC. Roda só em dias úteis (seg-sex)
+    - cron: '30 9 * * 1-5'
   workflow_dispatch:
     # Permite rodar manualmente pelo botão "Run workflow" na UI do GitHub
 
@@ -44,14 +44,34 @@ jobs:
           git push
           echo "✓ Commit feito"
 
-      - name: Notificar n8n (best-effort)
+      - name: Notificar n8n com detalhes do painel
         if: success()
         continue-on-error: true
         env:
           N8N_NOTIFY_URL: ${{ secrets.N8N_NOTIFY_URL }}
+          TZ: America/Cuiaba
         run: |
-          if [ -n "$N8N_NOTIFY_URL" ]; then
-            curl -s -X POST "$N8N_NOTIFY_URL" \
-              -H "Content-Type: application/json" \
-              -d "{\"status\":\"ok\",\"date\":\"$(TZ=America/Cuiaba date +%Y-%m-%d)\",\"workflow\":\"lumen-painel-diario\"}" || true
+          if [ -z "$N8N_NOTIFY_URL" ]; then
+            echo "ℹ️  N8N_NOTIFY_URL não configurada — pulando notificação"
+            exit 0
           fi
+          # Extrai campos do data.json gerado para incluir no payload
+          MANCHETE=$(node -e "const d=JSON.parse(require('fs').readFileSync('data.json','utf8')); process.stdout.write((d.manchete?.principal?.titulo||'').slice(0,200))")
+          DATE_LABEL=$(node -e "const d=JSON.parse(require('fs').readFileSync('data.json','utf8')); process.stdout.write(d.meta?.date_label||'')")
+          NOW=$(TZ=America/Cuiaba date +"%H:%M")
+          DATE_ISO=$(TZ=America/Cuiaba date +"%Y-%m-%d")
+          # Monta payload JSON usando jq para escape correto
+          PAYLOAD=$(jq -n \
+            --arg status "ok" \
+            --arg date "$DATE_ISO" \
+            --arg date_label "$DATE_LABEL" \
+            --arg time "$NOW" \
+            --arg manchete "$MANCHETE" \
+            --arg workflow "lumen-painel-diario" \
+            '{status:$status,date:$date,date_label:$date_label,time:$time,manchete:$manchete,workflow:$workflow}')
+          echo "Payload: $PAYLOAD"
+          curl -s -X POST "$N8N_NOTIFY_URL" \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD" || true
+          echo ""
+          echo "✓ n8n notificado"
