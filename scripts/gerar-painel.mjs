@@ -28,17 +28,26 @@ const DATA_PATH = process.env.DATA_PATH || "data.json";
 const currentData = JSON.parse(readFileSync(DATA_PATH, "utf8"));
 const structureExample = JSON.stringify(currentData, null, 2);
 
-// Data de hoje em formato BRT
+// Manchete e data da edição anterior (pra forçar diferenciação)
+const previousManchete = (currentData.manchete?.principal?.titulo || '').slice(0, 240);
+const previousSecundarias = (currentData.manchete?.secundarias || [])
+  .map(s => s.titulo)
+  .filter(Boolean)
+  .slice(0, 5);
+const previousDateIso = currentData.meta?.date_iso || '';
+
+// Data de hoje em formato BRT (Brasília GMT-3, sem DST)
 const now = new Date();
-const brtNow = new Date(now.toLocaleString("en-US", { timeZone: "America/Cuiaba" }));
+const brtNow = new Date(now.toLocaleString("en-US", { timeZone: "America/Sao_Paulo" }));
 const isoDate = brtNow.toISOString().split("T")[0];
 const diasSemana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
 const meses = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
 const dayOfWeek = diasSemana[brtNow.getDay()];
 const dateLabel = `${dayOfWeek} · ${brtNow.getDate().toString().padStart(2, "0")} ${meses[brtNow.getMonth()]} ${brtNow.getFullYear()}`;
-const hora = brtNow.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "America/Cuiaba" });
+const hora = brtNow.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "America/Sao_Paulo" });
 
 console.log(`📅 Gerando painel para ${isoDate} (${dateLabel}) — atualização ${hora}`);
+console.log(`📰 Manchete anterior (NÃO REPETIR): "${previousManchete.slice(0, 100)}..."`);
 
 const SYSTEM_PROMPT = `Você é o editor-chefe do Lumen Posto Club. Sua tarefa é gerar o JSON do **Painel Diário "Posto em Dia"** para HOJE.
 
@@ -55,6 +64,16 @@ const SYSTEM_PROMPT = `Você é o editor-chefe do Lumen Posto Club. Sua tarefa �
 3. Tom: copy-ready, conciso, direto. Cada \`nota\` no máximo 2-3 frases
 4. **Use web_search** para pesquisar TODOS os indicadores. Não invente, não use cache mental
 5. Severidade da manchete: "red" (crítico/alerta), "yellow" (atenção), "green" (calmo/positivo)
+6. **NÃO REPETIR manchete anterior** — busque o que de fato mudou nas últimas 24h
+
+## ⛔ MANCHETE DA EDIÇÃO ANTERIOR (${previousDateIso}) — NÃO REPETIR
+A edição anterior usou esta manchete principal:
+> "${previousManchete}"
+
+E essas manchetes secundárias:
+${previousSecundarias.map(s => `> "${s}"`).join('\n')}
+
+**REGRA:** sua nova manchete principal DEVE ser sobre algo que aconteceu desde a última publicação (últimas 12-24h). Use web_search para encontrar fato novo. Não reformule a antiga, não traduza, não pegue o mesmo evento sob outro ângulo se não houver desenvolvimento novo. Se o cenário não mudou, escolha um ângulo DIFERENTE para destacar (ex: dado macro novo, decisão regulatória brasileira, movimento da Petrobras, mudança no preço de combustível, etc.). Se REALMENTE não houver fato novo, escolha o evento mais relevante do dia mesmo que correlato.
 
 ## INDICADORES A PESQUISAR (use web_search)
 
