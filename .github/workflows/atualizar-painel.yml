@@ -1,0 +1,57 @@
+name: Atualiza painel diariamente
+
+on:
+  schedule:
+    # 07:30 BRT (UTC-3) = 10:30 UTC. Roda só em dias úteis (seg-sex)
+    - cron: '30 10 * * 1-5'
+  workflow_dispatch:
+    # Permite rodar manualmente pelo botão "Run workflow" na UI do GitHub
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Gerar data.json novo via Claude
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MODEL: claude-sonnet-4-6
+          TZ: America/Cuiaba
+        run: node scripts/gerar-painel.mjs
+
+      - name: Commitar mudanças (se houver)
+        run: |
+          git config user.name "Bot Lumen Painel"
+          git config user.email "bot@lumenposto.com"
+          if git diff --quiet data.json; then
+            echo "ℹ️  Nenhuma mudança em data.json — nada a commitar"
+            exit 0
+          fi
+          DATE_BR=$(TZ=America/Cuiaba date +"%d/%m/%Y %H:%M")
+          git add data.json
+          git commit -m "📊 painel diário automático — $DATE_BR"
+          git push
+          echo "✓ Commit feito"
+
+      - name: Notificar n8n (best-effort)
+        if: success()
+        continue-on-error: true
+        env:
+          N8N_NOTIFY_URL: ${{ secrets.N8N_NOTIFY_URL }}
+        run: |
+          if [ -n "$N8N_NOTIFY_URL" ]; then
+            curl -s -X POST "$N8N_NOTIFY_URL" \
+              -H "Content-Type: application/json" \
+              -d "{\"status\":\"ok\",\"date\":\"$(TZ=America/Cuiaba date +%Y-%m-%d)\",\"workflow\":\"lumen-painel-diario\"}" || true
+          fi
