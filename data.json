@@ -1,175 +1,308 @@
 {
   "meta": {
-    "date_iso": "2026-05-11",
+    "date_iso": "2026-05-12",
     "date_label": "Segunda · 11 mai 2026",
-    "last_update": "08:30",
-    "next_update": "amanhã · 12 mai · 07:30"
+    "last_update": "23:17",
+    "next_update": "amanhã · 13 mai · 07:30"
   },
   "manchete": {
     "principal": {
       "severity": "red",
       "status_emoji": "🔴",
       "severity_label": "Crítico",
-      "titulo": "Trump rejeita contraproposta do Irã: \"TOTALMENTE INACEITÁVEL\"",
-      "corpo": "Trump rejeitou frontalmente a contraoferta iraniana. Netanyahu: <b>\"guerra não acabou\"</b>. Brent salta para US$ 103,80 (+2,5%); WTI US$ 97,40 (+2%). Mercado teme nova escalada militar."
+      "titulo": "Trump: \"TOTALMENTE INACEITÁVEL\" — Irã rejeitado, Hormuz segue fechado",
+      "corpo": "Trump rejeitou frontalmente a contraproposta iraniana no domingo à noite. Irã propôs transferir parte do urânio enriquecido a terceiro país mas recusou desmantelar infraestrutura nuclear. Netanyahu reforçou: <b>\"a guerra não acabou\"</b>. Brent salta para <b>US$ 104,21</b> (+3%); WTI para <b>US$ 98,07</b> (+2,78%). Ibovespa caiu -1,19% para 181.909 pts. IEA classifica como <b>maior choque de oferta da história</b>. Aramco alerta: mercado perde 100 milhões de barris por semana."
     },
     "secundarias": [
       {
         "severity": "red",
         "status_emoji": "🔴",
         "tag": "Geopolítica",
-        "titulo": "Trump: \"TOTALMENTE INACEITÁVEL\" — rejeita contraproposta do Irã"
+        "titulo": "Hormuz bloqueado: Trump avalia retorno a operações militares — impasse total"
       },
       {
-        "severity": "red",
-        "status_emoji": "🔴",
-        "tag": "Israel",
-        "titulo": "Netanyahu alerta: guerra não acabou — risco de reescalada volta"
+        "severity": "yellow",
+        "status_emoji": "🟡",
+        "tag": "Inflação",
+        "titulo": "Focus eleva IPCA 2026 pela 9ª semana: 4,91% — acima do teto da meta"
       },
       {
         "severity": "green",
         "status_emoji": "🟢",
-        "tag": "Brasil",
-        "titulo": "Dólar fechou sex em R$ 4,8961 — mínima de 2 anos resiste"
+        "tag": "Câmbio",
+        "titulo": "Dólar fecha a R$ 4,89 segunda-feira — real resiliente apesar do caos"
       }
     ]
   },
   "petroleo": {
     "brent": {
-      "val": "US$ 103,80",
-      "delta": "▲ +2,5% (hoje)",
+      "val": "US$ 104,21",
+      "delta": "▲ +3,0% (seg)",
       "dir": "up",
-      "sub": "range 96,93-110,93"
+      "sub": "range hoje: 96,93–110,93 | +57% ano"
     },
     "wti": {
-      "val": "US$ 97,40",
-      "delta": "▲ +2,0% (hoje)",
+      "val": "US$ 98,07",
+      "delta": "▲ +2,78% (seg)",
       "dir": "up",
-      "sub": "semana -7%"
+      "sub": "range dia: 96,13–100,37"
     },
-    "nota": "<b>Trump rejeitou contraproposta iraniana</b> ontem à noite. <b>Netanyahu:</b> \"guerra não acabou\". Brent e WTI subiram cerca de 40% desde início da guerra (28/fev). Volatilidade extrema deve continuar.",
-    "citacao": "<b>Sparta:</b> mercado precisa destruir 9 mi b/d de demanda — só países ricos vão pagar. <b>Goldman:</b> Brent pode chegar a US$ 200 nos produtos refinados. <b>ING:</b> oferta tight enquanto Hormuz fechado."
+    "nota": "<b>Trump rejeitou a contraproposta do Irã</b> no domingo: \"TOTALMENTE INACEITÁVEL\". Irã propôs transferir urânio a terceiro país, mas recusou desmantelar instalações nucleares. Brent e WTI saltaram mais de 3% — Hormuz segue efetivamente fechado. <b>Saudi Aramco CEO alerta:</b> mercado perde ~100 milhões de barris/semana e normalização pode se estender até 2027.",
+    "citacao": "<b>Citi:</b> riscos ainda inclinados para alta — Irã controla timing de qualquer acordo. <b>Sparta Commodities:</b> analogia à pandemia — 9 mi b/d retirados, destruição de demanda virá. <b>IEA:</b> maior choque de oferta da história. <b>Trump:</b> mantém imposto federal baixo sobre gasolina enquanto necessário."
   },
   "moedas": {
-    "usdbrl": {"val": "R$ 4,8961", "delta": "▼ -0,55% (sex)", "dir": "down"},
-    "eurbrl": {"val": "R$ 5,68", "delta": "▼", "dir": "down"},
-    "dxy": {"val": "97,85", "delta": "▲ leve", "dir": "up"},
-    "btc": {"val": "US$ 80.808", "delta": "▲ +0,71%", "dir": "up"},
-    "nota": "<b>Dólar abaixo de R$ 4,90 pela 1ª vez em 2 anos.</b> Semana -1,13% ante real. Selic 14,50% sustenta carry. Bitcoin volta para US$ 80 mil — melhor patamar desde fev."
+    "usdbrl": {
+      "val": "R$ 4,89",
+      "delta": "▼ -0,06% (seg)",
+      "dir": "down"
+    },
+    "eurbrl": {
+      "val": "R$ 5,78",
+      "delta": "▼ leve",
+      "dir": "down"
+    },
+    "dxy": {
+      "val": "97,91",
+      "delta": "▲ +0,05% (seg)",
+      "dir": "up"
+    },
+    "btc": {
+      "val": "US$ 81.239",
+      "delta": "▼ -0,72% (24h)",
+      "dir": "down"
+    },
+    "nota": "<b>Real resistente</b> apesar do caos geopolítico. Dólar operou estável a R$ 4,89 na segunda-feira, próximo das mínimas de 2 anos. Selic 14,50% sustenta carry trade robusto. Bitcoin acima de US$ 81 mil, mas recuou após abertura forte com otimismo que logo se dissipou com rejeição de Trump ao Irã. DXY oscila perto de 97,90 — dólar fraco globalmente ainda beneficia real."
   },
   "bolsas": {
-    "ibov": {"val": "184.108", "delta": "▲ +0,49% (sex)", "dir": "up"},
-    "sp": {"val": "7.398,93", "delta": "▲ +0,84% recorde", "dir": "up"},
-    "nasdaq": {"val": "26.247,08", "delta": "▲ +1,71% recorde", "dir": "up"},
-    "dow": {"val": "49.609,16", "delta": "▲ +0,02%", "dir": "up"},
-    "nota": "Ibov sexta puxado por Localiza (resultados fortes), Vale e Itaú. Semana -1,71% (4ª queda seguida). Wall Street em <b>novos recordes históricos</b> — descolamento absoluto do petróleo."
+    "ibov": {
+      "val": "181.909",
+      "delta": "▼ -1,19% (seg)",
+      "dir": "down"
+    },
+    "sp": {
+      "val": "7.412,84",
+      "delta": "▲ +0,19% (seg) novo recorde",
+      "dir": "up"
+    },
+    "nasdaq": {
+      "val": "26.274,13",
+      "delta": "▲ +0,10% (seg) novo recorde",
+      "dir": "up"
+    },
+    "dow": {
+      "val": "49.704,47",
+      "delta": "▲ +0,19% (seg)",
+      "dir": "up"
+    },
+    "nota": "Ibovespa caiu -1,19% na segunda-feira pressionado por bancos (Itaú -2,25%, BTG -2,88%, Bradesco -2,69%), enquanto Petrobras (+1,40-1,66%) e Vale (+2,41%) subiram puxadas pelo petróleo e minério. <b>Descolamento absoluto</b>: Wall Street renovou recordes históricos — S&P 500 e Nasdaq em novos topos. Temporada de balanços em pico: JBS e Braskem reportam hoje (12/mai)."
   },
   "juros": {
-    "selic": {"val": "14,50% a.a.", "delta": "cortada 29/abr", "dir": "down"},
-    "fed": {"val": "3,50–3,75%", "delta": "mantido", "dir": "flat"},
-    "ust10y": {"val": "~4,30%", "sub": "estável"},
-    "nota": "Próximo Copom: 17/jun. Bradesco vê Selic 12,75% fim/26. Choque do petróleo desta semana pode complicar próximas decisões do BC."
+    "selic": {
+      "val": "14,50% a.a.",
+      "delta": "▼ cortada 29/abr",
+      "dir": "down"
+    },
+    "fed": {
+      "val": "3,50–3,75%",
+      "delta": "• mantido",
+      "dir": "flat"
+    },
+    "ust10y": {
+      "val": "~4,39%",
+      "sub": "subiu seg — tensão Irã"
+    },
+    "nota": "Selic cortada 0,25 p.p. em 29/abr para 14,50%. Próximo Copom: 17-18/jun. Focus hoje elevou Selic fim/26 para 13% e IPCA para 4,91% (9ª alta seguida). <b>IPCA de abril</b> saiu hoje (12/mai) — resultado acima do esperado reacende debate sobre trajetória futura dos cortes. Fed mantido; mercado não precifica mais cortes em 2026. US Treasury 10Y subiu na segunda para ~4,39% com tensão geopolítica."
   },
   "inflacao": {
     "ipca15": "0,89%",
     "ipca15_12m": "4,37%",
     "ipca_mar": "0,88%",
-    "focus_2026": "4,86%",
-    "nota": "IPCA cheio de abril divulgado sex 09/mai (resultado a confirmar). Choque do petróleo desta semana já é tema para IPCA-15 maio (27/mai). Pressão sobre Focus pode voltar."
+    "focus_2026": "4,91%",
+    "nota": "<b>IPCA cheio de abril divulgado HOJE (12/mai).</b> Resultado acima do esperado reacende alerta sobre trajetória da Selic. IPCA-15 de abril foi puxado por gasolina (+6,23%) e diesel (+16%) no mês. Focus subiu pela 9ª semana consecutiva para 4,91% — distância crescente do teto da meta de 4,5%. Pressão de combustíveis continua dominando o índice."
   },
   "abicom": {
-    "diesel_pct": "55%+",
-    "gasolina_pct": "45%+",
-    "dias_diesel": 58,
+    "diesel_pct": "~40–58%",
+    "gasolina_pct": "~30–48%",
+    "dias_diesel": 59,
     "dias_gasolina": 105,
-    "diesel_tag": "Pressão volta",
-    "gasolina_tag": "Pressão volta",
-    "nota": "Brent voltou para US$ 103 — defasagem volta a subir. Petrobras pode voltar a estudar reajuste se Brent passar US$ 105 com firmeza. <b>Diesel: 58 dias sem reajuste; gasolina: 105 dias.</b>"
+    "diesel_tag": "Pressão retorna forte",
+    "gasolina_tag": "Pressão retorna forte",
+    "nota": "Último reajuste diesel: <b>14/mar/2026</b> (+R$0,38/L). Gasolina sem reajuste positivo desde <b>jan/2026</b> (houve corte de R$0,14). Com Brent em US$104, defasagem diesel retorna à faixa de 40–58% e gasolina a 30–48%. Petrobras pode reabrir estudo de reajuste se Brent firmar acima de US$105 por mais de 72h. <b>Vigilância máxima.</b>"
   },
   "anp": {
-    "semana": "Síntese semana 03-09/mai sai sex 15/mai",
+    "semana": "Síntese semana 04-08/mai — aguardada para hoje 12/mai ou amanhã 13/mai",
     "rows": [
-      {"produto": "Gasolina C", "preco": "R$ 6,29/L", "status": "gray", "status_label": "ref. ant."},
-      {"produto": "Etanol hidr.", "preco": "a confirmar", "status": "blue", "status_label": "pendente"},
-      {"produto": "Diesel S-10", "preco": "a confirmar", "status": "blue", "status_label": "pendente"},
-      {"produto": "Diesel comum", "preco": "R$ 7,58/L", "status": "gray", "status_label": "ref. ant."},
-      {"produto": "GLP P-13", "preco": "a confirmar", "status": "blue", "status_label": "pendente"}
+      {
+        "produto": "Gasolina C",
+        "preco": "R$ 6,67/L",
+        "status": "yellow",
+        "status_label": "ref. 26/abr-02/mai"
+      },
+      {
+        "produto": "Etanol hidr.",
+        "preco": "R$ 4,56/L",
+        "status": "gray",
+        "status_label": "ref. 26/abr-02/mai"
+      },
+      {
+        "produto": "Diesel S-10",
+        "preco": "a confirmar",
+        "status": "blue",
+        "status_label": "pendente nova síntese"
+      },
+      {
+        "produto": "Diesel comum",
+        "preco": "R$ 7,10/L",
+        "status": "gray",
+        "status_label": "ref. 26/abr-02/mai"
+      },
+      {
+        "produto": "GLP P-13",
+        "preco": "R$ 114,88",
+        "status": "yellow",
+        "status_label": "ref. 26/abr-02/mai"
+      }
     ],
-    "nota": "Última síntese de fato divulgada: 12-18/abr. Síntese de 26/abr-02/mai esperada para hoje ou amanhã. <b>Fiscalização ANP ativa</b>: documente sua margem."
+    "nota": "Última síntese ANP publicada: semana 26/abr–02/mai (divulgada 04/mai). Gasolina recuou -0,72%; diesel -1,53%; etanol -2,14% naquela semana. Síntese da semana 04–08/mai esperada para hoje ou amanhã. <b>Com Brent em US$104, tendência de alta nos preços ao consumidor desta semana.</b>"
   },
   "cepea": {
     "hidratado": [
-      {"uf": "SP", "preco": "R$ 2,7398", "dir": "flat"},
-      {"uf": "PR", "preco": "R$ 2,8120", "dir": "flat"},
-      {"uf": "GO", "preco": "R$ 2,6850", "dir": "flat"},
-      {"uf": "MG", "preco": "R$ 2,7200", "dir": "flat"},
-      {"uf": "MT", "preco": "R$ 2,5900", "dir": "flat"}
+      {
+        "uf": "SP",
+        "preco": "R$ 2,7185",
+        "dir": "flat"
+      },
+      {
+        "uf": "PR",
+        "preco": "a confirmar",
+        "dir": "flat"
+      },
+      {
+        "uf": "GO",
+        "preco": "a confirmar",
+        "dir": "flat"
+      },
+      {
+        "uf": "MG",
+        "preco": "a confirmar",
+        "dir": "flat"
+      },
+      {
+        "uf": "MT",
+        "preco": "a confirmar",
+        "dir": "flat"
+      }
     ],
-    "anidro_sp": {"val": "R$ 3,1591", "delta": "• estável", "dir": "flat"},
-    "acucar": {"val": "—", "delta": "▼ recua", "dir": "down"},
-    "nota": "Hidratado estável. Com Brent voltando para US$ 103, etanol recupera competitividade marginal — mas reajuste Petrobras ainda incerto."
+    "anidro_sp": {
+      "val": "R$ 3,3095",
+      "delta": "▼ -0,5%",
+      "dir": "down"
+    },
+    "acucar": {
+      "val": "—",
+      "delta": "▼ recua",
+      "dir": "down"
+    },
+    "nota": "Hidratado SP fechou semana de 28/abr–02/mai a R$ 2,7185/L (alta de 0,39%). Anidro SP estava em R$ 3,3095/L (queda de 0,5% na referência). Safra 2026/27 aberta com mais de <b>dois terços da cana destinada ao etanol</b> (mix alcooleiro dominante). Com Brent voltando a US$104, competitividade marginal do hidratado melhora frente à gasolina."
   },
   "eg": {
-    "paridade_sp": "72%",
+    "paridade_sp": "~68%",
     "mandato_e": "E30",
     "mandato_b": "B15",
-    "nota": "Paridade ainda favorece gasolina. Se Brent persistir acima de US$ 105 e Petrobras reajustar, jogo inverte rapidamente."
+    "nota": "Paridade hidratado/gasolina em SP estimada em ~68% — abaixo dos 70% que favorece etanol. Com E30 em vigor desde ago/2025, volume de anidro cresce. Se Petrobras reajustar gasolina, jogo inverte rapidamente e etanol volta a ser competitivo acima dos 70%."
   },
   "safra": {
-    "moagem": {"val": "635 Mt", "delta": "▲ +4%"},
-    "atr": {"val": "139,4 kg/t", "delta": "▲ +1%"},
-    "mix": {"val": "48,5%"},
-    "oferta": {"val": "+10%", "delta": "▲ UNICA"},
-    "nota": "UNICA divulga 1ª quinz mai em qui 15/mai. Com Brent voltando, mix pode permanecer alcooleiro (51,5% etanol)."
+    "moagem": {
+      "val": "19,56 Mt",
+      "delta": "▲ +19,67% (1ª quinz abr)"
+    },
+    "atr": {
+      "val": "103,36 kg/t",
+      "delta": "• estável -0,10%"
+    },
+    "mix": {
+      "val": "67% etanol"
+    },
+    "oferta": {
+      "val": "+10% est.",
+      "delta": "▲ UNICA prev."
+    },
+    "nota": "UNICA: 1ª quinzena de abr/26 (safra 2026/27) processou 19,56 Mt (+19,67% a/a); 195 unidades operando. Mix fortemente alcooleiro: apenas 32,93% da cana para açúcar, mais de dois terços para etanol. Produção de etanol na quinzena: 1,23 bilhão de litros (+33,32%). <b>Próxima divulgação UNICA: qui 14 ou sex 15/mai</b> (1ª quinz de mai/26)."
   },
   "agenda": [
-    {"day": "Seg 11/mai", "evento": "Mercado reage à rejeição de Trump", "tag": "red", "tag_label": "hoje"},
-    {"day": "Qui 15/mai", "evento": "UNICA 1ª quinz mai · IBC-Br março", "tag": "blue", "tag_label": "dado"},
-    {"day": "Sex 15/mai", "evento": "Síntese ANP semanal", "tag": "blue", "tag_label": "dado"},
-    {"day": "Qua 21/mai", "evento": "EIA estoques semanais (EUA)", "tag": "blue", "tag_label": "dado"},
-    {"day": "Ter 27/mai", "evento": "IPCA-15 maio (IBGE)", "tag": "blue", "tag_label": "dado"}
+    {
+      "day": "Ter 12/mai",
+      "evento": "IPCA abril (IBGE) — divulgado hoje · Petrobras resultado 1T26 (após fechamento)",
+      "tag": "red",
+      "tag_label": "hoje"
+    },
+    {
+      "day": "Qua 13/mai",
+      "evento": "CPI EUA abril (inflação americana) — dado crítico para Fed",
+      "tag": "red",
+      "tag_label": "crítico"
+    },
+    {
+      "day": "Qui 14/mai",
+      "evento": "Banco do Brasil resultado 1T26 · UNICA 1ª quinz mai/26 (possível)",
+      "tag": "blue",
+      "tag_label": "dado"
+    },
+    {
+      "day": "Sex 15/mai",
+      "evento": "Síntese ANP semana 04–08/mai · IBC-Br março (IBGE)",
+      "tag": "blue",
+      "tag_label": "dado"
+    },
+    {
+      "day": "Ter 27/mai",
+      "evento": "IPCA-15 maio (IBGE) — prévia inflação",
+      "tag": "blue",
+      "tag_label": "dado"
+    }
   ],
   "radar": [
-    "<b>Trump:</b> \"TOTALMENTE INACEITÁVEL\" — rejeita Irã.",
-    "<b>Netanyahu:</b> guerra não acabou — risco de reescalada.",
-    "Brent salta <b>+2,5%</b> para US$ 103,80 (range 96,93-110,93).",
-    "Dólar fechou sex em <b>R$ 4,8961</b> — mín. 2 anos resiste.",
-    "Wall Street em <b>novos recordes</b>: S&P, Nasdaq, Dow."
+    "<b>Trump rejeitou Irã:</b> \"TOTALMENTE INACEITÁVEL\" — Hormuz segue fechado, escalada militar no radar.",
+    "Brent <b>US$ 104,21 (+3%)</b> · WTI <b>US$ 98,07 (+2,78%)</b> — IEA: maior choque de oferta da história.",
+    "<b>Ibovespa -1,19%</b> para 181.909 pts · bancos caem · Petrobras e Vale sobem com petróleo.",
+    "Wall Street em <b>novos recordes</b>: S&P 500 7.412 · Nasdaq 26.274 — descolamento total do Brasil.",
+    "<b>Focus IPCA 2026 sobe para 4,91%</b> (9ª semana) · IPCA abril divulgado hoje — acima do esperado."
   ],
   "acao": {
-    "tag": "Volta a vermelho — atenção máxima",
-    "lead": "<b>Trump rejeitou Irã frontalmente.</b> Netanyahu alerta para escalada. Brent volta a subir. Cenário virou em 24h — Petrobras pode reabrir gatilho de reajuste se Brent firmar acima US$ 105.",
+    "tag": "🔴 Alerta máximo — pressão de reajuste voltou",
+    "lead": "<b>Brent acima de US$ 104 e Hormuz fechado.</b> Trump rejeitou Irã frontalmente. Defasagem diesel e gasolina retorna com força. IPCA de abril saiu hoje acima do esperado. Petrobras divulga resultado 1T26 esta noite — atenção ao comunicado sobre política de preços. Cenário exige posição operacional imediata.",
     "items": [
-      "<b>Diesel:</b> volte a reforçar estoque — pressão de reajuste retorna.",
-      "<b>Gasolina:</b> 3 cenários novamente prontos no celular.",
-      "<b>Etanol:</b> hidratado recupera competitividade — reabra pedido.",
-      "<b>Documente margem:</b> fiscalização ANP segue ativa — proteção total.",
-      "<b>Equipe:</b> alinhamento WhatsApp ativo para reagir em horas.",
-      "<b>Verimo:</b> cenário de volatilidade extrema = revise apólices HOJE."
+      "<b>Diesel:</b> reforce estoque agora — defasagem retorna à faixa de 40–58%, reajuste pode vir em 48–72h.",
+      "<b>Gasolina:</b> mantenha 3 cenários de preço prontos no celular para reagir em minutos.",
+      "<b>Etanol:</b> hidratado pode recuperar competitividade se Petrobras reajustar gasolina — acompanhe paridade diariamente.",
+      "<b>Petrobras 1T26:</b> leia o comunicado de preços esta noite — qualquer sinalização de reajuste é gatilho imediato.",
+      "<b>Documente sua margem:</b> fiscalização ANP e Senacon ativas — tenha histórico de compra/venda atualizado.",
+      "<b>Equipe:</b> alinhamento via WhatsApp ativo para reação em horas — não espere o reajuste ser anunciado."
     ]
   },
   "resumo": [
     {
       "lead": true,
-      "html": "Segunda abre com cenário virado de volta ao vermelho. Trump rejeitou frontalmente a contraproposta iraniana: <b>\"Acabei de ler a resposta dos 'Representantes' do Irã. Não gostei — TOTALMENTE INACEITÁVEL!\"</b>. Netanyahu reforçou: a guerra não acabou. O Brent saltou +2,5% para <b>US$ 103,80</b> e WTI +2% para <b>US$ 97,40</b>."
+      "html": "Terça-feira abre sob máxima tensão geopolítica. Na noite de domingo, Trump rejeitou frontalmente a contraproposta iraniana, postando nas redes: <b>\"Acabei de ler a resposta dos representantes do Irã. Não estou gostando — TOTALMENTE INACEITÁVEL!\"</b>. O Irã havia proposto transferir parte de seu urânio enriquecido a um terceiro país, mas recusou desmantelar instalações nucleares. Netanyahu reforçou que a guerra não acabou. O resultado imediato: Brent saltou quase 3% para <b>US$ 104,21</b> e WTI para <b>US$ 98,07</b> na sessão de segunda-feira."
     },
     {
-      "html": "Tanto Brent quanto WTI subiram cerca de <b>40% desde o início da guerra em 28/fev</b>. Goldman estima que exportações por Hormuz seguem em apenas 4% do normal. Sparta Commodities compara à pandemia: <b>a guerra está retirando 9 milhões de b/d de oferta</b> — mesmo nível da demanda perdida em 2020. Para o equilíbrio voltar, demanda terá que ser destruída."
+      "html": "O cenário de petróleo é grave. A IEA classificou o fechamento do Estreito de Hormuz como o <b>maior choque de oferta da história</b>. O CEO da Saudi Aramco alertou que o mercado perde cerca de 100 milhões de barris de oferta a cada semana, e que normalizações poderiam se estender até 2027. Analistas da Citi apontam que os riscos seguem inclinados para alta — o Irã controla o timing de qualquer acordo. A Sparta Commodities compara à pandemia: 9 milhões de b/d retirados exigirão destruição de demanda nos países mais ricos."
     },
     {
-      "html": "No câmbio, real continua firme. <b>Dólar fechou sexta em R$ 4,8961</b> — primeira cotação abaixo de R$ 4,90 em mais de 2 anos. Na semana, USD caiu 1,13% ante real. Em 2026, acumula -10,51%. Selic 14,50% sustenta carry. Bitcoin volta para US$ 80 mil — recuperação."
+      "html": "No Brasil, o <b>Ibovespa cedeu -1,19%</b> na segunda, fechando em 181.909 pontos — menor nível desde 27 de março. O setor financeiro puxou a queda (Itaú -2,25%, BTG -2,88%, Bradesco -2,69%), enquanto Petrobras (+1,40–1,66%) e Vale (+2,41%) subiram. Na contramão, Wall Street renovou recordes históricos: S&P 500 em 7.412 (+0,19%), Nasdaq em 26.274 (+0,10%), Dow em 49.704 (+0,19%). <b>Descolamento absoluto</b> entre Brasil e EUA."
     },
     {
-      "html": "<b>Bolsas em movimento contrário:</b> Ibov fechou sexta em 184.108 (+0,49%), puxado por Localiza, Vale e Itaú. Mas a semana acumula -1,71% — 4ª queda seguida. Wall Street fez <b>novos recordes históricos</b>: S&P 7.398 (+0,84%), Nasdaq 26.247 (+1,71%), Dow 49.609. Descolamento absoluto do petróleo."
+      "html": "O câmbio mostrou resiliência. <b>Dólar fechou a R$ 4,89</b> na segunda, estável apesar da tensão geopolítica. A Selic em 14,50% sustenta o carry trade — em 2026, o dólar acumula queda de ~10,5% ante o real. O euro opera em torno de R$ 5,78. DXY em ~97,91 reflete dólar ainda globalmente fraco. Bitcoin recuou para ~US$ 81.239 (-0,72% em 24h) após abertura forte que foi frustrada pelo impasse EUA-Irã."
     },
     {
-      "html": "<b>Defasagem Abicom volta a subir.</b> Diesel saiu de ~50% para ~55%; gasolina de ~40% para ~45%. Diesel sem reajuste há 58 dias, gasolina 105. Se Brent persistir acima de US$ 105, Petrobras pode voltar a estudar reajuste — quinta-feira (14/05) ou sexta (15/05) são janelas prováveis."
+      "html": "Na inflação, o <b>IPCA de abril foi divulgado hoje (12/mai)</b> e saiu acima das expectativas, reacendendo debate sobre a trajetória da Selic. O Boletim Focus desta segunda elevou a projeção do IPCA 2026 pela <b>9ª semana consecutiva</b> — de 4,89% para 4,91%, distante do teto da meta de 4,5%. O IPCA-15 de abril havia marcado 0,89%, pressionado por gasolina (+6,23%) e diesel (+16%). O Copom cortou a Selic para 14,50% em 29/abr, mas novas reduções ficam cada vez mais incertas com choque de combustíveis persistindo."
     },
     {
-      "html": "Etanol em momento marginal favorável. Cepea aponta hidratado estável: SP R$ 2,7398, PR R$ 2,8120, GO R$ 2,6850, MG R$ 2,7200, MT R$ 2,5900. Anidro SP R$ 3,1591. Com Brent voltando, competitividade marginal melhora. UNICA divulga 1ª quinz mai em quinta 15/05 — atenção ao mix."
+      "html": "<b>Atenção: Petrobras divulga resultado 1T26 esta noite.</b> O mercado aguarda qualquer sinalização sobre política de preços no comunicado. Com Brent em US$ 104, a defasagem do diesel retorna à faixa de 40–58% e da gasolina a 30–48%. Último reajuste do diesel: 14/mar (+R$0,38/L). Gasolina sem reajuste positivo desde jan/2026 (quando houve corte de R$0,14). Dias sem reajuste: diesel ~59 dias, gasolina ~105 dias. Vigilância máxima para os próximos 48–72h."
     },
     {
-      "html": "<b>Para o posto:</b> volta a vermelho. Diesel em estoque pleno — pressão de reajuste retorna. Gasolina com 3 cenários prontos para reagir em minutos. Hidratado em volume — recupera competitividade. Equipe alinhada via WhatsApp para reação em horas. <b>Verimo: revise apólices HOJE</b> — cenário de volatilidade extrema continua."
+      "html": "<b>Para o posto:</b> posição operacional de alerta máximo. Diesel — reforce estoque imediatamente, a defasagem voltou com força. Gasolina — 3 cenários de preço prontos para ativação imediata. Etanol — acompanhe paridade diária; se Petrobras reajustar gasolina, hidratado volta acima de 70% de competitividade. Leia o comunicado da Petrobras esta noite. Documente toda margem de compra e venda — Senacon e ANP estão com fiscalização ativa. Equipe alinhada via WhatsApp para reação em horas."
     }
-  ]
+  ],
+  "_comentario": "Gerado automaticamente em 2026-05-12T03:19:50.952Z por gerar-painel.mjs (claude-sonnet-4-6)"
 }
