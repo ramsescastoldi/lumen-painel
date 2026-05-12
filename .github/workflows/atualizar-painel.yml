@@ -2,8 +2,8 @@ name: Atualiza painel diariamente
 
 on:
   schedule:
-    # 06:30 BRT (UTC-3) = 09:30 UTC. Roda TODOS os dias (seg-dom)
-    - cron: '30 9 * * *'
+    # 05:55 BRT (UTC-3) = 08:55 UTC. Roda seg-sex (1-5). Backup do agendador n8n
+    - cron: '55 8 * * 1-5'
   workflow_dispatch:
     # Permite rodar manualmente pelo botão "Run workflow" na UI do GitHub
 
