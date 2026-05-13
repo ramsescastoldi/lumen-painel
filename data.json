@@ -2,7 +2,7 @@
   "meta": {
     "date_iso": "2026-05-13",
     "date_label": "Quarta · 13 mai 2026",
-    "last_update": "12:17",
+    "last_update": "15:22",
     "next_update": "amanhã · 14 mai · 07:30"
   },
   "manchete": {
@@ -10,50 +10,50 @@
       "severity": "red",
       "status_emoji": "🔴",
       "severity_label": "Crítico",
-      "titulo": "PPI dos EUA de abril dispara +1,4% e derruba Wall Street na abertura — Nvidia segura Nasdaq com Jensen Huang na cúpula Trump-Xi; Petrobras sinaliza reajuste da gasolina \"em breve e com cuidado\" após resultado 1T26 abaixo do consenso",
-      "corpo": "A quarta-feira 13 de maio traz <b>fato novo concreto nas últimas 12 horas</b>: o PPI (índice de preços ao produtor) dos EUA de abril disparou <b>+1,4% acima do esperado</b>, superando amplamente as estimativas de +0,3% m/m e agravando o cenário inflacionário já sinalizado pelo CPI de 3,8% a/a de terça. O dado levou o Dow Jones a cair mais de 200 pontos na abertura de Nova York, enquanto o S&P 500 e o Nasdaq recuavam. A única trava foi a Nvidia: <b>Jensen Huang foi adicionado de última hora à delegação Trump para a cúpula de Pequim</b>, subindo as ações de semicondutores e amortecendo a queda do Nasdaq. No front Petrobras, a petroleira divulgou o resultado do 1T26 <b>abaixo do consenso</b> e descartou dividendos extraordinários em 2026 (\"muito baixa\" a probabilidade), mas foi explícita: avalia elevar o preço da gasolina <b>\"em breve e com cuidado\"</b> para não perder market share frente ao etanol barato da safra nova. Com o PPI surpreendendo para cima, o DXY se mantém firme (~98,3) e o câmbio permanece pressionado, ampliando a defasagem em reais: gasolina ainda em aprox. -80%+ e diesel em ~-41%. <b>A cúpula Trump-Xi começa com reuniões formais quinta e sexta</b> — e os analistas do ING apontam um \"lampejo de esperança\" de que Xi utilize influência sobre o Irã para aproximar um acordo de paz, o que poderia derrubar o Brent em US$ 5–10/barril imediatamente. O petróleo recua levemente nesta manhã: Brent ~US$ 107,48 (-0,27%) e WTI ~US$ 101,66 (-0,51%), encerrando três sessões consecutivas de alta."
+      "titulo": "IEA publica relatório histórico: estoques globais de petróleo caem em ritmo recorde de 4 MMbpd — mercado pode permanecer severamente desabastecido até outubro; PPI dos EUA sobe +1,4% m/m, maior alta desde março de 2022; Chambriard diz que reajuste da gasolina acontecerá \"já, já\"",
+      "corpo": "A quarta-feira 13 de maio traz três fatos novos e concretos nas últimas 12 horas. O primeiro e mais relevante para o setor: a <b>IEA publicou hoje (13/mai) seu Relatório Mensal do Mercado de Petróleo de maio de 2026</b>, com dados alarmantes — os estoques globais observados de petróleo caíram 129 milhões de barris em março e outros 117 milhões em abril, <b>drenando ao ritmo recorde de ~4 MMbpd</b>. A agência alerta que, com estoques caindo nesse ritmo, <b>\"maior volatilidade é provável\"</b> antes do pico da demanda de verão e que o mercado pode <b>permanecer severamente desabastecido até outubro</b>, mesmo que o conflito encerre antes. O segundo fato novo: o <b>PPI (índice de preços ao produtor) dos EUA de abril saiu em +1,4% m/m</b> — a maior alta mensal desde março de 2022 — superando amplamente a previsão de analistas de +0,7% e impulsionado por energia (+7,8%) e gasolina (+15,6% m/m). O núcleo do PPI avançou +1,0%, também acima do esperado (+0,3%). Na comparação anual, o PPI acelerou para <b>6% a/a</b> (de 4,3% em março), consolidando o cenário de \"higher for longer\" no Fed. O terceiro: a presidente da Petrobras, Magda Chambriard, na teleconferência de resultados do 1T26, afirmou que o reajuste da gasolina acontecerá <b>\"já, já\"</b> — a expressão mais explícita e urgente usada até agora. A diretora de Comercialização confirmou que o reajuste <b>independe da aprovação do PLP 67/2026 no Senado</b>. Com Brent em ~US$ 107/b, WTI em ~US$ 102/b e defasagem de gasolina em -81%/-R$ 2,03/L, a equação para o reajuste está fechada."
     },
     "secundarias": [
       {
         "severity": "red",
         "status_emoji": "🔴",
-        "tag": "PPI EUA / Fed / Inflação",
-        "titulo": "PPI dos EUA de abril dispara +1,4% — muito acima da expectativa de +0,3%; dado agrava cenário pós-CPI de 3,8% a/a; FedWatch: 97,6% de manutenção em junho; sem corte precificado até dez/2027; Warsh assume Fed na sexta"
+        "tag": "IEA / Estoques / Petróleo",
+        "titulo": "IEA (13/mai): estoques globais caem 4 MMbpd em mar-abr — ritmo recorde; mercado desabastecido até out/26 mesmo se conflito encerrar; cumulative supply losses ultrapassam 1 bilhão de barris; produção OPEC+ 10,5 MMbpd offline; Brent ~US$ 107/b (▼ snapping 3-day rally); WTI ~US$ 102/b"
       },
       {
         "severity": "red",
         "status_emoji": "🔴",
-        "tag": "Petrobras / 1T26 / Gasolina",
-        "titulo": "Petrobras 1T26 abaixo do consenso — dividendos extraordinários descartados para 2026; mas estatal confirma reajuste da gasolina \"em breve e com cuidado\"; Ibovespa abre quarta em alta (184.103 pts) revertendo queda de -0,86% de terça; PETR4 buscando recuperação"
+        "tag": "PPI EUA / Fed / Inflação",
+        "titulo": "PPI EUA abril +1,4% m/m — maior alta desde mar/2022; energia +7,8%, gasolina +15,6%; núcleo PPI +1,0% (est. +0,3%); PPI anual 6,0% a/a (máx. desde dez/2022); reforça \"higher for longer\" no Fed; DXY ~98,33; UST 10Y ~4,465%; Dow cai ~200 pts na abertura de NY"
       },
       {
-        "severity": "yellow",
-        "status_emoji": "🟡",
-        "tag": "Cúpula Trump-Xi / Hormuz / Petróleo",
-        "titulo": "Jensen Huang (Nvidia) entra na delegação Trump para Pequim — reuniões formais qui 14 e sex 15; ING: \"lampejo de esperança\" de Xi pressionar Irã; Brent ~US$ 107,48 (-0,27%) e WTI ~US$ 101,66 (-0,51%) na manhã de quarta; Eurasia Group: preços do petróleo acima de US$ 80/b pelo resto do ano"
+        "severity": "red",
+        "status_emoji": "🔴",
+        "tag": "Petrobras / Gasolina / Reajuste",
+        "titulo": "Chambriard (Petrobras): reajuste da gasolina será \"já, já\" — expressão mais explícita até hoje; decisão independe do PLP 67/2026 no Senado; defasagem -81%/-R$ 2,03/L; 1T26 lucro R$ 32,7 bi abaixo do consenso R$ 34,4 bi; PETR4 cai ~1,70% na tarde de terça; Ibovespa fecha 13/mai em a confirmar"
       }
     ]
   },
   "petroleo": {
     "brent": {
-      "val": "US$ 107,48",
-      "delta": "▼ -0,27% (qua 13/mai, manhã) | fech. ter: US$ 107,77 (+3,4%)",
+      "val": "US$ 107,05",
+      "delta": "▼ -0,67% vs. fech. ter US$ 107,77 (+3,4%) | snapping 3-day rally",
       "dir": "down",
-      "sub": "abertura qua: US$ 107,48 | fech. ter: US$ 107,77 | +61,97% a/a | EIA prevê ~US$ 106/b em mai/jun | pico abr: US$ 138/b"
+      "sub": "fech. ter: US$ 107,77 | pico abr: US$ 138/b | média abr: US$ 117/b | EIA: ~US$ 106/b em mai-jun | range mai: US$ 74,51–138,97 | +61,97% a/a"
     },
     "wti": {
-      "val": "US$ 101,66",
-      "delta": "▼ -0,51% (qua 13/mai, manhã) | fech. ter: US$ 102,18 (+4,2%)",
+      "val": "US$ 102,00",
+      "delta": "▼ steadied ~US$ 102/b qua, após rally de 7,6% em 3 sessões | fech. ter: US$ 102,18 (+4,2%)",
       "dir": "down",
-      "sub": "fech. ter: US$ 102,18 | +59,99% a/a | suporte técnico ~US$ 100 | range mai: US$ 74,51–138,97"
+      "sub": "fech. ter: US$ 102,18 | WTI+Brent ambos +45%+ desde 28/fev (início guerra EUA-Irã) | suporte técnico ~US$ 100"
     },
-    "nota": "<b>Brent fechou terça a US$ 107,77 (+3,4%) e WTI a US$ 102,18 (+4,2%)</b>, estendendo ganhos com Trump classificando a resposta iraniana de \"lixo\" e declarando cessar-fogo em \"massive life support\". Na manhã de quarta, ambos recuam levemente (Brent ~US$ 107,48, WTI ~US$ 101,66) com mercado aguardando sinais da cúpula Trump-Xi em Pequim. Hormuz permanece efetivamente fechado desde fevereiro — <b>EIA (12/mai) projeta Brent em ~US$ 106/b em mai/jun</b>, com queda de estoques de 8,5 MMbpd no 2T26, normalização só no 4T26 (US$ 89/b). Eurasia Group: perdas de oferta já ultrapassam 1 bilhão de barris — preços acima de US$ 80/b pelo resto do ano.",
-    "citacao": "<b>Citi:</b> \"Oil prices have been volatile and can rise further if US-Iran dealmaking remains thorny.\" <b>Aramco CEO Nasser:</b> \"If the Strait of Hormuz opens today, it will still take months for the market to rebalance.\" <b>ING:</b> há um \"lampejo de esperança\" de que conversas Trump-Xi gerem resultados positivos em relação ao Irã."
+    "nota": "<b>IEA publicou hoje (13/mai) seu OMR de maio:</b> estoques globais observados caíram 129 MB em março e 117 MB em abril — ritmo sem precedentes de ~4 MMbpd de queda. A agência avisa que a volatilidade de preços deve persistir antes do pico de demanda do verão e que o mercado pode permanecer em déficit até o 4T26. <b>WTI estabilizou em ~US$ 102/b</b> após snapping de rally de 7,6% em 3 sessões; o Brent recua para ~US$ 107/b. EIA (12/mai): Brent projetado em ~US$ 106/b em mai-jun; Hormuz fechado até final de maio no cenário base.",
+    "citacao": "<b>IEA (mai/26):</b> \"mounting supply losses from the Strait of Hormuz are depleting global oil inventories at a record pace.\" <b>Aramco CEO Nasser:</b> \"If the Strait of Hormuz opens today, it will still take months for the market to rebalance.\" <b>Citi:</b> \"Oil prices have been volatile and can rise further if US-Iran dealmaking remains thorny.\""
   },
   "moedas": {
     "usdbrl": {
-      "val": "R$ 4,8972",
-      "delta": "▲ +0,08% vs. fech. R$ 4,8877 | abert. qua: R$ 4,8957 | range: R$ 4,8841–4,9105",
+      "val": "R$ 4,9041",
+      "delta": "▲ leve alta no dia | abert. qua: R$ 4,8911 | range qua: R$ 4,8861–4,9276 | fech. ter: R$ 4,8949",
       "dir": "up"
     },
     "eurbrl": {
@@ -63,38 +63,38 @@
     },
     "dxy": {
       "val": "~98,33",
-      "delta": "▲ +0,38% (ter 12/mai) | firme após CPI 3,8% a/a + PPI acima do esperado",
+      "delta": "▲ +0,38% (ter 12/mai) | firme após CPI 3,8% a/a + PPI +1,4% m/m",
       "dir": "up"
     },
     "btc": {
       "val": "US$ 80.795",
-      "delta": "▼ -0,37% (qua 13/mai) | abert. US$ 80.473 | 4 rejeições em US$ 82.000 (MM200d)",
+      "delta": "▼ -1,05% qua | range dia: US$ 79.880–81.263 | 4 rejeições consecutivas na MM200d US$ 82.228",
       "dir": "down"
     },
-    "nota": "<b>Dólar opera em R$ 4,8972 nesta quarta</b>, com range do dia em R$ 4,8841–4,9105 — mínima de 52 semanas. DXY firme em ~98,33 após CPI de 3,8% a/a e PPI que surpreendeu para cima (+1,4%), eliminando qualquer expectativa de corte do Fed em 2026. O real resiste ancorado no diferencial de juros (Selic 14,50% vs. Fed 3,50–3,75%). Bitcoin abre em baixa em ~US$ 80.795, ainda abaixo da MM200d (US$ 82.228) após quatro rejeições consecutivas — <b>PPI quente retirou o catalisador de corte de juros que sustentaria eventual rompimento.</b>"
+    "nota": "<b>Dólar opera em R$ 4,9041 nesta quarta</b>, com range do dia em R$ 4,8861–4,9276 e abertura em R$ 4,8911 — ainda próximo das mínimas de 52 semanas (R$ 4,8841). DXY firme em ~98,33 após CPI de 3,8% a/a de terça e PPI de +1,4% m/m desta manhã (máx. desde mar/2022). PPI anual a 6,0% a/a consolida cenário de juros altos nos EUA por mais tempo, fortalecendo o dólar. O real se sustenta ancorado no diferencial de juros (Selic 14,50% vs. Fed 3,50–3,75%). <b>Bitcoin em US$ 80.795 com quatro rejeições na MM200d US$ 82.228</b> — PPI quente eliminou o catalisador de corte de juros que sustentaria rompimento acima de US$ 82.000."
   },
   "bolsas": {
     "ibov": {
-      "val": "184.103",
-      "delta": "▲ abert. qua +2,1% vs. fech. ter 180.342 (-0,86%) | range qua: 181.615–184.530",
+      "val": "a confirmar (fech. qua)",
+      "delta": "fech. ter: 180.342 (-0,86%) | abert. qua em recuperação | range inicial qua: 181.615–184.530",
       "dir": "up"
     },
     "sp": {
       "val": "7.400,96",
-      "delta": "▼ -0,16% (fech. ter 12/mai) | abert. qua ~-0,26% após PPI",
+      "delta": "▼ -0,16% (fech. ter 12/mai) | abert. qua: -0,26% após PPI +1,4%",
       "dir": "down"
     },
     "nasdaq": {
       "val": "26.088,20",
-      "delta": "▼ -0,71% (fech. ter 12/mai) | qua: Nvidia +2% segura queda após Huang entrar na delegação Trump",
+      "delta": "▼ -0,71% (fech. ter 12/mai) | Nvidia +2% (Jensen Huang na delegação Trump-Xi) segura queda na abert. qua",
       "dir": "down"
     },
     "dow": {
       "val": "49.760,56",
-      "delta": "▲ +0,11% (fech. ter 12/mai) | abert. qua: -0,41% após PPI acima do esperado",
+      "delta": "▲ +0,11% (fech. ter 12/mai) | abert. qua: -0,41% após PPI; -203 pts às 10h46 BRT",
       "dir": "up"
     },
-    "nota": "Ibovespa <b>abre a quarta em alta, revertendo a queda de -0,86% de terça (180.342 pts)</b> — oscilando entre 181.615 e 184.530 pts (abertura em 184.103). O resultado da Petrobras 1T26 abaixo do consenso e o descarte de dividendos extraordinários freiam o entusiasmo de PETR4. Em Wall Street, o <b>PPI de abril surpreendendo para cima (+1,4%)</b> derrubou Dow e S&P na abertura de quarta, mas a Nvidia (+2% com Jensen Huang na delegação para Pequim) segura o Nasdaq. <b>Fechamento de terça:</b> Dow +0,11% (49.760), S&P -0,16% (7.400,96), Nasdaq -0,71% (26.088)."
+    "nota": "<b>Wall Street abriu a quarta em baixa</b> após PPI de abril surpreender para cima (+1,4% m/m, maior desde mar/2022): Dow caía 203 pts (-0,41%), S&P recuava 0,26% e Nasdaq cedia 0,23% às 10h46 BRT. A Nvidia (NVDA) subia ~2% após Jensen Huang ser adicionado de última hora à delegação Trump para Pequim, segurando o Nasdaq. <b>Fechamento de terça:</b> Dow +0,11% (49.760), S&P -0,16% (7.400,96), Nasdaq -0,71% (26.088). Ibovespa fechou terça em 180.342 (-0,86%), puxado para baixo pela Petrobras (PETR4 -1,70% no dia) após 1T26 abaixo do consenso."
   },
   "juros": {
     "selic": {
@@ -104,30 +104,30 @@
     },
     "fed": {
       "val": "3,50–3,75%",
-      "delta": "• mantido — 97,6% chance manutenção jun (FedWatch CME) | PPI +1,4% reforça \"higher for longer\"",
+      "delta": "• mantido — PPI +1,4% m/m (+6% a/a) reforça \"higher for longer\" | FedWatch: manutenção em jun amplamente precificada",
       "dir": "flat"
     },
     "ust10y": {
       "val": "~4,465%",
-      "sub": "recuando levemente na manhã de qua (vs. ~4,52% na terça) | ainda perto de máximas de 11 meses pós-CPI 3,8% a/a + PPI surpresa"
+      "sub": "recuando levemente na manhã de qua vs. ~4,52% na terça | perto de máximas de 11 meses pós-CPI 3,8% a/a + PPI 6% a/a"
     },
-    "nota": "PPI dos EUA de abril <b>disparou +1,4%, muito acima da expectativa de +0,3% m/m</b>, consolidando o cenário de inflação persistente nos EUA — segundo indicador macro em dois dias a surpreender para cima após CPI de 3,8% a/a. FedWatch: 97,6% de manutenção em junho; sem corte precificado até dezembro de 2027. <b>Kevin Warsh assume o Fed na sexta (15/mai)</b>. No Brasil, Focus de 11/mai elevou IPCA 2026 para 4,91% (9ª alta consecutiva) e Selic 2027 para 11,25%. <b>Próximo Copom: 16–17 jun.</b> Selic em 14,50% após corte de 29/abr."
+    "nota": "PPI dos EUA de abril <b>avançou +1,4% m/m</b> — maior alta mensal desde março de 2022 — com energia subindo 7,8% e gasolina +15,6% no mês. Na comparação anual, o PPI acelerou para <b>6,0% a/a</b>, máxima desde dezembro de 2022. O núcleo do PPI também surpreendeu: +1,0% m/m vs. expectativa de +0,3%. O dado, combinado com o CPI de 3,8% a/a de terça, solidifica o cenário de inflação persistente nos EUA e elimina qualquer expectativa de corte do Fed em 2026. No Brasil, Focus de 11/mai elevou IPCA 2026 para 4,91% (9ª alta consecutiva); Selic 2027 elevada para 11,25%. <b>Próximo Copom: 16–17 jun.</b>"
   },
   "inflacao": {
     "ipca15": "0,89%",
     "ipca15_12m": "4,37%",
     "ipca_abr": "0,67% (12m: 4,39%)",
     "focus_2026": "4,91%",
-    "nota": "<b>IPCA de abril: 0,67% m/m</b> — desaceleração vs. março (0,88%), mas 12 meses sobiu para <b>4,39%</b>, acima do teto da meta (4,5%). Focus 11/mai: IPCA 2026 em 4,91% (<b>9ª alta consecutiva</b>), Selic 2027 elevada para 11,25%. <b>PPI EUA abril: +1,4% m/m</b> (expectativa +0,3%) — surpreende amplamente para cima; complementa CPI de 3,8% a/a de terça. Pressão inflacionária bilateral (BR + EUA) mantém juros altos por mais tempo e pressiona câmbio, ampliando defasagem de combustíveis em reais."
+    "nota": "<b>IPCA de abril: 0,67% m/m</b> — desaceleração vs. março (0,88%), mas 12 meses subiu para <b>4,39%</b>, acima do teto da meta de 4,5%. Focus 11/mai: IPCA 2026 em 4,91% (<b>9ª alta consecutiva</b>). PPI EUA abril: <b>+1,4% m/m, maior alta desde mar/2022</b>; anual em 6,0% a/a (máx. dez/2022). Pressão inflacionária bilateral (BR + EUA) mantém juros altos por mais tempo e pressiona câmbio, ampliando defasagem de combustíveis em reais. Reajuste de gasolina sinalizado para \"já, já\" pela Petrobras deve elevar IPCA de maio/junho."
   },
   "abicom": {
-    "diesel_pct": "~-41% (aprox. -R$ 1,48/L) | subvenção governamental ativa desde mar/26",
-    "gasolina_pct": "~-80%+ (aprox. -R$ 2,00+/L) | Petrobras: reajuste \"em breve e com cuidado\"",
+    "diesel_pct": "~-41% (aprox. -R$ 1,48/L) | subvenção governamental ativa — 2 rodadas desde mar/26 (~R$ 1,50/L total)",
+    "gasolina_pct": "~-81% (aprox. -R$ 2,03/L) | Petrobras: reajuste \"já, já\" (Chambriard, 12/mai/26)",
     "dias_diesel": 60,
     "dias_gasolina": 106,
     "diesel_tag": "Subvenção ativa — defasagem persiste apesar de 2 rodadas de subsídio",
-    "gasolina_tag": "Reajuste sinalizado — \"em breve e com cuidado\" (Petrobras 1T26)",
-    "nota": "<b>Petrobras confirmou no resultado do 1T26 (divulgado terça à noite)</b> que avalia elevar o preço da gasolina \"em breve e com cuidado\" para não perder market share frente ao etanol barato da safra nova. A defasagem acumulada é expressiva — gasolina em torno de -80%+ e diesel em ~-41% frente ao PPI. O último reajuste do diesel foi em 14/mar/26 (+R$ 0,38/L); gasolina sem reajuste positivo há ~106 dias (última alteração foi redução de R$ 0,14/L em 27/jan/26). <b>Com PPI dos EUA surpreendendo +1,4% e câmbio firme, a pressão por reajuste permanece elevada</b> — mas a Petrobras sinalizou cautela no timing para não comprometer volume de vendas."
+    "gasolina_tag": "ALERTA MÁXIMO — reajuste \"já, já\" confirmado por Chambriard",
+    "nota": "<b>Petrobras confirmou na teleconferência do 1T26 (terça 12/mai)</b> que o reajuste da gasolina acontecerá <b>\"já, já\"</b> — a expressão mais incisiva usada até agora pela presidente Magda Chambriard. A diretora de Comercialização, Angelica Laureano, reforçou que o reajuste <b>não depende da aprovação do PLP 67/2026 no Senado</b>. A defasagem da gasolina atingiu -81%/-R$ 2,03/L segundo dados ABICOM de 12/mai. Último reajuste da gasolina: redução de R$ 0,14/L em 27/jan/26 (há 106 dias). Diesel com subvenção de ~R$ 1,50/L em 2 rodadas desde março; defasagem diesel: -41%/-R$ 1,48/L. <b>Reajuste de gasolina iminente — prepare-se para comunicação imediata à equipe e timestamps em todas as notas fiscais.</b>"
   },
   "anp": {
     "semana": "Síntese semana 04–08/mai aguardada para hoje (qua 13) ou amanhã (qui 14). Última síntese completa publicada: semana 26/abr–01/mai (divulg. 04/mai).",
@@ -136,7 +136,7 @@
         "produto": "Gasolina C",
         "preco": "R$ 6,77/L",
         "status": "yellow",
-        "status_label": "ref. semana 26/abr–01/mai (média Brasil)"
+        "status_label": "ref. semana 26/abr–01/mai (média Brasil) — nova síntese pendente"
       },
       {
         "produto": "Etanol hidr.",
@@ -169,7 +169,7 @@
         "status_label": "pendente síntese 04–08/mai"
       }
     ],
-    "nota": "Última síntese ANP com dados completos: semana 26/abr–01/mai. <b>Síntese da semana 04–08/mai esperada para hoje (qua 13) ou amanhã (qui 14).</b> Na média Brasil (última semana disponível): gasolina R$ 6,77/L e etanol R$ 4,69/L. Em SP: gasolina R$ 6,98/L e etanol R$ 4,52/L. Com Brent ainda acima de US$ 107 e reajuste da gasolina sinalizado pela Petrobras, a próxima síntese deve registrar alta nos preços ao consumidor. Acompanhe gov.br/anp para publicação."
+    "nota": "Última síntese ANP com dados completos: semana 26/abr–01/mai. <b>Síntese da semana 04–08/mai esperada para hoje (qua 13) ou amanhã (qui 14).</b> Com reajuste de gasolina anunciado como iminente pela Petrobras e Brent acima de US$ 107/b, a próxima síntese ANP deve registrar alta nos preços ao consumidor — especialmente após a formalização do reajuste da refinaria. Acompanhe gov.br/anp para publicação."
   },
   "cepea": {
     "hidratado": [
@@ -201,26 +201,26 @@
     ],
     "anidro_sp": {
       "val": "R$ 2,9575/L",
-      "delta": "▼ abaixo de R$ 3,00 — 1ª vez desde ago/2023 | safra 2026/27 recorde pressiona",
+      "delta": "▼ abaixo de R$ 3,00 — 1ª vez desde ago/2023 | queda >7% na semana | safra 2026/27 recorde pressiona",
       "dir": "down"
     },
     "acucar": {
       "val": "647 mil t (1ª quinz abr/26)",
-      "delta": "▼ -11,94% a/a | mínimas de 5 anos em NY",
+      "delta": "▼ -11,94% a/a | usinas priorizando etanol (mix 67%) | açúcar em mínimas de 5 anos em NY",
       "dir": "down"
     },
-    "nota": "Etanol hidratado SP em R$ 2,5920/L na usina — <b>safra 2026/27 com produção recorde pressiona preços para baixo</b>. Anidro abaixo de R$ 3,00/L pela 1ª vez desde agosto de 2023. Paridade hidratado/gasolina nos postos em ~65% (limiar: 70%). A Petrobras reconheceu que a queda do etanol é fator no timing do reajuste da gasolina — a estatal não quer perder market share na bomba. <b>Quando o reajuste for formalizado, a paridade melhora automaticamente e vendas de etanol devem acelerar.</b>"
+    "nota": "Etanol hidratado SP em R$ 2,5920/L na usina e anidro a R$ 2,9575/L — <b>ambos caindo com oferta recorde da safra 2026/27</b>. Anidro abaixo de R$ 3,00/L pela 1ª vez desde agosto de 2023. O Cepea registra quedas superiores a 7% nos preços dos combustíveis na semana, com distribuidoras atuando de forma cautelosa. Chambriard citou explicitamente o etanol como fator na decisão de reajuste da gasolina — a Petrobras monitora a paridade nos últimos 15 dias. <b>Quando o reajuste da gasolina for formalizado, a paridade melhora automaticamente e volume de hidratado tende a acelerar.</b>"
   },
   "eg": {
-    "paridade_sp": "~64,8% (posto SP) | ~65% (posto Brasil)",
+    "paridade_sp": "~64,8% (posto SP) | ~69,2% (posto Brasil)",
     "mandato_e": "E30",
     "mandato_b": "B15",
-    "nota": "Paridade hidratado/gasolina (posto): SP ~64,8% (etanol R$ 4,52/L ÷ gasolina R$ 6,98/L) e Brasil ~65% (R$ 4,69 ÷ R$ 6,77). Ambos abaixo do gatilho de 70% — etanol favorável ao consumidor. <b>Quando a Petrobras formalizar o reajuste da gasolina</b>, a paridade melhora automaticamente — ex: gasolina a R$ 7,50/L elevaria paridade SP para ~60%, tornando etanol ainda mais competitivo. Com E30 desde ago/2025, o volume de anidro cresce estruturalmente. Usinas priorizando etanol (mix 67,07%) mantêm oferta de hidratado robusta — preço de usina pressionado beneficia o consumidor, mas dilui margem no posto."
+    "nota": "Paridade hidratado/gasolina (posto): SP ~64,8% (etanol R$ 4,52/L ÷ gasolina R$ 6,98/L) e Brasil ~69,2% (R$ 4,69 ÷ R$ 6,77). SP abaixo do gatilho de 70% — etanol claramente favorável ao consumidor flex em São Paulo. Com reajuste de gasolina iminente (\"já, já\" — Chambriard), o impacto na paridade será positivo para o etanol: ex. gasolina a R$ 7,50/L em SP eleva paridade para ~60%, tornando etanol ainda mais competitivo na bomba. Com E30 desde ago/2025, volume de anidro cresce estruturalmente. Safra 2026/27 recorde com mix 67% etanol mantém oferta robusta de hidratado — preço na usina pressionado beneficia o consumidor mas dilui margem no elo distribuição-posto."
   },
   "safra": {
     "moagem": {
       "val": "19,96 Mt (Centro-Sul)",
-      "delta": "▲ +19,67% a/a (1ª quinz abr/26)"
+      "delta": "▲ +19,67% a/a (1ª quinz abr/26) — acima das expectativas"
     },
     "atr": {
       "val": "103,36 kg/t",
@@ -231,32 +231,32 @@
     },
     "oferta": {
       "val": "1,23 bilhão de litros (cana + milho)",
-      "delta": "▲ +33,32% a/a (1ª quinz abr/26)"
+      "delta": "▲ +33,32% a/a (1ª quinz abr/26) | hidratado 820,15 ML | anidro 460,87 ML"
     },
-    "nota": "UNICA (divulgação 30/abr): 1ª quinzena de abr/26 processou <b>19,96 Mt (+19,67% a/a)</b> — safra 2026/27 acima das expectativas. Mix fortemente alcooleiro: <b>67,07% para etanol</b> vs. 55,29% em 2025 — usinas priorizando etanol porque açúcar atingiu mínimas de 5 anos em NY. Produção de etanol (cana + milho): <b>1,23 bilhão de litros (+33,32% a/a)</b> — hidratado 879,87 ML (+18,54%) e anidro 350,20 ML. Etanol de milho: 411,94 ML (+15,06%), 33,49% do total. Açúcar -11,94% a/a. ATR estável em 103,36 kg/t. Vendas no mercado interno: 1,25 bilhão de litros. <b>Próxima divulgação UNICA (1ª quinzena mai/26): esperada qui 14 ou sex 15/mai.</b>"
+    "nota": "UNICA (divulgação 30/abr): 1ª quinzena de abr/26 processou <b>19,96 Mt (+19,67% a/a)</b> — safra 2026/27 bem acima das expectativas. StoneX prevê segunda maior safra da história no Centro-Sul: 632,2 Mt. Mix fortemente alcooleiro: <b>67,07% para etanol</b> vs. 55,29% em 2025 — usinas priorizando etanol porque açúcar atingiu mínimas de 5 anos em NY. Produção total de etanol (cana + milho): <b>1,23 bilhão de litros (+33,32% a/a)</b>. Vendas 1ª quinz abr/26: 1,28 bilhão de litros. ATR estável em 103,36 kg/t. <b>Próxima divulgação UNICA (1ª quinzena mai/26): esperada qui 14 ou sex 15/mai.</b>"
   },
   "agenda": [
     {
       "day": "Qua 13/mai",
-      "evento": "PPI EUA abril divulgado: +1,4% — muito acima da expectativa · Ibovespa abre em alta revertendo queda de terça · Cúpula Trump-Xi: delegação chega a Pequim com Jensen Huang (Nvidia) de surpresa · Síntese ANP 04–08/mai (possível publicação hoje) · Banco do Brasil resultado 1T26 · Varejo Brasil 9h",
+      "evento": "IEA publica OMR mai/26: estoques caem ritmo recorde 4 MMbpd (hoje) · PPI EUA abril: +1,4% m/m, maior alta desde mar/2022 · Petrobras: reajuste gasolina \"já, já\" (Chambriard) · Cúpula Trump-Xi começa a se materializar em Pequim com Jensen Huang (Nvidia) na delegação · Síntese ANP 04–08/mai (possível publicação hoje) · Banco do Brasil resultado 1T26 · Varejo Brasil 9h · EIA: estoques de petróleo (crude -4,3 MB, distilados +190 MB)",
       "tag": "red",
       "tag_label": "hoje — crítico"
     },
     {
       "day": "Qui 14/mai",
-      "evento": "Trump–Xi Jinping: cúpula dia 1 (reuniões formais) em Pequim · Pedidos de auxílio-desemprego EUA · UNICA 1ª quinzena mai/26 (possível) · Síntese ANP se não publicada hoje · Possível comunicado de reajuste da gasolina Petrobras",
+      "evento": "Trump–Xi Jinping: cúpula dia 1 (reuniões formais) em Pequim · Pedidos de auxílio-desemprego EUA · UNICA 1ª quinzena mai/26 (possível) · Síntese ANP se não publicada hoje · Formalização do reajuste da gasolina Petrobras (\"já, já\")",
       "tag": "red",
       "tag_label": "crítico"
     },
     {
       "day": "Sex 15/mai",
-      "evento": "Trump–Xi: cúpula dia 2 / encerramento — declaração conjunta esperada · Kevin Warsh assume Fed (último dia de Powell) · Vendas varejo EUA abril · IBC-Br março (BC Brasil) · UNICA 1ª quinzena mai/26 se não publicada antes",
+      "evento": "Trump–Xi: cúpula dia 2 / encerramento — declaração conjunta esperada · Vendas varejo EUA abril · IBC-Br março (BC Brasil) · UNICA 1ª quinzena mai/26 se não publicada antes · PLP 67/2026 no Senado (isenção PIS/Cofins/Cide combustíveis)",
       "tag": "red",
       "tag_label": "crítico"
     },
     {
       "day": "Seg 18/mai",
-      "evento": "Focus semanal (IPCA/Selic/câmbio) — 10ª alta consecutiva do IPCA esperada · Reação do mercado ao resultado da cúpula Trump-Xi · Possível formalização do reajuste da gasolina Petrobras se não ocorreu antes",
+      "evento": "Focus semanal (IPCA/Selic/câmbio) — impacto do reajuste da gasolina na expectativa inflacionária · Reação do mercado ao resultado da cúpula Trump-Xi · FRED: Nominal Broad U.S. Dollar Index atualizado",
       "tag": "blue",
       "tag_label": "dado"
     },
@@ -274,47 +274,47 @@
     }
   ],
   "radar": [
-    "<b>PPI EUA abril +1,4% — surpresa máxima:</b> expectativa era +0,3% m/m. Dado de hoje agrava o cenário pós-CPI 3,8% a/a de terça e derruba Dow (-203 pts) e S&P (-0,26%) na abertura de quarta. FedWatch: 97,6% de manutenção em jun; sem corte até dez/2027. DXY firme ~98,33. UST 10Y ~4,465%. <b>Kevin Warsh assume Fed na sexta (15/mai).</b>",
-    "<b>Petrobras 1T26 abaixo do consenso — reajuste da gasolina \"em breve e com cuidado\":</b> estatal descartou dividendos extraordinários em 2026 (\"muito baixa\" probabilidade), mas confirmou avaliação de elevar preço da gasolina sem perder market share para o etanol barato. Defasagem gasolina ~-80%+, diesel ~-41%. Janelas fechadas há ~106 dias (gasolina) e ~60 dias (diesel).",
-    "<b>Jensen Huang (Nvidia) entra de surpresa na delegação Trump para Pequim</b> — reuniões formais Trump-Xi qui 14 e sex 15. ING: \"lampejo de esperança\" de Xi pressionar Irã para acordo; Yardeni: China tem forte incentivo para apoiar desescalada em Hormuz. Brent ~US$ 107,48 (-0,27%) e WTI ~US$ 101,66 (-0,51%) na manhã de quarta. EIA: Hormuz fecha até final de maio; normalização só no 4T26.",
-    "<b>Ibovespa abre quarta em alta (184.103 pts, range 181.615–184.530)</b> revertendo -0,86% de terça (180.342 pts). Dólar R$ 4,8972 (range R$ 4,8841–4,9105 — mínima 52 semanas). Bitcoin US$ 80.795 (-0,37%), quatro rejeições em US$ 82.000 (MM200d US$ 82.228). Focus 11/mai: IPCA 2026 a 4,91% (9ª alta); Selic 2027 elevada para 11,25%.",
-    "<b>Safra 2026/27 recorde:</b> UNICA 1ª quinz abr: 19,96 Mt (+19,67% a/a), mix 67% etanol, 1,23 bilhão de litros (+33,32%). Hidratado SP em R$ 2,5920/L, anidro abaixo de R$ 3,00/L (1ª vez desde ago/2023). Paridade etanol/gasolina ~65% (abaixo de 70%). Próxima divulgação UNICA (1ª quinz mai/26): qui 14 ou sex 15/mai."
+    "<b>IEA OMR mai/26 (hoje): estoques globais caem ritmo RECORDE de ~4 MMbpd:</b> -129 MB em março, -117 MB em abril. Acumulado total de perdas de oferta ultrapassa 1 bilhão de barris, com mais de 14 MMbpd de produção do Golfo parada. IEA: mercado pode permanecer em déficit até out/26 mesmo se conflito encerrar antes. WTI ~US$ 102/b e Brent ~US$ 107/b (snapping rally de 3 sessões). EIA (12/mai): Brent ~US$ 106/b em mai-jun; inventários US crude -4,3 MB na semana.",
+    "<b>PPI EUA abril +1,4% m/m — maior alta desde mar/2022 (+1,7%):</b> energia +7,8%, gasolina +15,6%; anual acelerou a 6,0% a/a (máx. dez/2022). Núcleo PPI +1,0% m/m vs. est. +0,3%. Dado combina com CPI de 3,8% a/a de terça para solidificar \"higher for longer\" no Fed. Dow abre -203 pts, S&P -0,26%. DXY ~98,33 firme. UST 10Y ~4,465%.",
+    "<b>Petrobras: reajuste gasolina \"já, já\" — mais explícito que \"em breve\":</b> Chambriard (12/mai) usou a expressão \"já, já\" na teleconferência; diretora confirmou que independe do PLP 67/2026 no Senado. Defasagem gasolina: -81%/-R$ 2,03/L (ABICOM 12/mai). Lucro 1T26: R$ 32,7 bi vs. consenso R$ 34,4 bi. PETR4 caiu -1,70% na tarde de terça; dividendos extraordinários com \"probabilidade muito baixa\" em 2026.",
+    "<b>Cúpula Trump-Xi (qui 14–sex 15) — Jensen Huang (Nvidia) na delegação:</b> CEO da Nvidia foi adicionado de última hora. Pauta: Irã/Hormuz, chips/IA, Taiwan, terras raras. Wilkinson (Dragonfly): Trump deve pedir a Xi que pressione Irã a aceitar termos dos EUA. Qualquer sinalização sobre Hormuz pode derrubar Brent US$ 5–10/b em minutos. Ibovespa abertura qua: range 181.615–184.530 pts. Dólar: R$ 4,8861–4,9276. Bitcoin: US$ 80.795 (-1,05%), 4 rejeições MM200d US$ 82.228.",
+    "<b>Safra 2026/27 recorde + etanol barato = pressão máxima no reajuste da gasolina:</b> Anidro SP em R$ 2,9575/L (abaixo de R$ 3,00 pela 1ª vez desde ago/2023). Hidratado SP em R$ 2,5920/L. StoneX: safra 632,2 Mt (2ª maior da história). UNICA (1ª quinz abr): moagem +19,67%, etanol +33,32%, mix 67% etanol. Paridade SP ~64,8% (abaixo de 70%). Petrobras monitora paridade dos últimos 15 dias antes de formalizar o reajuste — com etanol barato, pode agir mais cedo. Próxima UNICA (1ª quinz mai/26): qui 14 ou sex 15/mai."
   ],
   "acao": {
-    "tag": "🔴 Alerta máximo — PPI surpreende +1,4%, Petrobras sinaliza reajuste \"em breve\", cúpula Trump-Xi começa hoje",
-    "lead": "<b>Três vetores críticos convergem nesta quarta-feira 13 de maio.</b> Primeiro: o PPI dos EUA de abril saiu em +1,4% m/m — muito acima da expectativa de +0,3%, agravando o cenário inflacionário pós-CPI de 3,8% a/a de terça. O dado reforça juros altos por mais tempo nos EUA, fortalece DXY e pressiona câmbio, ampliando a defasagem de combustíveis em reais. Segundo: a Petrobras divulgou o resultado do 1T26 com lucro abaixo do consenso, descartou dividendos extraordinários, mas foi explícita: avalia reajuste da gasolina <b>\"em breve e com cuidado\"</b> para não perder market share frente ao etanol barato. A defasagem acumulada supera -80% na gasolina e -41% no diesel. Terceiro: a cúpula Trump-Xi começa com reuniões formais quinta e sexta em Pequim — e Jensen Huang (Nvidia) foi adicionado à delegação americana de última hora, sinalizando negociações sobre chips e IA. O ING aponta um <b>\"lampejo de esperança\"</b> de que Xi use influência sobre o Irã para aproximar um acordo; qualquer sinalização sobre Hormuz pode derrubar o Brent em US$ 5–10/barril em minutos.",
+    "tag": "🔴 Alerta máximo — IEA confirma crise histórica de estoques; PPI EUA +1,4%; Petrobras: reajuste gasolina \"já, já\"",
+    "lead": "<b>Esta é a edição de maior urgência operacional de 2026 para donos de posto.</b> Três vetores convergem em 13 de maio com impacto direto e iminente no seu caixa. Primeiro: a <b>IEA publicou hoje seu relatório mensal</b> confirmando que estoques globais caem no ritmo recorde de ~4 MMbpd — o mercado de petróleo pode permanecer severamente desabastecido até outubro, mesmo se o conflito encerrar antes. Segundo: o <b>PPI dos EUA de abril saiu em +1,4% m/m</b> — maior alta desde março de 2022 — eliminando qualquer perspectiva de corte do Fed e pressionando o câmbio (DXY ~98,33, dólar ~R$ 4,90). Terceiro e mais urgente: a presidente da Petrobras, Magda Chambriard, afirmou ontem (12/mai) que o reajuste da gasolina acontecerá <b>\"já, já\"</b> — e a diretora de Comercialização confirmou que não depende do PLP 67/2026. Com defasagem de -81%/-R$ 2,03/L e Brent acima de US$ 107/b, o reajuste pode vir a qualquer momento — qui 14 ou sex 15 são as janelas mais prováveis.",
     "items": [
-      "<b>Gasolina — reajuste sinalizado \"em breve e com cuidado\":</b> pela primeira vez, a própria Petrobras usou essas palavras no resultado oficial do 1T26. Com defasagem acumulada de ~-80%+ (-~R$ 2,00+/L) e janela fechada há ~106 dias, o reajuste é questão de dias. Tenha 3 cenários prontos: (a) reajuste moderado +R$ 0,30–0,40/L na refinaria; (b) reajuste em etapas; (c) reajuste condicionado à aprovação do PLP 67/2026 no Senado. Comunique sua equipe agora e mantenha timestamp em todas as notas fiscais.",
-      "<b>Diesel — subvenção ativa mas defasagem persiste (~-41%, -~R$ 1,48/L):</b> duas rodadas de subsídio governamental desde março. Último reajuste: +R$ 0,38/L em 14/mar/26. Janelas fechadas há ~60 dias. Monitore comunicados do governo sobre continuidade do modelo. Reforce estoques preventivamente antes de qualquer ajuste.",
-      "<b>PPI EUA +1,4% — impacto cambial imediato:</b> dado muito acima do esperado fortalece DXY (~98,33) e pressiona câmbio. Cada R$ 0,10 de alta no dólar equivale a aprox. R$ 0,15–0,20/L de ampliação da defasagem em reais. Calcule seu cenário de compra com câmbio a R$ 5,00+ para hedge preventivo.",
-      "<b>Cúpula Trump-Xi (qui 14–sex 15) — monitor em tempo real:</b> Jensen Huang (Nvidia) na delegação americana sinaliza agenda de chips/IA, mas o tema central é Irã/Hormuz. ING e Yardeni veem China com forte incentivo para apoiar desescalada. Configure alertas para \"Hormuz\", \"Iran deal\", \"Xi Trump Pequim\". Qualquer aceno positivo pode derrubar o Brent US$ 5–10/b em minutos — o que mudaria completamente o cálculo de defasagem. Mantenha planilha de paridade atualizada.",
-      "<b>Etanol — safra recorde mantém preços baixos e paridade favorável:</b> hidratado na usina SP em R$ 2,5920/L, paridade no posto ~65% (abaixo de 70%). Quando o reajuste da gasolina for formalizado, a paridade melhora automaticamente — ex: gasolina a R$ 7,50/L eleva paridade SP para ~60%, tornando etanol ainda mais competitivo na bomba. Ajuste preços ao consumidor com agilidade após o comunicado.",
-      "<b>Compliance — alerta redobrado:</b> com reajuste iminente e PPI surpreendendo, ANP e Senacon em estado de atenção. Mantenha histórico completo de notas fiscais de compra com timestamps e registro de preços de venda com horário. Em dias de reajuste, a documentação temporal é fundamental para demonstrar transmissão legítima de custos e evitar autuações por 'antecipação especulativa'."
+      "<b>GASOLINA — reajuste \"já, já\": prepare sua operação AGORA:</b> a expressão de Chambriard é inequívoca — não é mais \"em breve\" ou \"com cuidado\", é \"já, já\". Com defasagem de -81%/-R$ 2,03/L, janela fechada há 106 dias e mercado aguardando, o reajuste pode vir antes de sex 15/mai. (a) Configure alertas para comunicados da Petrobras (precos.petrobras.com.br) e para notícias-chave; (b) prepare 3 cenários de repasse: +R$ 0,30/L, +R$ 0,50/L e +R$ 0,70/L na bomba; (c) alinhe com sua distribuidora sobre prazo de entrega pós-reajuste; (d) comunique sua equipe com protocolo claro de quando e como ajustar preços — registre o horário de cada alteração.",
+      "<b>COMPLIANCE — timestamp é sua proteção legal:</b> com reajuste iminente e ANP/Senacon em alerta, toda nota fiscal de compra de combustível deve ter timestamp preciso e toda mudança de preço na bomba deve ser registrada com horário. Em dias de reajuste, documente: (a) hora em que recebeu a nota de compra ao novo preço; (b) hora em que ajustou o preço na bomba; (c) qualquer comunicação com clientes sobre a mudança. A documentação temporal demonstra transmissão legítima de custo e evita autuação por 'antecipação especulativa'.",
+      "<b>DIESEL — subvenção ativa mas atenção ao teto:</b> duas rodadas de subsídio (total ~R$ 1,50/L) desde março amenizam mas não eliminam a defasagem de -41%/-R$ 1,48/L. Petrobras informou que ~R$ 740 milhões de subsídios estão contabilizados como contas a receber. Monitore comunicados sobre continuidade e teto do programa. Com PPI de energia nos EUA em +7,8% no mês, pressão estrutural para novos reajustes do diesel permanece — e novo reajuste pode vir junto com a gasolina ou logo depois.",
+      "<b>IEA OMR mai/26 — cenário de petróleo estruturalmente alto até out/26:</b> estoques globais caindo 4 MMbpd, mercado em déficit até 4T26 — mesmo no cenário de reabertura gradual de Hormuz em junho. EIA projeta Brent ~US$ 106/b em mai-jun, caindo para US$ 89/b no 4T26 e US$ 79/b em 2027. Qualquer atraso de 1 mês na reabertura de Hormuz pode elevar Brent em mais de US$ 20/b no curto prazo (EIA). Mantenha planilha de paridade atualizada com cenários de Brent a US$ 90, US$ 100 e US$ 120.",
+      "<b>CÚPULA TRUMP-XI (qui 14 – sex 15) — monitor em tempo real:</b> este é o evento de maior potencial de reversão do cenário energético. Se Xi sinalizar pressão sobre o Irã para aceitar termos do cessar-fogo e abrir Hormuz, o Brent pode cair US$ 5–10/b em minutos — o que alteraria completamente o cálculo de defasagem. Configure alertas para: \"Hormuz\", \"Iran deal\", \"Trump Xi Pequim\", \"ceasefire\". Tenha o número da sua distribuidora na mão. Qualquer queda brusca do petróleo pode antecipar ou moderar o reajuste.",
+      "<b>ETANOL — paridade favorável SP; cuidado com a virada após reajuste da gasolina:</b> com hidratado SP em R$ 4,52/L e gasolina C em R$ 6,98/L, paridade em ~64,8% — bem abaixo de 70%. Etanol é a escolha racional para o consumidor flex em SP. Após o reajuste da gasolina, a paridade melhora automaticamente: com gasolina a R$ 7,50/L, paridade cai para ~60%, tornando etanol ainda mais competitivo. Comunique isso ao consumidor e ajuste sua estratégia de mix de abastecimento para capturar o volume adicional de etanol que deve ocorrer nas semanas pós-reajuste."
     ]
   },
   "resumo": [
     {
       "lead": true,
-      "html": "A quarta-feira 13 de maio traz <b>três vetores de impacto concreto e novo</b> desde a edição anterior. O primeiro e mais imediato: o <b>PPI dos EUA de abril saiu em +1,4% m/m</b> — muito acima da expectativa de +0,3% — agravando o cenário inflacionário pós-CPI de 3,8% a/a de terça. O Dow Jones abriu em queda de mais de 200 pontos em Nova York. O segundo: a <b>Petrobras divulgou o resultado do 1T26 abaixo do consenso</b> e descartou dividendos extraordinários para 2026, mas foi explícita ao confirmar que avalia reajuste da gasolina <b>\"em breve e com cuidado\"</b> para não perder market share frente ao etanol barato da safra nova. O terceiro: a cúpula Trump-Xi começou a se materializar em Pequim com um elemento novo — <b>Jensen Huang (Nvidia) foi adicionado de última hora à delegação americana</b>, sinalizando negociações sobre chips e IA, enquanto analistas do ING apontam um \"lampejo de esperança\" de que Xi use influência sobre o Irã para aproximar acordo sobre Hormuz."
+      "html": "A quarta-feira 13 de maio de 2026 é marcada por três fatos novos e concretos com impacto direto no setor de combustíveis. O primeiro e mais relevante: a <b>IEA publicou hoje seu Relatório Mensal do Mercado de Petróleo de maio</b>, confirmando que os estoques globais observados de petróleo caíram 129 milhões de barris em março e outros 117 milhões em abril — um ritmo sem precedentes de ~4 milhões de barris por dia. A agência alertou que a <b>volatilidade de preços deve persistir antes do pico de demanda do verão</b> e que o mercado pode permanecer em déficit severo até o quarto trimestre de 2026, mesmo que o conflito encerre antes. O segundo: o <b>PPI dos EUA de abril subiu +1,4% m/m</b> — a maior alta mensal desde março de 2022 — impulsionado por energia (+7,8%) e gasolina (+15,6%), com o índice anual acelerando para 6,0% a/a. O terceiro e mais urgente para o setor: a presidente da Petrobras, Magda Chambriard, afirmou na teleconferência de resultados do 1T26 que o reajuste da gasolina acontecerá <b>\"já, já\"</b> — a expressão mais incisiva usada até agora — e a diretora de Comercialização confirmou que a decisão <b>independe da aprovação do PLP 67/2026 no Senado</b>."
     },
     {
-      "html": "No petróleo, o <b>Brent fechou a terça a US$ 107,77 (+3,4%) e o WTI a US$ 102,18 (+4,2%)</b>, com Trump classificando a resposta iraniana de \"garbage\" e declarando o cessar-fogo em \"massive life support\". Na manhã de quarta, ambos recuam levemente: <b>Brent em ~US$ 107,48 (-0,27%) e WTI em ~US$ 101,66 (-0,51%)</b>, encerrando três sessões consecutivas de alta enquanto o mercado aguarda os sinais de Pequim. O EIA (12/mai) projeta Brent em <b>~US$ 106/b em mai/jun</b>, com queda de estoques de 8,5 MMbpd no 2T26, normalizando só no 4T26 (US$ 89/b). O CEO da Aramco alertou que, se Hormuz ficar bloqueado além de meados de junho, a normalização do mercado se estende até 2027. O Eurasia Group avalia que a perda de oferta já ultrapassa 1 bilhão de barris — preços acima de US$ 80/b pelo resto do ano."
+      "html": "No petróleo, o <b>WTI estabilizou em ~US$ 102/b nesta quarta</b> após três sessões consecutivas de alta (+7,6% acumulado), enquanto o Brent recuava levemente para ~US$ 107/b (-0,67% vs. fechamento de terça em US$ 107,77 +3,4%). O IEA calculou que as perdas acumuladas de oferta ultrapassam <b>1 bilhão de barris</b>, com mais de 14 MMbpd de produção do Golfo parada. A EIA (STEO de 12/mai) projeta Brent em ~US$ 106/b em maio-junho e avisa que um atraso de um mês na reabertura de Hormuz poderia elevar os preços em mais de US$ 20/b no curto prazo. O CEO da Aramco, Amin Nasser, reitou que <b>\"se o Estreito de Hormuz abrir hoje, ainda levará meses para o mercado reequilibrar\"</b>. Os dados EIA desta quarta mostraram queda de 4,3 MB nos estoques de crude dos EUA — quase o dobro das expectativas."
     },
     {
-      "html": "A <b>cúpula Trump-Xi em Pequim (reuniões formais qui 14 e sex 15/mai)</b> ganhou uma nova dimensão com a entrada surpresa de Jensen Huang (Nvidia) na delegação americana. A pauta cobre Irã/Hormuz, terras raras, IA, Taiwan e comércio. O analista Tobin Marcus, da Wolfe Research, afirmou que o encontro servirá <b>\"principalmente para reforçar a distensão\"</b> — resultados modestos sendo o desfecho mais provável. Contudo, o ING aponta um \"lampejo de esperança\" de que as conversas gerem resultados positivos em relação ao Irã, e a Yardeni Research observa que a China tem <b>fortes incentivos para apoiar a desescalada em Hormuz</b>, dado sua dependência de importações de energia do Oriente Médio. Pequim já pediu a reabertura do Estreito e criticou ataques iranianos a países do Golfo."
+      "html": "O <b>PPI dos EUA de abril surpreendeu amplamente: +1,4% m/m</b>, a maior alta mensal desde março de 2022, contra expectativa de +0,7% dos analistas da FactSet. Na comparação anual, o PPI acelerou de 4,3% para 6,0%, máxima desde dezembro de 2022. Mais de 75% do movimento vieram do salto de 7,8% nos preços de energia, com gasolina responsável por +15,6% m/m e mais de 40% do avanço dos bens finais. O núcleo do PPI também surpreendeu: +1,0% m/m vs. expectativa de +0,3%. Com CPI de 3,8% a/a na terça e PPI de 6,0% a/a na quarta, o cenário inflacionário nos EUA consolida definitivamente o \"higher for longer\" do Fed — Dow abriu em baixa de ~200 pontos, DXY firme em ~98,33 e UST 10Y em ~4,465%."
     },
     {
-      "html": "No front Petrobras, o resultado do <b>1T26 ficou abaixo do consenso</b> e a estatal descartou como \"muito baixa\" a probabilidade de dividendos extraordinários em 2026. A notícia positiva para o setor: a Petrobras confirmou que avalia elevar o preço da gasolina <b>\"em breve e com cuidado\"</b> para não impactar seu market share. A defasagem acumulada é expressiva — gasolina em torno de ~-80%+ e diesel em ~-41% frente ao PPI. O último reajuste do diesel foi em 14/mar/26 (+R$ 0,38/L); a gasolina está sem reajuste positivo há ~106 dias (última alteração foi redução de R$ 0,14/L em 27/jan/26). Duas rodadas de subsídio governamental no diesel (desde março) amortizam mas não eliminam a defasagem. O PLP 67/2026 (isenção PIS/Cofins e Cide) tramita no Senado como mecanismo para suavizar o repasse ao consumidor."
+      "html": "O resultado da Petrobras no 1T26 trouxe lucro de <b>R$ 32,7 bilhões</b> — queda de 7,2% a/a e abaixo do consenso de R$ 34,4 bilhões (LSEG). A estatal anunciou dividendos de ~US$ 1,8 bilhão (vs. consenso US$ 2,4 bilhões) e classificou como <b>\"muito baixa\"</b> a probabilidade de dividendos extraordinários em 2026. A notícia positiva para o setor chegou na teleconferência: Chambriard afirmou que a Petrobras aumentará o preço da gasolina <b>\"já, já\"</b>, monitorando a competição com o etanol barato da safra nova nos últimos 15 dias. A diretora Angelica Laureano confirmou que a decisão <b>não depende do PLP 67/2026</b>. Com defasagem de -81%/-R$ 2,03/L (ABICOM) e janela fechada há 106 dias (último movimento foi redução de R$ 0,14/L em 27/jan/26), o reajuste é considerado iminente — qui 14 ou sex 15 como janelas mais prováveis. Petrobras também recebeu duas rodadas de subsídio do governo para o diesel (~R$ 1,50/L total), com ~R$ 740 milhões a receber contabilizados."
     },
     {
-      "html": "Na inflação, o <b>PPI dos EUA de abril surpreendeu amplamente: +1,4% m/m</b> contra expectativa de +0,3%, consolidando o cenário de inflação persistente — segundo dado macro seguido a surpreender para cima depois do CPI de 3,8% a/a de terça. O FedWatch aponta 97,6% de probabilidade de manutenção do Fed em junho, sem corte precificado até dezembro de 2027. No Brasil, o Focus de 11/mai elevou o <b>IPCA 2026 para 4,91%</b> (9ª alta consecutiva) e a Selic para 11,25% em 2027 — juros altos por mais tempo em ambos os lados. O IPCA de abril saiu em 0,67% m/m e 4,39% em 12 meses. <b>Kevin Warsh assume o Fed na sexta (15/mai)</b>, encerrando a era Powell. Analistas esperam continuidade da postura cautelosa."
+      "html": "Na <b>cúpula Trump-Xi em Pequim (reuniões formais qui 14 e sex 15)</b>, Jensen Huang, CEO da Nvidia, foi adicionado de última hora à delegação americana — sinalizando que chips e IA estão na mesa, ao lado de Irã/Hormuz, Taiwan e terras raras. Henry Wilkinson, da Dragonfly, afirmou à CNBC que <b>Trump deve pedir a Xi que pressione o Irã a aceitar os termos dos EUA</b>. Qualquer sinalização positiva sobre Hormuz pode derrubar o Brent em US$ 5–10/b em minutos. Trump disse que a situação com o Irã \"permanece sob controle\" antes da reunião. A cúpula representa o maior catalisador de reversão do cenário energético disponível no curto prazo."
     },
     {
-      "html": "Nos mercados financeiros, o <b>Ibovespa abre a quarta em forte recuperação</b> — oscilando entre 181.615 e 184.530 pts (abertura em 184.103), revertendo a queda de -0,86% de terça (180.342 pts, menor nível desde 27/mar). O dólar opera em R$ 4,8972 com range do dia em R$ 4,8841–4,9105 (mínima de 52 semanas). DXY firme em ~98,33 após PPI surpresa. Em Wall Street, o PPI derrubou Dow (-203 pts na abertura) e S&P, mas a Nvidia (+2% com Jensen Huang na delegação) segura o Nasdaq. Bitcoin em US$ 80.795 (-0,37%), ainda abaixo da MM200d (US$ 82.228) após quatro rejeições. <b>UST 10Y ~4,465%</b>, recuando levemente da máxima de 11 meses."
+      "html": "Nos <b>mercados financeiros</b>, o Ibovespa fechou terça em 180.342 pts (-0,86%), abaixo dos 180 mil pontos na mínima do pregão, puxado pela Petrobras (PETR4 -1,70%). A abertura desta quarta aponta para recuperação, com range inicial de 181.615–184.530 pts. O dólar opera em R$ 4,9041 (abertura R$ 4,8911; range R$ 4,8861–4,9276), com -13,75% nos últimos 12 meses. EUR/BRL em R$ 5,75. Bitcoin em US$ 80.795 (-1,05%) com quatro rejeições na MM200d US$ 82.228 — CME FedWatch indica que mercados esperam juros inalterados até 2027. Em Wall Street, o PPI derrubou Dow (-203 pts na abertura de NY), S&P (-0,26%) e Nasdaq (-0,23%), com Nvidia (+2%) segurando o índice de tecnologia."
     },
     {
-      "html": "No setor sucroenergético, a safra 2026/27 avança em ritmo recorde: UNICA registrou <b>19,96 Mt na 1ª quinzena de abril (+19,67% a/a)</b>, com mix alcooleiro de <b>67,07%</b> (vs. 55,29% em 2025). Produção de etanol: 1,23 bilhão de litros (+33,32%). Etanol hidratado SP na usina em R$ 2,5920/L; anidro abaixo de R$ 3,00/L pela 1ª vez desde ago/2023. Paridade etanol/gasolina no posto ~65% (abaixo de 70%). <b>Para o posto: o reajuste da gasolina foi sinalizado pela própria Petrobras como \"em breve e com cuidado\" no resultado oficial do 1T26 — é o sinal mais concreto até agora. Configure alertas, tenha planilhas prontas, documente timestamps e monitore a cúpula Trump-Xi em tempo real. Próxima divulgação UNICA: qui 14 ou sex 15/mai.</b>"
+      "html": "No setor sucroenergético, a safra 2026/27 avança em ritmo recorde: UNICA registrou <b>19,96 Mt na 1ª quinzena de abril (+19,67% a/a)</b>, com mix alcooleiro de 67,07% (vs. 55,29% em 2025). StoneX projeta a <b>segunda maior safra da história no Centro-Sul: 632,2 Mt</b>. Etanol hidratado SP na usina em R$ 2,5920/L; anidro a R$ 2,9575/L — abaixo de R$ 3,00/L pela primeira vez desde agosto de 2023. Paridade etanol/gasolina no posto SP ~64,8% (abaixo de 70% — etanol favorável). <b>Para o posto: o reajuste da gasolina foi confirmado como \"já, já\" pela presidente da Petrobras na teleconferência oficial do 1T26 — prepare a operação, alinhe com distribuidoras, documente timestamps e monitore a cúpula Trump-Xi em tempo real. Próxima divulgação UNICA (1ª quinz mai/26): qui 14 ou sex 15/mai.</b>"
     }
   ],
-  "_comentario": "Gerado automaticamente em 2026-05-13T14:21:12.853Z por gerar-painel.mjs (claude-sonnet-4-6)"
+  "_comentario": "Gerado automaticamente em 2026-05-13T17:26:10.003Z por gerar-painel.mjs (claude-sonnet-4-6)"
 }
