@@ -229,7 +229,117 @@ footer{max-width:1480px;margin:8px auto 40px;padding:18px 28px;color:var(--text-
 footer b{color:var(--text-2);font-weight:600}
 </style>
 </head>
-<body>
+<body class="locked">
+<!-- ════════ AUTH GATE — Lumen Posto Club ════════ -->
+<style id="_auth_lock_css">
+  body.locked > *:not(#_auth_gate):not(script):not(style) { display: none !important; }
+</style>
+<div id="_auth_gate" style="position:fixed;inset:0;background:linear-gradient(135deg,#0a3d62 0%,#1e72bd 100%);z-index:999999;display:flex;align-items:center;justify-content:center;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;padding:16px;">
+  <div style="background:#fff;padding:32px 28px;border-radius:20px;max-width:420px;width:100%;box-shadow:0 25px 70px rgba(0,0,0,0.3);">
+    <div style="text-align:center;margin-bottom:24px;">
+      <div style="font-size:42px;margin-bottom:8px;">🔐</div>
+      <h1 style="color:#0a3d62;font-size:22px;margin:0 0 4px;font-weight:700;">Posto em Dia</h1>
+      <p style="color:#666;font-size:14px;margin:0;">Acesso exclusivo Lumen Posto Club</p>
+    </div>
+    <div id="_step_phone">
+      <label style="display:block;color:#333;font-size:14px;margin-bottom:6px;font-weight:600;">Seu WhatsApp:</label>
+      <input id="_phone_input" type="tel" placeholder="65 99999-8888" autocomplete="tel"
+        style="width:100%;padding:13px 14px;border:2px solid #ddd;border-radius:10px;font-size:16px;box-sizing:border-box;outline:none;transition:border-color .2s;"
+        onfocus="this.style.borderColor='#1e72bd'" onblur="this.style.borderColor='#ddd'"
+        onkeydown="if(event.key==='Enter')_requestOTP()">
+      <p id="_phone_error" style="color:#d32f2f;font-size:13px;margin:8px 0 0;min-height:18px;"></p>
+      <button id="_request_btn" onclick="_requestOTP()"
+        style="margin-top:8px;width:100%;padding:14px;background:#25D366;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:600;cursor:pointer;transition:opacity .2s;">
+        Enviar código por WhatsApp
+      </button>
+      <p style="text-align:center;color:#888;font-size:12px;margin:16px 0 0;">Apenas membros do grupo Lumen Posto Club conseguem acessar.</p>
+    </div>
+    <div id="_step_otp" style="display:none;">
+      <label style="display:block;color:#333;font-size:14px;margin-bottom:6px;font-weight:600;">Código enviado no seu WhatsApp:</label>
+      <input id="_otp_input" type="tel" inputmode="numeric" placeholder="000000" maxlength="6" autocomplete="one-time-code"
+        style="width:100%;padding:13px 14px;border:2px solid #ddd;border-radius:10px;font-size:28px;letter-spacing:10px;text-align:center;box-sizing:border-box;outline:none;font-weight:700;"
+        onfocus="this.style.borderColor='#1e72bd'" onblur="this.style.borderColor='#ddd'"
+        onkeydown="if(event.key==='Enter')_verifyOTP()">
+      <p id="_otp_error" style="color:#d32f2f;font-size:13px;margin:8px 0 0;min-height:18px;"></p>
+      <button id="_verify_btn" onclick="_verifyOTP()"
+        style="margin-top:8px;width:100%;padding:14px;background:#0a3d62;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:600;cursor:pointer;">
+        Validar e entrar
+      </button>
+      <p style="text-align:center;margin:16px 0 0;font-size:13px;">
+        <a href="#" onclick="event.preventDefault();_backToPhone()" style="color:#1e72bd;text-decoration:none;">← Voltar e usar outro número</a>
+      </p>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  const N8N='https://n8n.srv1662375.hstgr.cloud';
+  let _phone='';
+  window._requestOTP=async function(){
+    const phone=document.getElementById('_phone_input').value.trim();
+    if(!phone){return;}
+    _phone=phone;
+    const btn=document.getElementById('_request_btn');
+    const err=document.getElementById('_phone_error');
+    err.textContent='';btn.disabled=true;btn.textContent='Enviando...';
+    try{
+      const r=await fetch(N8N+'/webhook/painel-request-otp',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone})}).then(r=>r.json());
+      if(r.ok){
+        document.getElementById('_step_phone').style.display='none';
+        document.getElementById('_step_otp').style.display='block';
+        setTimeout(()=>document.getElementById('_otp_input').focus(),100);
+      }else{
+        err.textContent=r.message||'Não foi possível enviar o código';
+      }
+    }catch(e){err.textContent='Falha de conexão. Tente novamente.';}
+    finally{btn.disabled=false;btn.textContent='Enviar código por WhatsApp';}
+  };
+  window._verifyOTP=async function(){
+    const otp=document.getElementById('_otp_input').value.trim();
+    if(!otp){return;}
+    const btn=document.getElementById('_verify_btn');
+    const err=document.getElementById('_otp_error');
+    err.textContent='';btn.disabled=true;btn.textContent='Validando...';
+    try{
+      const r=await fetch(N8N+'/webhook/painel-verify-otp',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone:_phone,otp})}).then(r=>r.json());
+      if(r.ok){
+        localStorage.setItem('painel_session',r.session_token);
+        localStorage.setItem('painel_session_exp',r.expires);
+        _unlock();
+      }else{err.textContent=r.message||'Código inválido';}
+    }catch(e){err.textContent='Falha de conexão. Tente novamente.';}
+    finally{btn.disabled=false;btn.textContent='Validar e entrar';}
+  };
+  window._backToPhone=function(){
+    document.getElementById('_step_otp').style.display='none';
+    document.getElementById('_step_phone').style.display='block';
+    document.getElementById('_otp_input').value='';
+    document.getElementById('_otp_error').textContent='';
+  };
+  function _unlock(){
+    const g=document.getElementById('_auth_gate');const c=document.getElementById('_auth_lock_css');
+    if(g)g.remove();if(c)c.remove();
+    document.body.classList.remove('locked');
+  }
+  (async function(){
+    const s=localStorage.getItem('painel_session');
+    if(!s){return;}
+    const exp=parseInt(localStorage.getItem('painel_session_exp')||'0');
+    if(exp&&exp>Date.now()){
+      try{
+        const r=await fetch(N8N+'/webhook/painel-check-session',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({session_token:s})}).then(r=>r.json());
+        if(r.ok){_unlock();return;}
+      }catch(e){}
+    }
+    localStorage.removeItem('painel_session');
+    localStorage.removeItem('painel_session_exp');
+  })();
+})();
+</script>
+<!-- ════════ END AUTH GATE ════════ -->
+
+
+
 
 <!-- ================= HEADER ================= -->
 <header class="topbar">
