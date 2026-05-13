@@ -41,8 +41,17 @@ jobs:
           DATE_BR=$(TZ=America/Cuiaba date +"%d/%m/%Y %H:%M")
           git add data.json
           git commit -m "📊 painel diário automático — $DATE_BR"
-          git push
-          echo "✓ Commit feito"
+          # Race-safe push: se outro run commitou antes, faz rebase e tenta de novo
+          for i in 1 2 3; do
+            if git push; then
+              echo "✓ Commit feito (tentativa $i)"
+              exit 0
+            fi
+            echo "⚠️ Push rejeitado, fazendo rebase..."
+            git pull --rebase origin main
+          done
+          echo "❌ Push falhou após 3 tentativas"
+          exit 1
 
       - name: Notificar n8n com detalhes do painel
         if: success()
