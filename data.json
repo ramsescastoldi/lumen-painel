@@ -1,148 +1,160 @@
 {
   "meta": {
-    "date_iso": "2026-05-12",
-    "date_label": "Terça · 12 mai 2026",
-    "last_update": "09:02",
-    "next_update": "amanhã · 13 mai · 07:30"
+    "date_iso": "2026-05-13",
+    "date_label": "Quarta · 13 mai 2026",
+    "last_update": "09:09",
+    "next_update": "amanhã · 14 mai · 07:30"
   },
   "manchete": {
     "principal": {
       "severity": "red",
       "status_emoji": "🔴",
       "severity_label": "Crítico",
-      "titulo": "Petrobras lucra R$ 32,6 bi no 1T26, anuncia R$ 9,03 bi em dividendos — e mercado aguarda teleconferência hoje sobre política de preços com Brent em US$ 103",
-      "corpo": "A Petrobras divulgou ontem à noite (seg 11) o balanço do 1T26: <b>lucro líquido de R$ 32,663 bilhões</b>, queda de 7,2% a/a mas <b>109,9% acima do 4T25</b> e acima do consenso Bloomberg (R$ 30,684 bi). A estatal anunciou <b>R$ 9,03 bilhões em proventos</b> (R$ 0,70097272/ação), pagos em dois lotes em agosto e setembro/2026. Produção recorde de <b>3,23 MMboed (+16,1% a/a)</b>; refinarias com 95% de utilização. O mercado aguarda agora a <b>teleconferência de hoje (ter 12)</b> — atenção máxima ao pronunciamento sobre política de preços: o BofA estima defasagem da gasolina em ~40% e a Abicom em até 88% dependendo do polo. Petrobras elevou QAV em 18% e gás natural em 19,2% em maio, mas manteve gasolina e diesel sem reajuste positivo. Com Brent nesta terça em <b>US$ 103,73 (+2,41% às 10h39 ET)</b> e Hormuz fechado, o comunicado de política de preços é o gatilho operacional mais importante da semana para donos de posto."
+      "titulo": "Petrobras sinaliza reajuste da gasolina \"em breve\" na teleconferência de ontem — IPCA de abril veio em 0,67% (12m: 4,39%) e CPI dos EUA acelerou para 3,8% a/a, maior nível desde 2023",
+      "corpo": "A quarta-feira 13 de maio abre marcada pelos desdobramentos de dois eventos que dominaram a terça: a <b>teleconferência da Petrobras</b> e a divulgação dos índices de inflação no Brasil e nos EUA. Na teleconferência do 1T26, a presidente <b>Magda Chambriard afirmou que a Petrobras deve reajustar o preço da gasolina nos próximos dias</b> — \"Em breve, vocês terão boas notícias em relação à nossa gasolina\", disse a analistas. A estatal informou que o diesel já conta com modelo de subvenção governamental, com duas rodadas equivalentes a ~R$ 1,50/L desde março. O lucro do 1T26 foi de <b>R$ 32,7 bilhões</b>, abaixo do consenso LSEG (R$ 34,4 bi), e as ações PETR4 caíram ~1,46% na terça. No campo da inflação: <b>IPCA de abril veio em 0,67% m/m e 4,39% em 12 meses</b> — desaceleração frente a março (0,88%), mas acima do teto da meta de 4,5% em 12m. O <b>CPI americano de abril registrou +0,6% m/m e 3,8% a/a</b>, o maior nível desde maio de 2023, afastando definitivamente qualquer corte do Fed em 2026. Wall Street fechou misto: Dow +0,11%, S&P 500 -0,16%, Nasdaq -0,71%. O <b>Ibovespa cedeu -0,86%</b>, fechando em 180.342 pontos. Trump embarcou para Pequim nesta quarta — a cúpula com Xi Jinping ocorre de 13 a 15 de maio."
     },
     "secundarias": [
       {
         "severity": "red",
         "status_emoji": "🔴",
-        "tag": "Geopolítica / Petróleo",
-        "titulo": "Brent segura acima de US$ 103 nesta terça: Trump diz que cessar-fogo com Irã está em \"massive life support\" — Hormuz permanece fechado, novos ataques de drones no Golfo"
+        "tag": "Petróleo / Geopolítica",
+        "titulo": "Brent fecha terça a US$ 107,77 (+3,4%) e WTI a US$ 102,18 (+4,2%) — Hormuz fechado, Irã ameaça enriquecer urânio a 90% se atacado novamente; EIA prevê Brent ~US$ 106 em maio/junho"
+      },
+      {
+        "severity": "red",
+        "status_emoji": "🔴",
+        "tag": "Combustíveis / Reajuste",
+        "titulo": "Petrobras promete reajuste da gasolina \"em breve\" — defasagem estimada em até 88% (Abicom) com Brent acima de US$ 107; PPI dos EUA sai hoje (qua 13) complementando o CPI de ontem"
       },
       {
         "severity": "yellow",
         "status_emoji": "🟡",
-        "tag": "Inflação / CPI",
-        "titulo": "CPI dos EUA sai hoje (ter 12) — expectativa de alta de 0,6% m/m em abril; IPCA brasileiro de abril também divulgado hoje; Focus IPCA 2026 em 4,91% (9ª alta consecutiva)"
-      },
-      {
-        "severity": "yellow",
-        "status_emoji": "🟡",
-        "tag": "Diplomacia / Comércio",
-        "titulo": "Trump chega a Pequim amanhã (qua 13) para cúpula de dois dias com Xi Jinping — pauta: Irã, IA, Taiwan, terras raras e trégua comercial; mercados monitoram cada declaração"
+        "tag": "Diplomacia / Trump–Xi",
+        "titulo": "Trump chega a Pequim hoje (qua 13) para cúpula de 3 dias com Xi Jinping — pauta: Irã, IA, Taiwan, terras raras e comércio; Trump disse que terá \"longa conversa\" sobre a guerra no Irã com Xi"
       }
     ]
   },
   "petroleo": {
     "brent": {
-      "val": "US$ 103,73",
-      "delta": "▲ +2,41% (ter 12/mai, 10h39 ET) | fech. seg: US$ 104,21 (+2,88%)",
-      "dir": "up",
-      "sub": "range dia (ter): em aberto | fech. seg: US$ 104,21 | +57,5% a/a | abertura hoje: US$ 104,36"
+      "val": "US$ 107,05",
+      "delta": "▼ -0,67% (qua 13/mai, abertura) | fech. ter: US$ 107,77 (+3,4%)",
+      "dir": "down",
+      "sub": "range hoje (qua): US$ 100,92–101,25 (early session) | fech. ter: US$ 107,77 | +62% a/a | EIA prevê ~US$ 106 em mai/jun"
     },
     "wti": {
-      "val": "US$ 97,43",
-      "delta": "▲ +2,11% (ter 12/mai, 10h39 ET) | fech. seg: US$ 98,07 (+2,78%)",
-      "dir": "up",
-      "sub": "range dia seg: 96,93–100,35 | fech. seg: US$ 98,07 | +59% a/a | suporte técnico ~US$ 100,00"
+      "val": "US$ 101,87",
+      "delta": "▼ -0,30% (qua 13/mai, abertura) | fech. ter: US$ 102,18 (+4,2%)",
+      "dir": "down",
+      "sub": "range dia ter: WTI acima de US$ 101 | fech. ter: US$ 102,18 | +60% a/a | suporte técnico ~US$ 100"
     },
-    "nota": "<b>Trump declarou nesta terça que o cessar-fogo com o Irã está em \"massive life support\"</b>, após ter rejeitado a contraproposta iraniana no domingo. O Estreito de Hormuz segue efetivamente fechado — o Irã exige fim das sanções, liberação de ~US$ 100 bi em ativos congelados e participação na gestão de Hormuz. Brent cede levemente dos picos da madrugada (US$ 107,31 às 6h39 ET vs. US$ 103,73 às 10h39 ET), mas segue em patamar elevado. <b>Saudi Aramco CEO Amin Nasser:</b> se Hormuz ficar fechado além de meados de junho, normalização do mercado só em 2027.",
-    "citacao": "<b>Citi:</b> \"Oil prices have been volatile and can rise further if US-Iran dealmaking remains thorny\" — riscos inclinados para alta; assume reabertura parcial de Hormuz no fim de maio, mas vê riscos crescentes de atraso. <b>Dragonfly CIO Henry Wilkinson:</b> re-escalada do conflito Irã é possível; Trump pode pedir a Xi Jinping que pressione o Irã a aceitar termos americanos na cúpula desta semana. <b>Aramco CEO Nasser:</b> \"If the Strait of Hormuz opens today, it will still take months for the market to rebalance.\""
+    "nota": "<b>Brent fechou terça a US$ 107,77 (+3,4%) e WTI a US$ 102,18 (+4,2%)</b> com escalada das tensões no Oriente Médio: o parlamento iraniano ameaçou enriquecer urânio a 90% (grau armamento) se o Irã fosse atacado novamente, e o Irã expandiu sua definição do Estreito de Hormuz para uma \"vasta área operacional\". Na quarta, os preços recuam levemente (~US$ 107,05) com mercado aguardando Trump–Xi. O EIA (relatório de 12/mai) prevê Brent ~US$ 106/barril em maio e junho, com estoques globais em queda de 8,5 MMbpd no 2T26 — e normalização só a partir do 4T26 (~US$ 89/b).",
+    "citacao": "<b>EIA (Short-Term Energy Outlook, 12/mai):</b> Brent atingiu pico de US$ 138/b em 7/abr, média de US$ 117/b em abril; prevê US$ 106 em mai/jun e queda a US$ 89 no 4T26. <b>Aramco CEO Amin Nasser:</b> \"If the Strait of Hormuz opens today, it will still take months for the market to rebalance.\" <b>Citi:</b> \"Oil prices have been volatile and can rise further if US-Iran dealmaking remains thorny.\""
   },
   "moedas": {
     "usdbrl": {
-      "val": "R$ 4,8877",
-      "delta": "▼ -0,12% (ter 12/mai) | fech. seg: R$ 4,8937",
-      "dir": "down"
+      "val": "R$ 4,8972",
+      "delta": "▲ +0,08% (ter 12/mai) | fech. ter: R$ 4,8954 | abert. qua: R$ 4,8957",
+      "dir": "up"
     },
     "eurbrl": {
       "val": "R$ 5,75",
-      "delta": "▼ -0,17% (ter 12/mai)",
-      "dir": "down"
+      "delta": "• estável (ter 12/mai)",
+      "dir": "flat"
     },
     "dxy": {
-      "val": "~97,9",
-      "delta": "• estável (ter 12/mai) | range semana anterior: ~97,8–98,1",
-      "dir": "flat"
+      "val": "~98,3",
+      "delta": "▲ +0,34% (ter 12/mai) | CPI quente fortaleceu DXY",
+      "dir": "up"
     },
     "btc": {
-      "val": "US$ 80.817",
-      "delta": "• +0,03% (ter 12/mai, 9h08 UTC) | abert. seg: US$ 82.164",
+      "val": "US$ 80.960",
+      "delta": "• +0,18% (qua 13/mai) | fech. ter: US$ 80.814 | 4 rejeições em US$ 82.000",
       "dir": "flat"
     },
-    "nota": "<b>Real segue surpreendentemente resiliente</b> — dólar oscila na faixa R$ 4,88–4,90, próximo das mínimas de 52 semanas (R$ 4,8823). O Focus de 11/mai reduziu a projeção do dólar para fim/2026 de R$ 5,25 para R$ 5,20. BC realizará dois leilões de swap cambial nesta terça. A combinação de Selic em 14,50%, DXY globalmente fraco (~97,9) e termos de troca favoráveis (petróleo acima de US$ 100 beneficia exportações brasileiras de commodities) sustenta o real. Bitcoin testou US$ 82.000 no domingo à noite, mas recuou e agora consolida em ~US$ 80.800 — resistência da média de 200 dias (US$ 82.228) é o teto mais observado."
+    "nota": "<b>Dólar encerrou a terça praticamente estável em R$ 4,8954</b>, com leve alta de 0,08%. O range do dia foi R$ 4,8841–4,9105. O DXY avançou +0,34% para ~98,3 após o CPI americano de abril (+0,6% m/m, 3,8% a/a) eliminar qualquer chance de corte do Fed em 2026 — mercados precificam 97,6% de probabilidade de manutenção em junho. Apesar do DXY mais forte, o real se mantém resiliente com mínimas de 52 semanas em R$ 4,8841. Bitcoin consolida em ~US$ 80.960, rejeitado quatro vezes em US$ 82.000 (média de 200 dias em US$ 82.228); CPI quente removeu um dos principais catalisadores de alta."
   },
   "bolsas": {
     "ibov": {
-      "val": "181.909",
-      "delta": "▼ -1,19% (seg 11/mai)",
+      "val": "180.342",
+      "delta": "▼ -0,86% (ter 12/mai) | 2ª queda consecutiva",
       "dir": "down"
     },
     "sp": {
-      "val": "7.412,87",
-      "delta": "▲ +0,19% (seg 11/mai) — novo recorde histórico de fechamento",
-      "dir": "up"
+      "val": "7.400,97",
+      "delta": "▼ -0,16% (ter 12/mai) — afasta-se dos recordes pós-CPI",
+      "dir": "down"
     },
     "nasdaq": {
-      "val": "26.274,12",
-      "delta": "▲ +0,10% (seg 11/mai) — novo recorde histórico de fechamento",
-      "dir": "up"
+      "val": "26.088,20",
+      "delta": "▼ -0,71% (ter 12/mai) — puxado por tech após CPI quente",
+      "dir": "down"
     },
     "dow": {
-      "val": "49.704,34",
-      "delta": "▲ +0,19% (seg 11/mai)",
+      "val": "49.760,56",
+      "delta": "▲ +0,11% (ter 12/mai)",
       "dir": "up"
     },
-    "nota": "Ibovespa cedeu -1,19% na segunda para 181.909 pts — menor patamar desde 27 de março, com giro de R$ 29,2 bi. O setor financeiro tombou em bloco (Itaú PN -2,25%, BTG -2,88%, Santander -2,52%, Bradesco PN -2,69%); ações ligadas ao consumo e atividade doméstica aceleraram a queda com deterioração das expectativas inflacionárias. <b>Petrobras ON +1,40%</b> e <b>Vale ON +2,41%</b> subiram puxadas por petróleo e minério, mas não compensaram. Na contramão absoluta, <b>Wall Street renovou recordes históricos</b> em S&P 500 e Nasdaq — semicondutores (Micron, Nvidia, Tesla +3%), IA e balanços corporativos sólidos lideraram. Nesta terça futuros americanos operam estáveis à espera do CPI."
+    "nota": "Ibovespa cedeu <b>-0,86% na terça para 180.342 pts</b>, segundo pregão consecutivo no vermelho, chegando a perder os 180 mil pontos na mínima. Petrobras PETR4 caiu 1,46% e PETR3 -0,96% após a teleconferência do 1T26 — resultado abaixo do consenso e sinalização de reajuste da gasolina geraram incerteza. Vale3 avançou +0,37% e bancos pesaram. Em Wall Street, o <b>CPI quente de 3,8% a/a puxou S&P 500 e Nasdaq para baixo</b> (S&P -0,16%, Nasdaq -0,71%) — apenas o Dow subiu levemente (+0,11%, 49.760 pts). Ibovespa abre a quarta oscilando entre 181.615 e 184.530 pts (inversão positiva nos futuros matinais)."
   },
   "juros": {
     "selic": {
       "val": "14,50% a.a.",
-      "delta": "▼ cortada 29/abr (-0,25 p.p.)",
+      "delta": "▼ cortada 29/abr (-0,25 p.p.) — 2ª redução consecutiva",
       "dir": "down"
     },
     "fed": {
       "val": "3,50–3,75%",
-      "delta": "• mantido (decisão 29/abr, última sob Powell)",
+      "delta": "• mantido — 97,6% de chance de manutenção em junho (FedWatch)",
       "dir": "flat"
     },
     "ust10y": {
-      "val": "~4,40–4,45%",
-      "sub": "subindo com payroll abr (+115k vs. 62k esperado) e persistência inflacionária; CPI hoje pode mover yields"
+      "val": "~4,48–4,52%",
+      "sub": "subindo após CPI abr (+3,8% a/a) — maior nível em 11 meses; sem precificação de corte até dez/2027"
     },
-    "nota": "Copom cortou a Selic em 0,25 p.p. em 29/abr para 14,50% — 2ª redução consecutiva, decisão unânime. O Copom destacou que os próximos passos dependem da evolução do conflito no Oriente Médio e seus impactos sobre energia e inflação. <b>Focus de 11/mai: IPCA 2026 a 4,91% (9ª alta), Selic fim/2027 sobe de 11,00% para 11,25%</b> — juros altos por mais tempo. Próximo Copom: <b>16–17 de junho.</b> Fed manteve juros na última reunião de Powell (29/abr), com divisão interna de 8 a 4 — a maior desde 1992. Payroll de abril surpreendeu (+115k vs. 62k esperado, desemprego 4,3%), eliminando chances de corte em 2026. <b>Kevin Warsh assume o Fed em 15/mai.</b>"
+    "nota": "CPI americano de abril em <b>3,8% a/a (maior nível desde mai/2023)</b> e núcleo em +0,4% m/m eliminaram qualquer chance de corte do Fed em 2026 — FedWatch aponta 97,6% de manutenção em junho. Sem precificação de corte até dezembro de 2027. <b>Kevin Warsh assume o Fed em 15/mai</b>. No Brasil, Focus 11/mai: <b>IPCA 2026 a 4,91% (9ª alta)</b>, Selic fim/2026 mantida em 13,00% e Selic fim/2027 subiu para 11,25%. Copom cortou Selic a 14,50% em 29/abr (unânime). <b>Próximo Copom: 16–17 de junho.</b>"
   },
   "inflacao": {
     "ipca15": "0,89%",
     "ipca15_12m": "4,37%",
-    "ipca_mar": "0,88% (12m: 4,14%)",
+    "ipca_abr": "0,67% (12m: 4,39%)",
     "focus_2026": "4,91%",
-    "nota": "<b>Focus de 11/mai elevou IPCA 2026 para 4,91%</b> — 9ª alta consecutiva, distanciando-se do teto da meta contínua de 4,5%. Projeção para 2027 mantida em 4,00%; Selic fim/2027 subiu para 11,25%. Dólar projetado para fim/2026 caiu de R$ 5,25 para R$ 5,20. IPCA de março fechou em 0,88% (12m: 4,14%); IPCA-15 de abril marcou 0,89% (12m: 4,37%), pressionado por combustíveis e alimentos. <b>IPCA cheio de abril sai hoje (12/mai)</b> — expectativa de alta de ~0,6% m/m (CPI dos EUA também sai hoje). Daycoval aponta que petróleo respondeu por ~60% da inflação do 1T26 (0,82 p.p. dos 1,4% acumulados no trimestre)."
+    "nota": "<b>IPCA de abril saiu em 0,67% m/m</b> — desaceleração frente a março (0,88%), mas acumulado em 12 meses subiu para <b>4,39%</b>, acima do teto da meta de 4,5% em 12m. Alimentação e Bebidas liderou (1,34%); Transportes e Educação foram os de menor variação (0,06%). No acumulado do ano: 2,60%. <b>CPI americano abril: +0,6% m/m e 3,8% a/a</b> — maior taxa anual desde maio de 2023; núcleo +0,4% m/m e +2,8% a/a. Focus 11/mai: IPCA 2026 a 4,91% (9ª alta), Selic 2027 em 11,25% (juros altos por mais tempo). <b>PPI dos EUA de abril sai hoje (qua 13)</b> — expectativa: +0,5% no atacado."
   },
   "abicom": {
-    "diesel_pct": "~52% (Petrobras) | ~41% média nacional",
-    "gasolina_pct": "~88% (Petrobras) | ~40% (estimativa BofA)",
-    "dias_diesel": 59,
-    "dias_gasolina": 105,
-    "diesel_tag": "Defasagem grave — janela fechada 112d",
-    "gasolina_tag": "Defasagem crítica — janela fechada 69d+",
-    "nota": "Último reajuste positivo do <b>diesel: 14/mar/2026</b> (+R$0,38/L) — ~59 dias sem reajuste positivo; Abicom aponta janela de importação fechada há 112 dias para diesel. <b>Gasolina sem reajuste positivo desde jan/2026</b> (~105 dias); janela fechada há 69+ dias. Abicom reporta defasagem da gasolina nas refinarias Petrobras em <b>88%</b> (potencial alta de R$ 2,22/L); diesel em <b>52%</b> (potencial alta de R$ 1,87/L). BofA estima desconto da gasolina em ~40%. Petrobras elevou QAV (+18%) e gás natural (+19,2%) em maio, mas manteve gasolina e diesel. <b>Teleconferência Petrobras hoje:</b> qualquer sinalização sobre política de preços é gatilho operacional imediato para postos."
+    "diesel_pct": "~60% (Petrobras) | défasagem persistente após subvenção de ~R$ 1,50/L",
+    "gasolina_pct": "~88% (Abicom/Petrobras) | reajuste sinalizado pela Chambriard",
+    "dias_diesel": 60,
+    "dias_gasolina": 106,
+    "diesel_tag": "Subvenção ativa — ~R$ 1,50/L; janela fechada >112d",
+    "gasolina_tag": "Reajuste iminente — Chambriard: \"em breve\"",
+    "nota": "<b>Na teleconferência de ontem (ter 12), a presidente Magda Chambriard sinalizou reajuste da gasolina \"em breve\"</b> — \"Estamos trabalhando na questão da gasolina. Em breve, vocês terão boas notícias\". Para o diesel, a Petrobras informou que já opera com modelo de subvenção governamental, com duas rodadas desde março equivalentes a ~R$ 1,50/L. Defasagem da gasolina estimada em <b>~88%</b> (Abicom/Petrobras) e diesel em ~60% mesmo com subvenção. Gasolina sem reajuste positivo há ~106 dias, diesel há ~60 dias. O reajuste da gasolina pode ocorrer a qualquer momento — postos devem estar com cenários prontos."
   },
   "anp": {
-    "semana": "Última síntese publicada: semana 26/abr–01/mai (divulg. 04/mai). Síntese semana 04–08/mai aguardada para hoje 12/mai ou amanhã 13/mai",
+    "semana": "Última síntese publicada: semana 26/abr–01/mai (divulg. 04/mai). Página ANP atualizada em 08/mai/2026. Síntese semana 04–08/mai aguardada para hoje (qua 13) ou amanhã (qui 14).",
     "rows": [
       {
         "produto": "Gasolina C",
-        "preco": "R$ 6,67/L",
+        "preco": "R$ 6,77/L",
         "status": "yellow",
-        "status_label": "ref. 26/abr–01/mai"
+        "status_label": "ref. última semana ANP (média Brasil)"
       },
       {
         "produto": "Etanol hidr.",
-        "preco": "R$ 4,56/L",
+        "preco": "R$ 4,69/L",
         "status": "gray",
-        "status_label": "ref. 26/abr–01/mai"
+        "status_label": "ref. última semana ANP (média Brasil)"
+      },
+      {
+        "produto": "Gasolina C (SP)",
+        "preco": "R$ 6,98/L",
+        "status": "yellow",
+        "status_label": "ref. última semana ANP (São Paulo)"
+      },
+      {
+        "produto": "Etanol hidr. (SP)",
+        "preco": "R$ 4,52/L",
+        "status": "gray",
+        "status_label": "ref. última semana ANP (São Paulo)"
       },
       {
         "produto": "Diesel S-10",
@@ -151,19 +163,13 @@
         "status_label": "pendente síntese 04–08/mai"
       },
       {
-        "produto": "Diesel comum",
-        "preco": "R$ 7,10/L",
-        "status": "gray",
-        "status_label": "ref. 26/abr–01/mai"
-      },
-      {
         "produto": "GLP P-13",
-        "preco": "R$ 114,88",
-        "status": "yellow",
-        "status_label": "ref. 26/abr–01/mai"
+        "preco": "a confirmar",
+        "status": "blue",
+        "status_label": "pendente síntese 04–08/mai"
       }
     ],
-    "nota": "Última síntese ANP disponível: semana 26/abr–01/mai (publicada 04/mai com atraso por feriado). <b>Síntese da semana 04–08/mai esperada para hoje ou amanhã.</b> A ANP atualiza preços semanais regularmente — última atualização do levantamento de combustíveis registrada em 08/mai/2026. Com Brent acima de US$ 103 nesta terça, tendência altista nos próximos preços ao consumidor é esperada caso Petrobras reajuste após teleconferência de hoje. Etanol hidratado caiu na usina mas ainda não refletiu plenamente nos postos — quando ocorrer, paridade deve melhorar."
+    "nota": "Última síntese ANP com dados completos: semana 26/abr–01/mai. <b>Síntese da semana 04–08/mai esperada para hoje (qua 13) ou amanhã.</b> Na média Brasil (última semana disponível): gasolina R$ 6,77/L e etanol R$ 4,69/L. Em SP: gasolina R$ 6,98/L e etanol R$ 4,52/L. Com Brent fechando terça a US$ 107,77 e reajuste da gasolina sinalizado pela Petrobras, a próxima síntese deve registrar alta nos preços ao consumidor. Acompanhe o site gov.br/anp para a publicação da nova síntese ainda hoje."
   },
   "cepea": {
     "hidratado": [
@@ -203,13 +209,13 @@
       "delta": "▼ -11,94% a/a",
       "dir": "down"
     },
-    "nota": "Etanol hidratado SP caiu para R$ 2,5920/L (-7,01% na semana de 13–17/abr) e anidro para R$ 2,9575/L (-7,43%) — <b>anidro abaixo de R$ 3,00 pela 1ª vez desde agosto de 2023.</b> Pressão do início da safra 2026/27 e maior oferta de etanol de milho. Distribuidoras postergando reposição de estoques. Contudo, com Brent em US$ 103+ e potencial reajuste de gasolina pela Petrobras na teleconferência de hoje, <b>o hidratado pode recuperar competitividade rapidamente</b> — repassador de preço pode agir em horas. Próxima divulgação CEPEA semanal: semana que vem."
+    "nota": "Etanol hidratado SP em R$ 2,5920/L na usina, com queda acumulada >7% em uma semana — <b>início da safra 2026/27 com produção recorde pressiona preços para baixo.</b> Anidro abaixo de R$ 3,00 pela primeira vez desde agosto de 2023. Com reajuste da gasolina iminente (sinalizado pela Chambriard), a paridade hidratado/gasolina deve melhorar significativamente no posto — etanol tende a recuperar competitividade quando o reajuste for formalizado. Na média dos postos brasileiros (ANP): etanol a R$ 4,69/L e gasolina a R$ 6,77/L — paridade atual ~69%, abaixo do gatilho de 70%."
   },
   "eg": {
-    "paridade_sp": "~57–65%",
+    "paridade_sp": "~64–65% (usina SP) | ~65% (posto Brasil)",
     "mandato_e": "E30",
     "mandato_b": "B15",
-    "nota": "Paridade hidratado/gasolina em SP estimada em ~57–65% — bem abaixo dos 70% que favorece etanol ao consumidor. A forte queda do hidratado na usina (~17% em um mês em SP) ainda não se transmitiu completamente ao consumidor final. Se Petrobras reajustar gasolina após teleconferência hoje (altamente provável com Brent > US$ 100 e defasagem de ~88%), o jogo inverte e o etanol se torna muito mais competitivo. Com E30 em vigor desde ago/2025, volume de anidro cresce estruturalmente. Safra 2026/27 com início acima das expectativas (mix 67% etanol)."
+    "nota": "Paridade hidratado/gasolina na média Brasil (posto) em ~65% — próximo do limiar de 70% que favorece etanol. No Estado de SP (posto): etanol R$ 4,52/L vs. gasolina R$ 6,98/L → paridade ~64,8%, levemente abaixo do gatilho. <b>Quando a Petrobras formalizar o reajuste da gasolina</b> (sinalizado para \"em breve\"), a paridade melhora automaticamente e vendas de etanol devem acelerar. Com E30 em vigor desde ago/2025, volume de anidro cresce estruturalmente. Usinas priorizando etanol (mix 67,07%) pelas mínimas do açúcar — oferta crescente tende a manter preço de usina pressionado, beneficiando o consumidor."
   },
   "safra": {
     "moagem": {
@@ -224,91 +230,91 @@
       "val": "67,07% etanol (vs. 55,29% igual período 2025)"
     },
     "oferta": {
-      "val": "estimativa Centro-Sul 2026/27: início acima das expectativas",
-      "delta": "▲ +33,32% a/a na produção de etanol (cana + milho): 1,23 bilhão de litros"
+      "val": "produção etanol (cana + milho): 1,23 bilhão de litros",
+      "delta": "▲ +33,32% a/a (1ª quinz abr/26)"
     },
-    "nota": "UNICA: 1ª quinzena de abr/26 (safra 2026/27) processou 19,96 Mt (+19,67% a/a); início acima das expectativas. Mix fortemente alcooleiro: <b>67,07% para etanol</b> vs. 55,29% no mesmo período de 2025 — usinas priorizando etanol pois preços de açúcar atingiram mínimas de cinco anos. Produção de etanol (cana + milho): 1,23 bilhão de litros (+33,32% a/a). Açúcar caiu -11,94% a/a para 647 mil t. ATR estável em 103,36 kg/t. <b>Próxima divulgação UNICA:</b> 1ª quinzena de mai/26 — esperada qui 14 ou sex 15/mai."
+    "nota": "UNICA: 1ª quinzena de abr/26 processou <b>19,96 Mt (+19,67% a/a)</b> — safra 2026/27 com início acima das expectativas. Mix fortemente alcooleiro: <b>67,07% para etanol</b> vs. 55,29% no mesmo período 2025 — usinas priorizando etanol pois açúcar atingiu mínimas de cinco anos. Produção total de etanol (cana + milho): <b>1,23 bilhão de litros (+33,32% a/a)</b>. Açúcar caiu -11,94% a/a para 647 mil t. ATR estável em 103,36 kg/t. <b>Próxima divulgação UNICA (1ª quinzena mai/26):</b> esperada qui 14 ou sex 15/mai."
   },
   "agenda": [
     {
-      "day": "Ter 12/mai",
-      "evento": "IPCA abril (IBGE) — hoje · CPI EUA abril — hoje (expectativa: +0,6% m/m) · Teleconferência Petrobras 1T26 (manhã) — política de preços é o gatilho · Síntese ANP semana 04–08/mai (possível) · BC: dois leilões de swap cambial",
-      "tag": "red",
-      "tag_label": "hoje"
-    },
-    {
       "day": "Qua 13/mai",
-      "evento": "Trump chega a Pequim (cúpula Trump–Xi, 13–15/mai) — Irã, IA, Taiwan, terras raras · PPI EUA abril · Síntese ANP 04–08/mai se não publicada hoje",
+      "evento": "Trump–Xi Jinping: cúpula dia 1 em Pequim (13–15/mai) — Irã, IA, Taiwan, terras raras, comércio · PPI EUA abril (expectativa: +0,5% m/m) · Pesquisa Mensal do Comércio (PMC) março/Brasil · Síntese ANP 04–08/mai (possível publicação hoje) · Brent aguarda desdobramentos diplomáticos",
       "tag": "red",
-      "tag_label": "crítico"
+      "tag_label": "hoje — crítico"
     },
     {
       "day": "Qui 14/mai",
-      "evento": "Trump–Xi Jinping: cúpula dia 2 em Pequim · UNICA 1ª quinzena mai/26 (possível) · Banco do Brasil resultado 1T26",
+      "evento": "Trump–Xi Jinping: cúpula dia 2 em Pequim · Pedidos de auxílio-desemprego EUA · UNICA 1ª quinzena mai/26 (possível) · Banco do Brasil resultado 1T26 · Síntese ANP se não publicada hoje",
       "tag": "blue",
       "tag_label": "dado"
     },
     {
       "day": "Sex 15/mai",
-      "evento": "Powell: último dia como presidente do Fed — Kevin Warsh assume · Vendas varejo EUA abril · IBC-Br março (Banco Central) · Síntese ANP se não publicada antes",
-      "tag": "blue",
-      "tag_label": "dado"
+      "evento": "Trump–Xi Jinping: encerramento cúpula Pequim · Kevin Warsh assume o Fed (último dia de Powell) · Vendas varejo EUA abril · IBC-Br março (BC Brasil) · UNICA 1ª quinzena mai/26 se não publicada antes",
+      "tag": "red",
+      "tag_label": "crítico"
     },
     {
       "day": "Seg 18/mai",
-      "evento": "Focus semanal (IPCA/Selic/câmbio) — 10ª semana consecutiva de alta esperada · pré-Copom 16–17/jun",
+      "evento": "Focus semanal (IPCA/Selic/câmbio) — 10ª alta consecutiva esperada · Reação do mercado à cúpula Trump–Xi · Possível formalização do reajuste da gasolina Petrobras",
       "tag": "blue",
       "tag_label": "dado"
     },
     {
       "day": "Ter 27/mai",
-      "evento": "IPCA-15 maio (IBGE) — prévia inflação maio com impacto energético",
+      "evento": "IPCA-15 maio (IBGE) — prévia inflação maio com impacto energético pós-reajuste Petrobras",
+      "tag": "blue",
+      "tag_label": "dado"
+    },
+    {
+      "day": "Qua 10/jun",
+      "evento": "CPI EUA maio · Copom 16–17/jun se aproxima — Selic 14,50% em revisão",
       "tag": "blue",
       "tag_label": "dado"
     }
   ],
   "radar": [
-    "<b>Petrobras 1T26:</b> lucro R$ 32,6 bi (-7,2% a/a, acima do consenso) · R$ 9,03 bi em dividendos · produção recorde 3,23 MMboed · <b>teleconferência hoje</b> — política de preços é o gatilho da semana.",
-    "Brent <b>US$ 103,73 (+2,41%)</b> · WTI <b>US$ 97,43 (+2,11%)</b> nesta terça · Trump diz que cessar-fogo com Irã está em <b>\"massive life support\"</b> · Hormuz permanece fechado · Aramco CEO: normalização só em 2027 se Hormuz não abrir antes de junho.",
-    "<b>CPI EUA + IPCA Brasil</b> saem hoje — expectativa EUA: +0,6% m/m em abril; dados críticos para Fed (novo chair Warsh em 15/mai) e para Copom (16–17/jun). Focus IPCA 2026 em <b>4,91%</b> (9ª alta).",
-    "<b>Trump–Xi Jinping em Pequim amanhã (13–15/mai)</b> — primeira visita presidencial americana à China desde 2017; pauta cobre Irã, comércio, IA, Taiwan e terras raras; qualquer declaração pode mover mercados globais.",
-    "<b>Ibovespa -1,19%</b> (seg) para 181.909 pts · bancos tombam em bloco · Wall Street renova recordes: S&P 7.412 | Nasdaq 26.274 · Abicom: defasagem gasolina até <b>88%</b>, diesel <b>52%</b> — janelas fechadas há 69–112 dias."
+    "<b>Petrobras sinaliza reajuste da gasolina \"em breve\":</b> Chambriard na teleconferência ter 12 — \"Estamos trabalhando na questão da gasolina. Em breve, vocês terão boas notícias.\" Diesel já conta com subvenção de ~R$ 1,50/L (2 rodadas desde março). PETR4 -1,46% na sessão.",
+    "<b>IPCA abril: +0,67% m/m e 4,39% em 12m</b> — desacelera frente a março (0,88%) mas 12m sobe para 4,39%, acima do teto de 4,5%. CPI EUA abril: +0,6% m/m e <b>3,8% a/a (maior desde mai/2023)</b> — Fed sem corte até 2027 (97,6% chance manutenção em jun/26).",
+    "Brent fechou terça a <b>US$ 107,77 (+3,4%)</b> · WTI <b>US$ 102,18 (+4,2%)</b> · Irã ameaça enriquecer urânio a 90% · Hormuz permanece fechado · EIA projeta Brent ~US$ 106 em mai/jun com queda de estoques de 8,5 MMbpd no 2T26.",
+    "<b>Trump chega a Pequim hoje</b> para cúpula de 3 dias com Xi Jinping (13–15/mai) — Trump disse que terá \"longa conversa\" sobre o Irã; qualquer declaração pode mover mercados globais de energia, câmbio e commodities.",
+    "<b>Ibovespa -0,86%</b> (ter) para 180.342 pts · Petrobras e bancos pesaram · Wall Street mista: Dow +0,11%, S&P -0,16%, Nasdaq -0,71% · Dólar R$ 4,8954 · DXY ~98,3 · BTC US$ 80.960 (4 rejeições em US$ 82.000) · Safra 2026/27: 19,96 Mt na 1ª quinz abr (+19,67% a/a), mix 67% etanol."
   ],
   "acao": {
-    "tag": "🔴 Alerta máximo — resultado Petrobras + CPI hoje, reajuste iminente",
-    "lead": "<b>A manhã desta terça é dominada por dois eventos simultâneos: a teleconferência da Petrobras sobre o 1T26 e a divulgação do CPI americano de abril.</b> O resultado do 1T26 da Petrobras superou o consenso (R$ 32,6 bi vs. R$ 30,7 bi esperado) e a estatal anunciou R$ 9,03 bi em dividendos. Mas o que o mercado de combustíveis aguarda com urgência é o posicionamento da diretoria sobre política de preços na teleconferência de hoje — com defasagem da gasolina em ~88% (Abicom/Petrobras) e Brent acima de US$ 103, a pressão por reajuste é máxima. Diesel sem reajuste positivo há 59 dias, gasolina há 105 dias. CPI americano (+0,6% m/m esperado) pode mover câmbio, yields e a trajetória do Fed sob novo chair (Warsh, 15/mai). Trump–Xi começa amanhã em Pequim — agenda inclui Irã e petróleo.",
+    "tag": "🔴 Alerta máximo — reajuste da gasolina iminente + cúpula Trump–Xi hoje",
+    "lead": "<b>A quarta-feira 13 de maio tem dois vetores dominantes: a iminência do reajuste da gasolina pela Petrobras e o início da cúpula Trump–Xi em Pequim.</b> Na teleconferência de ontem, a presidente Magda Chambriard foi explícita: o reajuste da gasolina está a caminho — \"Em breve, vocês terão boas notícias em relação à nossa gasolina.\" Com Brent fechando terça a US$ 107,77, defasagem da gasolina em ~88% e IPCA de abril confirmando pressão inflacionária (4,39% em 12m), o cenário para reajuste está completamente formado. O CPI americano em 3,8% a/a (maior nível desde 2023) eliminou cortes do Fed e fortaleceu o DXY, o que pode pressionar ainda mais a paridade do real nos próximos dias. A cúpula Trump–Xi (13–15/mai) em Pequim é o maior evento geopolítico da semana — Trump declarou que terá \"longa conversa\" com Xi sobre o Irã, e qualquer aceno para reabertura de Hormuz derrubaria o petróleo. Postos e distribuidoras devem ter planos de preço prontos para ativar imediatamente.",
     "items": [
-      "<b>Petrobras — teleconferência hoje (manhã):</b> leia o comunicado de política de preços imediatamente. Qualquer sinalização de revisão de gasolina ou diesel é gatilho operacional imediato — tenha cenários de preço prontos para reagir em minutos.",
-      "<b>Diesel:</b> reforce estoque agora — ~59 dias sem reajuste positivo, defasagem ~52% (Abicom/Petrobras) e ~41% (média nacional). Janela de importação fechada há 112 dias. Brent acima de US$ 103 torna reajuste iminente após teleconferência.",
-      "<b>Gasolina:</b> situação crítica — defasagem de até 88% nas refinarias Petrobras (potencial alta de R$ 2,22/L), ~40% na estimativa BofA. Sem reajuste positivo há 105 dias. Mantenha 3 cenários de preço prontos para ativar imediatamente após comunicado da Petrobras.",
-      "<b>Etanol:</b> hidratado caiu ~17% na usina em SP (R$ 2,5920/L) — paridade vs. gasolina em ~57–65%, abaixo do gatilho de 70%. Se Petrobras reajustar gasolina, paridade melhora imediatamente e vendas de etanol devem acelerar. Acompanhe diariamente.",
-      "<b>CPI EUA hoje + Trump–Xi amanhã:</b> inflação americana acima do esperado pressiona yields UST 10Y e pode fortalecer o dólar, afetando câmbio e defasagem em reais. Reunião Trump–Xi pode mudar dinâmica geopolítica do petróleo — monitore declarações em tempo real.",
-      "<b>Documente sua margem:</b> ANP e Senacon com fiscalização ativa — mantenha histórico completo de notas fiscais de compra e registro de preços de venda atualizados para cada produto, especialmente nos dias de reajuste. Oscilações diárias exigem registro rigoroso."
+      "<b>Gasolina — reajuste iminente:</b> Chambriard sinalizou aumento \"em breve\" na teleconferência de ontem. Com Brent a US$ 107,77 e defasagem de ~88% (Abicom), o reajuste pode ocorrer a qualquer momento nos próximos dias. Tenha 3 cenários de preço prontos para ativar imediatamente após o comunicado oficial da Petrobras às distribuidoras.",
+      "<b>Diesel — subvenção ativa, mas atenção ao modelo:</b> a Petrobras confirmou duas rodadas de subsídio governamental desde março (~R$ 1,50/L). Isso não elimina a defasagem (~60%), apenas a amortece. Monitore comunicados do governo sobre continuidade do modelo e reforce estoques preventivamente.",
+      "<b>Etanol:</b> hidratado na usina SP em R$ 2,5920/L — paridade nos postos em ~65% (limiar: 70%). Quando o reajuste da gasolina for formalizado, a paridade melhora imediatamente e vendas de etanol devem acelerar. Safra 2026/27 com mix 67% etanol garante oferta robusta. Ajuste preços ao consumidor com agilidade.",
+      "<b>Cúpula Trump–Xi (hoje 13 a sex 15/mai):</b> qualquer sinalização positiva sobre Hormuz pode derrubar o Brent em US$ 5–10/barril em minutos e reverter a defasagem. Mantenha monitoramento em tempo real das declarações — configure alertas de notícia para \"Hormuz\", \"Iran deal\" e \"Xi Trump\".",
+      "<b>PPI dos EUA sai hoje:</b> dado mais quente pode fortalecer o dólar e pressionar o câmbio brasileiro, aumentando a defasagem em reais mesmo sem movimento do Brent. Calcule o impacto cambial na sua planilha de paridade.",
+      "<b>Documentação e compliance:</b> com reajuste iminente, ANP e Senacon em alerta máximo de fiscalização. Mantenha histórico completo de notas fiscais de compra e registros de preços de venda atualizados para cada produto. Em dias de reajuste, o registro com horário é fundamental para demonstrar transmissão legítima de custos."
     ]
   },
   "resumo": [
     {
       "lead": true,
-      "html": "A terça-feira 12 de maio abre sob dois eventos domésticos e internacionais simultâneos de alto impacto: a teleconferência da Petrobras sobre o balanço do 1T26 — divulgado ontem à noite — e a publicação do CPI americano de abril, ambos com potencial de mover preços de combustíveis, câmbio e juros. A Petrobras reportou <b>lucro líquido de R$ 32,663 bilhões no 1T26</b>, queda de 7,2% a/a mas <b>109,9% acima do 4T25</b> e acima do consenso Bloomberg (R$ 30,684 bi). A estatal anunciou ainda <b>R$ 9,03 bilhões em proventos</b> (R$ 0,70097272/ação), a serem pagos em agosto e setembro/2026. Produção recorde de 3,23 MMboed (+16,1% a/a) e refinarias operando a 95% de capacidade completam o quadro operacional forte."
+      "html": "A quarta-feira 13 de maio abre com o mercado processando dois eventos centrais da véspera: a <b>sinalização da Petrobras de reajuste iminente da gasolina</b> e a divulgação dos dados de inflação no Brasil e nos EUA. Na teleconferência do 1T26, a presidente Magda Chambriard foi direta ao mercado: <b>\"Em breve, vocês terão boas notícias em relação à nossa gasolina\"</b>, confirmando que o reajuste está em discussão com o governo federal. Para o diesel, a Petrobras informou que já opera com modelo de subvenção ativa — duas rodadas desde março, equivalentes a aproximadamente R$ 1,50 por litro. O lucro do 1T26 foi de R$ 32,7 bilhões, abaixo do consenso LSEG (R$ 34,4 bi), e as ações PETR4 recuaram 1,46% na sessão de terça."
     },
     {
-      "html": "O cenário geopolítico permanece crítico e segue movendo o petróleo. Trump declarou nesta terça que o cessar-fogo com o Irã está em <b>\"massive life support\"</b>, após ter rejeitado a contraproposta iraniana no domingo. O Irã exige fim das sanções americanas, liberação de ~US$ 100 bilhões em ativos congelados e participação na gestão do Estreito de Hormuz — o principal impasse segue sendo o programa nuclear. <b>Brent oscila em US$ 103,73 (+2,41%)</b> às 10h39 ET nesta terça, recuando dos picos de US$ 107,31 registrados às 6h39 ET. WTI em US$ 97,43 (+2,11%). O CEO da Saudi Aramco, Amin Nasser, alertou que se Hormuz ficar fechado além de meados de junho, a normalização do mercado de petróleo só ocorrerá em 2027."
+      "html": "No campo da inflação, os dois índices divulgados na terça trouxeram sinais mistos mas com viés preocupante. O <b>IPCA de abril saiu em 0,67% m/m</b> — desaceleração frente a março (0,88%), mas o acumulado em 12 meses subiu para <b>4,39%</b>, superando o teto da meta de 4,5% na comparação anual. Alimentação e Bebidas liderou as altas (1,34%). Nos Estados Unidos, o <b>CPI de abril registrou +0,6% m/m e 3,8% a/a</b> — o maior nível anual desde maio de 2023, segundo o BLS. O núcleo (ex-alimentos e energia) subiu 0,4% no mês e 2,8% em 12 meses. Com esse resultado, o mercado eliminou qualquer chance de corte do Fed em 2026 — FedWatch aponta 97,6% de probabilidade de manutenção na reunião de junho, e sem precificação de corte até dezembro de 2027."
     },
     {
-      "html": "No mercado doméstico, o foco total está na teleconferência da Petrobras de hoje — o BofA estima defasagem da gasolina em ~40%, enquanto a Abicom aponta até <b>88% nas refinarias da Petrobras</b> (potencial alta de R$ 2,22/L) e 52% no diesel (R$ 1,87/L). A janela de importação de gasolina está fechada há 69+ dias e a de diesel há 112 dias. A Petrobras elevou QAV em 18% e gás natural em 19,2% em maio, mas manteve gasolina e diesel sem reajuste positivo — <b>gasolina sem reajuste positivo há ~105 dias</b> e diesel há ~59 dias. Qualquer sinalização da diretoria na teleconferência é gatilho operacional imediato para distribuidoras e postos."
+      "html": "No petróleo, o <b>Brent fechou terça a US$ 107,77 (+3,4%) e o WTI a US$ 102,18 (+4,2%)</b>, impulsionados pela nova escalada no conflito Irã-EUA. O parlamento iraniano ameaçou enriquecer urânio a até 90% (grau de armamento) em caso de novo ataque, e o Irã expandiu a definição do Estreito de Hormuz para uma \"vasta área operacional\" muito mais ampla. O Kuwait acusou Teerã de enviar equipe armada da Guarda Revolucionária para atacar uma de suas ilhas. Na quarta-feira, o Brent recua levemente (~US$ 107,05, -0,67%) aguardando os desdobramentos da cúpula Trump–Xi em Pequim. O EIA (relatório de 12/mai) projeta Brent em ~US$ 106/b em maio e junho, com queda de estoques de 8,5 MMbpd no 2T26, e normalização apenas a partir do 4T26 (US$ 89/b)."
     },
     {
-      "html": "No câmbio, o dólar se mantém em torno de <b>R$ 4,8877</b> nesta terça, próximo das mínimas de 52 semanas (R$ 4,8823). O Boletim Focus de segunda reduziu a projeção do dólar para fim/2026 de R$ 5,25 para <b>R$ 5,20</b> — terceira redução consecutiva. O Banco Central realizará dois leilões de swap cambial hoje. A combinação de Selic em 14,50%, DXY globalmente fraco (~97,9) e termos de troca favoráveis sustenta o real. EUR/BRL em R$ 5,75. Bitcoin testa resistência em ~US$ 80.800 — a média de 200 dias (US$ 82.228) rejeitou o preço quatro vezes em duas semanas."
+      "html": "A <b>cúpula Trump–Xi Jinping em Pequim (13–15/mai)</b> é o maior evento geopolítico da semana. Trump declarou antes de embarcar que terá uma \"longa conversa\" com Xi sobre a guerra no Irã, mas também afirmou: \"Não acho que precisamos de ajuda com o Irã. Vamos vencer de uma forma ou de outra.\" O chefe de inteligência da Dragonfly, Henry Wilkinson, avalia que Trump pode pedir a Xi que pressione o Irã a aceitar os termos americanos — qualquer sinalização positiva sobre Hormuz pode derrubar o Brent em US$ 5–10/barril em tempo real. A pauta cobre ainda comércio, IA, Taiwan e terras raras. É a primeira visita presidencial americana à China desde 2017."
     },
     {
-      "html": "Na frente de bolsas, o Ibovespa recuou <b>-1,19%</b> na segunda para 181.909 pontos — menor nível desde 27 de março, giro de R$ 29,2 bilhões. O setor bancário tombou em bloco: Itaú PN -2,25%, BTG -2,88%, Santander -2,52%, Bradesco PN -2,69%. Ações ligadas ao consumo e atividade doméstica lideraram as perdas adicionais, pressionadas pela deterioração das expectativas inflacionárias. Petrobras ON +1,40% e Vale ON +2,41% subiram, mas não foram suficientes. Na contramão total, <b>Wall Street renovou máximas históricas</b>: S&P 500 em 7.412,87 (+0,19%), Nasdaq em 26.274,12 (+0,10%) e Dow Jones em 49.704,34 (+0,19%), liderados por semicondutores e IA."
+      "html": "Nos mercados financeiros, o <b>Ibovespa fechou terça em -0,86% para 180.342 pontos</b> — segundo pregão consecutivo no vermelho, chegando a perder os 180 mil pontos na mínima do dia. Petrobras pesou com PETR4 -1,46%, enquanto bancos e ações sensíveis a juros sofreram com a abertura da curva após o CPI americano. Vale3 avançou +0,37% acompanhando minério. Em Wall Street, o fechamento foi misto: Dow Jones +0,11% (49.760 pts), S&P 500 -0,16% (7.400,97) e Nasdaq -0,71% (26.088 pts). O <b>dólar encerrou praticamente estável em R$ 4,8954</b> (+0,08%), enquanto o DXY avançou +0,34% para ~98,3 após o CPI quente. Na abertura de quarta, o Ibovespa futuro já opera em terreno positivo (oscilando entre 181.615 e 184.530 pts), sugerindo abertura em alta."
     },
     {
-      "html": "Na inflação, o <b>Focus de 11/mai elevou o IPCA 2026 para 4,91%</b> — nona alta consecutiva, acima do teto da meta de 4,5%. A projeção da Selic para fim/2027 avançou para 11,25% (de 11,00%), sinalizando juros elevados por mais tempo. O Copom cortou a Selic para 14,50% em 29/abr e destacou que os próximos passos dependem da evolução do conflito no Oriente Médio. <b>IPCA cheio de abril sai hoje</b>, assim como o <b>CPI americano de abril</b> (expectativa: +0,6% m/m). Daycoval aponta que o petróleo respondeu por ~60% da inflação brasileira do 1T26. Próximo Copom: 16–17 de junho."
+      "html": "Na frente de juros e política monetária, o <b>Focus de 11/mai elevou o IPCA 2026 para 4,91%</b> — nona alta consecutiva e bem acima do teto da meta de 4,5%. A Selic fim/2027 subiu para 11,25%, sinalizando juros elevados por mais tempo. O Copom cortou a Selic para 14,50% em 29/abr (2ª redução consecutiva, unânime) e o próximo encontro é em 16–17 de junho. Nos EUA, <b>Kevin Warsh assume o Fed em 15/mai</b> (sexta-feira) — última reunião de Powell já ocorreu em 29/abr. Os yields do UST 10Y sobem para ~4,48–4,52% após o CPI, pressionando ativos emergentes e o custo de captação das importadoras brasileiras de combustível."
     },
     {
-      "html": "No setor sucroenergético, a safra 2026/27 avança acima das expectativas: UNICA reportou 19,96 Mt na 1ª quinzena de abril (+19,67% a/a), mix fortemente alcooleiro de 67,07% para etanol. Produção de etanol (cana + milho): 1,23 bilhão de litros (+33,32%). ATR estável em 103,36 kg/t. O hidratado caiu para R$ 2,5920/L em SP (-7,01%) e o anidro para R$ 2,9575/L — abaixo de R$ 3 pela primeira vez desde agosto de 2023. Paridade hidratado/gasolina em SP em ~57–65%, abaixo do gatilho de 70%. <b>Para o posto: alerta máximo.</b> Reforce diesel imediatamente. Leia o comunicado da Petrobras hoje. Monitore CPI americano e Trump–Xi Jinping (começa amanhã). Mantenha equipe alinhada para reação em horas. Próxima divulgação UNICA (1ª quinz mai/26): 14–15/mai."
+      "html": "No setor sucroenergético, a safra 2026/27 avança em ritmo acelerado: UNICA registrou <b>19,96 Mt na 1ª quinzena de abril (+19,67% a/a)</b>, mix fortemente alcooleiro de 67,07% — vs. 55,29% no mesmo período de 2025. Produção de etanol (cana + milho): 1,23 bilhão de litros (+33,32%). O etanol hidratado na usina SP caiu para R$ 2,5920/L, com o anidro abaixo de R$ 3,00 pela primeira vez desde agosto de 2023. Na média dos postos brasileiros, paridade hidratado/gasolina está em ~65%, próxima mas abaixo do limiar de 70%. <b>Para o posto: atenção máxima.</b> O reajuste da gasolina pela Petrobras foi sinalizado e pode ocorrer a qualquer momento. Configure alertas de notícias, tenha planilhas de precificação prontas e monitore a cúpula Trump–Xi em tempo real — qualquer aceno de Hormuz inverte o cenário em minutos. Próxima divulgação UNICA (1ª quinzena mai/26): esperada qui 14 ou sex 15/mai."
     }
   ],
-  "_comentario": "Gerado automaticamente em 2026-05-12T11:05:15.635Z por gerar-painel.mjs (claude-sonnet-4-6)"
+  "_comentario": "Gerado automaticamente em 2026-05-13T11:12:45.137Z por gerar-painel.mjs (claude-sonnet-4-6)"
 }
