@@ -291,7 +291,7 @@ footer b{color:var(--text-2);font-weight:600}
       }else{
         err.textContent=r.message||'Não foi possível enviar o código';
       }
-    }catch(e){err.textContent='Falha de conexão. Tente novamente.';}
+    }catch(e){err.textContent='ERRO: '+(e.message||e.toString());console.error('Auth fetch error',e);}
     finally{btn.disabled=false;btn.textContent='Enviar código por WhatsApp';}
   };
   window._verifyOTP=async function(){
@@ -301,13 +301,20 @@ footer b{color:var(--text-2);font-weight:600}
     const err=document.getElementById('_otp_error');
     err.textContent='';btn.disabled=true;btn.textContent='Validando...';
     try{
-      const r=await fetch(N8N+'/webhook/painel-verify-otp',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone:_phone,otp})}).then(r=>r.json());
+      console.log('[verify] enviando phone=', _phone, 'otp=', otp);
+      const resp=await fetch(N8N+'/webhook/painel-verify-otp',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone:_phone,otp})});
+      console.log('[verify] response status', resp.status, 'ok?', resp.ok);
+      const raw = await resp.text();
+      console.log('[verify] raw body:', raw);
+      let r;
+      try { r = JSON.parse(raw); } catch(parseErr) { err.textContent='Resposta inválida: ' + raw.slice(0,100); return; }
+      console.log('[verify] parsed:', r);
       if(r.ok){
         localStorage.setItem('painel_session',r.session_token);
         localStorage.setItem('painel_session_exp',r.expires);
         _unlock();
-      }else{err.textContent=r.message||'Código inválido';}
-    }catch(e){err.textContent='Falha de conexão. Tente novamente.';}
+      }else{err.textContent='[' + (r.reason||'?') + '] ' + (r.message||'Código inválido');}
+    }catch(e){err.textContent='FETCH ERRO: '+(e.message||e.toString());console.error('Auth fetch error',e);}
     finally{btn.disabled=false;btn.textContent='Validar e entrar';}
   };
   window._backToPhone=function(){
