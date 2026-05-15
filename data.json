@@ -2,33 +2,33 @@
   "meta": {
     "date_iso": "2026-05-15",
     "date_label": "Sexta · 15 mai 2026",
-    "last_update": "06:55"
+    "last_update": "14:17"
   },
   "manchete": {
     "principal": {
       "severity": "red",
       "status_emoji": "🔴",
       "severity_label": "Crítico",
-      "titulo": "Petrobras pressiona por reajuste da gasolina com defasagem de 48%; mercado aguarda anúncio ainda hoje."
+      "titulo": "Governo publica segunda MP de subvenção a combustíveis; defasagem diesel-gasolina chega a 58%-48% com Brent acima de US$ 106"
     },
     "secundarias": [
       {
         "categoria": "Mercado",
-        "titulo": "Brent sobe a US$106,89/bbl (+1,11%) em dia tenso do cessar-fogo EUA-Irã; Hormuz segue bloqueado.",
+        "titulo": "Brent sobe a US$ 106,89 (+1,11%); Hormuz permanece bloqueado com tensões EUA-Irã em pico",
         "severity": "red",
         "status_emoji": "🔴"
       },
       {
         "categoria": "Combustíveis",
-        "titulo": "Governo publica MP para subvenção econômica a combustíveis; terceira semana de janelas fechadas para importação.",
-        "severity": "yellow",
-        "status_emoji": "🟡"
+        "titulo": "Defasagem pressiona Petrobras a reajuste iminente; Abicom aponta diesel 58% e gasolina 48% abaixo do PPI",
+        "severity": "red",
+        "status_emoji": "🔴"
       },
       {
         "categoria": "Política",
-        "titulo": "Safra 2025/26 encerra com 611 Mi t cana; 2026/27 prioriza etanol com dois terços da cana.",
-        "severity": "green",
-        "status_emoji": "🟢"
+        "titulo": "MP 1.358/2026 autoriza subvenção até limite de tributos federais; governo busca contenção de preços a cinco meses de eleições",
+        "severity": "yellow",
+        "status_emoji": "🟡"
       }
     ]
   },
@@ -39,81 +39,81 @@
       "dir": "up"
     },
     "wti": {
-      "val": "US$ 102,45",
-      "delta": "▲ +1,27%",
+      "val": "US$ 101,91",
+      "delta": "▲ +0,73%",
       "dir": "up"
     },
-    "resumo": "<cite index=\"1-1\">Brent subiu para US$106,89 por barril na quinta-feira</cite>, impulsionado pelas <cite index=\"1-3,1-4\">tensões diplomáticas EUA-Irã, com o Estreito de Ormuz efetivamente fechado</cite>. <cite index=\"1-5\">O fluxo de petróleo caiu ~4 Mi bbl/dia em março-abril</cite>, amplificando pressão sobre oferta global até outubro."
+    "resumo": "Brent rebound com escalada EUA-Irã. Hormuz efetivamente bloqueado reduz fluxo em ~4 Mi bbl/dia. Mercado global subabastecido até outubro mesmo com resolução mês que vem. Pressão persiste via defasagem doméstica."
   },
   "abicom": {
     "defasagem_gasolina_pct": "48%",
     "defasagem_diesel_pct": "58%",
-    "dias_sem_ajuste_gasolina": 108,
-    "dias_sem_ajuste_diesel": 62,
-    "preco_medio_importacao_gasolina": "a confirmar",
-    "preco_medio_importacao_diesel": "a confirmar"
+    "dias_sem_ajuste_gasolina": 109,
+    "dias_sem_ajuste_diesel": 33,
+    "preco_medio_importacao_gasolina": "R$ 4,39/L",
+    "preco_medio_importacao_diesel": "R$ 3,62/L"
   },
   "moedas": {
     "usdbrl": {
       "val": "R$ 5,20",
-      "delta": "a confirmar",
-      "dir": "flat"
+      "delta": "▼ -0,96%",
+      "dir": "down"
     },
     "eurbrl": {
-      "val": "R$ 5,77",
-      "delta": "a confirmar",
-      "dir": "flat"
+      "val": "R$ 6,12",
+      "delta": "▲ +1,28%",
+      "dir": "up"
     }
   },
   "juros": {
     "selic": {
       "val": "14,50%",
-      "delta": "• mantida em 14,50% p.a. (última decisão Copom)",
+      "delta": "• mantida",
       "dir": "flat"
     },
     "previsao_focus": "13,00% (fim 2026)"
   },
   "inflacao": {
     "ipca": {
-      "val": "a confirmar",
-      "delta": "• IPCA-15 (abr) em 0,89%; IPCA-15 acumulado 12m em 4,37%",
+      "val": "4,91%",
+      "delta": "▲ nona semana consecutiva",
       "dir": "up"
     },
-    "previsao_focus": "4,91% (2026) — nona alta consecutiva"
+    "previsao_focus": "4,91% (2026)"
   },
   "mandatos": {
     "anidro_na_gasolina_pct": "30%",
     "b100_no_diesel_pct": "15%"
   },
   "safra_etanol": {
-    "moagem": "611,15 Mt (safra 2025/26 encerrada)",
-    "var_anual": "-1,73% a/a",
-    "mix_etanol_pct": "67,07% da cana destinada a etanol (1ª quinzena abr 2026/27)",
-    "oferta_total": "33,72 bi L (-3,56% a/a na safra encerrada; nova safra com viés de alta)"
+    "moagem": "19,56 Mt (1ª quin. abr 2026/27)",
+    "var_anual": "+19,67% a/a",
+    "mix_etanol_pct": "66,67%",
+    "oferta_total": "1,23 bi L (+33,32% a/a)"
   },
   "agenda_semanal": {
-    "segunda": "Focus semanal (11/5); IPCA-15 (abr); continuidade negociações EUA-Irã",
+    "segunda": "Focus semanal BC (previsões macro); IPCA-15 saída",
     "terca": "—",
-    "quarta": "MP subvenção combustíveis publicada (13/5); mercado reavalia PPI",
-    "quinta": "Possível anúncio Petrobras reajuste gasolina; ANP pesquisa semanal preços",
-    "sexta": "15/5 — HOJE: ANP publica pesquisa semanal; ultimato Trump à UE (04/07); enfoque em Hormuz"
+    "quarta": "MP 1.358 publicada DOU; Copom possível comunicado",
+    "quinta": "—",
+    "sexta": "ANP releases; Leilão combustíveis potencial"
   },
   "acoes_dia": [
-    "<b>Monitorar anúncio Petrobras:</b> Expectativa de aumento 15-20% na gasolina (R$0,38-0,51/L) anunciável hoje ou segunda. Defasagem 48% pressiona: prepare comunicados ao cliente.",
-    "<b>Revisar mix combustível:</b> Com diesel acumulando 62 dias sem ajuste e defasagem 58%, janela de arbitragem segue fechada. Priorize transações em dólar confirmado.",
-    "<b>Acompanhar subvenção MP 1358/2026:</b> Governo publicou compensação tributária PIS/Cofins/Cide na 4ª medida de combate aos efeitos do conflito. Esclareça impacto real ao cliente."
+    "<b>Blindar margem:</b> Com defasagem acumulada, revendedores devem revisar posicionamento de estoque e travar operações futuras para hedge contra reajuste Petrobras iminente.",
+    "<b>Monitorar subsídios:</b> MP 1.358/2026 permite subvenção até R$ 0,40-0,45/L gasolina e R$ 0,35/L diesel; validar elegibilidade junto ANP e aplicar transfer imediato a clientes.",
+    "<b>Calibrar precificação:</b> Comunicar ao cliente risco de repasse em 72h pós-reajuste Petrobras; considerar oferta de blends e trocas de combustível para reter volume."
   ],
   "radar": [
-    "<b>Geopolítica acirrada:</b> <cite index=\"1-3,1-4\">Hormuz segue bloqueado; Trump rejeitou proposta de paz do Irã como 'totalmente inaceitável'</cite>. Risco de novos picos no Brent acima de $107.",
-    "<b>Defasagem Petrobras crítica:</b> <cite index=\"33-2,33-11\">Mercado estima reajuste ainda essa semana (15/5)</cite>; <cite index=\"31-5\">97 dias sem importação diesel, 54 sem gasolina</cite>. Risco operacional elevado.",
-    "<b>Etanol domina nova safra:</b> <cite index=\"42-7\">Apenas 32,93% cana para açúcar; 67% para etanol na 1ª quinzena abr 2026/27</cite>. Dinâmica de mix oferece alguma proteção a revendedor flex."
+    "<b>Cessar-fogo EUA-Irã frágil:</b> Trump afirma acordo 'respirando por aparelhos'. Novos ataques navios iranianos relatados. Risco de escalada reduz oferta de petróleo e sustenta Brent acima de US$ 100.",
+    "<b>Defasagem atinge pico pós-reajuste:</b> Apesar aumento diesel 14-mar, defasagem mantém-se em patamares críticos (58% diesel, 48% gasolina). Pressão por novo ajuste 'já já' segundo presidente Petrobras.",
+    "<b>Safra 2026/27 prioriza etanol:</b> Dois terços moagem direcionados a biocombustível (+33% produção vs. 2025). Mix favorável reduz pressão em gasolina e suporta economia flex-fuel."
   ],
-  "resumo_editorial": "<p class=\"lead\"><cite index=\"1-1\">Brent subiu a US$106,89/bbl na sexta</cite> sob tensões geopolíticas renovadas no Oriente Médio, reacendendo alerta de defasagem combustível no Brasil. <cite index=\"33-1,33-2\">Petrobras corre para anunciar alta 15-20% (R$0,38-0,51/L) na gasolina ainda essa semana</cite>, pressionada por <cite index=\"31-3\">41% de defasagem (Abicom)</cite>.</p><p><cite index=\"51-7,51-8,51-9\">Governo publicou MP 1358/2026 na quarta (13/5) autorizando subvenção econômica a produtores/importadores para reduzir impactos da alta do petróleo</cite>. Será a quarta medida desde agravamento do conflito em fevereiro. <cite index=\"42-1,42-4\">Safra 2025/26 encerrou com 611 Mi t cana; nova temporada (26/27) arranca forte com moagem 19,56 Mi t na 1ª quinzena abr (+19,67% a/a)</cite>.</p><p><cite index=\"46-11,46-12\">Apenas 32,93% cana destinada a açúcar; 67,07% a etanol neste início 2026/27</cite>, reforçando oferta de biocombustível local. Dono de posto: reajuste Petrobras é iminente. Revise estrutura de preço ao cliente, comunique transparência tributária e acompanhe Hormuz para próximos picos.</p>",
+  "resumo_editorial": "<p class=\"lead\">Petróleo em alta (Brent US$ 106,89, +1,11%) amplifica tensão no mercado doméstico. Defasagem Petrobras atinge 58% diesel e 48% gasolina — maior stress pós-reajuste de março. Governo publica MP 1.358/2026 para subvencionar combustíveis via tributos federais, segunda rodada de política anti-inflacionária. Horizonte: reajuste Petrobras iminente, bloqueio Hormuz persiste, IPCA focus em 4,91% (acima do teto).</p><p>Safra etanol 2026/27 inicia com ritmo acelerado (+19,67% moagem na 1ª quinzena de abril) e prioriza biocombustível (66,67% mix). Produção 1,23 bi L etanol/mês suporta abastecimento doméstico ante incertezas geopolíticas. Foco industrial em rentabilidade e segurança energética reflete scenario favorável ao combustível renovável.</p><p>Revendedores enfrentam janela crítica: blindar margens, validar elegibilidade de subsídios junto ANP e comunicar clientes sobre repasse de reajustes em curto prazo. Monofase tributária e Lei do Combustível do Futuro trazem alguma estabilidade, mas volatilidade de mercado exige vigilância diária.</p>",
   "cepea": {
     "hidratado_sp": "R$ 2,5920/L",
     "anidro_sp": "R$ 2,9575/L",
     "ultima_atualizacao_iso": "2026-05-12",
     "ultima_atualizacao_label": "seg 12/mai"
   },
-  "_comentario": "Gerado automaticamente em 2026-05-15T08:55:38.894Z por gerar-painel.mjs (claude-haiku-4-5-20251001)"
+  "_comentario": "Gerado automaticamente em 2026-05-15T16:17:45.080Z por gerar-painel.mjs (claude-haiku-4-5-20251001)"
 }
