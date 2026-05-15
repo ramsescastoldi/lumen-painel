@@ -1,32 +1,32 @@
 {
   "meta": {
-    "date_iso": "2026-05-14",
-    "date_label": "Quinta · 14 mai 2026",
-    "last_update": "07:30"
+    "date_iso": "2026-05-15",
+    "date_label": "Sexta · 15 mai 2026",
+    "last_update": "06:55"
   },
   "manchete": {
     "principal": {
       "severity": "red",
       "status_emoji": "🔴",
       "severity_label": "Crítico",
-      "titulo": "Manchete principal do dia em uma frase forte"
+      "titulo": "Petrobras pressiona por reajuste da gasolina com defasagem de 48%; mercado aguarda anúncio ainda hoje."
     },
     "secundarias": [
       {
         "categoria": "Mercado",
-        "titulo": "Notícia mais relevante do mercado financeiro do dia",
-        "severity": "yellow",
-        "status_emoji": "🟡"
-      },
-      {
-        "categoria": "Combustíveis",
-        "titulo": "Notícia mais relevante do setor de combustíveis do dia",
+        "titulo": "Brent sobe a US$106,89/bbl (+1,11%) em dia tenso do cessar-fogo EUA-Irã; Hormuz segue bloqueado.",
         "severity": "red",
         "status_emoji": "🔴"
       },
       {
+        "categoria": "Combustíveis",
+        "titulo": "Governo publica MP para subvenção econômica a combustíveis; terceira semana de janelas fechadas para importação.",
+        "severity": "yellow",
+        "status_emoji": "🟡"
+      },
+      {
         "categoria": "Política",
-        "titulo": "Notícia mais relevante de política / regulação do dia",
+        "titulo": "Safra 2025/26 encerra com 611 Mi t cana; 2026/27 prioriza etanol com dois terços da cana.",
         "severity": "green",
         "status_emoji": "🟢"
       }
@@ -34,85 +34,86 @@
   },
   "petroleo": {
     "brent": {
-      "val": "US$ 105,05",
-      "delta": "▼ -0,55%",
-      "dir": "down"
+      "val": "US$ 106,89",
+      "delta": "▲ +1,11%",
+      "dir": "up"
     },
     "wti": {
-      "val": "US$ 100,56",
-      "delta": "▼ -0,40%",
-      "dir": "down"
+      "val": "US$ 102,45",
+      "delta": "▲ +1,27%",
+      "dir": "up"
     },
-    "resumo": "Resumo curto (2–3 frases) sobre o cenário do petróleo hoje. Cite fatores principais e impacto direto para o revendedor."
+    "resumo": "<cite index=\"1-1\">Brent subiu para US$106,89 por barril na quinta-feira</cite>, impulsionado pelas <cite index=\"1-3,1-4\">tensões diplomáticas EUA-Irã, com o Estreito de Ormuz efetivamente fechado</cite>. <cite index=\"1-5\">O fluxo de petróleo caiu ~4 Mi bbl/dia em março-abril</cite>, amplificando pressão sobre oferta global até outubro."
   },
   "abicom": {
-    "defasagem_gasolina_pct": "73%",
-    "defasagem_diesel_pct": "39%",
-    "dias_sem_ajuste_gasolina": 107,
-    "dias_sem_ajuste_diesel": 61,
-    "preco_medio_importacao_gasolina": "R$ 4,12/L",
-    "preco_medio_importacao_diesel": "R$ 4,55/L"
+    "defasagem_gasolina_pct": "48%",
+    "defasagem_diesel_pct": "58%",
+    "dias_sem_ajuste_gasolina": 108,
+    "dias_sem_ajuste_diesel": 62,
+    "preco_medio_importacao_gasolina": "a confirmar",
+    "preco_medio_importacao_diesel": "a confirmar"
   },
   "moedas": {
     "usdbrl": {
-      "val": "R$ 4,981",
-      "delta": "▼ -0,56%",
-      "dir": "down"
+      "val": "R$ 5,20",
+      "delta": "a confirmar",
+      "dir": "flat"
     },
     "eurbrl": {
-      "val": "R$ 5,62",
-      "delta": "▼ -0,40%",
-      "dir": "down"
+      "val": "R$ 5,77",
+      "delta": "a confirmar",
+      "dir": "flat"
     }
   },
   "juros": {
     "selic": {
       "val": "14,50%",
-      "delta": "▼ -0,25 p.p.",
-      "dir": "down"
+      "delta": "• mantida em 14,50% p.a. (última decisão Copom)",
+      "dir": "flat"
     },
-    "previsao_focus": "13,75% (fim 2026)"
+    "previsao_focus": "13,00% (fim 2026)"
   },
   "inflacao": {
     "ipca": {
-      "val": "0,67%",
-      "delta": "▼ vs. mês anterior",
-      "dir": "down"
+      "val": "a confirmar",
+      "delta": "• IPCA-15 (abr) em 0,89%; IPCA-15 acumulado 12m em 4,37%",
+      "dir": "up"
     },
-    "previsao_focus": "4,91% (2026)"
+    "previsao_focus": "4,91% (2026) — nona alta consecutiva"
   },
   "mandatos": {
     "anidro_na_gasolina_pct": "30%",
     "b100_no_diesel_pct": "15%"
   },
+  "safra_etanol": {
+    "moagem": "611,15 Mt (safra 2025/26 encerrada)",
+    "var_anual": "-1,73% a/a",
+    "mix_etanol_pct": "67,07% da cana destinada a etanol (1ª quinzena abr 2026/27)",
+    "oferta_total": "33,72 bi L (-3,56% a/a na safra encerrada; nova safra com viés de alta)"
+  },
+  "agenda_semanal": {
+    "segunda": "Focus semanal (11/5); IPCA-15 (abr); continuidade negociações EUA-Irã",
+    "terca": "—",
+    "quarta": "MP subvenção combustíveis publicada (13/5); mercado reavalia PPI",
+    "quinta": "Possível anúncio Petrobras reajuste gasolina; ANP pesquisa semanal preços",
+    "sexta": "15/5 — HOJE: ANP publica pesquisa semanal; ultimato Trump à UE (04/07); enfoque em Hormuz"
+  },
+  "acoes_dia": [
+    "<b>Monitorar anúncio Petrobras:</b> Expectativa de aumento 15-20% na gasolina (R$0,38-0,51/L) anunciável hoje ou segunda. Defasagem 48% pressiona: prepare comunicados ao cliente.",
+    "<b>Revisar mix combustível:</b> Com diesel acumulando 62 dias sem ajuste e defasagem 58%, janela de arbitragem segue fechada. Priorize transações em dólar confirmado.",
+    "<b>Acompanhar subvenção MP 1358/2026:</b> Governo publicou compensação tributária PIS/Cofins/Cide na 4ª medida de combate aos efeitos do conflito. Esclareça impacto real ao cliente."
+  ],
+  "radar": [
+    "<b>Geopolítica acirrada:</b> <cite index=\"1-3,1-4\">Hormuz segue bloqueado; Trump rejeitou proposta de paz do Irã como 'totalmente inaceitável'</cite>. Risco de novos picos no Brent acima de $107.",
+    "<b>Defasagem Petrobras crítica:</b> <cite index=\"33-2,33-11\">Mercado estima reajuste ainda essa semana (15/5)</cite>; <cite index=\"31-5\">97 dias sem importação diesel, 54 sem gasolina</cite>. Risco operacional elevado.",
+    "<b>Etanol domina nova safra:</b> <cite index=\"42-7\">Apenas 32,93% cana para açúcar; 67% para etanol na 1ª quinzena abr 2026/27</cite>. Dinâmica de mix oferece alguma proteção a revendedor flex."
+  ],
+  "resumo_editorial": "<p class=\"lead\"><cite index=\"1-1\">Brent subiu a US$106,89/bbl na sexta</cite> sob tensões geopolíticas renovadas no Oriente Médio, reacendendo alerta de defasagem combustível no Brasil. <cite index=\"33-1,33-2\">Petrobras corre para anunciar alta 15-20% (R$0,38-0,51/L) na gasolina ainda essa semana</cite>, pressionada por <cite index=\"31-3\">41% de defasagem (Abicom)</cite>.</p><p><cite index=\"51-7,51-8,51-9\">Governo publicou MP 1358/2026 na quarta (13/5) autorizando subvenção econômica a produtores/importadores para reduzir impactos da alta do petróleo</cite>. Será a quarta medida desde agravamento do conflito em fevereiro. <cite index=\"42-1,42-4\">Safra 2025/26 encerrou com 611 Mi t cana; nova temporada (26/27) arranca forte com moagem 19,56 Mi t na 1ª quinzena abr (+19,67% a/a)</cite>.</p><p><cite index=\"46-11,46-12\">Apenas 32,93% cana destinada a açúcar; 67,07% a etanol neste início 2026/27</cite>, reforçando oferta de biocombustível local. Dono de posto: reajuste Petrobras é iminente. Revise estrutura de preço ao cliente, comunique transparência tributária e acompanhe Hormuz para próximos picos.</p>",
   "cepea": {
     "hidratado_sp": "R$ 2,5920/L",
     "anidro_sp": "R$ 2,9575/L",
     "ultima_atualizacao_iso": "2026-05-12",
     "ultima_atualizacao_label": "seg 12/mai"
   },
-  "safra_etanol": {
-    "moagem": "19,96 Mt",
-    "var_anual": "+19,67% a/a",
-    "mix_etanol_pct": "67,07%",
-    "oferta_total": "1,23 bi L (+33,32% a/a)"
-  },
-  "agenda_semanal": {
-    "segunda": "Focus semanal (IPCA/Selic/câmbio)",
-    "terca": "—",
-    "quarta": "—",
-    "quinta": "—",
-    "sexta": "UNICA (1ª quinzena mai/26)"
-  },
-  "acoes_dia": [
-    "<b>Ação operacional 1:</b> descrição curta e direta do que o revendedor deve fazer hoje.",
-    "<b>Ação operacional 2:</b> segunda recomendação acionável.",
-    "<b>Ação operacional 3:</b> terceira recomendação."
-  ],
-  "radar": [
-    "<b>Tema 1:</b> síntese curta do desenvolvimento mais relevante do dia.",
-    "<b>Tema 2:</b> segundo desenvolvimento de impacto.",
-    "<b>Tema 3:</b> terceiro destaque do dia."
-  ],
-  "resumo_editorial": "<p class=\"lead\">Parágrafo de abertura editorial sintetizando o cenário do dia.</p><p>Segundo parágrafo aprofundando os dados macro e o impacto no setor.</p><p>Terceiro parágrafo com fechamento acionável para o revendedor.</p>"
+  "_comentario": "Gerado automaticamente em 2026-05-15T08:55:38.894Z por gerar-painel.mjs (claude-haiku-4-5-20251001)"
 }
