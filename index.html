@@ -9,11 +9,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* ====================================================
-   Lumen Posto Club — Painel diário "Posto em Dia"
-   Identidade: dourado #C9A84C sobre petróleo profundo
-   Tipografia: Manrope (200 editorial, 400/500 corpo, 600 destaque)
-====================================================*/
 :root{
   --gold:#C9A84C; --gold-soft:#E5C77A; --gold-line:rgba(201,168,76,.22); --gold-line-strong:rgba(201,168,76,.55);
   --bg-0:#0B1320; --bg-1:#0D1B2A; --bg-2:#13243A; --bg-3:#1A2D45;
@@ -54,7 +49,7 @@ a{color:inherit;text-decoration:none}
 .ticker:hover .ticker-track{animation-play-state:paused}
 .ticker .sym{color:var(--text-2);margin-right:8px;font-weight:500;letter-spacing:.1em}
 .ticker .v{color:var(--text);margin-right:8px;font-weight:500}
-.ticker .up{color:var(--up)} .ticker .down{color:var(--down)} .ticker .warn{color:var(--warn)}
+.ticker .up{color:var(--up)} .ticker .down{color:var(--down)} .ticker .warn{color:var(--warn)} .ticker .flat{color:var(--text-2)}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* GRID */
@@ -91,19 +86,6 @@ a{color:inherit;text-decoration:none}
 .delta.flat{color:var(--text-2);background:rgba(139,148,163,.08);border:1px solid rgba(139,148,163,.18)}
 .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .lbl{font-size:11px;color:var(--text-2);letter-spacing:.12em;text-transform:uppercase;font-weight:500;margin-bottom:6px}
-
-/* TABLES */
-table{width:100%;border-collapse:separate;border-spacing:0;font-size:13px}
-th{font-weight:500;text-align:right;color:var(--text-2);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.05)}
-th:first-child,td:first-child{text-align:left}
-td{padding:10px;border-bottom:1px solid rgba(255,255,255,.035);text-align:right;font-feature-settings:"tnum" 1}
-tr:last-child td{border-bottom:none}
-tbody tr:hover td{background:rgba(201,168,76,.03)}
-.region{color:var(--text);font-weight:500;letter-spacing:.04em}
-.cell-num{color:var(--text);font-weight:400}
-.cell-sub{color:var(--text-2);font-size:11px}
-
-.spark{display:block}
 
 /* mini metric */
 .mgrid{display:grid;gap:14px}
@@ -147,28 +129,19 @@ tbody tr:hover td{background:rgba(201,168,76,.03)}
 .manchete-status{font-size:64px;line-height:1}
 .manchete-body{min-width:0;position:relative;z-index:1}
 .manchete-tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--text-2);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:10px}
-.manchete-titulo{font-weight:300;font-size:38px;line-height:1.1;letter-spacing:-.02em;color:var(--text);margin:0 0 12px;max-width:1100px;word-wrap:break-word}
-.manchete-corpo{font-size:15px;line-height:1.6;color:var(--text);max-width:1000px;font-weight:400}
-.manchete-corpo b{color:var(--gold);font-weight:600}
+.manchete-titulo{font-weight:300;font-size:32px;line-height:1.15;letter-spacing:-.02em;color:var(--text);margin:0;max-width:1100px;word-wrap:break-word}
 @media(max-width:760px){
   .manchete{grid-template-columns:1fr;padding:22px;gap:14px}
-  .manchete-titulo{font-size:24px}
+  .manchete-titulo{font-size:22px}
   .manchete-status{font-size:42px}
 }
 
-/* MANCHETES SECUNDÁRIAS (3 cards menores) */
-.manch-mini{
-  font-size:16px;line-height:1.4;font-weight:400;color:var(--text);
-  margin:0;letter-spacing:-.005em;
-  word-wrap:break-word;
-}
-.manch-tag{
-  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--text-2);font-weight:600;margin:0;
-}
+/* MANCHETES SECUNDÁRIAS */
+.manch-mini{font-size:15px;line-height:1.45;font-weight:400;color:var(--text);margin:0;letter-spacing:-.005em;word-wrap:break-word}
+.manch-tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-2);font-weight:600;margin:0}
 .manch-emoji{font-size:18px;line-height:1}
 
-/* AÇÃO DO DIA — list */
+/* AÇÃO DO DIA */
 .acao-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
 .acao-list li{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);border-radius:8px;font-size:14px;line-height:1.5;min-height:56px}
 .acao-list li > span:last-child{flex:1 1 auto;min-width:0;word-wrap:break-word}
@@ -183,12 +156,25 @@ tbody tr:hover td{background:rgba(201,168,76,.03)}
 .radar li > span,.radar li{min-width:0}
 .radar li b{display:inline;color:var(--gold);font-weight:600}
 
-/* AGENDA */
-.agenda{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
-.agenda li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px;align-items:center;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.05)}
-.agenda li:last-child{border-bottom:none}
-.agenda .day{font-weight:300;font-size:18px;color:var(--text);min-width:70px;letter-spacing:-.01em}
-.agenda .ev{color:var(--text);font-size:13px;min-width:0;word-wrap:break-word}
+/* AGENDA SEMANAL — mobile-friendly */
+.agenda-week{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0}
+.agenda-week li{display:grid;grid-template-columns:70px 1fr;gap:14px;align-items:baseline;padding:11px 0;border-bottom:1px dashed rgba(255,255,255,.05)}
+.agenda-week li:last-child{border-bottom:none}
+.agenda-week .wday{font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.agenda-week .wev{color:var(--text);font-size:13.5px;line-height:1.45;min-width:0;word-wrap:break-word;overflow-wrap:break-word}
+.agenda-week .wev.empty{color:var(--text-3)}
+@media(max-width:560px){
+  .agenda-week li{grid-template-columns:54px 1fr;gap:10px;padding:10px 0}
+  .agenda-week .wday{font-size:10.5px}
+  .agenda-week .wev{font-size:12.5px}
+}
+
+/* COUNTERS (ABICOM) */
+.counter-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.counter{padding:14px;border-radius:10px;background:rgba(227,106,90,.06);border:1px solid rgba(227,106,90,.2);text-align:left}
+.counter.red{background:rgba(227,106,90,.06);border-color:rgba(227,106,90,.25)}
+.counter .n{font-weight:200;font-size:34px;color:var(--down);line-height:1;letter-spacing:-.02em;font-feature-settings:"tnum" 1}
+.counter .l{font-size:11px;color:var(--text-2);letter-spacing:.1em;text-transform:uppercase;font-weight:500;margin-top:4px}
 
 /* VERIMO BLOCK */
 .verimo{display:flex;flex-direction:column;height:100%;gap:14px;padding:6px 4px}
@@ -207,13 +193,6 @@ tbody tr:hover td{background:rgba(201,168,76,.03)}
 .resumo p:last-child{margin-bottom:0}
 .resumo b{color:var(--gold-soft);font-weight:600}
 .resumo .lead{font-size:16px;font-weight:300;letter-spacing:-.005em;color:var(--text);border-left:2px solid var(--gold);padding-left:14px;margin-bottom:18px}
-
-/* DAYS-WITHOUT counter */
-.counter-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
-.counter{padding:14px;border-radius:10px;background:rgba(227,106,90,.06);border:1px solid rgba(227,106,90,.2);text-align:left}
-.counter.red{background:rgba(227,106,90,.06);border-color:rgba(227,106,90,.25)}
-.counter .n{font-weight:200;font-size:34px;color:var(--down);line-height:1;letter-spacing:-.02em;font-feature-settings:"tnum" 1}
-.counter .l{font-size:11px;color:var(--text-2);letter-spacing:.1em;text-transform:uppercase;font-weight:500;margin-top:4px}
 
 /* responsive */
 @media(max-width:760px){
@@ -301,14 +280,10 @@ footer b{color:var(--text-2);font-weight:600}
     const err=document.getElementById('_otp_error');
     err.textContent='';btn.disabled=true;btn.textContent='Validando...';
     try{
-      console.log('[verify] enviando phone=', _phone, 'otp=', otp);
       const resp=await fetch(N8N+'/webhook/painel-verify-otp',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone:_phone,otp})});
-      console.log('[verify] response status', resp.status, 'ok?', resp.ok);
       const raw = await resp.text();
-      console.log('[verify] raw body:', raw);
       let r;
       try { r = JSON.parse(raw); } catch(parseErr) { err.textContent='Resposta inválida: ' + raw.slice(0,100); return; }
-      console.log('[verify] parsed:', r);
       if(r.ok){
         localStorage.setItem('painel_session',r.session_token);
         localStorage.setItem('painel_session_exp',r.expires);
@@ -344,9 +319,6 @@ footer b{color:var(--text-2);font-weight:600}
 })();
 </script>
 <!-- ════════ END AUTH GATE ════════ -->
-
-
-
 
 <!-- ================= HEADER ================= -->
 <header class="topbar">
@@ -401,12 +373,11 @@ footer b{color:var(--text-2);font-weight:600}
           <span class="pill red" id="mancheteSeverity">Crítico</span>
         </div>
         <h2 class="manchete-titulo" id="mancheteTitulo">—</h2>
-        <p class="manchete-corpo" id="mancheteCorpo">—</p>
       </div>
     </div>
   </section>
 
-  <!-- 1b. MANCHETES SECUNDÁRIAS (3 cards · col-4 cada) -->
+  <!-- 1b. MANCHETES SECUNDÁRIAS (3 cards — Mercado / Combustíveis / Política) -->
   <section class="card col-4" id="manch2">
     <div class="card-h">
       <div class="ico"><span class="manch-emoji" id="manch2Emoji">🟡</span></div>
@@ -436,13 +407,12 @@ footer b{color:var(--text-2);font-weight:600}
 
   <!-- 2. AÇÃO DO DIA (col-7) + RADAR (col-5) -->
   <section class="card alert-red col-7" id="cardAcao">
-    <div class="card-h"><div class="ico">⚡</div><h2>Ação do dia</h2><span class="src" id="acaoTag">Véspera de feriado</span></div>
-    <p style="font-size:14px;color:var(--text);line-height:1.5;margin:0 0 14px;word-wrap:break-word" id="acaoLead">—</p>
+    <div class="card-h"><div class="ico">⚡</div><h2>Ação do dia</h2><span class="src">3 movimentos hoje</span></div>
     <ol class="acao-list" id="acaoList"></ol>
   </section>
 
   <section class="card col-5">
-    <div class="card-h"><div class="ico">🛰️</div><h2>Radar do dia</h2><span class="src">Síntese rápida</span></div>
+    <div class="card-h"><div class="ico">🛰️</div><h2>Radar do dia</h2><span class="src">3 destaques</span></div>
     <ul class="radar" id="radarList"></ul>
   </section>
 
@@ -453,160 +423,121 @@ footer b{color:var(--text-2);font-weight:600}
       <div class="metric">
         <div class="name">Brent</div>
         <div class="val big sm" id="brentVal">—</div>
-        <div class="sub"><span class="delta down" id="brentDelta">—</span><span class="muted" style="font-size:11.5px" id="brentSub">—</span></div>
+        <div class="sub"><span class="delta down" id="brentDelta">—</span></div>
       </div>
       <div class="metric">
         <div class="name">WTI</div>
         <div class="val big sm" id="wtiVal">—</div>
-        <div class="sub"><span class="delta down" id="wtiDelta">—</span><span class="muted" style="font-size:11.5px" id="wtiSub">—</span></div>
+        <div class="sub"><span class="delta down" id="wtiDelta">—</span></div>
       </div>
     </div>
-    <div class="note red" id="petroleoNota">—</div>
-    <div class="note" style="border-left-color:var(--gold)" id="petroleoCit">—</div>
+    <div class="note red" id="petroleoResumo">—</div>
   </section>
 
   <section class="card alert-red col-6">
-    <div class="card-h"><div class="ico">🚢</div><h2>Abicom — Defasagem Petrobras × PPI</h2><span class="src">Indicador diário</span></div>
+    <div class="card-h"><div class="ico">🚢</div><h2>Abicom — Defasagem</h2><span class="src">Petrobras × PPI</span></div>
     <div class="mgrid c2">
-      <div class="metric" style="text-align:left">
-        <div class="name">Diesel S-10</div>
-        <div class="big xl" style="color:var(--down)" id="abicomDiesel">—</div>
-        <div class="sub"><span class="pill red" id="abicomDieselTag">Recorde</span></div>
-      </div>
       <div class="metric" style="text-align:left">
         <div class="name">Gasolina A</div>
         <div class="big xl" style="color:var(--down)" id="abicomGasolina">—</div>
-        <div class="sub"><span class="pill red" id="abicomGasolinaTag">Recorde</span></div>
+      </div>
+      <div class="metric" style="text-align:left">
+        <div class="name">Diesel S-10</div>
+        <div class="big xl" style="color:var(--down)" id="abicomDiesel">—</div>
       </div>
     </div>
-    <div class="lbl" style="margin-top:18px">Sem reajuste Petrobras</div>
+    <div class="lbl" style="margin-top:18px">Dias sem reajuste Petrobras</div>
     <div class="counter-grid">
-      <div class="counter red"><div class="n" id="diasDiesel">—</div><div class="l">dias · diesel</div></div>
       <div class="counter red"><div class="n" id="diasGasolina">—</div><div class="l">dias · gasolina</div></div>
+      <div class="counter red"><div class="n" id="diasDiesel">—</div><div class="l">dias · diesel</div></div>
     </div>
-    <div class="note red" id="abicomNota">—</div>
+    <div class="divider"></div>
+    <div class="lbl">Preço médio de importação</div>
+    <div class="mgrid c2" style="margin-top:6px">
+      <div class="metric"><div class="name">Gasolina</div><div class="val" id="impGasolina">—</div></div>
+      <div class="metric"><div class="name">Diesel</div><div class="val" id="impDiesel">—</div></div>
+    </div>
   </section>
 
-  <!-- 4. MOEDAS (col-6) + BOLSAS (col-6) -->
-  <section class="card col-6">
-    <div class="card-h"><div class="ico">💵</div><h2>Moedas</h2><span class="src">Spot · BCB / B3 / global</span></div>
-    <div class="mgrid c4">
+  <!-- 4. MOEDAS + JUROS + INFLAÇÃO + MANDATOS (col-3 cada) -->
+  <section class="card col-3">
+    <div class="card-h"><div class="ico">💵</div><h2>Moedas</h2><span class="src">BCB</span></div>
+    <div class="mgrid c2">
       <div class="metric"><div class="name">USD/BRL</div><div class="val" id="usdbrlVal">—</div><div class="sub"><span class="delta down" id="usdbrlDelta">—</span></div></div>
       <div class="metric"><div class="name">EUR/BRL</div><div class="val" id="eurbrlVal">—</div><div class="sub"><span class="delta down" id="eurbrlDelta">—</span></div></div>
-      <div class="metric"><div class="name">DXY</div><div class="val" id="dxyVal">—</div><div class="sub"><span class="delta up" id="dxyDelta">—</span></div></div>
-      <div class="metric"><div class="name">BTC/USD</div><div class="val" id="btcVal">—</div><div class="sub"><span class="delta down" id="btcDelta">—</span></div></div>
     </div>
-    <div class="note yellow" id="moedasNota">—</div>
   </section>
 
-  <section class="card col-6">
-    <div class="card-h"><div class="ico">📈</div><h2>Bolsas</h2><span class="src">B3 · NYSE / Nasdaq</span></div>
-    <div class="mgrid c4">
-      <div class="metric"><div class="name">Ibovespa</div><div class="val" id="ibovVal">—</div><div class="sub"><span class="delta down" id="ibovDelta">—</span></div></div>
-      <div class="metric"><div class="name">S&P 500</div><div class="val" id="spVal">—</div><div class="sub"><span class="delta down" id="spDelta">—</span></div></div>
-      <div class="metric"><div class="name">Nasdaq</div><div class="val" id="nasdaqVal">—</div><div class="sub"><span class="delta down" id="nasdaqDelta">—</span></div></div>
-      <div class="metric"><div class="name">Dow Jones</div><div class="val" id="dowVal">—</div><div class="sub"><span class="delta down" id="dowDelta">—</span></div></div>
+  <section class="card col-3">
+    <div class="card-h"><div class="ico">🏦</div><h2>Juros</h2><span class="src">BCB · Focus</span></div>
+    <div class="metric">
+      <div class="name">Selic</div>
+      <div class="val big sm" id="selicVal">—</div>
+      <div class="sub"><span class="delta flat" id="selicDelta">—</span></div>
     </div>
-    <div class="note blue" id="bolsasNota">—</div>
+    <div class="metric" style="margin-top:14px">
+      <div class="name">Previsão Focus</div>
+      <div class="val" id="selicFocus">—</div>
+    </div>
   </section>
 
-  <!-- 5. JUROS (col-6) + INFLAÇÃO (col-6) -->
-  <section class="card col-6">
-    <div class="card-h"><div class="ico">🏦</div><h2>Juros</h2><span class="src">BCB · Fed · UST</span></div>
-    <div class="mgrid c3">
-      <div class="metric">
-        <div class="name">Selic</div>
-        <div class="val big sm" id="selicVal">—</div>
-        <div class="sub"><span class="delta down" id="selicDelta">—</span></div>
-      </div>
-      <div class="metric">
-        <div class="name">Fed Funds</div>
-        <div class="val big sm" id="fedVal">—</div>
-        <div class="sub"><span class="delta flat" id="fedDelta">—</span></div>
-      </div>
-      <div class="metric">
-        <div class="name">UST 10Y</div>
-        <div class="val big sm" id="ust10Val">—</div>
-        <div class="sub"><span class="muted" style="font-size:11px" id="ust10Sub">—</span></div>
-      </div>
-    </div>
-    <div class="note yellow" id="jurosNota">—</div>
-  </section>
-
-  <section class="card col-6">
+  <section class="card col-3">
     <div class="card-h"><div class="ico">📉</div><h2>Inflação</h2><span class="src">IBGE · Focus</span></div>
-    <div class="mgrid c4">
-      <div class="metric"><div class="name">IPCA-15 abr</div><div class="val" id="ipca15Val">—</div></div>
-      <div class="metric"><div class="name">IPCA-15 12m</div><div class="val" id="ipca15_12mVal">—</div><div class="sub"><span class="delta warn">perto do teto</span></div></div>
-      <div class="metric"><div class="name">IPCA mar/26</div><div class="val" id="ipcaMarVal">—</div></div>
-      <div class="metric"><div class="name">Focus 2026</div><div class="val" id="focusVal">—</div><div class="sub"><span class="pill red">acima do teto</span></div></div>
+    <div class="metric">
+      <div class="name">IPCA atual</div>
+      <div class="val big sm" id="ipcaVal">—</div>
+      <div class="sub"><span class="delta flat" id="ipcaDelta">—</span></div>
     </div>
-    <div class="note red" id="inflacaoNota">—</div>
+    <div class="metric" style="margin-top:14px">
+      <div class="name">Previsão Focus</div>
+      <div class="val" id="ipcaFocus">—</div>
+    </div>
   </section>
 
-  <!-- 6. ANP SÍNTESE (col-6) + CEPEA (col-6) -->
-  <section class="card col-6">
-    <div class="card-h"><div class="ico">⛽</div><h2>ANP — Síntese semanal</h2><span class="src" id="anpSemana">—</span></div>
-    <div style="overflow-x:auto">
-    <table>
-      <thead><tr><th>Produto</th><th>Preço médio Brasil</th><th>Status</th></tr></thead>
-      <tbody id="anpRows"></tbody>
-    </table>
+  <section class="card col-3">
+    <div class="card-h"><div class="ico">⚗️</div><h2>Mandatos</h2><span class="src">CNPE</span></div>
+    <div class="metric">
+      <div class="name">Anidro na gasolina</div>
+      <div class="val big sm" id="mandatoAnidro">—</div>
     </div>
-    <div class="note blue" id="anpNota">—</div>
+    <div class="metric" style="margin-top:14px">
+      <div class="name">B100 no diesel</div>
+      <div class="val big sm" id="mandatoB100">—</div>
+    </div>
   </section>
 
-  <section class="card col-6">
-    <div class="card-h"><div class="ico">🌱</div><h2>CEPEA — Hidratado produtor</h2><span class="src">R$/litro · sem impostos</span></div>
-    <div style="overflow-x:auto">
-    <table>
-      <thead><tr><th>UF</th><th>Hidratado (R$/L)</th><th>Var.</th></tr></thead>
-      <tbody id="cepeaRows"></tbody>
-    </table>
+  <!-- 5. CEPEA (col-4) + SAFRA ETANOL (col-4) + AGENDA SEMANAL (col-4) -->
+  <section class="card col-4">
+    <div class="card-h"><div class="ico">🌱</div><h2>CEPEA — Etanol usina</h2><span class="src" id="cepeaUpd">—</span></div>
+    <div class="metric">
+      <div class="name">Hidratado · SP</div>
+      <div class="val big sm" id="cepeaHidVal">—</div>
     </div>
-    <div class="divider"></div>
+    <div class="metric" style="margin-top:14px">
+      <div class="name">Anidro · SP</div>
+      <div class="val big sm" id="cepeaAniVal">—</div>
+    </div>
+    <p class="muted" style="font-size:11.5px;margin-top:12px">Preço do produtor sem impostos. Atualizado às segundas-feiras.</p>
+  </section>
+
+  <section class="card col-4">
+    <div class="card-h"><div class="ico">🌾</div><h2>Safra etanol</h2><span class="src">UNICA · Centro-Sul</span></div>
     <div class="mgrid c2">
-      <div class="metric"><div class="name">Anidro · SP</div><div class="val big sm" id="anidroVal">—</div><div class="sub"><span class="delta up" id="anidroDelta">—</span></div></div>
-      <div class="metric"><div class="name">Açúcar cristal</div><div class="val big sm" id="acucarVal">—</div><div class="sub"><span class="delta down" id="acucarDelta">—</span></div></div>
+      <div class="metric"><div class="name">Moagem</div><div class="val big sm" id="safraMoagem">—</div><div class="sub"><span class="delta up" id="safraVar">—</span></div></div>
+      <div class="metric"><div class="name">Mix etanol</div><div class="val big sm" id="safraMix">—</div></div>
     </div>
-    <div class="note green" id="cepeaNota">—</div>
-  </section>
-
-  <!-- 7. RELAÇÃO E/G + MANDATO (col-4) + SAFRA (col-4) + AGENDA (col-4) -->
-  <section class="card col-4">
-    <div class="card-h"><div class="ico">⚖️</div><h2>Relação E/G + Mandato</h2><span class="src">Bomba SP</span></div>
-    <div class="lbl">Paridade etanol/gasolina · bomba SP</div>
-    <div class="row" style="gap:18px;align-items:baseline;margin-top:6px">
-      <div class="big xl" id="egPct" style="color:var(--down)">—</div>
-      <span class="pill red">acima de 70%</span>
+    <div class="metric" style="margin-top:14px">
+      <div class="name">Oferta total</div>
+      <div class="val" id="safraOferta">—</div>
     </div>
-    <div style="font-size:13px;color:var(--text-2);margin-top:6px">gasolina compensa enquanto E/G &gt; 70%</div>
-    <div class="divider"></div>
-    <div class="lbl">Mandatos vigentes</div>
-    <div class="row" style="gap:10px;margin-top:6px">
-      <span class="pill" id="mandatoE">E30</span>
-      <span class="pill" id="mandatoB">B15</span>
-    </div>
-    <div class="note yellow" id="egNota">—</div>
   </section>
 
   <section class="card col-4">
-    <div class="card-h"><div class="ico">🌾</div><h2>Safra Centro-Sul 26/27</h2><span class="src">UNICA · Conab</span></div>
-    <div class="mgrid c2">
-      <div class="metric"><div class="name">Moagem proj.</div><div class="val big sm" id="moagemVal">—</div><div class="sub"><span class="delta up" id="moagemDelta">—</span></div></div>
-      <div class="metric"><div class="name">ATR proj.</div><div class="val big sm" id="atrVal">—</div><div class="sub"><span class="delta up" id="atrDelta">—</span></div></div>
-      <div class="metric"><div class="name">Mix açúcar</div><div class="val big sm" id="mixVal">—</div></div>
-      <div class="metric"><div class="name">Oferta etanol</div><div class="val big sm" id="ofertaVal">—</div><div class="sub"><span class="delta up" id="ofertaDelta">—</span></div></div>
-    </div>
-    <div class="note green" id="safraNota">—</div>
+    <div class="card-h"><div class="ico">📅</div><h2>Agenda da semana</h2><span class="src">Síntese</span></div>
+    <ul class="agenda-week" id="agendaWeek"></ul>
   </section>
 
-  <section class="card col-4">
-    <div class="card-h"><div class="ico">📅</div><h2>Agenda</h2><span class="src">Próximos eventos</span></div>
-    <ul class="agenda" id="agendaList"></ul>
-  </section>
-
-  <!-- 8. RESUMO ECONÔMICO (col-9) + VERIMO (col-3) -->
+  <!-- 6. RESUMO ECONÔMICO (col-9) + VERIMO (col-3) -->
   <section class="card col-9">
     <div class="card-h"><div class="ico">📝</div><h2>Resumo econômico do dia</h2><span class="src">Editorial · Ramsés Castoldi</span></div>
     <div class="resumo" id="resumo"></div>
@@ -622,222 +553,149 @@ footer b{color:var(--text-2);font-weight:600}
         <h3>Verimo Seguros</h3>
       </div>
       <p>Plataforma <b>oficial</b> do clube. Ramsés é franqueado — cota em <b>todas seguradoras</b>.</p>
-      <div>
-        <div class="lbl" style="margin-bottom:0">Economia média</div>
-        <div class="savings"><span class="pct">25</span><span style="font-size:18px;color:var(--gold-soft)">%</span></div>
-      </div>
-      <div class="phone">📲 (65) 99265-7008</div>
-      <div style="font-size:11px;color:var(--text-2);line-height:1.5;margin-top:auto">
-        Defasagem recorde + cenário de guerra → revise apólices.
-      </div>
+      <div class="savings"><span class="pct">até 25%</span><span class="muted" style="font-size:11.5px">economia média</span></div>
+      <div class="phone">📱 (65) 99262-2507</div>
     </div>
   </section>
 
 </main>
 
 <footer>
-  <span>© 2026 <b>Lumen Posto Club</b> · Posto em Dia · Painel diário do revendedor · @eusouramses</span>
-  <span>Próxima atualização: <b id="nextUpdate">—</b></span>
+  <span>© Lumen Posto Club · Posto em Dia</span>
+  <span>Edição diária · <b id="footerDate">—</b></span>
 </footer>
 
+<!-- ================= DATA + RENDERER ================= -->
 <script>
-/* ============================================================
-   POSTO EM DIA — Lumen Posto Club
-   Schema:
-   - meta · manchete (principal + secundarias[]) · petroleo
-   - moedas · bolsas · juros · inflacao · abicom
-   - anp · cepea · eg · safra · agenda · radar · acao · resumo
-   ============================================================ */
-
 const DATA = {
-  "_comentario": "Substituído pelo update.mjs no build do Netlify"
+  "meta": {"date_iso":"2026-05-14","date_label":"Quinta · 14 mai 2026","last_update":"07:30"}
 };
 
-/* ============================================================
-   RENDER — não mexa abaixo. Tudo é alimentado pelo objeto DATA.
-   ============================================================ */
-(function render(){
-  const $ = (id)=>document.getElementById(id);
-  const ev = (val) => (val==null?"—":val);
+(function(){
+  const $=id=>document.getElementById(id);
+  const SEVERITY={red:"red",yellow:"yellow",green:"green"};
+  const SEV_LABEL={red:"Crítico",yellow:"Atenção",green:"Calmo"};
+  const SEV_EMOJI={red:"🔴",yellow:"🟡",green:"🟢"};
 
-  // Header
+  // Cabeçalho
   $("hdate").textContent = DATA.meta?.date_label || "—";
   $("lastup").textContent = DATA.meta?.last_update || "—";
-  $("nextUpdate").textContent = DATA.meta?.next_update || "—";
+  $("footerDate").textContent = DATA.meta?.date_label || "—";
 
-  // Manchete principal (compat com formato antigo)
-  const m = DATA.manchete?.principal || DATA.manchete || {};
-  const mEl = document.querySelector(".manchete");
-  mEl.classList.remove("red","yellow","green");
-  if(m.severity && m.severity !== "red") mEl.classList.add(m.severity);
-  $("mancheteStatus").textContent = m.status_emoji || "🔴";
-  $("mancheteSeverity").textContent = m.severity_label || "—";
-  $("mancheteSeverity").className = "pill " + (m.severity || "red");
-  $("mancheteTitulo").textContent = m.titulo || "—";
-  $("mancheteCorpo").innerHTML = m.corpo || "—";
+  // Manchete principal
+  const mp = DATA.manchete?.principal || {};
+  const sev = mp.severity || "red";
+  const m = $("manchete");
+  m.classList.remove("green","yellow","red");
+  if(sev!=="red") m.classList.add(sev);
+  $("mancheteStatus").textContent = mp.status_emoji || SEV_EMOJI[sev] || "🔴";
+  const sevPill = $("mancheteSeverity");
+  sevPill.className = "pill " + (SEVERITY[sev]||"red");
+  sevPill.textContent = mp.severity_label || SEV_LABEL[sev] || "Crítico";
+  $("mancheteTitulo").textContent = mp.titulo || "—";
 
-  // Manchetes secundárias (3 cards)
-  const secs = (DATA.manchete && Array.isArray(DATA.manchete.secundarias)) ? DATA.manchete.secundarias : [];
-  for(let i=0;i<3;i++){
-    const idx = i + 2; // manch2, manch3, manch4
-    const card = $("manch" + idx);
-    if(!card) continue;
-    const sec = secs[i];
-    card.classList.remove("alert-red","alert-yellow","alert-green");
-    if(sec){
-      card.classList.add("alert-" + (sec.severity || "yellow"));
-      $("manch" + idx + "Emoji").textContent = sec.status_emoji || "🟡";
-      $("manch" + idx + "Tag").textContent = sec.tag || "";
-      $("manch" + idx + "Titulo").textContent = sec.titulo || "—";
-    } else {
-      card.style.display = "none";
-    }
-  }
+  // Manchetes secundárias (sempre 3: Mercado / Combustíveis / Política)
+  const sec = DATA.manchete?.secundarias || [];
+  [2,3,4].forEach((n,i)=>{
+    const s = sec[i] || {};
+    $(`manch${n}Emoji`).textContent = s.status_emoji || SEV_EMOJI[s.severity||"yellow"] || "🟡";
+    $(`manch${n}Tag`).textContent = s.categoria || "—";
+    $(`manch${n}Titulo`).textContent = s.titulo || "—";
+  });
 
   // Petróleo
-  const p = DATA.petroleo || {brent:{},wti:{}};
+  const p = DATA.petroleo || {};
   $("brentVal").textContent = p.brent?.val || "—";
   $("brentDelta").textContent = p.brent?.delta || "—";
-  $("brentDelta").className = "delta " + (p.brent?.dir || "flat");
-  $("brentSub").textContent = p.brent?.sub || "";
+  $("brentDelta").className = "delta " + (p.brent?.dir||"flat");
   $("wtiVal").textContent = p.wti?.val || "—";
   $("wtiDelta").textContent = p.wti?.delta || "—";
-  $("wtiDelta").className = "delta " + (p.wti?.dir || "flat");
-  $("wtiSub").textContent = p.wti?.sub || "";
-  $("petroleoNota").innerHTML = p.nota || "—";
-  $("petroleoCit").innerHTML = "🔴 " + (p.citacao || "—");
+  $("wtiDelta").className = "delta " + (p.wti?.dir||"flat");
+  $("petroleoResumo").innerHTML = p.resumo || "—";
+
+  // ABICOM
+  const ab = DATA.abicom || {};
+  $("abicomGasolina").textContent = ab.defasagem_gasolina_pct || "—";
+  $("abicomDiesel").textContent = ab.defasagem_diesel_pct || "—";
+  $("diasGasolina").textContent = ab.dias_sem_ajuste_gasolina ?? "—";
+  $("diasDiesel").textContent = ab.dias_sem_ajuste_diesel ?? "—";
+  $("impGasolina").textContent = ab.preco_medio_importacao_gasolina || "—";
+  $("impDiesel").textContent = ab.preco_medio_importacao_diesel || "—";
 
   // Moedas
   const md = DATA.moedas || {};
-  ["usdbrl","eurbrl","dxy","btc"].forEach(k=>{
-    if(md[k]){
-      $(k+"Val").textContent = md[k].val || "—";
-      $(k+"Delta").textContent = md[k].delta || "—";
-      $(k+"Delta").className = "delta " + (md[k].dir || "flat");
-    }
-  });
-  $("moedasNota").innerHTML = "🟡 " + (md.nota || "—");
-
-  // Bolsas
-  const b = DATA.bolsas || {};
-  ["ibov","sp","nasdaq","dow"].forEach(k=>{
-    if(b[k]){
-      $(k+"Val").textContent = b[k].val || "—";
-      $(k+"Delta").textContent = b[k].delta || "—";
-      $(k+"Delta").className = "delta " + (b[k].dir || "flat");
-    }
-  });
-  $("bolsasNota").innerHTML = "🔵 " + (b.nota || "—");
+  $("usdbrlVal").textContent = md.usdbrl?.val || "—";
+  $("usdbrlDelta").textContent = md.usdbrl?.delta || "—";
+  $("usdbrlDelta").className = "delta " + (md.usdbrl?.dir||"flat");
+  $("eurbrlVal").textContent = md.eurbrl?.val || "—";
+  $("eurbrlDelta").textContent = md.eurbrl?.delta || "—";
+  $("eurbrlDelta").className = "delta " + (md.eurbrl?.dir||"flat");
 
   // Juros
-  const j = DATA.juros || {selic:{},fed:{},ust10y:{}};
+  const j = DATA.juros || {};
   $("selicVal").textContent = j.selic?.val || "—";
   $("selicDelta").textContent = j.selic?.delta || "—";
-  $("selicDelta").className = "delta " + (j.selic?.dir || "flat");
-  $("fedVal").textContent = j.fed?.val || "—";
-  $("fedDelta").textContent = j.fed?.delta || "—";
-  $("ust10Val").textContent = j.ust10y?.val || "—";
-  $("ust10Sub").textContent = j.ust10y?.sub || "";
-  $("jurosNota").innerHTML = "🟡 " + (j.nota || "—");
+  $("selicDelta").className = "delta " + (j.selic?.dir||"flat");
+  $("selicFocus").textContent = j.previsao_focus || "—";
 
   // Inflação
   const inf = DATA.inflacao || {};
-  $("ipca15Val").textContent = inf.ipca15 || "—";
-  $("ipca15_12mVal").textContent = inf.ipca15_12m || "—";
-  $("ipcaMarVal").textContent = inf.ipca_mar || "—";
-  $("focusVal").textContent = inf.focus_2026 || "—";
-  $("inflacaoNota").innerHTML = "🔴 " + (inf.nota || "—");
+  $("ipcaVal").textContent = inf.ipca?.val || "—";
+  $("ipcaDelta").textContent = inf.ipca?.delta || "—";
+  $("ipcaDelta").className = "delta " + (inf.ipca?.dir||"flat");
+  $("ipcaFocus").textContent = inf.previsao_focus || "—";
 
-  // Abicom
-  const ab = DATA.abicom || {};
-  $("abicomDiesel").textContent = ab.diesel_pct || "—";
-  $("abicomGasolina").textContent = ab.gasolina_pct || "—";
-  $("abicomDieselTag").textContent = ab.diesel_tag || "—";
-  $("abicomGasolinaTag").textContent = ab.gasolina_tag || "—";
-  $("diasDiesel").textContent = ab.dias_diesel ?? "—";
-  $("diasGasolina").textContent = ab.dias_gasolina ?? "—";
-  $("abicomNota").innerHTML = "🔴 " + (ab.nota || "—");
-
-  // ANP
-  const anp = DATA.anp || {rows:[]};
-  $("anpSemana").textContent = anp.semana || "—";
-  $("anpRows").innerHTML = (anp.rows||[]).map(r=>`
-    <tr>
-      <td class="region">${r.produto||""}</td>
-      <td><span class="cell-num">${r.preco||"—"}</span></td>
-      <td><span class="pill ${r.status||'gray'}">${r.status_label||'—'}</span></td>
-    </tr>`).join("");
-  $("anpNota").innerHTML = "🔵 " + (anp.nota || "—");
+  // Mandatos
+  const mnd = DATA.mandatos || {};
+  $("mandatoAnidro").textContent = mnd.anidro_na_gasolina_pct || "—";
+  $("mandatoB100").textContent = mnd.b100_no_diesel_pct || "—";
 
   // CEPEA
-  const cp = DATA.cepea || {hidratado:[],anidro_sp:{},acucar:{}};
-  const arrowFor = d => d==="up"?"▲":(d==="down"?"▼":"•");
-  $("cepeaRows").innerHTML = (cp.hidratado||[]).map(r=>`
-    <tr>
-      <td class="region">${r.uf||""}</td>
-      <td><span class="cell-num">${r.preco||"—"}</span></td>
-      <td style="color:${r.dir==='up'?'var(--up)':r.dir==='down'?'var(--down)':'var(--text-2)'};font-weight:600">${arrowFor(r.dir)}</td>
-    </tr>`).join("");
-  $("anidroVal").textContent = cp.anidro_sp?.val || "—";
-  $("anidroDelta").textContent = cp.anidro_sp?.delta || "—";
-  $("anidroDelta").className = "delta " + (cp.anidro_sp?.dir || "flat");
-  $("acucarVal").textContent = cp.acucar?.val || "—";
-  $("acucarDelta").textContent = cp.acucar?.delta || "—";
-  $("acucarDelta").className = "delta " + (cp.acucar?.dir || "flat");
-  $("cepeaNota").innerHTML = "🟢 " + (cp.nota || "—");
-
-  // E/G
-  const eg = DATA.eg || {};
-  $("egPct").textContent = eg.paridade_sp || "—";
-  $("mandatoE").textContent = eg.mandato_e || "—";
-  $("mandatoB").textContent = eg.mandato_b || "—";
-  $("egNota").innerHTML = "🟡 " + (eg.nota || "—");
+  const c = DATA.cepea || {};
+  $("cepeaHidVal").textContent = c.hidratado_sp || "—";
+  $("cepeaAniVal").textContent = c.anidro_sp || "—";
+  $("cepeaUpd").textContent = c.ultima_atualizacao_label ? `atualizado ${c.ultima_atualizacao_label}` : "—";
 
   // Safra
-  const sf = DATA.safra || {moagem:{},atr:{},mix:{},oferta:{}};
-  $("moagemVal").textContent = sf.moagem?.val || "—";
-  $("moagemDelta").textContent = sf.moagem?.delta || "—";
-  $("atrVal").textContent = sf.atr?.val || "—";
-  $("atrDelta").textContent = sf.atr?.delta || "—";
-  $("mixVal").textContent = sf.mix?.val || "—";
-  $("ofertaVal").textContent = sf.oferta?.val || "—";
-  $("ofertaDelta").textContent = sf.oferta?.delta || "—";
-  $("safraNota").innerHTML = "🟢 " + (sf.nota || "—");
+  const sf = DATA.safra_etanol || {};
+  $("safraMoagem").textContent = sf.moagem || "—";
+  $("safraVar").textContent = sf.var_anual || "—";
+  $("safraVar").className = "delta " + ((sf.var_anual||"").startsWith("-") ? "down" : "up");
+  $("safraMix").textContent = sf.mix_etanol_pct || "—";
+  $("safraOferta").textContent = sf.oferta_total || "—";
 
-  // Agenda
-  $("agendaList").innerHTML = (DATA.agenda||[]).map(a=>`
-    <li>
-      <span class="day">${a.day||""}</span>
-      <span class="ev">${a.evento||""}</span>
-      <span class="pill ${a.tag||'gray'}">${a.tag_label||''}</span>
-    </li>`).join("");
+  // Agenda semanal
+  const ag = DATA.agenda_semanal || {};
+  const dias = [
+    ["Segunda","segunda"],
+    ["Terça","terca"],
+    ["Quarta","quarta"],
+    ["Quinta","quinta"],
+    ["Sexta","sexta"]
+  ];
+  $("agendaWeek").innerHTML = dias.map(([label,key])=>{
+    const v = ag[key] || "—";
+    const empty = !v || v === "—";
+    return `<li><span class="wday">${label}</span><span class="wev${empty?' empty':''}">${v}</span></li>`;
+  }).join("");
 
-  // Radar
+  // Ações + Radar
+  $("acaoList").innerHTML = (DATA.acoes_dia||[]).map((it,i)=>`<li><span class="num">${String(i+1).padStart(2,'0')}</span><span>${it}</span></li>`).join("");
   $("radarList").innerHTML = (DATA.radar||[]).map(r=>`<li><span>${r}</span></li>`).join("");
 
-  // Ação
-  const ac = DATA.acao || {items:[]};
-  $("acaoTag").textContent = ac.tag || "—";
-  $("acaoLead").innerHTML = ac.lead || "—";
-  $("acaoList").innerHTML = (ac.items||[]).map((it,i)=>`<li><span class="num">${String(i+1).padStart(2,'0')}</span><span>${it}</span></li>`).join("");
-
   // Resumo
-  $("resumo").innerHTML = (DATA.resumo||[]).map(p=>`<p${p.lead?' class="lead"':''}>${p.html||""}</p>`).join("");
+  $("resumo").innerHTML = DATA.resumo_editorial || "—";
 
-  // Ticker
+  // Ticker — só indicadores essenciais
   const tickerItems = [
     ["BRENT", p.brent?.val||"—", p.brent?.delta||"—", p.brent?.dir||"flat"],
     ["WTI",   p.wti?.val||"—",   p.wti?.delta||"—",   p.wti?.dir||"flat"],
     ["USD/BRL", md.usdbrl?.val||"—", md.usdbrl?.delta||"—", md.usdbrl?.dir||"flat"],
     ["EUR/BRL", md.eurbrl?.val||"—", md.eurbrl?.delta||"—", md.eurbrl?.dir||"flat"],
-    ["DXY",     md.dxy?.val||"—",    md.dxy?.delta||"—",    md.dxy?.dir||"flat"],
-    ["IBOV",    b.ibov?.val||"—",    b.ibov?.delta||"—",    b.ibov?.dir||"flat"],
-    ["S&P 500", b.sp?.val||"—",      b.sp?.delta||"—",      b.sp?.dir||"flat"],
-    ["NASDAQ",  b.nasdaq?.val||"—",  b.nasdaq?.delta||"—",  b.nasdaq?.dir||"flat"],
     ["SELIC",   j.selic?.val||"—",   j.selic?.delta||"—",   j.selic?.dir||"flat"],
-    ["DEFAS. DIESEL",   ab.diesel_pct||"—",   ab.diesel_tag||"—",   "down"],
-    ["DEFAS. GASOLINA", ab.gasolina_pct||"—", ab.gasolina_tag||"—", "down"],
-    ["E/G SP",          eg.paridade_sp||"—", "acima 70%", "down"]
+    ["DEFAS. GASOLINA", ab.defasagem_gasolina_pct||"—", `${ab.dias_sem_ajuste_gasolina||"—"} dias`, "down"],
+    ["DEFAS. DIESEL",   ab.defasagem_diesel_pct||"—",   `${ab.dias_sem_ajuste_diesel||"—"} dias`,   "down"],
+    ["MIX ETANOL", sf.mix_etanol_pct||"—", sf.var_anual||"—", "up"]
   ];
   const tplOne = it => `<span><span class="sym">${it[0]}</span><span class="v">${it[1]}</span><span class="${it[3]}">${it[2]}</span></span>`;
   $("tickerTrack").innerHTML = tickerItems.map(tplOne).join("") + tickerItems.map(tplOne).join("");

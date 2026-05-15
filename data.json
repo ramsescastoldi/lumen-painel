@@ -2,310 +2,117 @@
   "meta": {
     "date_iso": "2026-05-14",
     "date_label": "Quinta · 14 mai 2026",
-    "last_update": "14:24",
-    "next_update": "amanhã · 15 mai · 07:30"
+    "last_update": "07:30"
   },
   "manchete": {
     "principal": {
       "severity": "red",
       "status_emoji": "🔴",
       "severity_label": "Crítico",
-      "titulo": "Trump e Xi concordam que Hormuz 'deve permanecer aberto' — Brent recua para ~US$ 105/b com navios chineses já cruzando o estreito; Governo anuncia MP com subsídio tributário para gasolina e diesel; Ibovespa abre quinta em alta recuperando dos 177k; dólar ensaia correção abaixo de R$ 5,00",
-      "corpo": "A quinta-feira 14 de maio traz o desenvolvimento mais aguardado da semana: <b>Trump e Xi concordaram, em cúpula no Grande Salão do Povo em Pequim, que o Estreito de Hormuz 'deve permanecer aberto para garantir o livre fluxo de energia'</b>, segundo comunicado da Casa Branca. Xi também expressou interesse em comprar mais petróleo americano para reduzir a dependência da China do Golfo Pérsico. O impacto imediato foi um recuo do Brent para ~US$ 105/b (de ~US$ 106/b no fechamento de quarta) e do WTI para ~US$ 100,56/b, com a agência iraniana Fars relatando que navios chineses já estão cruzando o estreito. <b>Segundo desenvolvimento crítico para o setor:</b> o Governo Federal anunciou, nesta quarta-feira 13/mai, uma <b>Medida Provisória com benefício tributário no PIS/Cofins e na Cide</b> para gasolina e diesel, em resposta à alta do petróleo — a nova subvenção iniciará pela gasolina, que ainda não havia sido alvo de nenhuma medida de contenção. A MP abre caminho para o reajuste iminente que Chambriard anunciou como 'já, já' (12/mai), amenizando o impacto no consumidor. <b>No câmbio</b>, o dólar ensaia correção nesta quinta e opera abaixo de R$ 5,00 (~R$ 4,98), após disparar 2,31% para R$ 5,009 no fechamento de quarta — o maior valor desde 10 de abril. <b>No Ibovespa</b>, a bolsa abre em recuperação acima dos 181 mil pontos, impulsionada pelo alívio em Hormuz e pelo tom positivo da cúpula Trump-Xi. Cúpula continua na sexta-feira (dia 2), com declaração conjunta esperada."
+      "titulo": "Manchete principal do dia em uma frase forte"
     },
     "secundarias": [
       {
-        "severity": "red",
-        "status_emoji": "🔴",
-        "tag": "Cúpula Trump-Xi / Hormuz / Petróleo",
-        "titulo": "Trump e Xi concordam: Hormuz 'deve permanecer aberto' (Casa Branca, qui 14/mai); navios chineses já cruzam o estreito (Fars); Irã começa a permitir trânsito para embarcações chinesas; Brent recua para ~US$ 105,05/b (9h36 ET) e WTI para ~US$ 100,56/b; OPEC corta estimativa de crescimento de demanda 2026 para 1,2 MMbpd (de 1,4 MMbpd); Xi convida Trump para Casa Branca em 24/set; cúpula dia 2 amanhã (sex 15)"
-      },
-      {
-        "severity": "red",
-        "status_emoji": "🔴",
-        "tag": "Governo BR / Subsídio / Gasolina / MP",
-        "titulo": "Governo anuncia MP com isenção de PIS/Cofins e Cide para gasolina e diesel (qui 14/mai) — teto de R$ 0,89/L na gasolina; Abicom aponta defasagem de 39% diesel e 73% gasolina (cálc. com Brent ~US$ 106/b); Chambriard: reajuste 'já, já' (12/mai); Acelen já reajustou 4x diesel e 3x gasolina em março; MP visa amenizar impacto do reajuste iminente no consumidor"
-      },
-      {
+        "categoria": "Mercado",
+        "titulo": "Notícia mais relevante do mercado financeiro do dia",
         "severity": "yellow",
-        "status_emoji": "🟡",
-        "tag": "Ibovespa / Dólar / Recuperação qui",
-        "titulo": "Ibovespa abre quinta em recuperação: oscila entre 181.615 e 184.530 pts após fechar em -1,8% (177.098,29) na quarta; dólar cai abaixo de R$ 5,00 (~R$ 4,98) ensaiando correção pós-disparo de 2,31%; S&P 500 +0,73% (7.498,85), Nasdaq +1,03% (26.675,29) e Dow Jones +0,77% (50.073,54) em Wall Street durante o pregão de quinta; DXY sobe para máxima de 2 semanas"
+        "status_emoji": "🟡"
+      },
+      {
+        "categoria": "Combustíveis",
+        "titulo": "Notícia mais relevante do setor de combustíveis do dia",
+        "severity": "red",
+        "status_emoji": "🔴"
+      },
+      {
+        "categoria": "Política",
+        "titulo": "Notícia mais relevante de política / regulação do dia",
+        "severity": "green",
+        "status_emoji": "🟢"
       }
     ]
   },
   "petroleo": {
     "brent": {
       "val": "US$ 105,05",
-      "delta": "▼ -0,55% vs. fech. qua ~US$ 106/b | recuo pós-acordo Trump-Xi sobre Hormuz; navios chineses já cruzando o estreito (Fars)",
-      "dir": "down",
-      "sub": "fech. qua: ~US$ 106/b | pico abr: US$ 138/b (7/abr) | média abr: US$ 117/b | EIA STEO mai/26: ~US$ 106/b mai-jun, US$ 89/b no 4T26 | +64,06% a/a | OPEC produção -1,7 MMbpd em abr | Arábia Saudita: menor produção desde 1990"
+      "delta": "▼ -0,55%",
+      "dir": "down"
     },
     "wti": {
       "val": "US$ 100,56",
-      "delta": "▼ -0,40% | recuo com alívio em Hormuz | fech. qua: ~US$ 102/b | EIA: crude -4,3 MB na semana (quase 2x esperado) | distilados: +190 MB (1ª alta desde março)",
-      "dir": "down",
-      "sub": "fech. qua: ~US$ 102/b | estoques EUA crude: -4,3 MB (EIA qua) | suporte técnico ~US$ 100 | fluxo Hormuz: -6 MMbpd no 1T26 (EIA) | OPEC produção total -30%+ desde início conflito Irã (fev/26)"
+      "delta": "▼ -0,40%",
+      "dir": "down"
     },
-    "nota": "<b>Brent recua para ~US$ 105/b e WTI para ~US$ 100/b nesta quinta</b> após Trump e Xi concordarem que Hormuz 'deve permanecer aberto', com a agência Fars reportando que navios chineses já começaram a cruzar o estreito. O alívio é real mas parcial: a IEA alertou que o mercado permanecerá severamente subabastecido até outubro mesmo que o conflito encerre no próximo mês, e a Arábia Saudita informou à OPEP que sua produção caiu ao menor nível desde 1990. <b>Fator de incerteza residual:</b> a China não confirmou o acordo sobre Hormuz em sua nota oficial (Xinhua), e o dia 2 da cúpula (sex 15/mai) ainda pode trazer surpresas.",
-    "citacao": "<b>IEA (mai/26):</b> \"Supply losses from the strait were depleting global oil inventories at a record pace.\" <b>Casa Branca (qui 14/mai):</b> \"The two sides agreed that the Strait of Hormuz must remain open to support the free flow of energy.\" <b>EIA STEO mai/26:</b> Brent ~US$ 106/b em mai-jun, caindo para US$ 89/b no 4T26."
+    "resumo": "Resumo curto (2–3 frases) sobre o cenário do petróleo hoje. Cite fatores principais e impacto direto para o revendedor."
+  },
+  "abicom": {
+    "defasagem_gasolina_pct": "73%",
+    "defasagem_diesel_pct": "39%",
+    "dias_sem_ajuste_gasolina": 107,
+    "dias_sem_ajuste_diesel": 61,
+    "preco_medio_importacao_gasolina": "R$ 4,12/L",
+    "preco_medio_importacao_diesel": "R$ 4,55/L"
   },
   "moedas": {
     "usdbrl": {
       "val": "R$ 4,981",
-      "delta": "▼ -0,56% (correção qui 14/mai) | fech. qua: R$ 5,009 (+2,31%) | abert. qui: R$ 4,8939 | range hoje: R$ 4,8861–R$ 4,9276 | fech. ter: R$ 4,8954",
+      "delta": "▼ -0,56%",
       "dir": "down"
     },
     "eurbrl": {
-      "val": "~R$ 5,62",
-      "delta": "▼ leve correção acompanhando dólar | range 52 sem: a confirmar | EUR/USD ~1,128",
+      "val": "R$ 5,62",
+      "delta": "▼ -0,40%",
       "dir": "down"
-    },
-    "dxy": {
-      "val": "~98,50",
-      "delta": "▲ sobe para máxima de 2 semanas (qui 14/mai) | firme pós-PPI +1,4% m/m + CPI 3,8% a/a | DXY em 98,289 na terça | 3ª alta consecutiva antes da correção do real",
-      "dir": "up"
-    },
-    "btc": {
-      "val": "~US$ 79.000–80.000",
-      "delta": "• estável/leve alta após cúpula Trump-Xi | ainda abaixo de US$ 80k | pico mai: a confirmar | ETH ultrapassa US$ 2.300 (+1% em 24h, 13/mai)",
-      "dir": "flat"
-    },
-    "nota": "<b>Dólar ensaia correção nesta quinta, operando abaixo de R$ 5,00 (~R$ 4,98)</b>, após o disparo de 2,31% para R$ 5,009 no fechamento de quarta. O alívio vem do tom positivo da cúpula Trump-Xi (Hormuz) e da dinâmica técnica de correção. O DXY, contudo, sobe para máxima de 2 semanas (~98,50), sustentado por PPI de 6% a/a e CPI de 3,8% a/a. A abertura do Ibovespa em recuperação (acima de 181k) reflete o alívio externo. Para o setor de combustíveis: a correção do câmbio de R$ 5,009 para R$ 4,98 alivia marginalmente o custo de reposição, mas não muda a equação da defasagem — Brent ainda ~US$ 105/b sustenta pressão para o reajuste."
-  },
-  "bolsas": {
-    "ibov": {
-      "val": "~182.500",
-      "delta": "▲ +recuperação qui | abert. qui: 184.103 | range hoje: 181.615–184.530 | fech. qua: 177.098,29 (-1,80%) | vol. qua: R$ 66,39 bi",
-      "dir": "up"
-    },
-    "sp": {
-      "val": "7.498,85",
-      "delta": "▲ +0,73% (pregão qui 14/mai) | novo recorde intraday | cúpula Trump-Xi + alívio em Hormuz + tech rally",
-      "dir": "up"
-    },
-    "nasdaq": {
-      "val": "26.675,29",
-      "delta": "▲ +1,03% (pregão qui 14/mai) | novo recorde | Jensen Huang na delegação Trump-Xi (Nvidia); Elon Musk (Tesla) e Tim Cook (Apple) também na delegação",
-      "dir": "up"
-    },
-    "dow": {
-      "val": "50.073,54",
-      "delta": "▲ +0,77% (pregão qui 14/mai) | +380 pts | recuperação ampla impulsionada por alívio em Hormuz e tom positivo da cúpula",
-      "dir": "up"
-    },
-    "nota": "<b>Wall Street avança em forte recuperação nesta quinta-feira</b>, com S&P 500 (+0,73%) e Nasdaq (+1,03%) renovando recordes impulsionados pelo acordo Trump-Xi sobre Hormuz e pela presença de Jensen Huang (Nvidia), Elon Musk (Tesla) e Tim Cook (Apple) na delegação americana em Pequim. O Dow Jones supera 50.000 pontos pela primeira vez em dias. <b>O Ibovespa abre em forte recuperação</b>, oscilando entre 181.615 e 184.530 pts após o fechamento em 177.098 (-1,8%) na quarta. O dólar corrige abaixo de R$ 5,00, aliviando o risco político doméstico (Flávio Bolsonaro/Banco Master) parcialmente. Pregão de quinta ainda em aberto — fechamento final a confirmar."
+    }
   },
   "juros": {
     "selic": {
-      "val": "14,50% a.a.",
-      "delta": "▼ cortada 29/abr (-0,25 p.p.) | Copom unânime | 2ª redução consecutiva | próximo Copom: 16–17 jun",
+      "val": "14,50%",
+      "delta": "▼ -0,25 p.p.",
       "dir": "down"
     },
-    "fed": {
-      "val": "3,50–3,75%",
-      "delta": "• mantido | PPI +1,4% m/m (+6% a/a) + CPI 3,8% a/a consolidam 'higher for longer' | mercado vê 97,6% prob. de manutenção em jun (FedWatch/CME) | Kevin Warsh: novo Fed chair — 1º FOMC em jun/26",
-      "dir": "flat"
-    },
-    "ust10y": {
-      "val": "~4,47%",
-      "sub": "estável qui | máxima desde jul/2025 pós-PPI 6% a/a | UST 10Y em 4,416% na semana de 5/mai, subindo para ~4,47% após PPI qua 13/mai | CNBC: 'yields near 11-month high'"
-    },
-    "nota": "Com PPI de +1,4% m/m (maior desde mar/2022) e CPI de 3,8% a/a, <b>mercados precificam 97,6% de probabilidade de manutenção dos juros do Fed em junho</b> (FedWatch/CME). Kevin Warsh, novo Fed chair, tem seu primeiro FOMC em junho — investidores aguardam sinais sobre postura de política monetária. UST 10Y em ~4,47% (máxima desde julho/2025). No Brasil, Selic em 14,50% a.a. após corte de 29/abr; Focus 11/mai elevou IPCA 2026 para 4,91% (9ª alta) e Selic 2027 para 11,25% — diferencial de juros favorável ao real, mas risco político doméstico pressiona."
+    "previsao_focus": "13,75% (fim 2026)"
   },
   "inflacao": {
-    "ipca15": "0,89%",
-    "ipca15_12m": "4,37%",
-    "ipca_abr": "0,67% (12m: 4,39%)",
-    "focus_2026": "4,91%",
-    "nota": "<b>IPCA-15 de abril: 0,89% m/m</b> — maior variação mensal do ano — com 12 meses acelerando para <b>4,37%</b> (acima do centro da meta de 3%). IPCA de abril: 0,67% m/m (12m: 4,39%) — desacelerou no cheio, mas composição mais disseminada preocupa o BCB. <b>Focus 11/mai: IPCA 2026 em 4,91% (9ª alta consecutiva)</b>, acima do teto da meta de 4,5%; Selic 2027 subiu a 11,25%. Reajuste iminente da gasolina (Chambriard: 'já, já') + MP de subsídio anunciada pelo governo deve aparecer no IPCA-15 de maio (divulg. 27/mai). Próximo Copom: 16–17 de junho."
+    "ipca": {
+      "val": "0,67%",
+      "delta": "▼ vs. mês anterior",
+      "dir": "down"
+    },
+    "previsao_focus": "4,91% (2026)"
   },
-  "abicom": {
-    "diesel_pct": "~39% (aprox. -R$ 1,48/L) | MP de subsídio tributário anunciada (PIS/Cofins+Cide) ameniza mas não elimina defasagem",
-    "gasolina_pct": "~73% (aprox. -R$ 2,03/L) | MP de subsídio tributário para gasolina anunciada qua 13/mai (teto R$ 0,89/L) | reajuste 'já, já' (Chambriard 12/mai) | janela de formalização: qui 14 – sex 15/mai",
-    "dias_diesel": 61,
-    "dias_gasolina": 107,
-    "diesel_tag": "Subvenção MP ativa — defasagem persiste | último reajuste Petrobras: 14/mar/26 (+R$ 0,38/L)",
-    "gasolina_tag": "ALERTA MÁXIMO — reajuste iminente + MP de subsídio anunciada; 107 dias sem alteração",
-    "nota": "<b>O Governo Federal anunciou nesta quarta-feira 13/mai uma Medida Provisória com benefício tributário (PIS/Cofins + Cide) para conter a alta dos combustíveis</b>, iniciando pela gasolina (teto de R$ 0,89/L). A MP foi publicada em resposta direta à defasagem de 73% na gasolina e 39% no diesel calculada pela Abicom, e ao anúncio de Chambriard de reajuste 'já, já' (12/mai). Com a MP, o impacto do reajuste no consumidor será parcialmente absorvido pela renúncia fiscal — Chambriard estimou que o subsídio limitaria o repasse a cerca de R$ 0,06/L nas distribuidoras. A Acelen (Mataripe) já reajustou diesel 4x e gasolina 3x em março. Brent recuando para ~US$ 105/b e dólar corrigindo para R$ 4,98 podem reduzir levemente o tamanho do reajuste vs. o calculado com câmbio a R$ 5,009."
-  },
-  "anp": {
-    "semana": "Síntese semana 04–09/mai — publicação prevista para hoje (qui 14) ou amanhã (sex 15/mai). Última síntese completa publicada: semana 26/abr–01/mai (divulg. 07/mai).",
-    "rows": [
-      {
-        "produto": "Gasolina C",
-        "preco": "R$ 6,77/L",
-        "status": "yellow",
-        "status_label": "ref. semana 26/abr–01/mai (média Brasil) — nova síntese pendente"
-      },
-      {
-        "produto": "Etanol hidr.",
-        "preco": "R$ 4,69/L",
-        "status": "gray",
-        "status_label": "ref. semana 26/abr–01/mai (média Brasil)"
-      },
-      {
-        "produto": "Gasolina C (SP)",
-        "preco": "R$ 6,98/L",
-        "status": "yellow",
-        "status_label": "ref. semana 26/abr–01/mai (São Paulo)"
-      },
-      {
-        "produto": "Etanol hidr. (SP)",
-        "preco": "R$ 4,52/L",
-        "status": "gray",
-        "status_label": "ref. semana 26/abr–01/mai (São Paulo)"
-      },
-      {
-        "produto": "Diesel S-10",
-        "preco": "a confirmar",
-        "status": "blue",
-        "status_label": "pendente síntese 04–09/mai"
-      },
-      {
-        "produto": "GLP P-13",
-        "preco": "a confirmar",
-        "status": "blue",
-        "status_label": "pendente síntese 04–09/mai"
-      }
-    ],
-    "nota": "Última síntese ANP com dados completos: semana 26/abr–01/mai. <b>Síntese da semana 04–09/mai esperada para hoje (qui 14) ou amanhã (sex 15).</b> Com reajuste iminente anunciado pela Petrobras e MP de subsídio tributário publicada, a próxima síntese ANP será a primeira a capturar os efeitos do reajuste ou a registrar os preços pré-reajuste como base de comparação. A MP prevê isenção de até R$ 0,89/L na gasolina (PIS/Cofins + Cide), o que amortece o repasse ao consumidor. Acompanhe gov.br/anp para publicação."
+  "mandatos": {
+    "anidro_na_gasolina_pct": "30%",
+    "b100_no_diesel_pct": "15%"
   },
   "cepea": {
-    "hidratado": [
-      {
-        "uf": "SP",
-        "preco": "R$ 2,5920/L",
-        "dir": "down"
-      },
-      {
-        "uf": "PR",
-        "preco": "a confirmar",
-        "dir": "down"
-      },
-      {
-        "uf": "GO",
-        "preco": "a confirmar",
-        "dir": "down"
-      },
-      {
-        "uf": "MG",
-        "preco": "a confirmar",
-        "dir": "down"
-      },
-      {
-        "uf": "MT",
-        "preco": "a confirmar",
-        "dir": "down"
-      }
-    ],
-    "anidro_sp": {
-      "val": "R$ 2,9575/L",
-      "delta": "▼ abaixo de R$ 3,00 — 1ª vez desde ago/2023 | queda >7% na semana | safra 2026/27 recorde pressiona preços",
-      "dir": "down"
-    },
-    "acucar": {
-      "val": "~14,69 cts/lb (NY) — a confirmar usina",
-      "delta": "▼ mínimas de 5 anos em NY | usinas priorizando etanol (mix 67,07%) em detrimento do açúcar",
-      "dir": "down"
-    },
-    "nota": "Etanol hidratado SP em R$ 2,5920/L na usina e anidro a R$ 2,9575/L — <b>ambos caindo com oferta recorde da safra 2026/27</b>. Anidro abaixo de R$ 3,00/L pela 1ª vez desde agosto de 2023. Com dólar corrigindo para R$ 4,98 após pico de R$ 5,009, o custo de importação de gasolina em reais alivia levemente, mas o etanol barato na usina sustenta a paridade competitiva no posto para o consumidor flex. <b>Próxima divulgação UNICA (1ª quinz mai/26): esperada hoje (qui 14) ou sex 15/mai.</b>"
+    "hidratado_sp": "R$ 2,5920/L",
+    "anidro_sp": "R$ 2,9575/L",
+    "ultima_atualizacao_iso": "2026-05-12",
+    "ultima_atualizacao_label": "seg 12/mai"
   },
-  "eg": {
-    "paridade_sp": "~64,8% (posto SP) | ~69,2% (posto Brasil)",
-    "mandato_e": "E30",
-    "mandato_b": "B15",
-    "nota": "Paridade hidratado/gasolina (posto): SP ~64,8% (etanol R$ 4,52/L ÷ gasolina R$ 6,98/L) e Brasil ~69,2% (R$ 4,69 ÷ R$ 6,77). SP muito abaixo do gatilho de 70% — etanol claramente favorável ao consumidor flex. Com reajuste iminente da gasolina (Chambriard 'já, já') + MP de subsídio que limita repasse ao consumidor, o impacto líquido na paridade dependerá do valor final do reajuste na bomba. Se gasolina subir líquido de R$ 0,30/L (pós-subsídio) para R$ 7,28/L em SP, paridade cai para ~62% — etanol ainda mais vantajoso. Com E30 desde ago/2025, volume de anidro cresce estruturalmente — safra recorde mantém oferta robusta."
+  "safra_etanol": {
+    "moagem": "19,96 Mt",
+    "var_anual": "+19,67% a/a",
+    "mix_etanol_pct": "67,07%",
+    "oferta_total": "1,23 bi L (+33,32% a/a)"
   },
-  "safra": {
-    "moagem": {
-      "val": "19,96 Mt (Centro-Sul)",
-      "delta": "▲ +19,67% a/a (1ª quinz abr/26) — acima das expectativas; StoneX projeta 632,2 Mt na safra (2ª maior da história)"
-    },
-    "atr": {
-      "val": "103,36 kg/t",
-      "delta": "• -0,10% a/a — estável"
-    },
-    "mix": {
-      "val": "67,07% etanol (vs. 55,29% igual período 2025)"
-    },
-    "oferta": {
-      "val": "1,23 bilhão de litros (cana + milho)",
-      "delta": "▲ +33,32% a/a (1ª quinz abr/26) | hidratado 820,15 ML | anidro 460,87 ML | vendas 1ª quinz abr: 1,28 bi L"
-    },
-    "nota": "UNICA (divulg. 30/abr): 1ª quinzena de abr/26 processou <b>19,96 Mt (+19,67% a/a)</b>. Mix fortemente alcooleiro: <b>67,07% para etanol</b> vs. 55,29% em 2025 — usinas priorizando etanol porque açúcar atingiu mínimas de 5 anos em NY (~14,69 cts/lb). Produção total de etanol (cana + milho): <b>1,23 bilhão de litros (+33,32% a/a)</b>. ATR estável em 103,36 kg/t. <b>Próxima divulgação UNICA (1ª quinzena mai/26): hoje (qui 14) ou sex 15/mai.</b>"
+  "agenda_semanal": {
+    "segunda": "Focus semanal (IPCA/Selic/câmbio)",
+    "terca": "—",
+    "quarta": "—",
+    "quinta": "—",
+    "sexta": "UNICA (1ª quinzena mai/26)"
   },
-  "agenda": [
-    {
-      "day": "Qui 14/mai — HOJE",
-      "evento": "Cúpula Trump-Xi DIA 1 em Pequim: Trump e Xi concordam que Hormuz 'deve permanecer aberto' (Casa Branca); navios chineses já cruzam o estreito (Fars); Xi convida Trump para Casa Branca em 24/set · Governo anuncia MP de subsídio tributário (PIS/Cofins+Cide) para gasolina e diesel · Reajuste gasolina Petrobras: janela aberta ('já, já' — Chambriard 12/mai) — formalização aguardada · UNICA 1ª quinz mai/26: possível publicação hoje · Síntese ANP 04–09/mai: possível hoje · Wall Street em alta: S&P 500 +0,73%, Nasdaq +1,03%, Dow +0,77% (14h ET) · Ibovespa em recuperação: 181–184k pts",
-      "tag": "red",
-      "tag_label": "hoje — crítico"
-    },
-    {
-      "day": "Sex 15/mai",
-      "evento": "Cúpula Trump-Xi DIA 2 / encerramento em Pequim — declaração conjunta esperada (acordos sobre comércio, chips/IA, Hormuz/Irã, compras de petróleo americano pela China) · Formalização reajuste gasolina Petrobras (se não ocorrer hoje) · UNICA 1ª quinz mai/26 (se não publicada hoje) · Síntese ANP (se não publicada hoje) · Produção industrial EUA abril",
-      "tag": "red",
-      "tag_label": "crítico"
-    },
-    {
-      "day": "Seg 18/mai",
-      "evento": "Focus semanal (IPCA/Selic/câmbio) — impacto do cenário pós-cúpula e confirmação reajuste gasolina · FRED: Nominal Broad U.S. Dollar Index atualizado · Monitor: declaração conjunta Trump-Xi e implementação de acordos",
-      "tag": "blue",
-      "tag_label": "dado"
-    },
-    {
-      "day": "Ter 27/mai",
-      "evento": "IPCA-15 maio (IBGE) — prévia inflação com impacto energético pós-reajuste Petrobras + efeito do subsídio MP",
-      "tag": "blue",
-      "tag_label": "dado"
-    },
-    {
-      "day": "16–17/jun",
-      "evento": "Copom — próxima decisão sobre Selic (14,50%); 1º FOMC de Kevin Warsh como Fed chair; CPI EUA maio sai ~10/jun",
-      "tag": "blue",
-      "tag_label": "dado"
-    }
+  "acoes_dia": [
+    "<b>Ação operacional 1:</b> descrição curta e direta do que o revendedor deve fazer hoje.",
+    "<b>Ação operacional 2:</b> segunda recomendação acionável.",
+    "<b>Ação operacional 3:</b> terceira recomendação."
   ],
   "radar": [
-    "<b>TRUMP E XI CONCORDAM: HORMUZ 'DEVE PERMANECER ABERTO' — NAVIOS CHINESES JÁ CRUZAM O ESTREITO:</b> este é o maior desenvolvimento desde o início do conflito Irã-EUA em fev/26 para o mercado de petróleo. A Casa Branca confirmou que ambos os lados concordaram que o Estreito de Hormuz 'deve permanecer aberto para garantir o livre fluxo de energia'. A agência Fars reportou que o Irã já começou a permitir o trânsito de embarcações chinesas. Brent recua para ~US$ 105/b e WTI para ~US$ 100,56/b. PORÉM: (a) a China não confirmou o acordo de Hormuz em sua nota oficial (Xinhua); (b) o Irã não fez anúncio formal; (c) o dia 2 da cúpula (sex 15) ainda pode trazer o acordo definitivo — ou o colapso das negociações. O impacto no cálculo de defasagem: Brent a US$ 105 vs. US$ 106 muda marginalmente o número, mas não a urgência do reajuste.",
-    "<b>GOVERNO FEDERAL ANUNCIA MP DE SUBSÍDIO TRIBUTÁRIO PARA GASOLINA E DIESEL (qua 13/mai):</b> a Medida Provisória prevê benefício fiscal no PIS/Cofins e na Cide, com teto de R$ 0,89/L na gasolina. Segundo Chambriard, o subsídio limitaria o repasse ao consumidor a cerca de R$ 0,06/L nas distribuidoras. A MP foi publicada para amenizar o impacto do reajuste 'já, já' anunciado pela presidente da Petrobras. Para o posto: (a) o reajuste na refinaria pode ser maior (refletindo a defasagem real de 73%), mas o impacto no bomba será parcialmente absorvido pela renúncia fiscal; (b) acompanhe se a MP se estende ao diesel (anunciado como possível extensão); (c) documente os timestamps da NF de compra ao novo preço de refinaria e do ajuste no preço da bomba.",
-    "<b>IBOVESPA RECUPERA FORTE NA ABERTURA DE QUINTA (181–184k pts) + DÓLAR ABAIXO DE R$ 5,00:</b> após o tombo de 1,8% na quarta (177.098 pts) impulsionado pela reportagem ligando Flávio Bolsonaro ao ex-dono do Banco Master, a bolsa abre em forte recuperação — o pregão oscila entre 181.615 e 184.530 pts. O dólar corrige abaixo de R$ 5,00 (~R$ 4,98). O fator externo (alívio em Hormuz + cúpula Trump-Xi positiva) e o fator interno (DIs fecham a alta após catarse de quarta) sustentam o movimento. Para o posto: câmbio a R$ 4,98 vs. R$ 5,009 de ontem alivia marginalmente o custo de reposição — mas a defasagem calculada pela Abicom (73% gasolina) continua exigindo reajuste substancial.",
-    "<b>DELEGAÇÃO TRUMP EM PEQUIM: JENSEN HUANG (NVIDIA), ELON MUSK (TESLA), TIM COOK (APPLE) — IMPACTO EM CHIPS/IA:</b> a presença de CEOs de Nvidia, Tesla e Apple na delegação americana sinaliza que chips de IA e semicondutores estão no centro das negociações. Wall Street reage com Nasdaq +1,03% e S&P +0,73% (pregão de quinta). Investidores aguardam acordos sobre exportação de chips H200 da Nvidia para a China. Xi também expressou interesse em comprar mais petróleo americano (US LNG + crude) para reduzir a dependência do Golfo Pérsico — potencial desvio de fluxo de commodities energéticas.",
-    "<b>KEVIN WARSH NO FED + 'HIGHER FOR LONGER' + DXY SOBE PARA MÁXIMA DE 2 SEMANAS:</b> o novo chairman do Fed, confirmado com 51–45 votos pelo Senado em 13/mai, tem seu primeiro FOMC em junho. O DXY sobe para máxima de 2 semanas (~98,50), sustentado por PPI de 6% a/a e CPI de 3,8% a/a — mercado vê 97,6% de probabilidade de manutenção dos juros em junho (FedWatch/CME). Para o posto: câmbio estruturalmente pressionado pelo diferencial de política monetária (Fed firme + Warsh possivelmente hawkish) amplifica o custo de reposição de combustíveis importados em reais. Monitor: primeira comunicação pública de Warsh como chair."
+    "<b>Tema 1:</b> síntese curta do desenvolvimento mais relevante do dia.",
+    "<b>Tema 2:</b> segundo desenvolvimento de impacto.",
+    "<b>Tema 3:</b> terceiro destaque do dia."
   ],
-  "acao": {
-    "tag": "🔴 Atenção máxima — reajuste gasolina iminente + MP subsídio + cúpula Trump-Xi dia 2 amanhã",
-    "lead": "<b>A quinta-feira 14 de maio é o dia de maior concentração de ações operacionais do mês para o dono de posto.</b> Quatro convergências críticas: (1) <b>Reajuste da gasolina é iminente</b> — Chambriard disse 'já, já' e o Governo publicou MP de subsídio tributário para amenizar o impacto: a janela qui–sex é a mais provável; (2) <b>A cúpula Trump-Xi trouxe alívio em Hormuz</b> — navios chineses já cruzam o estreito, Brent recua para ~US$ 105/b, o que pode reduzir marginalmente o tamanho do reajuste vs. o calculado com Brent a US$ 106 + câmbio a R$ 5,009; (3) <b>Dólar corrige abaixo de R$ 5,00</b> após o pico de 2,31% na quarta — cada centavo importa no cálculo do custo de reposição; (4) <b>O dia 2 da cúpula (sex 15)</b> pode trazer declaração conjunta com compromissos formais sobre Hormuz — se firme, novo alívio no Brent; se colapsar, nova alta.",
-    "items": [
-      "<b>REAJUSTE GASOLINA — 3 CENÁRIOS ATUALIZADOS COM MP DE SUBSÍDIO:</b> com a MP de subsídio (teto R$ 0,89/L em renúncia fiscal) e Brent recuando para ~US$ 105/b e câmbio a R$ 4,98, prepare cenários atualizados: (a) Bomba +R$ 0,20/L líquido (reajuste refinaria maior, mas subsídio absorve parte — Brent ~US$ 100–102 com acordo Hormuz firmado); (b) Bomba +R$ 0,35/L líquido (cenário base — Brent ~US$ 105, câmbio ~R$ 4,98, subsídio parcial de R$ 0,50/L); (c) Bomba +R$ 0,55/L líquido (sem acordo Hormuz, Brent sobe, subsídio insuficiente). Monitore precos.petrobras.com.br a cada hora.",
-      "<b>MP DE SUBSÍDIO — ENTENDA O IMPACTO OPERACIONAL NO POSTO:</b> a MP prevê isenção de PIS/Cofins e Cide (teto R$ 0,89/L) para gasolina. Na prática: (a) o reajuste na refinaria Petrobras pode ser maior do que aparece no repasse final ao posto; (b) a distribuidora pode receber um crédito tributário que reduz o custo efetivo de aquisição; (c) verifique com sua distribuidora se ela passou a isenção integralmente ou reteve margem; (d) documente o preço de NF da distribuidora antes e depois da vigência da MP — a diferença é o subsídio real recebido; (e) monitore a extensão ao diesel (anunciada como possível pelo governo).",
-      "<b>COMPLIANCE — TIMESTAMP OBRIGATÓRIO NAS PRÓXIMAS 24–72 HORAS:</b> com MP de subsídio + reajuste de refinaria simultâneos, a equação tributária é complexa. Documente com hora exata: (a) NF de compra ao preço pré-reajuste; (b) NF de compra ao preço pós-reajuste com vigência da MP; (c) hora do ajuste no preço da bomba; (d) qualquer comunicação da distribuidora sobre repasse do subsídio. A diferença entre 'repassou o subsídio' e 'não repassou' pode ser auditada pelo Procon/Senacon/ANP nos próximos dias.",
-      "<b>CÚPULA TRUMP-XI DIA 2 (sex 15) — MONITOR EM TEMPO REAL:</b> o dia de amanhã é o mais crítico para o Brent no curto prazo. Cenários: (a) declaração conjunta com compromisso formal sobre Hormuz → Brent pode cair US$ 5–8/b adicionais → Petrobras pode calibrar reajuste menor; (b) sem acordo formal mas tom positivo → Brent estável ~US$ 105/b → reajuste no cenário base; (c) colapso ou retórica dura → Brent sobe → reajuste maior e mais urgente. Configure alertas para 'Hormuz deal', 'Trump Xi declaração conjunta', 'Iran Hormuz'.",
-      "<b>ETANOL — PARIDADE FAVORÁVEL + NOVO DADO UNICA HOJE:</b> com hidratado SP em R$ 4,52/L e gasolina C SP em R$ 6,98/L, paridade em ~64,8% — etanol claramente vantajoso para o consumidor flex. A UNICA divulga hoje (qui 14) ou amanhã (sex 15) os dados da 1ª quinzena de maio. Com reajuste da gasolina iminente + subsídio parcial, a paridade cai para ~62% se a bomba subir R$ 0,30/L líquido (R$ 7,28/L SP). Comunique o benefício do etanol ao consumidor ANTES do reajuste — e garanta estoque adequado de hidratado.",
-      "<b>DÓLAR A R$ 4,98 vs. R$ 5,009 — ATUALIZE SUA PLANILHA DE PARIDADE:</b> a correção do câmbio de 2,31% para ~-0,56% hoje alivia o custo de reposição. Recalcule o custo de importação por litro com: (a) câmbio R$ 4,98 + Brent US$ 105 → base atual; (b) câmbio R$ 5,00 + Brent US$ 103 (cenário acordo Hormuz); (c) câmbio R$ 5,05 + Brent US$ 107 (cenário sem acordo). A diferença entre os extremos pode ser de R$ 0,20–0,30/L no custo de reposição."
-    ]
-  },
-  "resumo": [
-    {
-      "lead": true,
-      "html": "A quinta-feira 14 de maio de 2026 traz o maior desenvolvimento desta semana para o mercado de petróleo e combustíveis: <b>Trump e Xi Jinping concordaram, em reunião de mais de duas horas no Grande Salão do Povo em Pequim, que o Estreito de Hormuz 'deve permanecer aberto para garantir o livre fluxo de energia'</b>, segundo comunicado da Casa Branca. O presidente Xi também expressou interesse em comprar mais petróleo americano para reduzir a dependência da China do Golfo Pérsico, e ambos os lados concordaram que o Irã não pode possuir armas nucleares. A agência iraniana Fars reportou que navios chineses já começaram a cruzar o estreito, com o Irã permitindo o trânsito com base na 'parceria estratégica' entre os dois países. Brent recua para ~US$ 105/b e WTI para ~US$ 100,56/b. O dia 2 da cúpula acontece amanhã (sex 15), com declaração conjunta esperada."
-    },
-    {
-      "html": "O segundo desenvolvimento crítico do dia para o setor: <b>o Governo Federal anunciou na quarta-feira 13/mai uma Medida Provisória com benefício tributário no PIS/Cofins e na Cide para gasolina e diesel</b>, em resposta direta ao anúncio de Chambriard de reajuste 'já, já' e à defasagem calculada pela Abicom de 73% na gasolina e 39% no diesel. A MP prevê isenção de até R$ 0,89/L na gasolina e pode se estender ao diesel. Segundo Chambriard, o subsídio limitaria o impacto ao consumidor a cerca de R$ 0,06/L nas distribuidoras. A MP foi publicada junto ao reajuste iminente, que deve ser formalizado nas próximas horas (qui–sex). Para o dono de posto, a combinação reajuste + subsídio tributário cria uma equação operacional e fiscal complexa que exige documentação rigorosa com timestamp."
-    },
-    {
-      "html": "No câmbio e nas bolsas, <b>o dólar ensaia correção nesta quinta e opera abaixo de R$ 5,00 (~R$ 4,98)</b>, após o disparo de 2,31% para R$ 5,009 no fechamento de quarta — o maior valor desde 10 de abril — impulsionado pela reportagem que ligou o senador Flávio Bolsonaro (PL-RJ) ao ex-dono do Banco Master, Daniel Vorcaro. <b>O Ibovespa abre em forte recuperação</b>, oscilando entre 181.615 e 184.530 pts após fechar em 177.098,29 (-1,8%) na quarta, impulsionado pelo alívio em Hormuz e pelo tom positivo da cúpula Trump-Xi. Em Wall Street, o S&P 500 avança 0,73% (7.498,85), o Nasdaq sobe 1,03% (26.675,29) e o Dow Jones ultrapassa 50.000 pts (+0,77%), impulsionados pela presença de Jensen Huang (Nvidia), Elon Musk (Tesla) e Tim Cook (Apple) na delegação americana em Pequim."
-    },
-    {
-      "html": "No petróleo, <b>o Brent opera em ~US$ 105/b e o WTI em ~US$ 100,56/b</b> nesta quinta — abaixo dos ~US$ 106/b e ~US$ 102/b no fechamento de quarta. O alívio é real, mas parcial: a IEA alertou que o mercado permanecerá severamente subabastecido até outubro mesmo que o conflito encerre no próximo mês, e a Arábia Saudita informou à OPEP que sua produção caiu ao menor nível desde 1990. A OPEP cortou sua estimativa de crescimento de demanda 2026 para 1,2 MMbpd (de 1,4 MMbpd), e a produção total da OPEP caiu mais de 30% desde o início do conflito Irã-EUA em fevereiro. A China não confirmou o acordo sobre Hormuz em sua nota oficial (Xinhua), e o Irã não fez anúncio formal — o dia 2 da cúpula (sex 15) é o catalisador pendente mais relevante."
-    },
-    {
-      "html": "No bloco macro americano, o <b>DXY sobe para máxima de 2 semanas (~98,50)</b> e o UST 10Y permanece em ~4,47% (máxima desde julho/2025), sustentados por PPI de +1,4% m/m (maior desde mar/2022) e CPI de 3,8% a/a. <b>Kevin Warsh</b>, confirmado como novo Fed chair pelo Senado (51–45) em 13/mai, tem seu primeiro FOMC em junho — mercado vê 97,6% de probabilidade de manutenção dos juros (FedWatch/CME). No Brasil, o Focus de 11/mai elevou o IPCA 2026 para 4,91% (9ª alta consecutiva), acima do teto da meta de 4,5%, e a Selic esperada para 2027 subiu para 11,25%."
-    },
-    {
-      "html": "No setor sucroenergético, a safra 2026/27 avança em ritmo recorde: UNICA registrou 19,96 Mt na 1ª quinzena de abril (+19,67% a/a), com mix alcooleiro de 67,07% (vs. 55,29% em 2025). Etanol hidratado SP na usina em R$ 2,5920/L; anidro a R$ 2,9575/L — abaixo de R$ 3,00/L pela 1ª vez desde agosto de 2023. Paridade no posto SP ~64,8% — etanol claramente favorável ao consumidor flex. A UNICA divulga hoje (qui 14) ou amanhã (sex 15) os dados da 1ª quinzena de maio. <b>Resumo operacional para hoje:</b> monitore a cúpula Trump-Xi dia 2 (sex 15), aguarde formalização do reajuste da gasolina + MP de subsídio, documente todos os timestamps fiscais, comunique o benefício do etanol ao consumidor flex e prepare estoques de hidratado antes do reajuste da gasolina."
-    }
-  ],
-  "_comentario": "Gerado automaticamente em 2026-05-14T16:28:16.621Z por gerar-painel.mjs (claude-sonnet-4-6)"
+  "resumo_editorial": "<p class=\"lead\">Parágrafo de abertura editorial sintetizando o cenário do dia.</p><p>Segundo parágrafo aprofundando os dados macro e o impacto no setor.</p><p>Terceiro parágrafo com fechamento acionável para o revendedor.</p>"
 }

@@ -1,16 +1,22 @@
 #!/usr/bin/env node
 /**
- * gerar-painel.mjs — gera data.json novo via Claude API com web search
+ * gerar-painel.mjs (v2 — Haiku 4.5 + estrutura enxuta)
  *
- * Roda dentro do GitHub Actions diariamente. Lê o data.json atual como referência
- * de estrutura, chama Claude API com web_search habilitado para pesquisar os
- * indicadores do dia, e grava o data.json atualizado.
+ * Gera data.json novo via Claude API com web search. Roda dentro do GitHub Actions.
  *
- * Variáveis de ambiente esperadas:
- *   ANTHROPIC_API_KEY — chave da API Anthropic
+ * Mudanças v2 (2026-05-14):
+ *   - Modelo padrão Haiku 4.5 (mais barato; ~R$ 25/mês estimado)
+ *   - Estrutura enxuta: removidos ANP, E/G, Bolsas, DXY, BTC, Fed, UST10Y
+ *   - Adicionado bloco "mandatos" (% anidro gasolina, % B100 diesel)
+ *   - Agenda agora é síntese semanal seg–sex (não eventos com data)
+ *   - CEPEA só busca real na segunda; outros dias herda do data.json atual
+ *   - 3 ações + 3 itens de radar (não mais 5–6)
+ *   - max_uses=6, max_tokens=6000 (config conservadora pra Haiku passar)
  *
- * Saída:
- *   Escreve em data.json (overwrite). Retorna exit 0 em sucesso, 1 em falha.
+ * Vars de ambiente:
+ *   ANTHROPIC_API_KEY — obrigatório
+ *   MODEL             — default claude-haiku-4-5-20251001
+ *   DATA_PATH         — default data.json
  */
 
 import { readFileSync, writeFileSync } from "node:fs";
@@ -21,22 +27,20 @@ if (!API_KEY) {
   process.exit(1);
 }
 
-const MODEL = process.env.MODEL || "claude-sonnet-4-6";
+const MODEL = process.env.MODEL || "claude-haiku-4-5-20251001";
 const DATA_PATH = process.env.DATA_PATH || "data.json";
 
-// Lê estrutura atual como referência
 const currentData = JSON.parse(readFileSync(DATA_PATH, "utf8"));
-const structureExample = JSON.stringify(currentData, null, 2);
 
-// Manchete e data da edição anterior (pra forçar diferenciação)
-const previousManchete = (currentData.manchete?.principal?.titulo || '').slice(0, 240);
+// Manchete anterior para anti-repetição
+const previousManchete = (currentData.manchete?.principal?.titulo || "").slice(0, 240);
 const previousSecundarias = (currentData.manchete?.secundarias || [])
   .map(s => s.titulo)
   .filter(Boolean)
   .slice(0, 5);
-const previousDateIso = currentData.meta?.date_iso || '';
+const previousDateIso = currentData.meta?.date_iso || "";
 
-// Data de hoje em formato BRT (Brasília GMT-3, sem DST)
+// Data de hoje em BRT
 const now = new Date();
 const brtNow = new Date(now.toLocaleString("en-US", { timeZone: "America/Sao_Paulo" }));
 const isoDate = brtNow.toISOString().split("T")[0];
@@ -46,128 +50,150 @@ const dayOfWeek = diasSemana[brtNow.getDay()];
 const dateLabel = `${dayOfWeek} · ${brtNow.getDate().toString().padStart(2, "0")} ${meses[brtNow.getMonth()]} ${brtNow.getFullYear()}`;
 const hora = brtNow.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "America/Sao_Paulo" });
 
+// CEPEA só atualiza segunda-feira (getDay()===1). Outros dias herda valor anterior.
+const isMonday = brtNow.getDay() === 1;
+const cepeaHerdado = !isMonday ? (currentData.cepea || null) : null;
+
 console.log(`📅 Gerando painel para ${isoDate} (${dateLabel}) — atualização ${hora}`);
 console.log(`📰 Manchete anterior (NÃO REPETIR): "${previousManchete.slice(0, 100)}..."`);
+console.log(`🌱 CEPEA: ${isMonday ? "BUSCAR (segunda-feira)" : "HERDAR do data.json atual"}`);
 
-const SYSTEM_PROMPT = `Você é o editor-chefe do Lumen Posto Club. Sua tarefa é gerar o JSON do **Painel Diário "Posto em Dia"** para HOJE.
+// Estrutura-exemplo enxuta (sem campos legados)
+const structureExample = JSON.stringify({
+  meta: { date_iso: isoDate, date_label: dateLabel, last_update: hora },
+  manchete: {
+    principal: { severity: "red|yellow|green", status_emoji: "🔴|🟡|🟢", severity_label: "Crítico|Atenção|Calmo", titulo: "frase forte do dia" },
+    secundarias: [
+      { categoria: "Mercado", titulo: "...", severity: "red|yellow|green", status_emoji: "🔴|🟡|🟢" },
+      { categoria: "Combustíveis", titulo: "...", severity: "red|yellow|green", status_emoji: "🔴|🟡|🟢" },
+      { categoria: "Política", titulo: "...", severity: "red|yellow|green", status_emoji: "🔴|🟡|🟢" }
+    ]
+  },
+  petroleo: {
+    brent: { val: "US$ X,XX", delta: "▼ -X% ou ▲ +X%", dir: "down|up|flat" },
+    wti:   { val: "US$ X,XX", delta: "▼ -X% ou ▲ +X%", dir: "down|up|flat" },
+    resumo: "2–3 frases sobre o cenário do petróleo e impacto pro revendedor."
+  },
+  abicom: {
+    defasagem_gasolina_pct: "XX%",
+    defasagem_diesel_pct: "XX%",
+    dias_sem_ajuste_gasolina: 0,
+    dias_sem_ajuste_diesel: 0,
+    preco_medio_importacao_gasolina: "R$ X,XX/L",
+    preco_medio_importacao_diesel: "R$ X,XX/L"
+  },
+  moedas: {
+    usdbrl: { val: "R$ X,XXX", delta: "▼/▲ ±X,XX%", dir: "down|up|flat" },
+    eurbrl: { val: "R$ X,XX",  delta: "▼/▲ ±X,XX%", dir: "down|up|flat" }
+  },
+  juros: {
+    selic: { val: "XX,XX%", delta: "▼ -X,XX p.p. ou • mantida", dir: "down|up|flat" },
+    previsao_focus: "XX,XX% (fim 2026)"
+  },
+  inflacao: {
+    ipca: { val: "X,XX%", delta: "▼/▲ vs. mês anterior", dir: "down|up|flat" },
+    previsao_focus: "X,XX% (2026)"
+  },
+  mandatos: {
+    anidro_na_gasolina_pct: "XX%",
+    b100_no_diesel_pct: "XX%"
+  },
+  cepea: {
+    hidratado_sp: "R$ X,XXXX/L",
+    anidro_sp: "R$ X,XXXX/L",
+    ultima_atualizacao_iso: isoDate,
+    ultima_atualizacao_label: "seg DD/mmm"
+  },
+  safra_etanol: {
+    moagem: "XX,XX Mt",
+    var_anual: "+/-X,XX% a/a",
+    mix_etanol_pct: "XX,XX%",
+    oferta_total: "X,XX bi L (+/-X% a/a)"
+  },
+  agenda_semanal: {
+    segunda: "evento principal ou — se vazio",
+    terca: "evento principal ou —",
+    quarta: "evento principal ou —",
+    quinta: "evento principal ou —",
+    sexta: "evento principal ou —"
+  },
+  acoes_dia: [
+    "<b>Ação 1:</b> texto curto e acionável.",
+    "<b>Ação 2:</b> ...",
+    "<b>Ação 3:</b> ..."
+  ],
+  radar: [
+    "<b>Tema 1:</b> síntese curta.",
+    "<b>Tema 2:</b> ...",
+    "<b>Tema 3:</b> ..."
+  ],
+  resumo_editorial: "<p class=\"lead\">Lead editorial.</p><p>Parágrafo 2.</p><p>Parágrafo 3 acionável.</p>"
+}, null, 2);
+
+const SYSTEM_PROMPT = `Você é o editor-chefe do Lumen Posto Club. Gere o JSON do **Painel Diário "Posto em Dia"** de HOJE.
 
 ## CONTEXTO
-- **Organização:** Lumen Posto Club
-- **Responsável editorial:** Ramsés
-- **Missão:** inteligência de mercado acionável para donos de posto e revendedores de combustíveis no Brasil
-- **Hoje:** ${isoDate} — ${dateLabel}
-- **Hora atualização:** ${hora}
+- Hoje: ${isoDate} — ${dateLabel}
+- Hora atualização: ${hora}
+- Público: donos de posto e revendedores de combustíveis no Brasil
 
 ## REGRAS INVIOLÁVEIS
-1. **NUNCA fabricar valores.** Se fonte não localizada → use "a confirmar" como valor
-2. Emojis direcionais obrigatórios: ▼ (queda), ▲ (alta), • (estável)
-3. Tom: copy-ready, conciso, direto. Cada \`nota\` no máximo 2-3 frases
-4. **Use web_search** para pesquisar TODOS os indicadores. Não invente, não use cache mental
-5. Severidade da manchete: "red" (crítico/alerta), "yellow" (atenção), "green" (calmo/positivo)
-6. **NÃO REPETIR manchete anterior** — busque o que de fato mudou nas últimas 24h
+1. **NUNCA fabricar valores.** Se não localizar fonte → use "a confirmar"
+2. Emojis direcionais: ▼ (queda), ▲ (alta), • (estável)
+3. Tom: copy-ready, conciso, direto. Frases curtas.
+4. **Use web_search** para pesquisar os indicadores. Não invente.
+5. Severity: "red" (crítico/alerta), "yellow" (atenção), "green" (calmo/positivo)
+6. **NÃO REPETIR manchete anterior** — busque o que mudou nas últimas 24h
 
 ## ⛔ MANCHETE DA EDIÇÃO ANTERIOR (${previousDateIso}) — NÃO REPETIR
-A edição anterior usou esta manchete principal:
+Principal anterior:
 > "${previousManchete}"
+Secundárias anteriores:
+${previousSecundarias.map(s => `> "${s}"`).join("\n")}
 
-E essas manchetes secundárias:
-${previousSecundarias.map(s => `> "${s}"`).join('\n')}
+Sua manchete principal DEVE ser sobre fato novo (últimas 12–24h). Se cenário não mudou, escolha ângulo diferente.
 
-**REGRA:** sua nova manchete principal DEVE ser sobre algo que aconteceu desde a última publicação (últimas 12-24h). Use web_search para encontrar fato novo. Não reformule a antiga, não traduza, não pegue o mesmo evento sob outro ângulo se não houver desenvolvimento novo. Se o cenário não mudou, escolha um ângulo DIFERENTE para destacar (ex: dado macro novo, decisão regulatória brasileira, movimento da Petrobras, mudança no preço de combustível, etc.). Se REALMENTE não houver fato novo, escolha o evento mais relevante do dia mesmo que correlato.
+## INDICADORES A PESQUISAR (use web_search — 6 buscas no total)
+1. "Brent WTI petróleo cotação hoje ${isoDate}"
+2. "dólar euro cotação ${isoDate} Banco Central"
+3. "Selic Copom IPCA Focus Brasil ${isoDate}"
+4. "Abicom defasagem Petrobras diesel gasolina ${isoDate}"
+${isMonday ? '5. "CEPEA ESALQ etanol hidratado anidro SP preço usina ${isoDate}"\n6. "UNICA safra Centro-Sul cana etanol mix ${isoDate}"' : '5. "UNICA safra Centro-Sul cana etanol mix ${isoDate}"\n6. notícia principal do dia (manchete + 3 secundárias) — combustíveis/política/mercado'}
 
-## INDICADORES A PESQUISAR (use web_search)
+${isMonday ? "" : `## ⚠️ CEPEA HERDADO — NÃO PESQUISAR
+Hoje não é segunda-feira. O bloco \`cepea\` será **herdado automaticamente** do data.json atual. **Não inclua o campo \`cepea\` no seu JSON de saída.** O script vai mesclar:
+\`\`\`json
+${JSON.stringify(cepeaHerdado, null, 2)}
+\`\`\`
+`}
 
-### Bloco PETRÓLEO
-- "Brent crude oil price today ${isoDate}"
-- "WTI crude oil price today ${isoDate}"
+## REGRAS POR BLOCO
 
-### Bloco MOEDAS
-- "dólar hoje cotação USD BRL ${isoDate} Banco Central"
-- "EUR/BRL ${isoDate}"
-- "Bitcoin price today USD"
-- "DXY dollar index today"
-
-### Bloco BOLSAS
-- "Ibovespa fechamento ${isoDate}"
-- "S&P 500 close ${isoDate}"
-- "Nasdaq close ${isoDate}"
-- "Dow Jones close ${isoDate}"
-
-### Bloco JUROS
-- "Selic taxa atual Copom 2026"
-- "Fed funds rate ${isoDate}"
-- "US Treasury 10Y yield ${isoDate}"
-
-### Bloco INFLAÇÃO
-- "IPCA-15 último resultado IBGE 2026"
-- "Boletim Focus inflação 2026 expectativa"
-
-### Bloco ABICOM (defasagem Petrobras)
-- "Abicom defasagem Petrobras diesel gasolina ${isoDate}"
-- "Petrobras último reajuste preços combustíveis 2026"
-
-### Bloco ANP
-- "ANP síntese semanal preços combustíveis gasolina etanol diesel GLP semana ${isoDate}"
-
-### Bloco CEPEA
-- "CEPEA ESALQ etanol hidratado SP PR GO MG MT preço ${isoDate}"
-- "CEPEA etanol anidro SP preço"
-
-### Bloco SAFRA UNICA
-- "UNICA Centro-Sul moagem cana ATR mix açúcar etanol última quinzena 2026"
-
-### Bloco GEOPOLÍTICA / MANCHETE
-- Pesquisar 2-3 notícias mais relevantes do dia que afetam petróleo/combustíveis no Brasil
-- Foco: tensões geopolíticas Oriente Médio, decisões OPEP+, ações regulatórias ANP/CNPE no Brasil, movimentações Petrobras
+- **manchete.principal**: 1 frase forte, severity coerente com o fato
+- **manchete.secundarias**: SEMPRE 3 itens, um de cada categoria ["Mercado", "Combustíveis", "Política"]
+- **petroleo**: brent + wti + resumo curto (2–3 frases). Não cite analistas longamente.
+- **abicom**: % defasagem (gasolina e diesel), dias sem ajuste Petrobras, preço médio importação por litro
+- **moedas**: USD/BRL e EUR/BRL apenas. Cotação + variação dia.
+- **juros**: Selic atual + variação + previsão Focus para fim do ano
+- **inflacao**: IPCA mais recente + variação + previsão Focus
+- **mandatos**: % anidro na gasolina (ex "30%") e % B100 no diesel (ex "15%"). Pesquise se houve mudança recente.
+- **safra_etanol**: moagem, variação anual, mix etanol, oferta total
+- **agenda_semanal**: síntese por dia da SEMANA ATUAL (seg, ter, qua, qui, sex). UMA frase curta por dia. "—" se nada relevante. Eventos: Focus (toda 2ª), IPCA/IPCA-15, Copom (quando houver), UNICA (quinzenas), ANP (sex), reuniões geopolíticas relevantes, divulgações Petrobras.
+- **acoes_dia**: 3 ações operacionais para o dono de posto HOJE. HTML com <b>. Cada uma 1–2 frases.
+- **radar**: 3 temas de impacto do dia. HTML com <b>. Cada um 1–2 frases.
+- **resumo_editorial**: HTML com 3 parágrafos. Primeiro com class="lead". Síntese dos dados + manchetes.
 
 ## ESTRUTURA EXATA DO JSON DE SAÍDA
-
-Saída deve ser **JSON puro** (sem markdown, sem preâmbulo, sem explicação), mantendo EXATAMENTE a estrutura do exemplo abaixo. Não adicione nem remova campos top-level.
 
 \`\`\`json
 ${structureExample}
 \`\`\`
 
-## CAMPOS QUE VOCÊ DEVE PREENCHER
-
-- \`meta.date_iso\`: "${isoDate}"
-- \`meta.date_label\`: "${dateLabel}"
-- \`meta.last_update\`: "${hora}"
-- \`meta.next_update\`: "amanhã · ${(brtNow.getDate() + 1).toString().padStart(2, "0")} ${meses[brtNow.getMonth()]} · 07:30"
-- \`manchete.principal\`: a notícia mais importante do dia (geopolítica/petróleo/regulação). severity red/yellow/green. titulo + corpo em HTML (negrito permitido com <b>)
-- \`manchete.secundarias\`: array de 3 notícias secundárias relevantes
-- \`petroleo.brent\`, \`petroleo.wti\`: cotações com val, delta (variação dia), dir (up/down/flat), sub (info extra como range/semana)
-- \`petroleo.nota\`: 2-3 frases editoriais sobre o cenário do petróleo
-- \`petroleo.citacao\`: opcional, frase de analistas (Goldman, ING, Sparta, etc.) se houver
-- \`moedas.usdbrl/eurbrl/dxy/btc\`: val, delta, dir
-- \`moedas.nota\`: contexto editorial do câmbio
-- \`bolsas.ibov/sp/nasdaq/dow\`: val, delta, dir
-- \`bolsas.nota\`: contexto editorial bolsas
-- \`juros.selic/fed\`: val, delta, dir. \`ust10y\` = val, sub
-- \`juros.nota\`: contexto editorial juros
-- \`inflacao\`: ipca15, ipca15_12m, ipca_mar, focus_2026 + nota
-- \`abicom\`: diesel_pct, gasolina_pct, dias_diesel (número), dias_gasolina, diesel_tag/gasolina_tag (rótulos como "Pressão volta", "Estável"), nota
-- \`anp.semana\`: descrição da semana ANP (ex: "Síntese semana 03-09/mai")
-- \`anp.rows\`: array de produtos com produto, preco, status (green/yellow/red/gray/blue), status_label
-- \`anp.nota\`: contexto editorial ANP
-- \`cepea.hidratado\`: array por UF (SP, PR, GO, MG, MT) com uf, preco, dir
-- \`cepea.anidro_sp\`: val, delta, dir
-- \`cepea.acucar\`: val, delta, dir
-- \`cepea.nota\`: contexto editorial
-- \`eg\`: paridade_sp (ex "72%"), mandato_e (E30), mandato_b (B15), nota
-- \`safra\`: moagem, atr, mix, oferta (cada um com val + delta), nota
-- \`agenda\`: 4-5 eventos próximos com day, evento, tag (red/blue/green), tag_label
-- \`radar\`: array de 5 bullets HTML com destaques do dia
-- \`acao.tag\`: rótulo do estado de alerta (ex "Volta a vermelho — atenção máxima", "Cenário calmo", "Atenção média")
-- \`acao.lead\`: lead em HTML com contexto
-- \`acao.items\`: 4-6 ações operacionais (HTML com <b>)
-- \`resumo\`: 6-7 parágrafos editoriais HTML cobrindo todo o cenário do dia. Primeiro item tem \`"lead": true\`
-
 ## SAÍDA
 
-Devolva APENAS o JSON. Sem code blocks, sem texto antes ou depois. Pronto pra \`JSON.parse()\`.`;
+Devolva APENAS o JSON. Sem markdown, sem texto antes ou depois. Pronto pra JSON.parse().${isMonday ? "" : ' **Importante: NÃO inclua o campo `cepea` no seu JSON** — o script vai herdar do data.json atual.'}`;
 
-const USER_PROMPT = `Pesquise e gere o painel completo para ${isoDate}. Use web_search para todos os indicadores. Responda APENAS com o JSON.`;
+const USER_PROMPT = `Pesquise e gere o painel completo para ${isoDate}. Use web_search para os indicadores. Responda APENAS com o JSON.`;
 
 async function callClaude() {
   const response = await fetch("https://api.anthropic.com/v1/messages", {
@@ -180,14 +206,14 @@ async function callClaude() {
     },
     body: JSON.stringify({
       model: MODEL,
-      max_tokens: 16000,
+      max_tokens: 6000,
       system: SYSTEM_PROMPT,
       messages: [{ role: "user", content: USER_PROMPT }],
       tools: [
         {
           type: "web_search_20250305",
           name: "web_search",
-          max_uses: 12
+          max_uses: 6
         }
       ]
     })
@@ -202,41 +228,27 @@ async function callClaude() {
 }
 
 function extractFinalText(apiResponse) {
-  // Resposta da API tem array de content blocks. Pegar todos os text blocks
-  // e concatenar (o output final ficará no último text block normalmente)
   const textBlocks = apiResponse.content.filter(b => b.type === "text").map(b => b.text);
   return textBlocks.join("\n").trim();
 }
 
 function parseJSON(text) {
-  // Tentar parsear direto
-  try {
-    return JSON.parse(text);
-  } catch {}
-
-  // Se veio com code blocks ```json ... ```, extrair
+  try { return JSON.parse(text); } catch {}
   const match = text.match(/```(?:json)?\s*([\s\S]*?)```/);
   if (match) {
-    try {
-      return JSON.parse(match[1]);
-    } catch {}
+    try { return JSON.parse(match[1]); } catch {}
   }
-
-  // Tentar achar { ... } com balanced braces
   const start = text.indexOf("{");
   const end = text.lastIndexOf("}");
   if (start >= 0 && end > start) {
-    try {
-      return JSON.parse(text.slice(start, end + 1));
-    } catch {}
+    try { return JSON.parse(text.slice(start, end + 1)); } catch {}
   }
-
   throw new Error("Não consegui parsear JSON da resposta do Claude");
 }
 
 (async () => {
   try {
-    console.log(`🤖 Chamando Claude (${MODEL}) com web search...`);
+    console.log(`🤖 Chamando Claude (${MODEL}) com web search (max_uses=6, max_tokens=6000)...`);
     const t0 = Date.now();
     const result = await callClaude();
     const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
@@ -253,15 +265,27 @@ function parseJSON(text) {
 
     const newData = parseJSON(finalText);
 
-    // Validações básicas
+    // Validações de campos essenciais
     if (!newData.meta || !newData.manchete || !newData.petroleo) {
       throw new Error("JSON parsado mas faltam campos essenciais (meta/manchete/petroleo)");
     }
 
-    // Garante data correta no meta
+    // Garante meta correta
     newData.meta.date_iso = isoDate;
     newData.meta.date_label = dateLabel;
     newData.meta.last_update = hora;
+
+    // CEPEA: herda do data.json atual se não é segunda
+    if (!isMonday && cepeaHerdado) {
+      newData.cepea = cepeaHerdado;
+      console.log(`  CEPEA herdado (última atualização: ${cepeaHerdado.ultima_atualizacao_label || "?"})`);
+    } else if (isMonday) {
+      // Em segunda, garantir o label de atualização
+      if (newData.cepea) {
+        newData.cepea.ultima_atualizacao_iso = isoDate;
+        newData.cepea.ultima_atualizacao_label = `seg ${brtNow.getDate().toString().padStart(2, "0")}/${meses[brtNow.getMonth()]}`;
+      }
+    }
 
     // Comentário interno (deletado no build)
     newData._comentario = `Gerado automaticamente em ${new Date().toISOString()} por gerar-painel.mjs (${MODEL})`;
