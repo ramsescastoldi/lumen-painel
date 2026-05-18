@@ -2,31 +2,31 @@
   "meta": {
     "date_iso": "2026-05-18",
     "date_label": "Segunda · 18 mai 2026",
-    "last_update": "06:55"
+    "last_update": "15:37"
   },
   "manchete": {
     "principal": {
       "severity": "red",
       "status_emoji": "🔴",
       "severity_label": "Crítico",
-      "titulo": "Brent salta a US$ 111; Hormuz bloqueado mantém petróleo em pico; defasagem diesel-gasolina dispara com novo reajuste Petrobras esperado"
+      "titulo": "Brent toca US$ 111 em tensões Irã-EUA; defasagem diesel 31% trava importações há 97 dias"
     },
     "secundarias": [
       {
         "categoria": "Mercado",
-        "titulo": "Inflação Focus fecha em 4,91% para 2026; mercado eleva Selic fim-ano para 13% diante pressão de combustíveis",
+        "titulo": "Focus eleva Selic esperada para 13,25% e IPCA sobe pelo décimo mês seguido",
         "severity": "red",
         "status_emoji": "🔴"
       },
       {
         "categoria": "Combustíveis",
-        "titulo": "Defasagem diesel 31%-39% e gasolina 41%-88% conforme fontes; governo negocia segunda MP com subvenção até R$ 1,20/litro",
+        "titulo": "Gasolina defasada 41% vs. importação; Petrobras sem reajuste há 54 dias na bomba",
         "severity": "red",
         "status_emoji": "🔴"
       },
       {
         "categoria": "Política",
-        "titulo": "MP 1.358/2026 em fase de detalhamento; governo assume custo de contenção a cinco meses das eleições de outubro",
+        "titulo": "MP 1.358/2026 em execução; governo mantém subvenção R$ 0,32/L diesel conforme Medida Provisória",
         "severity": "yellow",
         "status_emoji": "🟡"
       }
@@ -34,20 +34,20 @@
   },
   "petroleo": {
     "brent": {
-      "val": "US$ 111,15",
-      "delta": "▲ +1,73%",
+      "val": "US$ 111,04",
+      "delta": "▲ +1,25%",
       "dir": "up"
     },
     "wti": {
-      "val": "US$ 103,24",
-      "delta": "▲ +2,19%",
+      "val": "US$ 106,97",
+      "delta": "▲ +1,80%",
       "dir": "up"
     },
-    "resumo": "Brent acima de US$ 111 com tensões EUA-Irã mantendo Hormuz bloqueado. WTI em US$ 103 e subindo. Oferta global apertada segundo AIE até outubro. Pressão direta nos preços domésticos de diesel e gasolina."
+    "resumo": "Petróleo sobe com incerteza geopolítica: EUA rejeita proposta iraniana, Hormuz bloqueado segue mantendo oferta em risco. Brent oscilou acima de US$ 111 antes de ceder para US$ 102, refletindo volatilidade nas negociações de sanções. Pressão inflacionária continua travando cortes de juros no Brasil."
   },
   "abicom": {
-    "defasagem_gasolina_pct": "41-88%",
-    "defasagem_diesel_pct": "31-39%",
+    "defasagem_gasolina_pct": "41%",
+    "defasagem_diesel_pct": "31%",
     "dias_sem_ajuste_gasolina": 54,
     "dias_sem_ajuste_diesel": 97,
     "preco_medio_importacao_gasolina": "a confirmar",
@@ -55,65 +55,65 @@
   },
   "moedas": {
     "usdbrl": {
-      "val": "R$ 4,97",
-      "delta": "▲ +0,49%",
-      "dir": "up"
+      "val": "R$ 5,00",
+      "delta": "▼ -0,80%",
+      "dir": "down"
     },
     "eurbrl": {
-      "val": "R$ 5,84",
-      "delta": "▼ -0,08%",
-      "dir": "down"
+      "val": "R$ 5,81",
+      "delta": "▲ +0,60%",
+      "dir": "up"
     }
   },
   "juros": {
     "selic": {
       "val": "14,50%",
-      "delta": "▼ -0,25 p.p.",
-      "dir": "down"
+      "delta": "• mantida em última reunião",
+      "dir": "flat"
     },
-    "previsao_focus": "13,00% (fim 2026)"
+    "previsao_focus": "13,25% (fim 2026)"
   },
   "inflacao": {
     "ipca": {
-      "val": "4,14%",
-      "delta": "▲ vs. mês anterior",
+      "val": "4,92%",
+      "delta": "▲ +0,01 p.p. vs. semana anterior",
       "dir": "up"
     },
-    "previsao_focus": "4,91% (2026)"
+    "previsao_focus": "4,92% (2026)"
   },
   "mandatos": {
     "anidro_na_gasolina_pct": "30%",
     "b100_no_diesel_pct": "15%"
   },
   "cepea": {
-    "hidratado_sp": "R$ 2,8875/L",
+    "hidratado_sp": "a confirmar",
     "anidro_sp": "a confirmar",
     "ultima_atualizacao_iso": "2026-05-18",
     "ultima_atualizacao_label": "seg 18/mai"
   },
   "safra_etanol": {
-    "moagem": "611,15 Mt",
-    "var_anual": "-1,73% a/a",
-    "mix_etanol_pct": "55,13%",
-    "oferta_total": "33,72 bi L (-3,56% a/a)"
+    "moagem": "19,56 Mt",
+    "var_anual": "+19,67% a/a",
+    "mix_etanol_pct": "67,07%",
+    "oferta_total": "1,28 bi L (+/-a confirmar a/a)"
   },
   "agenda_semanal": {
-    "segunda": "Focus (semanal BC). Copom em hiato até próxima reunião.",
-    "terca": "UNICA quinzenal (dados safra 2026/27 em andamento).",
+    "segunda": "Focus divulgado; Brent acima de US$ 110 com tensões Irã-EUA",
+    "terca": "Possível reunião Trump com equipe de segurança sobre Irã",
     "quarta": "—",
     "quinta": "—",
-    "sexta": "ANP (dados semanais combustíveis); possível ato ministerial sobre subvenção diesel."
+    "sexta": "ANP publica dados semanais de importação e defasagem"
   },
   "acoes_dia": [
-    "<b>Monitorar reajuste Petrobras:</b> Segundo a estatal, novo repasse é iminente após pressão de defasagem acima de 30-40%. Prepare precificação para revendedoras.",
-    "<b>Acompanhar Focus e Copom:</b> Selic em 14,50% com expectativa de 13% ao final de 2026. Impacta margens e financiamentos para reabastecimento.",
-    "<b>Validar subvenção diesel:</b> Governo pode anunciar R$ 0,35-1,20/L em subsídio. Impacta volume de importações e margens de venda."
+    "<b>Precifique com margem:</b> com defasagem diesel em 31%, negocie reajuste com distribuidoras hoje; Petrobras pode anunciar reajuste qualquer hora sem aviso prévio.",
+    "<b>Monitore estoque:</b> 97 dias sem importação de diesel cria risco estrutural. Confirme com fornecedores a garantia de abastecimento para próximos 30 dias.",
+    "<b>Comunique ao cliente:</b> próximo aumento de gasolina/diesel deve ser acumulado. Prepare equipe para picos de demanda (antecipação de compras)."
   ],
   "radar": [
-    "<b>Hormuz bloqueado mantém oferta global apertada:</b> AIE alerta mercado pode permanecer subabastecido até outubro. Brent acima de US$ 111 pressiona cada litro de importação.",
-    "<b>Inflação Focus em 4,91% rompeu teto da meta:</b> Mercado vê IPCA acima de 4,5% em 2026. Governo busca contenção de preços via subsídios, comprimindo margens.",
-    "<b>Safra 2026/27 promete oferta recorde de etanol:</b> Conab estima 40,69 bi L (+8,5%). Pressão de preços no hidratado já em 17% de queda vs. um mês atrás."
+    "<b>Hormuz bloqueado (persistente):</b> Estreito segue parcialmente fechado há meses. Risco geopolítico mantém Brent em piso elevado; qualquer ataque direto a infraestrutura iraniana leva petróleo acima de US$ 120.",
+    "<b>Desancoragem de expectativas (Focus):</b> Mercado já eleva IPCA 2026 pela décima semana. Copom sinaliza cautela: próximo corte de Selic depende de alívio de preços, improvável com petróleo em US$ 110+.",
+    "<b>Importação travada (Abicom):</b> Defasagem diesel-gasolina continua inviabilizando importações privadas. Petrobras aumenta fator de utilização, mas sem importação = risco de desabastecimento após junho."
   ],
-  "resumo_editorial": "<p class=\"lead\">Petróleo Brent acima de US$ 111 com bloqueio do Estreito de Hormuz mantendo oferta global sob pressão. No Brasil, defasagem diesel-gasolina dispara (31-88% conforme medição), pressionando novo reajuste iminente da Petrobras e forçando novo pacote de subvenção do governo. Inflação em 4,91% para 2026 rompe teto da meta (4,5%), com Selic em 14,50% e expectativa de corte para 13% ao final do ano.</p><p>Segunda MP com subvenção combustíveis em detalhamento. Governo quer conter preços a cinco meses de eleições (outubro 2026). Donos de postos enfrentam compressão de margens entre custos internacionais crescentes, reajuste iminente da refinaria estatal e concorrência de importadores subsidiados. Safra de etanol 2026/27 promete volume recorde (40,69 bi L), aumentando pressão baixista no hidratado (queda 17% em um mês nas usinas de SP).</p><p><b>Ação prioritária:</b> Confirme com distribuidoras agenda de reajuste Petrobras esta semana. Revise cenários de margens sob subsídio. Prepare fluxo de caixa para volatilidade crescente de dólar (4,97) em ambiente de pico geopolítico. Acompanhe diariamente indicador Cepea/Esalq (etanol) e ABICOM (defasagem) até divulgação da nova medida governamental na sexta (18/05).</p>",
-  "_comentario": "Gerado automaticamente em 2026-05-18T08:55:36.161Z por gerar-painel.mjs (claude-haiku-4-5-20251001)"
+  "resumo_editorial": "<p class=\"lead\">Petróleo dispara em tensão Irã-EUA, Brent toca US$ 111; defasagem combustíveis dispara e importações estão travadas há meses. Mercado financeiro desconta pressão inflacionária: IPCA 2026 toque décimo mês de alta, Selic esperada em 13,25% até fim do ano. Copom sinaliza cautela, esperando alívio internacional que não chega.</p><p>Defasagem estrutural no diesel (31%) e gasolina (41%) deixa revendedor desprotegido. Petrobras mantém subvenção via MP 1.358, mas cobertura é parcial (R$ 0,32/L). Importadores ausentes por 97 dias no diesel criam gargalo logístico visível: oferta concentrada em refinaria estatal, sem hedge de preço privado.</p><p>Ação imediata: reprece hoje com distribuidor; negocie garantia 30 dias com fornecedor; prepare equipe para comunicado de reajuste qualquer hora. Próximas 72h serão críticas: Trump decide sobre opção militar no Irã; Copom pode sinalizar pausa em cortes de Selic se IPCA Focus subir mais.</p>",
+  "_comentario": "Gerado automaticamente em 2026-05-18T17:38:14.346Z por gerar-painel.mjs (claude-haiku-4-5-20251001)"
 }
