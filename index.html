@@ -117,6 +117,41 @@ a{color:inherit;text-decoration:none}
 
 .divider{height:1px;background:rgba(255,255,255,.05);margin:16px 0}
 
+/* DECISÃO DO DIA */
+.decisao{background:linear-gradient(160deg,#13243A 0%,#0B1320 100%);border:1px solid var(--gold-line);border-radius:18px;padding:24px 26px;position:relative;overflow:hidden}
+.decisao::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.012) 0,rgba(255,255,255,.012) 1px,transparent 1px,transparent 14px);pointer-events:none}
+.decisao-h{display:flex;align-items:center;gap:12px;margin-bottom:4px;position:relative;z-index:1}
+.decisao-h .ico{font-size:22px}
+.decisao-h h2{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0}
+.decisao-sub{font-size:12.5px;color:var(--text-2);margin-bottom:20px;position:relative;z-index:1}
+.dgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative;z-index:1}
+@media(max-width:980px){.dgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.dgrid{grid-template-columns:1fr}}
+.dcard{border-radius:14px;padding:18px;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.02);display:flex;flex-direction:column;gap:13px}
+.dcard.buy{border-color:rgba(227,106,90,.4);background:linear-gradient(180deg,rgba(227,106,90,.10),rgba(227,106,90,.02))}
+.dcard.warn{border-color:rgba(232,181,71,.38);background:linear-gradient(180deg,rgba(232,181,71,.09),rgba(232,181,71,.02))}
+.dcard.wait{border-color:rgba(123,183,128,.36);background:linear-gradient(180deg,rgba(123,183,128,.09),rgba(123,183,128,.02))}
+.dfuel{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-2);font-weight:600}
+.dverdict{display:flex;align-items:center;gap:9px}
+.dverdict .dot{font-size:18px;line-height:1}
+.dverdict .label{font-size:19px;font-weight:600;letter-spacing:-.01em}
+.dcard.buy .label{color:var(--down)}.dcard.warn .label{color:var(--warn)}.dcard.wait .label{color:var(--up)}
+.dbar{height:8px;border-radius:99px;background:rgba(255,255,255,.07);overflow:hidden;position:relative}
+.dbar i{position:absolute;left:0;top:0;bottom:0;border-radius:99px;display:block}
+.dcard.buy .dbar i{background:linear-gradient(90deg,#E8B547,#E36A5A)}
+.dcard.warn .dbar i{background:linear-gradient(90deg,#7BB780,#E8B547)}
+.dcard.wait .dbar i{background:linear-gradient(90deg,#5C6675,#7BB780)}
+.dscore{display:flex;justify-content:space-between;font-size:10.5px;color:var(--text-3);letter-spacing:.05em}
+.dtrend{display:flex;align-items:flex-end;gap:3px;height:30px}
+.dtrend span{flex:1;background:rgba(201,168,76,.25);border-radius:2px 2px 0 0;min-height:3px}
+.dwhy{font-size:12.5px;line-height:1.5;color:var(--text);border-top:1px dashed rgba(255,255,255,.07);padding-top:11px}
+.dwhy .row{display:flex;align-items:flex-start;gap:7px;margin-bottom:5px}
+.dwhy .row:last-child{margin-bottom:0}
+.dwhy b{color:var(--gold-soft);font-weight:600}
+.dwhy .arrow{font-weight:700;flex:0 0 auto}
+.dwhy .up{color:var(--down)}.dwhy .dn{color:var(--up)}.dwhy .fl{color:var(--text-2)}
+.decisao-foot{margin-top:18px;font-size:11.5px;color:var(--text-3);position:relative;z-index:1;border-top:1px solid rgba(255,255,255,.05);padding-top:13px;line-height:1.55}
+
 /* HERO MANCHETE */
 .manchete{padding:28px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;
   background:
@@ -363,6 +398,16 @@ footer b{color:var(--text-2);font-weight:600}
 <!-- ================= GRID ================= -->
 <main class="wrap" id="grid">
 
+  <!-- 0. DECISÃO DO DIA (topo absoluto) -->
+  <section class="col-12" id="decisaoSec">
+    <div class="decisao">
+      <div class="decisao-h"><span class="ico">🎯</span><h2>Decisão do Dia — Comprar ou Esperar?</h2></div>
+      <div class="decisao-sub" id="decisaoSub">—</div>
+      <div class="dgrid" id="decisaoGrid"></div>
+      <div class="decisao-foot" id="decisaoFoot">—</div>
+    </div>
+  </section>
+
   <!-- 1. MANCHETE PRINCIPAL (col-12) -->
   <section class="col-12">
     <div class="manchete" id="manchete">
@@ -581,6 +626,33 @@ const DATA = {
   $("hdate").textContent = DATA.meta?.date_label || "—";
   $("lastup").textContent = DATA.meta?.last_update || "—";
   $("footerDate").textContent = DATA.meta?.date_label || "—";
+
+  // Decisão do Dia (topo)
+  const dec = DATA.decisao;
+  const decSec = $("decisaoSec");
+  if (dec && dec.fuels && dec.fuels.length) {
+    $("decisaoSub").textContent = [dec.data_label, dec.base].filter(Boolean).join(" · ");
+    $("decisaoFoot").innerHTML = `🔴 <b style="color:var(--down)">Compre agora</b> = reajuste provável, trave o preço atual · 🟡 <b style="color:var(--warn)">Atenção</b> = pressão subindo, monitore · 🟢 <b style="color:var(--up)">Pode esperar</b> = sem pressão de alta.<br>` + (dec.disclaimer || "");
+    $("decisaoGrid").innerHTML = dec.fuels.map(f => {
+      const sp = f.spark || [];
+      const spark = sp.length ? `<div class="dtrend">${sp.map((h,i)=>`<span style="height:${h}%${i===sp.length-1?';background:var(--gold)':''}"></span>`).join("")}</div>` : "";
+      const reasons = (f.reasons||[]).map(r=>{
+        const cl = r.dir==='up'?'up':r.dir==='down'?'dn':'fl';
+        const ar = r.dir==='up'?'▲':r.dir==='down'?'▼':'•';
+        return `<div class="row"><span class="arrow ${cl}">${ar}</span> <span>${r.text}</span></div>`;
+      }).join("");
+      return `<div class="dcard ${f.verdict}">
+        <div class="dfuel">${f.nome}</div>
+        <div class="dverdict"><span class="dot">${f.emoji}</span><span class="label">${f.label}</span></div>
+        <div class="dbar"><i style="width:${f.score}%"></i></div>
+        <div class="dscore"><span>pressão de reajuste</span><span>${f.score}/100</span></div>
+        ${spark}
+        <div class="dwhy">${reasons}</div>
+      </div>`;
+    }).join("");
+  } else if (decSec) {
+    decSec.style.display = "none";
+  }
 
   // Manchete principal
   const mp = DATA.manchete?.principal || {};

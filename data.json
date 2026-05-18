@@ -115,5 +115,136 @@
     "<b>Importação travada (Abicom):</b> Defasagem diesel-gasolina continua inviabilizando importações privadas. Petrobras aumenta fator de utilização, mas sem importação = risco de desabastecimento após junho."
   ],
   "resumo_editorial": "<p class=\"lead\">Petróleo dispara em tensão Irã-EUA, Brent toca US$ 111; defasagem combustíveis dispara e importações estão travadas há meses. Mercado financeiro desconta pressão inflacionária: IPCA 2026 toque décimo mês de alta, Selic esperada em 13,25% até fim do ano. Copom sinaliza cautela, esperando alívio internacional que não chega.</p><p>Defasagem estrutural no diesel (31%) e gasolina (41%) deixa revendedor desprotegido. Petrobras mantém subvenção via MP 1.358, mas cobertura é parcial (R$ 0,32/L). Importadores ausentes por 97 dias no diesel criam gargalo logístico visível: oferta concentrada em refinaria estatal, sem hedge de preço privado.</p><p>Ação imediata: reprece hoje com distribuidor; negocie garantia 30 dias com fornecedor; prepare equipe para comunicado de reajuste qualquer hora. Próximas 72h serão críticas: Trump decide sobre opção militar no Irã; Copom pode sinalizar pausa em cortes de Selic se IPCA Focus subir mais.</p>",
-  "_comentario": "Gerado automaticamente em 2026-05-18T17:38:14.346Z por gerar-painel.mjs (claude-haiku-4-5-20251001)"
+  "_comentario": "Gerado automaticamente em 2026-05-18T17:38:14.346Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
+  "decisao": {
+    "data_label": "Segunda · 18 mai 2026",
+    "base": "ABICOM + custo distribuidora (monitor de preços) + Brent/câmbio",
+    "disclaimer": "Essa não é uma recomendação de compra, apenas uma sugestão baseada num modelo educacional.",
+    "fuels": [
+      {
+        "key": "gasolina",
+        "nome": "⛽ Gasolina",
+        "verdict": "buy",
+        "label": "COMPRE AGORA",
+        "emoji": "🔴",
+        "score": 82,
+        "spark": [
+          55,
+          8,
+          100,
+          32
+        ],
+        "reasons": [
+          {
+            "dir": "up",
+            "text": "Defasagem ABICOM <b>41%</b> (zona de atenção)"
+          },
+          {
+            "dir": "up",
+            "text": "<b>54 dias</b> sem reajuste"
+          },
+          {
+            "dir": "up",
+            "text": "Custo distribuidora <b>+3,5%</b> nas últimas 2 semanas"
+          },
+          {
+            "dir": "up",
+            "text": "Brent subindo — pressão no custo de reposição"
+          }
+        ]
+      },
+      {
+        "key": "diesel_s10",
+        "nome": "🚚 Diesel S10",
+        "verdict": "warn",
+        "label": "ATENÇÃO",
+        "emoji": "🟡",
+        "score": 65,
+        "spark": [
+          100,
+          29,
+          8,
+          46
+        ],
+        "reasons": [
+          {
+            "dir": "up",
+            "text": "Defasagem ABICOM <b>31%</b> (zona de atenção)"
+          },
+          {
+            "dir": "up",
+            "text": "<b>97 dias</b> sem reajuste Petrobras"
+          },
+          {
+            "dir": "down",
+            "text": "Custo distribuidora <b>-1,6%</b> (caindo)"
+          },
+          {
+            "dir": "up",
+            "text": "Brent subindo — pressão no custo de reposição"
+          }
+        ]
+      },
+      {
+        "key": "diesel_s500",
+        "nome": "🚛 Diesel S500",
+        "verdict": "warn",
+        "label": "ATENÇÃO",
+        "emoji": "🟡",
+        "score": 65,
+        "spark": [
+          100,
+          16,
+          8,
+          67
+        ],
+        "reasons": [
+          {
+            "dir": "up",
+            "text": "Defasagem ABICOM <b>31%</b> (zona de atenção)"
+          },
+          {
+            "dir": "up",
+            "text": "<b>97 dias</b> sem reajuste Petrobras"
+          },
+          {
+            "dir": "down",
+            "text": "Custo distribuidora <b>-1,3%</b> (caindo)"
+          },
+          {
+            "dir": "up",
+            "text": "Brent subindo — pressão no custo de reposição"
+          }
+        ]
+      },
+      {
+        "key": "etanol",
+        "nome": "🌱 Etanol",
+        "verdict": "wait",
+        "label": "PODE ESPERAR",
+        "emoji": "🟢",
+        "score": 20,
+        "spark": [
+          100,
+          29,
+          8,
+          25
+        ],
+        "reasons": [
+          {
+            "dir": "down",
+            "text": "Custo distribuidora <b>-19,5%</b> (caindo)"
+          },
+          {
+            "dir": "up",
+            "text": "Brent subindo — pressão no custo de reposição"
+          },
+          {
+            "dir": "up",
+            "text": "Sinal de reajuste na manchete (governo/Petrobras)"
+          }
+        ]
+      }
+    ]
+  }
 }

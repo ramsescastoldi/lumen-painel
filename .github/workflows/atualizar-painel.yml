@@ -30,6 +30,14 @@ jobs:
           TZ: America/Cuiaba
         run: node scripts/gerar-painel.mjs
 
+      - name: Decisão do Dia (motor determinístico — zero IA)
+        env:
+          SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+          TZ: America/Cuiaba
+        run: |
+          npm install pg@8 --no-save --silent || echo "⚠️ pg não instalou — decisao roda em modo degradado"
+          node scripts/decisao.mjs
+
       - name: Commitar mudanças (se houver)
         run: |
           git config user.name "Bot Lumen Painel"
@@ -53,6 +61,10 @@ jobs:
           echo "❌ Push falhou após 3 tentativas"
           exit 1
 
+      - name: Gerar versão WhatsApp (texto) do painel
+        if: success()
+        run: node scripts/whatsapp-text.mjs
+
       - name: Notificar n8n com detalhes do painel
         if: success()
         continue-on-error: true
@@ -69,6 +81,8 @@ jobs:
           DATE_LABEL=$(node -e "const d=JSON.parse(require('fs').readFileSync('data.json','utf8')); process.stdout.write(d.meta?.date_label||'')")
           NOW=$(TZ=America/Cuiaba date +"%H:%M")
           DATE_ISO=$(TZ=America/Cuiaba date +"%Y-%m-%d")
+          # wa-text.txt (gerado no step anterior) vai inteiro no payload via --rawfile
+          [ -f wa-text.txt ] || echo "" > wa-text.txt
           # Monta payload JSON usando jq para escape correto
           PAYLOAD=$(jq -n \
             --arg status "ok" \
@@ -77,10 +91,10 @@ jobs:
             --arg time "$NOW" \
             --arg manchete "$MANCHETE" \
             --arg workflow "lumen-painel-diario" \
-            '{status:$status,date:$date,date_label:$date_label,time:$time,manchete:$manchete,workflow:$workflow}')
-          echo "Payload: $PAYLOAD"
+            --rawfile wa_text wa-text.txt \
+            '{status:$status,date:$date,date_label:$date_label,time:$time,manchete:$manchete,workflow:$workflow,wa_text:$wa_text}')
           curl -s -X POST "$N8N_NOTIFY_URL" \
             -H "Content-Type: application/json" \
             -d "$PAYLOAD" || true
           echo ""
-          echo "✓ n8n notificado"
+          echo "✓ n8n notificado (com versão WhatsApp)"

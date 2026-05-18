@@ -153,12 +153,14 @@ ${previousSecundarias.map(s => `> "${s}"`).join("\n")}
 
 Sua manchete principal DEVE ser sobre fato novo (últimas 12–24h). Se cenário não mudou, escolha ângulo diferente.
 
-## INDICADORES A PESQUISAR (use web_search — 6 buscas no total)
+## ✅ FATOS CONFIRMADOS (fonte oficial Banco Central — USE EXATAMENTE, NÃO PESQUISAR)
+__FATOS__
+Para os blocos \`moedas\`, \`juros\` e \`inflacao\` use EXATAMENTE os números acima (vindos da API do Banco Central). NÃO gaste web_search com câmbio/Selic/IPCA.
+
+## INDICADORES A PESQUISAR (use web_search — máximo 3 buscas)
 1. "Brent WTI petróleo cotação hoje ${isoDate}"
-2. "dólar euro cotação ${isoDate} Banco Central"
-3. "Selic Copom IPCA Focus Brasil ${isoDate}"
-4. "Abicom defasagem Petrobras diesel gasolina ${isoDate}"
-${isMonday ? '5. "CEPEA ESALQ etanol hidratado anidro SP preço usina ${isoDate}"\n6. "UNICA safra Centro-Sul cana etanol mix ${isoDate}"' : '5. "UNICA safra Centro-Sul cana etanol mix ${isoDate}"\n6. notícia principal do dia (manchete + 3 secundárias) — combustíveis/política/mercado'}
+2. "Abicom defasagem Petrobras diesel gasolina ${isoDate}"
+${isMonday ? '3. "CEPEA ESALQ etanol hidratado anidro SP / UNICA safra mix ${isoDate}"' : '3. notícia principal do dia (manchete + 3 secundárias) — combustíveis/política/mercado'}
 
 ${isMonday ? "" : `## ⚠️ CEPEA HERDADO — NÃO PESQUISAR
 Hoje não é segunda-feira. O bloco \`cepea\` será **herdado automaticamente** do data.json atual. **Não inclua o campo \`cepea\` no seu JSON de saída.** O script vai mesclar:
@@ -195,7 +197,59 @@ Devolva APENAS o JSON. Sem markdown, sem texto antes ou depois. Pronto pra JSON.
 
 const USER_PROMPT = `Pesquise e gere o painel completo para ${isoDate}. Use web_search para os indicadores. Responda APENAS com o JSON.`;
 
-async function callClaude() {
+// ---- BCB (Banco Central) — séries SGS oficiais, grátis, sem chave ----
+// Substitui as buscas web do Haiku por números EXATOS. Reduz custo e erra menos.
+async function bcbSerie(id, n = 2) {
+  try {
+    const r = await fetch(`https://api.bcb.gov.br/dados/serie/bcdata.sgs.${id}/dados/ultimos/${n}?formato=json`, { signal: AbortSignal.timeout(12000) });
+    if (!r.ok) return null;
+    const arr = await r.json();
+    return Array.isArray(arr) && arr.length ? arr : null;
+  } catch { return null; }
+}
+function dirOf(cur, prev) {
+  if (prev == null || cur == null) return "flat";
+  if (cur > prev) return "up";
+  if (cur < prev) return "down";
+  return "flat";
+}
+async function fetchFatosBCB() {
+  // SGS: 1=USD venda, 21619=EUR venda, 432=Selic meta %a.a., 433=IPCA %mês
+  const [usd, eur, selic, ipca] = await Promise.all([
+    bcbSerie(1, 2), bcbSerie(21619, 2), bcbSerie(432, 1), bcbSerie(433, 2)
+  ]);
+  const lines = [];
+  const out = {};
+  if (usd) {
+    const cur = parseFloat(usd.at(-1).valor), prev = usd.length > 1 ? parseFloat(usd[0].valor) : null;
+    const dir = dirOf(cur, prev);
+    out.usdbrl = { val: `R$ ${cur.toFixed(4).replace(".", ",")}`, dir, data: usd.at(-1).data };
+    lines.push(`- USD/BRL (PTAX venda, ${usd.at(-1).data}): R$ ${cur.toFixed(4).replace(".", ",")} — ${dir}`);
+  }
+  if (eur) {
+    const cur = parseFloat(eur.at(-1).valor), prev = eur.length > 1 ? parseFloat(eur[0].valor) : null;
+    const dir = dirOf(cur, prev);
+    out.eurbrl = { val: `R$ ${cur.toFixed(4).replace(".", ",")}`, dir, data: eur.at(-1).data };
+    lines.push(`- EUR/BRL (PTAX venda, ${eur.at(-1).data}): R$ ${cur.toFixed(4).replace(".", ",")} — ${dir}`);
+  }
+  if (selic) {
+    const cur = parseFloat(selic.at(-1).valor);
+    out.selic = { val: `${cur.toFixed(2).replace(".", ",")}% a.a.`, data: selic.at(-1).data };
+    lines.push(`- Selic meta (${selic.at(-1).data}): ${cur.toFixed(2).replace(".", ",")}% a.a.`);
+  }
+  if (ipca) {
+    const cur = parseFloat(ipca.at(-1).valor), prev = ipca.length > 1 ? parseFloat(ipca[0].valor) : null;
+    const dir = dirOf(cur, prev);
+    out.ipca = { val: `${cur.toFixed(2).replace(".", ",")}% (mês)`, dir, data: ipca.at(-1).data };
+    lines.push(`- IPCA mensal (${ipca.at(-1).data}): ${cur.toFixed(2).replace(".", ",")}% — ${dir} vs. mês anterior`);
+  }
+  const block = lines.length
+    ? lines.join("\n")
+    : "(API do BCB indisponível agora — pesquise câmbio/Selic/IPCA via web_search como fallback, +2 buscas permitidas)";
+  return { block, hasData: lines.length > 0, out };
+}
+
+async function callClaude(systemPrompt, maxUses) {
   const response = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
@@ -207,13 +261,13 @@ async function callClaude() {
     body: JSON.stringify({
       model: MODEL,
       max_tokens: 6000,
-      system: SYSTEM_PROMPT,
+      system: systemPrompt,
       messages: [{ role: "user", content: USER_PROMPT }],
       tools: [
         {
           type: "web_search_20250305",
           name: "web_search",
-          max_uses: 6
+          max_uses: maxUses
         }
       ]
     })
@@ -248,9 +302,15 @@ function parseJSON(text) {
 
 (async () => {
   try {
-    console.log(`🤖 Chamando Claude (${MODEL}) com web search (max_uses=6, max_tokens=6000)...`);
+    console.log("🏦 Buscando câmbio/Selic/IPCA na API do Banco Central...");
+    const fatos = await fetchFatosBCB();
+    console.log(fatos.hasData ? "✓ BCB ok:\n" + fatos.block : "⚠️  BCB indisponível — fallback web_search");
+    const systemFinal = SYSTEM_PROMPT.replace("__FATOS__", fatos.block);
+    const maxUses = fatos.hasData ? 3 : 5; // sem BCB, libera +2 buscas de fallback
+
+    console.log(`🤖 Chamando Claude (${MODEL}) — max_uses=${maxUses}, max_tokens=6000...`);
     const t0 = Date.now();
-    const result = await callClaude();
+    const result = await callClaude(systemFinal, maxUses);
     const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
 
     console.log(`✓ Resposta recebida em ${elapsed}s`);
@@ -285,6 +345,17 @@ function parseJSON(text) {
         newData.cepea.ultima_atualizacao_iso = isoDate;
         newData.cepea.ultima_atualizacao_label = `seg ${brtNow.getDate().toString().padStart(2, "0")}/${meses[brtNow.getMonth()]}`;
       }
+    }
+
+    // FORÇA os números oficiais do BCB (Haiku não inventa câmbio/Selic/IPCA)
+    if (fatos.hasData) {
+      const f = fatos.out;
+      newData.moedas = newData.moedas || {};
+      if (f.usdbrl) newData.moedas.usdbrl = { ...(newData.moedas.usdbrl||{}), val: f.usdbrl.val, dir: f.usdbrl.dir, delta: (newData.moedas.usdbrl?.delta)||"PTAX BCB" };
+      if (f.eurbrl) newData.moedas.eurbrl = { ...(newData.moedas.eurbrl||{}), val: f.eurbrl.val, dir: f.eurbrl.dir, delta: (newData.moedas.eurbrl?.delta)||"PTAX BCB" };
+      if (f.selic) { newData.juros = newData.juros || {}; newData.juros.selic = { ...(newData.juros.selic||{}), val: f.selic.val }; }
+      if (f.ipca) { newData.inflacao = newData.inflacao || {}; newData.inflacao.ipca = { ...(newData.inflacao.ipca||{}), val: f.ipca.val, dir: f.ipca.dir }; }
+      console.log("  ✓ Câmbio/Selic/IPCA sobrescritos com dados oficiais do BCB");
     }
 
     // Comentário interno (deletado no build)
