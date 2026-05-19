@@ -2,48 +2,48 @@
   "meta": {
     "date_iso": "2026-05-19",
     "date_label": "Terça · 19 mai 2026",
-    "last_update": "06:55"
+    "last_update": "15:42"
   },
   "manchete": {
     "principal": {
       "severity": "yellow",
       "status_emoji": "🟡",
       "severity_label": "Atenção",
-      "titulo": "Brent cai para US$ 107,30 após tensões Irã-EUA arrefecerem; defasagem diesel segue em 31%"
+      "titulo": "Trump adia ataque ao Irã; Brent cai 1,2% para US$ 110,78 com sinal de negociações"
     },
     "secundarias": [
       {
         "categoria": "Mercado",
-        "titulo": "Petrobras anuncia R$ 37 bi em investimentos em SP com foco em refino até 2030",
-        "severity": "green",
-        "status_emoji": "🟢"
-      },
-      {
-        "categoria": "Combustíveis",
-        "titulo": "WTI cai para ~US$ 103 em ajuste de tensões; Abicom mantém gasolina em 41% de defasagem",
+        "titulo": "WTI recua para US$ 108,10 com otimismo sobre trégua; Hormuz segue fechado",
         "severity": "yellow",
         "status_emoji": "🟡"
       },
       {
-        "categoria": "Política",
-        "titulo": "Gás natural sobe 19,2% com reajuste trimestral; próximo pode chegar a 40% em agosto",
+        "categoria": "Combustíveis",
+        "titulo": "Defasagem diesel em 31% e gasolina em 41%; Petrobras sem reajuste há dias",
         "severity": "red",
         "status_emoji": "🔴"
+      },
+      {
+        "categoria": "Política",
+        "titulo": "Governo mantém subsídio PIS/Cofins; ANP administra medidas contra inflação",
+        "severity": "green",
+        "status_emoji": "🟢"
       }
     ]
   },
   "petroleo": {
     "brent": {
-      "val": "US$ 107,30",
-      "delta": "▼ -3,08%",
+      "val": "US$ 110,78",
+      "delta": "▼ -1,2%",
       "dir": "down"
     },
     "wti": {
-      "val": "US$ 102,97",
-      "delta": "▼ -2,65%",
+      "val": "US$ 108,10",
+      "delta": "▼ -0,5%",
       "dir": "down"
     },
-    "resumo": "Brent recua para US$ 107,30 após Trump sinalizar possível arrefecimento das negociações Irã-EUA. WTI cai para ~US$ 103, ampliando alívio da semana passada. Estreito de Ormuz ainda operando abaixo da capacidade, mantendo riscos de oferta global. Cenário favorável ao revendedor, mas defasagem doméstica persiste."
+    "resumo": "Petróleo recua após Trump adiar ataque militar ao Irã, sinalizando abertura para negociações. Hormuz permanece praticamente bloqueado, mantendo elevação estrutural de preços. Volatilidade segue alta conforme desenvolve-se conflito Middle East."
   },
   "abicom": {
     "defasagem_gasolina_pct": "41%",
@@ -55,14 +55,14 @@
   },
   "moedas": {
     "usdbrl": {
-      "val": "R$ 5,0093",
-      "delta": "▼ -0,28%",
-      "dir": "down"
+      "val": "R$ 5,0378",
+      "delta": "▲ +0,XX%",
+      "dir": "up"
     },
     "eurbrl": {
-      "val": "R$ 5,8358",
-      "delta": "▼ -0,19%",
-      "dir": "down"
+      "val": "R$ 5,8454",
+      "delta": "▲ +0,XX%",
+      "dir": "up"
     }
   },
   "juros": {
@@ -71,7 +71,7 @@
       "delta": "• mantida",
       "dir": "flat"
     },
-    "previsao_focus": "13,25% (fim 2026)"
+    "previsao_focus": "a confirmar"
   },
   "inflacao": {
     "ipca": {
@@ -79,11 +79,11 @@
       "delta": "▼ vs. mês anterior",
       "dir": "down"
     },
-    "previsao_focus": "a confirmar (2026)"
+    "previsao_focus": "a confirmar"
   },
   "mandatos": {
-    "anidro_na_gasolina_pct": "30%",
-    "b100_no_diesel_pct": "15%"
+    "anidro_na_gasolina_pct": "a confirmar",
+    "b100_no_diesel_pct": "a confirmar"
   },
   "safra_etanol": {
     "moagem": "a confirmar",
@@ -92,30 +92,30 @@
     "oferta_total": "a confirmar"
   },
   "agenda_semanal": {
-    "segunda": "Petrobras anuncia R$ 37 bi em investimentos em SP/refino até 2030",
-    "terca": "Acompanhamento Brent/WTI; possível Focus mercado",
-    "quarta": "—",
+    "segunda": "Focus (Banco Central)",
+    "terca": "—",
+    "quarta": "EIA - dados estoques petróleo EUA",
     "quinta": "—",
-    "sexta": "Divulgação ANP preços/movimentação semanal"
+    "sexta": "ANP - relatório semanal"
   },
   "acoes_dia": [
-    "<b>Reposicione margens:</b> Com Brent cedendo (US$ 107,30) e WTI em ~US$ 103, revise tabelas de venda ao consumidor hoje. Defasagem diesel em 31% e gasolina em 41% ainda pressionam competitividade com importadores.",
-    "<b>Monitorar anúncio Petrobras:</b> Estatal investiu R$ 37 bi em SP/refino até 2030 ontem. Acompanhe comunicados sobre política de preços ou reajustes em refinarias (Replan, Paulínia) nas próximas 48h.",
-    "<b>Alertar clientes GNV/gás:</b> Gás natural subiu 19,2% em reajuste trimestral de maio. Próximo ajuste (1º ago) pode atingir 40%. Comunique clientes GNV sobre volatilidade esperada."
+    "<b>Monitorar Hormuz:</b> Negociações Irã-EUA avançam, mas bloqueio persiste. Fique atento a notícias geopolíticas que impactam cotação.",
+    "<b>Revisar margens:</b> Defasagem diesel 31% e gasolina 41% pressionam revenda. Considere ajustes operacionais para manter competitividade.",
+    "<b>Acompanhar subsídios:</b> Governo mantém renúncia fiscal PIS/Cofins. Verifique se há novas medidas de proteção de preço antes da próxima segunda."
   ],
   "radar": [
-    "<b>Petróleo em realinhamento:</b> Queda de ~3% no Brent após possível arrefecimento de tensões Irã-EUA. Estreito de Ormuz ainda constrito. Monitorar negociações Trump-Teerã para próximos passos; risco geopolítico persiste até acordo concreto.",
-    "<b>Defasagem crônica:</b> Diesel em 31% e gasolina em 41% há 97 e 54 dias sem importação Petrobras. Investimento bilionário da estatal em refino (Replan +25 mil bpd) sinaliza foco em autossuficiência, não em alinhamento de preços.",
-    "<b>Pressão inflacionária em gás:</b> Reajuste de 19,2% em maio e expectativa de 40% em agosto. IPCA mensal em 0,67% (recuou), mas gás segue como vetor de pressão. Selic em 14,50% (mantida); Focus prevê queda a 13,25% fim de ano."
+    "<b>Geopolítica Volátil:</b> Trump adia ataque ao Irã, abrindo janela para negociações. Qualquer escalada rapidamente reverte ganhos de preço.",
+    "<b>Defasagem Histórica:</b> Petrobras não reajusta há 97 dias (diesel) e 54 dias (gasolina). Pressão por revisão segue intensificando-se.",
+    "<b>Demanda Global Caindo:</b> IEA projeta queda de 420 mil bpd em 2026 due ao conflito. Alívio no longo prazo depende de normalização do Hormuz."
   ],
-  "resumo_editorial": "<p class=\"lead\">Terça de reposicionamento: Brent cai para US$ 107,30 e WTI para ~US$ 103 após Trump sinalizar possível arrefecimento nas negociações Irã-EUA. Apesar do alívio internacional, a defasagem doméstica persiste (diesel 31%, gasolina 41%, janelas fechadas por 97 e 54 dias). Ontem, Petrobras anunciou R$ 37 bilhões em investimentos até 2030 com foco em refino — movimento que reforça estratégia de autossuficiência, não de alinhamento de preços ao mercado externo.</p><p>No front inflacionário, gás natural subiu 19,2% em reajuste trimestral de maio, com avisos de possível alta de 40% em agosto. IPCA mensal mantém-se controlado (0,67%), e Selic segue em 14,50%, com Focus apontando queda a 13,25% até fim de 2026. Câmbio estável: USD/BRL em R$ 5,0093 e EUR/BRL em R$ 5,8358, ambos em queda leve.</p><p>Ação recomendada: revise tabelas de venda e margens de combustível considerando o alívio de 3% no Brent; monitore comunicados Petrobras sobre política de preços nas refinarias nas próximas 48h; e alerte clientes GNV/gás para volatilidade esperada até agosto. Risco geopolítico em Ormuz permanece — negociações Trump-Teerã continuam determinantes.</p>",
+  "resumo_editorial": "<p class=\"lead\">Brent cai 1,2% para US$ 110,78 e WTI recua para US$ 108,10 após Trump adiar ataque militar ao Irã. Sinal de abertura para negociações acalma mercado, mas Hormuz permanece bloqueado. Defasagem diesel permanece em 31% e gasolina em 41%, com Petrobras sem reajuste há mais de dois meses.</p><p>A volatilidade segue extrema. Qualquer escalada no Oriente Médio inverte ganhos imediatos. Órgãos internacionais alertam para queda de demanda global de 420 mil bpd em 2026, criando incentivo para normalização. Subsídios do governo mantêm pressão fiscal, enquanto revendedores enfrentam margens comprimidas e importações fechadas.</p><p>Acompanhe relatório EIA quarta-feira e dados ANP sexta. Reunião Focus segunda traz novas projeções de inflação e juros. Donos de postos devem revisar estratégia de preço e fluxo de caixa antes de possível reajuste Petrobras.</p>",
   "cepea": {
     "hidratado_sp": "a confirmar",
     "anidro_sp": "a confirmar",
     "ultima_atualizacao_iso": "2026-05-18",
     "ultima_atualizacao_label": "seg 18/mai"
   },
-  "_comentario": "Gerado automaticamente em 2026-05-19T08:55:33.800Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
+  "_comentario": "Gerado automaticamente em 2026-05-19T17:43:09.827Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
   "decisao": {
     "data_label": "Terça · 19 mai 2026",
     "base": "ABICOM + custo distribuidora (monitor de preços) + Brent/câmbio",
@@ -127,11 +127,12 @@
         "verdict": "warn",
         "label": "ATENÇÃO",
         "emoji": "🟡",
-        "score": 67,
+        "score": 52,
         "spark": [
-          55,
-          8,
           100,
+          8,
+          98,
+          40,
           32
         ],
         "reasons": [
@@ -144,8 +145,8 @@
             "text": "<b>54 dias</b> sem reajuste"
           },
           {
-            "dir": "up",
-            "text": "Custo distribuidora <b>+3,5%</b> nas últimas 2 semanas"
+            "dir": "down",
+            "text": "Custo distribuidora <b>-1,6%</b> (caindo)"
           },
           {
             "dir": "down",
@@ -159,12 +160,13 @@
         "verdict": "warn",
         "label": "ATENÇÃO",
         "emoji": "🟡",
-        "score": 50,
+        "score": 65,
         "spark": [
           100,
-          29,
           8,
-          46
+          20,
+          20,
+          24
         ],
         "reasons": [
           {
@@ -177,7 +179,7 @@
           },
           {
             "dir": "down",
-            "text": "Custo distribuidora <b>-1,6%</b> (caindo)"
+            "text": "Custo distribuidora <b>-1,1%</b> (caindo)"
           },
           {
             "dir": "down",
@@ -188,15 +190,16 @@
       {
         "key": "diesel_s500",
         "nome": "🚛 Diesel S500",
-        "verdict": "warn",
-        "label": "ATENÇÃO",
-        "emoji": "🟡",
-        "score": 50,
+        "verdict": "buy",
+        "label": "COMPRE AGORA",
+        "emoji": "🔴",
+        "score": 83,
         "spark": [
-          100,
-          16,
+          92,
+          34,
           8,
-          67
+          88,
+          100
         ],
         "reasons": [
           {
@@ -208,8 +211,8 @@
             "text": "<b>97 dias</b> sem reajuste Petrobras"
           },
           {
-            "dir": "down",
-            "text": "Custo distribuidora <b>-1,3%</b> (caindo)"
+            "dir": "up",
+            "text": "Custo distribuidora <b>+1,9%</b> (leve)"
           },
           {
             "dir": "down",
@@ -223,21 +226,26 @@
         "verdict": "wait",
         "label": "PODE ESPERAR",
         "emoji": "🟢",
-        "score": 5,
+        "score": 20,
         "spark": [
           100,
-          29,
+          33,
           8,
-          25
+          28,
+          54
         ],
         "reasons": [
           {
             "dir": "down",
-            "text": "Custo distribuidora <b>-19,5%</b> (caindo)"
+            "text": "Custo distribuidora <b>-8,9%</b> (caindo)"
           },
           {
             "dir": "down",
             "text": "Brent em queda — alivia custo"
+          },
+          {
+            "dir": "up",
+            "text": "Dólar subindo — encarece importação"
           },
           {
             "dir": "up",
