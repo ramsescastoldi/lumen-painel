@@ -1,49 +1,49 @@
 {
   "meta": {
-    "date_iso": "2026-05-18",
-    "date_label": "Segunda · 18 mai 2026",
-    "last_update": "15:37"
+    "date_iso": "2026-05-19",
+    "date_label": "Terça · 19 mai 2026",
+    "last_update": "06:55"
   },
   "manchete": {
     "principal": {
-      "severity": "red",
-      "status_emoji": "🔴",
-      "severity_label": "Crítico",
-      "titulo": "Brent toca US$ 111 em tensões Irã-EUA; defasagem diesel 31% trava importações há 97 dias"
+      "severity": "yellow",
+      "status_emoji": "🟡",
+      "severity_label": "Atenção",
+      "titulo": "Brent cai para US$ 107,30 após tensões Irã-EUA arrefecerem; defasagem diesel segue em 31%"
     },
     "secundarias": [
       {
         "categoria": "Mercado",
-        "titulo": "Focus eleva Selic esperada para 13,25% e IPCA sobe pelo décimo mês seguido",
-        "severity": "red",
-        "status_emoji": "🔴"
+        "titulo": "Petrobras anuncia R$ 37 bi em investimentos em SP com foco em refino até 2030",
+        "severity": "green",
+        "status_emoji": "🟢"
       },
       {
         "categoria": "Combustíveis",
-        "titulo": "Gasolina defasada 41% vs. importação; Petrobras sem reajuste há 54 dias na bomba",
-        "severity": "red",
-        "status_emoji": "🔴"
+        "titulo": "WTI cai para ~US$ 103 em ajuste de tensões; Abicom mantém gasolina em 41% de defasagem",
+        "severity": "yellow",
+        "status_emoji": "🟡"
       },
       {
         "categoria": "Política",
-        "titulo": "MP 1.358/2026 em execução; governo mantém subvenção R$ 0,32/L diesel conforme Medida Provisória",
-        "severity": "yellow",
-        "status_emoji": "🟡"
+        "titulo": "Gás natural sobe 19,2% com reajuste trimestral; próximo pode chegar a 40% em agosto",
+        "severity": "red",
+        "status_emoji": "🔴"
       }
     ]
   },
   "petroleo": {
     "brent": {
-      "val": "US$ 111,04",
-      "delta": "▲ +1,25%",
-      "dir": "up"
+      "val": "US$ 107,30",
+      "delta": "▼ -3,08%",
+      "dir": "down"
     },
     "wti": {
-      "val": "US$ 106,97",
-      "delta": "▲ +1,80%",
-      "dir": "up"
+      "val": "US$ 102,97",
+      "delta": "▼ -2,65%",
+      "dir": "down"
     },
-    "resumo": "Petróleo sobe com incerteza geopolítica: EUA rejeita proposta iraniana, Hormuz bloqueado segue mantendo oferta em risco. Brent oscilou acima de US$ 111 antes de ceder para US$ 102, refletindo volatilidade nas negociações de sanções. Pressão inflacionária continua travando cortes de juros no Brasil."
+    "resumo": "Brent recua para US$ 107,30 após Trump sinalizar possível arrefecimento das negociações Irã-EUA. WTI cai para ~US$ 103, ampliando alívio da semana passada. Estreito de Ormuz ainda operando abaixo da capacidade, mantendo riscos de oferta global. Cenário favorável ao revendedor, mas defasagem doméstica persiste."
   },
   "abicom": {
     "defasagem_gasolina_pct": "41%",
@@ -55,79 +55,79 @@
   },
   "moedas": {
     "usdbrl": {
-      "val": "R$ 5,00",
-      "delta": "▼ -0,80%",
+      "val": "R$ 5,0093",
+      "delta": "▼ -0,28%",
       "dir": "down"
     },
     "eurbrl": {
-      "val": "R$ 5,81",
-      "delta": "▲ +0,60%",
-      "dir": "up"
+      "val": "R$ 5,8358",
+      "delta": "▼ -0,19%",
+      "dir": "down"
     }
   },
   "juros": {
     "selic": {
-      "val": "14,50%",
-      "delta": "• mantida em última reunião",
+      "val": "14,50% a.a.",
+      "delta": "• mantida",
       "dir": "flat"
     },
     "previsao_focus": "13,25% (fim 2026)"
   },
   "inflacao": {
     "ipca": {
-      "val": "4,92%",
-      "delta": "▲ +0,01 p.p. vs. semana anterior",
-      "dir": "up"
+      "val": "0,67% (mês)",
+      "delta": "▼ vs. mês anterior",
+      "dir": "down"
     },
-    "previsao_focus": "4,92% (2026)"
+    "previsao_focus": "a confirmar (2026)"
   },
   "mandatos": {
     "anidro_na_gasolina_pct": "30%",
     "b100_no_diesel_pct": "15%"
   },
+  "safra_etanol": {
+    "moagem": "a confirmar",
+    "var_anual": "a confirmar",
+    "mix_etanol_pct": "a confirmar",
+    "oferta_total": "a confirmar"
+  },
+  "agenda_semanal": {
+    "segunda": "Petrobras anuncia R$ 37 bi em investimentos em SP/refino até 2030",
+    "terca": "Acompanhamento Brent/WTI; possível Focus mercado",
+    "quarta": "—",
+    "quinta": "—",
+    "sexta": "Divulgação ANP preços/movimentação semanal"
+  },
+  "acoes_dia": [
+    "<b>Reposicione margens:</b> Com Brent cedendo (US$ 107,30) e WTI em ~US$ 103, revise tabelas de venda ao consumidor hoje. Defasagem diesel em 31% e gasolina em 41% ainda pressionam competitividade com importadores.",
+    "<b>Monitorar anúncio Petrobras:</b> Estatal investiu R$ 37 bi em SP/refino até 2030 ontem. Acompanhe comunicados sobre política de preços ou reajustes em refinarias (Replan, Paulínia) nas próximas 48h.",
+    "<b>Alertar clientes GNV/gás:</b> Gás natural subiu 19,2% em reajuste trimestral de maio. Próximo ajuste (1º ago) pode atingir 40%. Comunique clientes GNV sobre volatilidade esperada."
+  ],
+  "radar": [
+    "<b>Petróleo em realinhamento:</b> Queda de ~3% no Brent após possível arrefecimento de tensões Irã-EUA. Estreito de Ormuz ainda constrito. Monitorar negociações Trump-Teerã para próximos passos; risco geopolítico persiste até acordo concreto.",
+    "<b>Defasagem crônica:</b> Diesel em 31% e gasolina em 41% há 97 e 54 dias sem importação Petrobras. Investimento bilionário da estatal em refino (Replan +25 mil bpd) sinaliza foco em autossuficiência, não em alinhamento de preços.",
+    "<b>Pressão inflacionária em gás:</b> Reajuste de 19,2% em maio e expectativa de 40% em agosto. IPCA mensal em 0,67% (recuou), mas gás segue como vetor de pressão. Selic em 14,50% (mantida); Focus prevê queda a 13,25% fim de ano."
+  ],
+  "resumo_editorial": "<p class=\"lead\">Terça de reposicionamento: Brent cai para US$ 107,30 e WTI para ~US$ 103 após Trump sinalizar possível arrefecimento nas negociações Irã-EUA. Apesar do alívio internacional, a defasagem doméstica persiste (diesel 31%, gasolina 41%, janelas fechadas por 97 e 54 dias). Ontem, Petrobras anunciou R$ 37 bilhões em investimentos até 2030 com foco em refino — movimento que reforça estratégia de autossuficiência, não de alinhamento de preços ao mercado externo.</p><p>No front inflacionário, gás natural subiu 19,2% em reajuste trimestral de maio, com avisos de possível alta de 40% em agosto. IPCA mensal mantém-se controlado (0,67%), e Selic segue em 14,50%, com Focus apontando queda a 13,25% até fim de 2026. Câmbio estável: USD/BRL em R$ 5,0093 e EUR/BRL em R$ 5,8358, ambos em queda leve.</p><p>Ação recomendada: revise tabelas de venda e margens de combustível considerando o alívio de 3% no Brent; monitore comunicados Petrobras sobre política de preços nas refinarias nas próximas 48h; e alerte clientes GNV/gás para volatilidade esperada até agosto. Risco geopolítico em Ormuz permanece — negociações Trump-Teerã continuam determinantes.</p>",
   "cepea": {
     "hidratado_sp": "a confirmar",
     "anidro_sp": "a confirmar",
     "ultima_atualizacao_iso": "2026-05-18",
     "ultima_atualizacao_label": "seg 18/mai"
   },
-  "safra_etanol": {
-    "moagem": "19,56 Mt",
-    "var_anual": "+19,67% a/a",
-    "mix_etanol_pct": "67,07%",
-    "oferta_total": "1,28 bi L (+/-a confirmar a/a)"
-  },
-  "agenda_semanal": {
-    "segunda": "Focus divulgado; Brent acima de US$ 110 com tensões Irã-EUA",
-    "terca": "Possível reunião Trump com equipe de segurança sobre Irã",
-    "quarta": "—",
-    "quinta": "—",
-    "sexta": "ANP publica dados semanais de importação e defasagem"
-  },
-  "acoes_dia": [
-    "<b>Precifique com margem:</b> com defasagem diesel em 31%, negocie reajuste com distribuidoras hoje; Petrobras pode anunciar reajuste qualquer hora sem aviso prévio.",
-    "<b>Monitore estoque:</b> 97 dias sem importação de diesel cria risco estrutural. Confirme com fornecedores a garantia de abastecimento para próximos 30 dias.",
-    "<b>Comunique ao cliente:</b> próximo aumento de gasolina/diesel deve ser acumulado. Prepare equipe para picos de demanda (antecipação de compras)."
-  ],
-  "radar": [
-    "<b>Hormuz bloqueado (persistente):</b> Estreito segue parcialmente fechado há meses. Risco geopolítico mantém Brent em piso elevado; qualquer ataque direto a infraestrutura iraniana leva petróleo acima de US$ 120.",
-    "<b>Desancoragem de expectativas (Focus):</b> Mercado já eleva IPCA 2026 pela décima semana. Copom sinaliza cautela: próximo corte de Selic depende de alívio de preços, improvável com petróleo em US$ 110+.",
-    "<b>Importação travada (Abicom):</b> Defasagem diesel-gasolina continua inviabilizando importações privadas. Petrobras aumenta fator de utilização, mas sem importação = risco de desabastecimento após junho."
-  ],
-  "resumo_editorial": "<p class=\"lead\">Petróleo dispara em tensão Irã-EUA, Brent toca US$ 111; defasagem combustíveis dispara e importações estão travadas há meses. Mercado financeiro desconta pressão inflacionária: IPCA 2026 toque décimo mês de alta, Selic esperada em 13,25% até fim do ano. Copom sinaliza cautela, esperando alívio internacional que não chega.</p><p>Defasagem estrutural no diesel (31%) e gasolina (41%) deixa revendedor desprotegido. Petrobras mantém subvenção via MP 1.358, mas cobertura é parcial (R$ 0,32/L). Importadores ausentes por 97 dias no diesel criam gargalo logístico visível: oferta concentrada em refinaria estatal, sem hedge de preço privado.</p><p>Ação imediata: reprece hoje com distribuidor; negocie garantia 30 dias com fornecedor; prepare equipe para comunicado de reajuste qualquer hora. Próximas 72h serão críticas: Trump decide sobre opção militar no Irã; Copom pode sinalizar pausa em cortes de Selic se IPCA Focus subir mais.</p>",
-  "_comentario": "Gerado automaticamente em 2026-05-18T17:38:14.346Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
+  "_comentario": "Gerado automaticamente em 2026-05-19T08:55:33.800Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
   "decisao": {
-    "data_label": "Segunda · 18 mai 2026",
+    "data_label": "Terça · 19 mai 2026",
     "base": "ABICOM + custo distribuidora (monitor de preços) + Brent/câmbio",
     "disclaimer": "Essa não é uma recomendação de compra, apenas uma sugestão baseada num modelo educacional.",
     "fuels": [
       {
         "key": "gasolina",
         "nome": "⛽ Gasolina",
-        "verdict": "buy",
-        "label": "COMPRE AGORA",
-        "emoji": "🔴",
-        "score": 82,
+        "verdict": "warn",
+        "label": "ATENÇÃO",
+        "emoji": "🟡",
+        "score": 67,
         "spark": [
           55,
           8,
@@ -148,8 +148,8 @@
             "text": "Custo distribuidora <b>+3,5%</b> nas últimas 2 semanas"
           },
           {
-            "dir": "up",
-            "text": "Brent subindo — pressão no custo de reposição"
+            "dir": "down",
+            "text": "Brent em queda — alivia custo"
           }
         ]
       },
@@ -159,7 +159,7 @@
         "verdict": "warn",
         "label": "ATENÇÃO",
         "emoji": "🟡",
-        "score": 65,
+        "score": 50,
         "spark": [
           100,
           29,
@@ -180,8 +180,8 @@
             "text": "Custo distribuidora <b>-1,6%</b> (caindo)"
           },
           {
-            "dir": "up",
-            "text": "Brent subindo — pressão no custo de reposição"
+            "dir": "down",
+            "text": "Brent em queda — alivia custo"
           }
         ]
       },
@@ -191,7 +191,7 @@
         "verdict": "warn",
         "label": "ATENÇÃO",
         "emoji": "🟡",
-        "score": 65,
+        "score": 50,
         "spark": [
           100,
           16,
@@ -212,8 +212,8 @@
             "text": "Custo distribuidora <b>-1,3%</b> (caindo)"
           },
           {
-            "dir": "up",
-            "text": "Brent subindo — pressão no custo de reposição"
+            "dir": "down",
+            "text": "Brent em queda — alivia custo"
           }
         ]
       },
@@ -223,7 +223,7 @@
         "verdict": "wait",
         "label": "PODE ESPERAR",
         "emoji": "🟢",
-        "score": 20,
+        "score": 5,
         "spark": [
           100,
           29,
@@ -236,8 +236,8 @@
             "text": "Custo distribuidora <b>-19,5%</b> (caindo)"
           },
           {
-            "dir": "up",
-            "text": "Brent subindo — pressão no custo de reposição"
+            "dir": "down",
+            "text": "Brent em queda — alivia custo"
           },
           {
             "dir": "up",
