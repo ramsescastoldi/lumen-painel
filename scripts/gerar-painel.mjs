@@ -157,10 +157,12 @@ Sua manchete principal DEVE ser sobre fato novo (últimas 12–24h). Se cenário
 __FATOS__
 Para os blocos \`moedas\`, \`juros\` e \`inflacao\` use EXATAMENTE os números acima (vindos da API do Banco Central). NÃO gaste web_search com câmbio/Selic/IPCA.
 
-## INDICADORES A PESQUISAR (use web_search — máximo 3 buscas)
+## INDICADORES A PESQUISAR (use web_search — até 5 buscas, em ORDEM, parando se já tiver dados suficientes)
 1. "Brent WTI petróleo cotação hoje ${isoDate}"
-2. "Abicom defasagem Petrobras diesel gasolina ${isoDate}"
-${isMonday ? '3. "CEPEA ESALQ etanol hidratado anidro SP / UNICA safra mix ${isoDate}"' : '3. notícia principal do dia (manchete + 3 secundárias) — combustíveis/política/mercado'}
+2. "Abicom defasagem Petrobras diesel gasolina ${isoDate} dias sem reajuste preço médio importação"  ← **CRÍTICO**: extraia % defasagem, dias sem ajuste (ambos combustíveis) E preço médio de importação por litro
+3. "mandato anidro etanol gasolina E30 B15 biodiesel diesel ${isoDate} CNPE ANP" ← extraia % anidro na gasolina E % B100 no diesel
+4. "Focus Banco Central Brasil expectativa Selic IPCA 2026 boletim semanal" ← extraia previsão Focus para Selic fim 2026 e IPCA 2026
+${isMonday ? '5. "CEPEA ESALQ etanol hidratado anidro SP usina + UNICA safra moagem mix Centro-Sul ${isoDate}"' : '5. notícia principal do dia + UNICA safra etanol mix (combine numa busca só)'}
 
 ${isMonday ? "" : `## ⚠️ CEPEA HERDADO — NÃO PESQUISAR
 Hoje não é segunda-feira. O bloco \`cepea\` será **herdado automaticamente** do data.json atual. **Não inclua o campo \`cepea\` no seu JSON de saída.** O script vai mesclar:
@@ -306,7 +308,7 @@ function parseJSON(text) {
     const fatos = await fetchFatosBCB();
     console.log(fatos.hasData ? "✓ BCB ok:\n" + fatos.block : "⚠️  BCB indisponível — fallback web_search");
     const systemFinal = SYSTEM_PROMPT.replace("__FATOS__", fatos.block);
-    const maxUses = fatos.hasData ? 3 : 5; // sem BCB, libera +2 buscas de fallback
+    const maxUses = fatos.hasData ? 5 : 7; // bumped 3→5 em 2026-05-20 pq tinha muito "a confirmar" (dias_sem_ajuste, mandatos, Focus, safra)
 
     console.log(`🤖 Chamando Claude (${MODEL}) — max_uses=${maxUses}, max_tokens=6000...`);
     const t0 = Date.now();
