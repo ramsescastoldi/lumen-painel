@@ -497,7 +497,7 @@ footer b{color:var(--text-2);font-weight:600}
       <div class="counter red"><div class="n" id="diasDiesel">—</div><div class="l">dias · diesel</div></div>
     </div>
     <div class="divider"></div>
-    <div class="lbl">Preço médio de importação</div>
+    <div class="lbl">Potencial de aumento (R$/L p/ alcançar paridade)</div>
     <div class="mgrid c2" style="margin-top:6px">
       <div class="metric"><div class="name">Gasolina</div><div class="val" id="impGasolina">—</div></div>
       <div class="metric"><div class="name">Diesel</div><div class="val" id="impDiesel">—</div></div>
@@ -691,8 +691,9 @@ const DATA = {
   $("abicomDiesel").textContent = ab.defasagem_diesel_pct || "—";
   $("diasGasolina").textContent = ab.dias_sem_ajuste_gasolina ?? "—";
   $("diasDiesel").textContent = ab.dias_sem_ajuste_diesel ?? "—";
-  $("impGasolina").textContent = ab.preco_medio_importacao_gasolina || "—";
-  $("impDiesel").textContent = ab.preco_medio_importacao_diesel || "—";
+  // Suporta novo campo (potencial_aumento_rs_*) e cai pro antigo (preco_medio_importacao_*) se ainda vier
+  $("impGasolina").textContent = ab.potencial_aumento_rs_gasolina || ab.preco_medio_importacao_gasolina || "—";
+  $("impDiesel").textContent   = ab.potencial_aumento_rs_diesel   || ab.preco_medio_importacao_diesel   || "—";
 
   // Moedas
   const md = DATA.moedas || {};

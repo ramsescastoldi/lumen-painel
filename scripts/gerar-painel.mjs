@@ -79,8 +79,9 @@ const structureExample = JSON.stringify({
     defasagem_diesel_pct: "XX%",
     dias_sem_ajuste_gasolina: 0,
     dias_sem_ajuste_diesel: 0,
-    preco_medio_importacao_gasolina: "R$ X,XX/L",
-    preco_medio_importacao_diesel: "R$ X,XX/L"
+    potencial_aumento_rs_gasolina: "R$ X,XX/L",
+    potencial_aumento_rs_diesel: "R$ X,XX/L",
+    sinal_petrobras: "nenhum|nao_importa|mp_subsidio|reajuste_anunciado|reajustou_recente"
   },
   moedas: {
     usdbrl: { val: "R$ X,XXX", delta: "▼/▲ ±X,XX%", dir: "down|up|flat" },
@@ -159,7 +160,7 @@ Para os blocos \`moedas\`, \`juros\` e \`inflacao\` use EXATAMENTE os números a
 
 ## INDICADORES A PESQUISAR (use web_search — até 5 buscas, em ORDEM, parando se já tiver dados suficientes)
 1. "Brent WTI petróleo cotação hoje ${isoDate}"
-2. "Abicom defasagem Petrobras diesel gasolina ${isoDate} dias sem reajuste preço médio importação"  ← **CRÍTICO**: extraia % defasagem, dias sem ajuste (ambos combustíveis) E preço médio de importação por litro
+2. "Abicom defasagem Petrobras diesel gasolina ${isoDate} dias janelas fechadas potencial aumento R$/L"  ← **CRÍTICO**: extraia (a) % defasagem (ambos combustíveis), (b) dias sem importação/janelas fechadas (ambos), (c) **potencial de aumento em R$/L** que a Petrobras precisaria subir pra alcançar a paridade (ABICOM publica isso, ex: "R$ 1,12/L diesel"), (d) detecte sinal: Petrobras anunciou que NÃO vai importar → "nao_importa"; tem MP de subsídio → "mp_subsidio"; reajuste anunciado/iminente → "reajuste_anunciado"; Petrobras acabou de reajustar (últimos 7 dias) → "reajustou_recente"; senão → "nenhum". Coloca em `sinal_petrobras`
 3. "mandato anidro etanol gasolina E30 B15 biodiesel diesel ${isoDate} CNPE ANP" ← extraia % anidro na gasolina E % B100 no diesel
 4. "Focus Banco Central Brasil expectativa Selic IPCA 2026 boletim semanal" ← extraia previsão Focus para Selic fim 2026 e IPCA 2026
 ${isMonday ? '5. "CEPEA ESALQ etanol hidratado anidro SP usina + UNICA safra moagem mix Centro-Sul ${isoDate}"' : '5. notícia principal do dia + UNICA safra etanol mix (combine numa busca só)'}
@@ -176,7 +177,7 @@ ${JSON.stringify(cepeaHerdado, null, 2)}
 - **manchete.principal**: 1 frase forte, severity coerente com o fato
 - **manchete.secundarias**: SEMPRE 3 itens, um de cada categoria ["Mercado", "Combustíveis", "Política"]
 - **petroleo**: brent + wti + resumo curto (2–3 frases). Não cite analistas longamente.
-- **abicom**: % defasagem (gasolina e diesel), dias sem ajuste Petrobras, preço médio importação por litro
+- **abicom**: % defasagem (gasolina e diesel), dias sem importação/janelas fechadas, **potencial_aumento_rs_***: quanto a Petrobras precisaria subir em R$/L pra alcançar paridade (ABICOM publica explicitamente). Detecte `sinal_petrobras` (uma das opções listadas na pesquisa #2)
 - **moedas**: USD/BRL e EUR/BRL apenas. Cotação + variação dia.
 - **juros**: Selic atual + variação + previsão Focus para fim do ano
 - **inflacao**: IPCA mais recente + variação + previsão Focus
