@@ -2,31 +2,31 @@
   "meta": {
     "date_iso": "2026-05-20",
     "date_label": "Quarta · 20 mai 2026",
-    "last_update": "12:31"
+    "last_update": "16:05"
   },
   "manchete": {
     "principal": {
       "severity": "yellow",
       "status_emoji": "🟡",
       "severity_label": "Atenção",
-      "titulo": "Petrobras mantém defasagem acima de 30% em diesel; negociações EUA-Irã abrem margem, mas Hormuz segue crítico"
+      "titulo": "Brent recua a US$ 108,31/bbl com diplomacia EUA-Irã avançando; defasagem Petrobras em níveis críticos permanece bloqueio em importações"
     },
     "secundarias": [
       {
         "categoria": "Mercado",
-        "titulo": "Brent recua a US$ 110,59/bbl com sinais de diplomacia; volatilidade permanece elevada por Hormuz fechado",
+        "titulo": "Trump acena com conclusão rápida de negociações com Irã; volatilidade de petróleo em patamares elevados apesar das quedas",
         "severity": "yellow",
         "status_emoji": "🟡"
       },
       {
         "categoria": "Combustíveis",
-        "titulo": "Defasagem mantém gasolina em 41% e diesel em 31%; 97 dias sem importação de diesel, 54 dias sem gasolina",
+        "titulo": "Defasagem mantém gasolina em 41% e diesel em 31%; 97 dias sem importação diesel, 54 dias sem gasolina (situação herdada do painel anterior)",
         "severity": "red",
         "status_emoji": "🔴"
       },
       {
         "categoria": "Política",
-        "titulo": "Focus projeta Selic em 13,25% (fim 2026) e IPCA em 4,92%; subsídios PIS/Cofins sob pressão até 31/maio",
+        "titulo": "Focus projeta Selic em 13,25% (fim 2026) e IPCA em 4,92%; subsídios PIS/Cofins sob pressão com limite até 31/maio",
         "severity": "yellow",
         "status_emoji": "🟡"
       }
@@ -34,16 +34,16 @@
   },
   "petroleo": {
     "brent": {
-      "val": "US$ 110,59",
-      "delta": "▼ -1,35%",
+      "val": "US$ 108,31",
+      "delta": "▼ -2,7%",
       "dir": "down"
     },
     "wti": {
-      "val": "US$ 103,49",
-      "delta": "▼ -0,85%",
+      "val": "US$ 101,46",
+      "delta": "▼ -2,6%",
       "dir": "down"
     },
-    "resumo": "Brent recua com sinais diplomáticos entre EUA-Irã, mas Hormuz permanece efetivamente bloqueado. Volatilidade persiste por risco geopolítico. Importadores brasileiros enfrentam janelas fechadas e margens comprimidas."
+    "resumo": "Brent e WTI recuam com sinais de diplomacia EUA-Irã. Trump declara que negociações para encerrar conflito avançam rapidamente. Majores quedas em 2 semanas com abertura de esperança de reabertura do Estreito de Hormuz. Cautela persiste: desabastecimento global e risco geopolítico continuam pressionando precificação."
   },
   "abicom": {
     "defasagem_gasolina_pct": "41%",
@@ -55,20 +55,20 @@
   },
   "moedas": {
     "usdbrl": {
-      "val": "R$ 5,0378",
-      "delta": "▲ +0,04%",
-      "dir": "up"
+      "val": "R$ 5,0301",
+      "delta": "▼ -0,13%",
+      "dir": "down"
     },
     "eurbrl": {
-      "val": "R$ 5,8454",
-      "delta": "▲ +0,06%",
-      "dir": "up"
+      "val": "R$ 5,8450",
+      "delta": "▼ -0,41%",
+      "dir": "down"
     }
   },
   "juros": {
     "selic": {
       "val": "14,50% a.a.",
-      "delta": "• mantida",
+      "delta": "• mantida em 17/06/2026",
       "dir": "flat"
     },
     "previsao_focus": "13,25% (fim 2026)"
@@ -76,7 +76,7 @@
   "inflacao": {
     "ipca": {
       "val": "0,67% (mês)",
-      "delta": "▼ vs. mês anterior",
+      "delta": "▼ vs. mês anterior (01/04/2026)",
       "dir": "down"
     },
     "previsao_focus": "4,92% (2026)"
@@ -86,36 +86,36 @@
     "b100_no_diesel_pct": "15%"
   },
   "safra_etanol": {
-    "moagem": "124,77 Mt",
-    "var_anual": "-11,85% a/a",
-    "mix_etanol_pct": "49,99%",
-    "oferta_total": "5,74 bi L (-11,36% a/a)"
+    "moagem": "611,15 Mt",
+    "var_anual": "-1,73% a/a",
+    "mix_etanol_pct": "60,02%",
+    "oferta_total": "33,72 bi L (-3,56% a/a)"
   },
   "agenda_semanal": {
-    "segunda": "Boletim Focus (divulgado segunda 18/mai); Focus elevou Selic para 13,25% e IPCA para 4,92%.",
-    "terca": "Negociações EUA-Irã em pauta; Hormuz permanece fechado.",
-    "quarta": "Divulgação ANP — síntese semanal de preços combustíveis (esperado).",
-    "quinta": "Reunião CNPE potencial (agenda sujeita a confirmação).",
-    "sexta": "Divulgação ANP — cotações e painel dinâmico de preços."
+    "segunda": "Focus semanal (18/05 divulgado: Selic 13,25%, IPCA 4,92%)",
+    "terca": "—",
+    "quarta": "Divulgação EIA estoques petróleo EUA (previsão -3,4 mi barris); negociações EUA-Irã em evolução",
+    "quinta": "—",
+    "sexta": "ANP levantamentos regulatórios; possível Focus atualizado (25/05)"
   },
   "acoes_dia": [
-    "<b>Revise contratos de importação:</b> com Hormuz ainda bloqueado e defasagem em 31% (diesel), renegocie prazos e quantidades de importação para evitar janelas fechadas.",
-    "<b>Monitore subsídios PIS/Cofins:</b> governo mantém até 31/maio. Prepare estratégia de reajuste interno caso prorrogação não se confirme.",
-    "<b>Comunique ao cliente:</b> volatilidade do Brent (negociações diplomáticas) pode gerar oscilação em 3–5 dias. Evite fixações longas em combustível."
+    "<b>Monitorar cotação Brent:</b> queda de 2,7% abre janela para repasse ao consumidor, mas defasagem estrutural continua bloqueada politicamente. Acompanhe notícias de abertura de Hormuz e conclusão de negociações EUA-Irã.",
+    "<b>Revisar margens e estoques:</b> com negociações diplomáticas avançando, volatilidade tende a persistir. Proteja margem com hedge de petróleo e diesel importado.",
+    "<b>Pressionar por subsídio PIS/Cofins:</b> limite de 31/maio se aproxima; dialogue com sindicatos e Abiquim para manutenção ou extensão do mecanismo. Defasagem diesel em 31% inviabiliza importação sem apoio fiscal."
   ],
   "radar": [
-    "<b>Hormuz crítico:</b> Apesar de sinais de paz entre EUA-Irã, Estreito permanece bloqueado. Qualquer aceleração nas negociações pode impactar preços 10–15% para cima em horas.",
-    "<b>Defasagem recorde:</b> 97 dias sem importar diesel e 41% de defasagem na gasolina alimentam risco de desabastecimento. Petrobras amplia refino acima de 100%, mas não cobre demanda interna.",
-    "<b>Focus aperta margem:</b> Selic em 13,25% (fim 2026) e IPCA em 4,92% (acima do teto) sinalizando juros elevados por mais tempo. Pressão nos custos operacionais do setor."
+    "<b>Diplomacia EUA-Irã avança (crítico para volatilidade):</b> Trump confirma negociações para encerrar conflito 'muito em breve'. Se Hormuz reabrir, pressão no Brent pode intensificar queda. Fluxo positivo reduz prêmio geopolítico — ideal para revendedor, mas timing incerto.",
+    "<b>Defasagem combustíveis congelada em altos patamares:</b> gasolina 41%, diesel 31%. 54-97 dias sem importação sinalizam risco estrutural de desabastecimento se Petrobras não reajustar. Foco em sustentabilidade da cadeia pós-31/maio (fim subsídio).",
+    "<b>Etanol anidro em alta demanda (E30):</b> vendas 2025/26 cresceram 7,08% (+13,04 bi L), puxadas pelo mandato E30 (30% anidro). Mix etanol em 60% da cana indica foco industrial em biocombustível. Oportunidade: hidroetanol já oferece margens via E30, enquanto diesel sofre com defasagem."
   ],
-  "resumo_editorial": "<p class=\"lead\">A defasagem de preços na Petrobras permanece em patamares críticos — 31% no diesel e 41% na gasolina — enquanto negociações diplomáticas entre EUA e Irã reduzem volatilidade no curto prazo, mas não eliminam o risco geopolítico. O Hormuz segue efetivamente fechado, mantendo Brent acima de US$ 110/bbl e importações brasileiras bloqueadas há mais de 3 meses.</p><p>O Focus de maio reforça cenário de aperto monetário: Selic projetada a 13,25% (fim 2026) e IPCA em 4,92%, acima do teto da meta. Subsídios PIS/Cofins vencem em 31/maio sob intenso debate político sobre prorrogação. Safra de etanol acumula queda de 11,85% a/a no Centro-Sul, com moagem em 124,77 Mt até final de maio.</p><p>Revendedores devem renegociar contratos de importação, monitorar o calendário de subsídios e comunicar transparentemente aos clientes sobre riscos de oscilação rápida nos combustíveis. A volatilidade geopolítica justifica cautela em fixações longas.</p>",
+  "resumo_editorial": "<p class=\"lead\">O Brent recua 2,7% a US$ 108,31/bbl em sinal de otimismo diplomático: Trump reafirma que negociações EUA-Irã para encerrar conflito do Oriente Médio caminham para conclusão rápida. Apesar da queda, mercados permanecem cautelosos com risco geopolítico e possível reabertura do Estreito de Hormuz. No Brasil, câmbio segue apreciado (USD/BRL em R$ 5,03, EUR/BRL em R$ 5,84), oferecendo alívio marginal para importadores, mas defasagem de preços permanece congelada: gasolina 41% e diesel 31% abaixo da paridade internacional.</p><p>A Abicom mantém alerta crítico: 97 dias sem janelas para importação de diesel e 54 dias sem gasolina sinalizam que, sem reajuste da Petrobras ou reabertura comercial, risco de desabastecimento persiste. Subsídio PIS/Cofins (MP 1.340) finaliza em 31/maio — pressão sobre cadeia tende a aumentar. Focus do BC (18/05) elevou projeção de Selic para 13,25% (fim 2026) e IPCA para 4,92%, reforçando cenário de inflação elevada e juros por mais tempo.</p><p>Setor etanol aproveita oportunidade: E30 (30% anidro obrigatório desde 1º/ago/2025) puxou vendas de anidro em 7,08% na safra 2025/26. Moagem encerrou em 611,15 Mt (-1,73% a/a), mas mix etanol dominou com 60% da cana, sinalizando realinhamento estratégico das usinas. Revendedor deve priorizar: (1) acompanhar Hormuz e negociações EUA-Irã para timing de queda de Brent; (2) defender limite de subsídio até 31/maio; (3) capitalizar demanda de etanol anidro via E30.</p>",
   "cepea": {
     "hidratado_sp": "a confirmar",
     "anidro_sp": "a confirmar",
     "ultima_atualizacao_iso": "2026-05-18",
     "ultima_atualizacao_label": "seg 18/mai"
   },
-  "_comentario": "Gerado automaticamente em 2026-05-20T14:32:17.927Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
+  "_comentario": "Gerado automaticamente em 2026-05-20T18:05:55.311Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
   "decisao": {
     "data_label": "Quarta · 20 mai 2026",
     "base": "ABICOM + custo distribuidora (monitor de preços) + Brent/câmbio",
@@ -124,10 +124,10 @@
       {
         "key": "gasolina",
         "nome": "⛽ Gasolina",
-        "verdict": "warn",
-        "label": "ATENÇÃO",
-        "emoji": "🟡",
-        "score": 52,
+        "verdict": "wait",
+        "label": "PODE ESPERAR",
+        "emoji": "🟢",
+        "score": 37,
         "spark": [
           100,
           8,
@@ -160,7 +160,7 @@
         "verdict": "warn",
         "label": "ATENÇÃO",
         "emoji": "🟡",
-        "score": 65,
+        "score": 50,
         "spark": [
           100,
           8,
@@ -190,10 +190,10 @@
       {
         "key": "diesel_s500",
         "nome": "🚛 Diesel S500",
-        "verdict": "buy",
-        "label": "COMPRE AGORA",
-        "emoji": "🔴",
-        "score": 83,
+        "verdict": "warn",
+        "label": "ATENÇÃO",
+        "emoji": "🟡",
+        "score": 68,
         "spark": [
           92,
           34,
@@ -226,7 +226,7 @@
         "verdict": "wait",
         "label": "PODE ESPERAR",
         "emoji": "🟢",
-        "score": 20,
+        "score": 5,
         "spark": [
           100,
           33,
@@ -242,10 +242,6 @@
           {
             "dir": "down",
             "text": "Brent em queda — alivia custo"
-          },
-          {
-            "dir": "up",
-            "text": "Dólar subindo — encarece importação"
           },
           {
             "dir": "up",
