@@ -2,31 +2,31 @@
   "meta": {
     "date_iso": "2026-05-21",
     "date_label": "Quinta · 21 mai 2026",
-    "last_update": "11:50"
+    "last_update": "15:35"
   },
   "manchete": {
     "principal": {
       "severity": "yellow",
       "status_emoji": "🟡",
       "severity_label": "Atenção",
-      "titulo": "Brent dispara 2,2% para US$ 107,33 com trégua Irã-EUA; defasagem Petrobras segue crítica apesar da alta"
+      "titulo": "Petróleo rebota 2,2% com negociações Irã-EUA, mas defasagem Petrobras mantém pressão em importações; gasolina com janelas fechadas 54 dias"
     },
     "secundarias": [
       {
         "categoria": "Mercado",
-        "titulo": "WTI sobe 2,58% para US$ 100,80 com queda maior que esperada nos estoques dos EUA; mercado monitora negociações de paz no Oriente Médio",
+        "titulo": "Brent sobe para US$ 107,33 e WTI para US$ 100,80 em recuperação pós-queda; estoques dos EUA caem e mantêm oferta apertada",
         "severity": "yellow",
         "status_emoji": "🟡"
       },
       {
         "categoria": "Combustíveis",
-        "titulo": "Defasagem diesel persiste acima de 50%; janelas de importação fechadas por 97 dias; Petrobras precisaria de reajuste de pelo menos R$ 2,50/L para alcançar paridade",
+        "titulo": "Defasagem diesel em 31% e gasolina em 41%; Petrobras não planeja importação em maio mantendo janelas fechadas por 97 dias (diesel) e 54 dias (gasolina)",
         "severity": "red",
         "status_emoji": "🔴"
       },
       {
         "categoria": "Política",
-        "titulo": "E30 e B15 operando desde 1º ago 2025; governo avalia possibilidade de E35 e B25 para próximos anos; CNPE segue monitorando mandatos de biocombustíveis",
+        "titulo": "E30 e B15 operacionais desde 1º ago 2025; CNPE estuda E35 e B25 para próximos anos com subcomitê técnico em funcionamento",
         "severity": "green",
         "status_emoji": "🟢"
       }
@@ -43,7 +43,7 @@
       "delta": "▲ +2,58%",
       "dir": "up"
     },
-    "resumo": "Petróleo rebota com perspectivas de trégua Irã-EUA; queda maior que esperada nos estoques dos EUA fornece piso. Ofertas ainda apertadas no Oriente Médio mantêm preços elevados apesar de esperança de normalização. Mercado permanece volátil e sensível a notícias diplomáticas."
+    "resumo": "Petróleo rebota com esperança em acordos de paz Irã-EUA e queda maior que esperada nos estoques dos EUA. Estreito de Ormuz permanece bloqueado, mantendo oferta global sob pressão. Mercado segue sensível a negociações geopolíticas, com impacto direto na defasagem Petrobras."
   },
   "abicom": {
     "defasagem_gasolina_pct": "41%",
@@ -56,12 +56,12 @@
   },
   "moedas": {
     "usdbrl": {
-      "val": "R$ 5,0301",
+      "val": "R$ 5,0077",
       "delta": "▼ -X,XX%",
       "dir": "down"
     },
     "eurbrl": {
-      "val": "R$ 5,8450",
+      "val": "R$ 5,8034",
       "delta": "▼ -X,XX%",
       "dir": "down"
     }
@@ -87,36 +87,36 @@
     "b100_no_diesel_pct": "15%"
   },
   "safra_etanol": {
-    "moagem": "19,56 Mt",
-    "var_anual": "+19,67% a/a",
-    "mix_etanol_pct": "67,07%",
-    "oferta_total": "1,23 bi L (+33,32% a/a)"
+    "moagem": "124,77 Mt",
+    "var_anual": "-11,85% a/a",
+    "mix_etanol_pct": "49,99%",
+    "oferta_total": "5,77 bi L (-1,92% a/a)"
   },
   "agenda_semanal": {
-    "segunda": "Focus Banco Central (divulgação semanal); IPCA/IPCA-15",
+    "segunda": "Focus Banco Central (divulgado segunda-feira anterior); UNICA quinzenal",
     "terca": "—",
     "quarta": "—",
-    "quinta": "Hoje: reajustes de câmbio; monitoramento Petrobras",
-    "sexta": "Divulgação ANP; possível reunião CNPE sobre mandatos"
+    "quinta": "Petróleo rebote; Abicom defasagem crítica em foco",
+    "sexta": "ANP dados semanais de preços; possíveis anúncios Petrobras"
   },
   "acoes_dia": [
-    "<b>Monitorar câmbio:</b> Real segue fortalecido (PTAX 5,03). Se dólar subir, impacto imediato na defasagem Petrobras. Simule cenários de US$ 5,10 e US$ 5,20.",
-    "<b>Revisar previsões Focus:</b> Boletim atualizado mostra Selic fim 2026 em 13,25% (alta de 0,25 p.p.) e IPCA 2026 em 4,92%. Avalie impacto nas suas projeções de custos operacionais.",
-    "<b>Pressionar por reajuste Petrobras:</b> Defasagem crítica persiste; Abicom confirma 97 dias de janelas fechadas diesel. Participar de comunicados coletivos do setor junto a sindicatos."
+    "<b>Monitorar defasagem:</b> Com diesel 31% e gasolina 41% abaixo da paridade, acompanhe notícias de reajuste Petrobras. Risco de desabastecimento em regiões importadoras persiste.",
+    "<b>Revisar mix E30/B15:</b> Mandatos em vigor desde agosto 2025. Certifique-se de testes de especificação (etanol anidro 29-31%; biodiesel 15%) e drenagem semanal de tanques.",
+    "<b>Avaliar hedge de câmbio:</b> Dólar em queda intradiária, mas pressão geopolítica no Oriente Médio persiste. Combustíveis importados ainda pressionam margens."
   ],
   "radar": [
-    "<b>Geopolítica petrolífera:</b> Negociações Irã-EUA em fase final, conforme Trump. Se acordo prosperar, fluxos do Golfo podem normalizar em 60 dias. Mercado preço permanece volátil até confirmação.",
-    "<b>Etanol em alta na safra 2026/27:</b> Moagem acumulada em 19,56 Mt (+19,67% a/a); 67% alocado para etanol (E30 impulsiona demanda). Preços nas usinas já recuam; repasse aos postos será gradual.",
-    "<b>Inflação estoura teto da meta:</b> Focus aponta IPCA 2026 em 4,92%, acima dos 4,50% do teto. Selic seguirá elevada (13,25% fim 2026); pressão contínua sobre custos de operação."
+    "<b>Negociações Irã-EUA:</b> Trump sinalizou fase final de acordos; acordo poderia reabrir Estreito de Ormuz e aliviar oferta global em 2–3 meses. Mercado aguarda confirmação antes de reprecificar.",
+    "<b>Defasagem Petrobras crítica:</b> Janelas de importação fechadas por 97 dias (diesel) e 54 dias (gasolina). Empresa não importará em maio. Risco de gargalo em junho se não reajustar.",
+    "<b>E30/B15 consolidado:</b> Novo mandato operacional; CNPE estuda E35 (até 35% etanol) e B25 (até 25% biodiesel) para próximos anos. Monitorar impacto na demanda de biocombustíveis."
   ],
-  "resumo_editorial": "<p class=\"lead\">Quinta traz rebote do petróleo com Brent acima de US$ 107 e WTI em US$ 100,80, sustentado por esperança de trégua Irã-EUA e queda nos estoques americanos. Real continua forte (PTAX 5,03) em moedas, aliviando pressão cambial, mas defasagem Petrobras permanece crítica: janelas de importação fechadas por 97 dias (diesel) e potencial de aumento de pelo menos R$ 2,50/L para paridade — sinalizando que Petrobras não importará em maio. E30 e B15 consolidam-se na matriz (30% etanol, 15% biodiesel), com novos estudos do CNPE avaliando E35/B25.</p><p>No plano macroeconômico, Boletim Focus mais recente (18/05) eleua Selic para 13,25% ao fim de 2026 e IPCA para 4,92%, estourando o teto da meta de 4,50%. A moagem de etanol na safra 2026/27 responde positivamente, com 19,56 Mt (+19,67% a/a) e mix de 67% para biocombustível, impulsionado pelo mandato E30. Preços nas usinas já caem, e repassos aos postos devem vir gradualmente — oportunidade para revendedores anteciparem quedas.</p><p>Recomendações: (1) Acompanhar diária as negociações Irã-EUA — acordo normalizaria oferta em 60 dias e reveria preços; (2) pressionar Petrobras por reajuste ou aderir coletivamente a subsídios governamentais para reduzir defasagem; (3) capitalizar na queda do etanol nas usinas: comunicar postos sobre previsão de redução de preço do combustível hidratado e rodar campanhas de incentivo ao abastecimento com E.</p>",
+  "resumo_editorial": "<p class=\"lead\">Petróleo rebota 2,2% com esperança em negociações de paz no Oriente Médio, mas a defasagem crítica da Petrobras persiste: diesel 31% e gasolina 41% abaixo da paridade. Estatal não importará em maio, mantendo janelas fechadas por 97 dias (diesel) e 54 dias (gasolina). Mercado observa Trump anunciando avanços com Irã; possível acordo poderia aliviar oferta global em semanas, impactando diretamente a dinâmica de importação brasileira.</p><p>Cambio em leve queda (USD/BRL 5,0077; EUR/BRL 5,8034), enquanto Selic mantém-se em 14,50% a.a. Focus projeta queda para 13,25% ao fim de 2026 e inflação (IPCA) em 4,92%. Mandatos E30 (30% anidro) e B15 (15% biodiesel) consolidados desde agosto 2025; CNPE avalia E35 e B25. Safra etanol acumula 5,77 bi L até fim de maio, com queda anual de 1,92%.</p><p><b>Ação operacional:</b> Revise testes de especificação E30/B15 (etanol anidro 29-31%; drenagem semanal de diesel obrigatória). Monitore anúncios de reajuste Petrobras e negociações Irã-EUA; possível abertura do Estreito poderia mudar cenário de importação em 3-4 semanas. Avalie hedge de câmbio diante da volatilidade geopolítica.</p>",
   "cepea": {
     "hidratado_sp": "a confirmar",
     "anidro_sp": "a confirmar",
     "ultima_atualizacao_iso": "2026-05-18",
     "ultima_atualizacao_label": "seg 18/mai"
   },
-  "_comentario": "Gerado automaticamente em 2026-05-21T13:50:45.538Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
+  "_comentario": "Gerado automaticamente em 2026-05-21T17:35:55.994Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
   "decisao": {
     "data_label": "Quinta · 21 mai 2026",
     "base": "ABICOM + custo distribuidora (monitor de preços) + Brent/câmbio",
