@@ -1,55 +1,55 @@
 {
   "meta": {
     "date_iso": "2026-05-21",
-    "date_label": "Quarta · 20 mai 2026",
-    "last_update": "21:42"
+    "date_label": "Quinta · 21 mai 2026",
+    "last_update": "06:55"
   },
   "manchete": {
     "principal": {
-      "severity": "red",
-      "status_emoji": "🔴",
-      "severity_label": "Crítico",
-      "titulo": "Brent ultrapassa US$ 111/bbl com fechamento do Estreito de Ormuz; Petrobras mantém bloqueio importações e defasagem em 41% gasolina e 31% diesel"
+      "severity": "yellow",
+      "status_emoji": "🟡",
+      "severity_label": "Atenção",
+      "titulo": "Petróleo recua para US$ 102-106 com esperança de negócio EUA-Irã; defasagem Petrobras segue crítica (41% gasolina, 31% diesel)"
     },
     "secundarias": [
       {
         "categoria": "Mercado",
-        "titulo": "Volatilidade petrolífera elevada impulsiona Brent; impasse EUA-Irã persiste com proposta iraniana ainda insuficiente",
+        "titulo": "Brent cai 2,5% a partir esperança de acordo; estoques globais caem enquanto oferta oriental segue constrita",
+        "severity": "yellow",
+        "status_emoji": "🟡"
+      },
+      {
+        "categoria": "Combustíveis",
+        "titulo": "Abicom reporta 97 dias sem importação diesel e 54 dias sem gasolina; Petrobras anunciou bloqueio de importações em maio",
         "severity": "red",
         "status_emoji": "🔴"
       },
       {
-        "categoria": "Combustíveis",
-        "titulo": "Safra etanol 2025/26 encerra com 33,72 bi L (-3,56% a/a); nova safra inicia com etanol dominando mix (67%)",
-        "severity": "yellow",
-        "status_emoji": "🟡"
-      },
-      {
         "categoria": "Política",
-        "titulo": "Focus eleva Selic para 13,25% e IPCA para 4,92%; limite de subsídios PIS/Cofins encerra 31/maio sob pressão cambial",
-        "severity": "yellow",
-        "status_emoji": "🟡"
+        "titulo": "E30 e B15 operando desde agosto 2025 (30% etanol, 15% biodiesel); governo avalia B16 para fim 2026",
+        "severity": "green",
+        "status_emoji": "🟢"
       }
     ]
   },
   "petroleo": {
     "brent": {
-      "val": "US$ 111,06",
-      "delta": "▲ +2,48%",
-      "dir": "up"
+      "val": "US$ 106,10",
+      "delta": "▼ -2,5% vs 20/mai",
+      "dir": "down"
     },
     "wti": {
-      "val": "US$ 102,31",
-      "delta": "▲ +4,32%",
+      "val": "US$ 99,38",
+      "delta": "▲ +0,38%",
       "dir": "up"
     },
-    "resumo": "Brent e WTI em alta firme com fechamento prolongado do Estreito de Ormuz. Impasse EUA-Irã mantém volatilidade elevada; proposta iraniana considerada insuficiente pela Casa Branca. Risco geopolítico encareça combustível por semanas — revendedor deve acompanhar spot diário."
+    "resumo": "<cite index=\"5-1\">Brent caiu para US$ 105,54 no dia 20, queda de 5,16%</cite>, com recuperação parcial hoje. <cite index=\"5-3,5-4,5-5\">Brent estabilizou acima de US$ 105 com esperança de que os EUA estejam na fase final de negociações com o Irã; acordo removeria bloqueios navais sobre o Estreito de Ormuz</cite>. Volatilidade persiste; oferta global permanece constrita."
   },
   "abicom": {
     "defasagem_gasolina_pct": "41%",
     "defasagem_diesel_pct": "31%",
-    "dias_sem_ajuste_gasolina": 54,
-    "dias_sem_ajuste_diesel": 97,
+    "dias_sem_ajuste_gasolina": "54",
+    "dias_sem_ajuste_diesel": "97",
     "potencial_aumento_rs_gasolina": "R$ 1,03/L",
     "potencial_aumento_rs_diesel": "R$ 1,12/L",
     "sinal_petrobras": "nao_importa"
@@ -57,27 +57,27 @@
   "moedas": {
     "usdbrl": {
       "val": "R$ 5,0301",
-      "delta": "▼ -0,26%",
+      "delta": "▼ queda vs 20/mai",
       "dir": "down"
     },
     "eurbrl": {
       "val": "R$ 5,8450",
-      "delta": "▼ -0,36%",
+      "delta": "▼ queda vs 20/mai",
       "dir": "down"
     }
   },
   "juros": {
     "selic": {
       "val": "14,50% a.a.",
-      "delta": "▼ -0,25 p.p. (redução recente)",
-      "dir": "down"
+      "delta": "▲ meta 17/jun eleva para 14,50% a.a.",
+      "dir": "up"
     },
     "previsao_focus": "13,25% (fim 2026)"
   },
   "inflacao": {
     "ipca": {
       "val": "0,67% (mês)",
-      "delta": "▼ vs. mês anterior",
+      "delta": "▼ vs mês anterior (01/04/2026)",
       "dir": "down"
     },
     "previsao_focus": "4,92% (2026)"
@@ -88,37 +88,37 @@
   },
   "safra_etanol": {
     "moagem": "611,15 Mt",
-    "var_anual": "-1,70% a/a",
-    "mix_etanol_pct": "49,62%",
+    "var_anual": "-1,73% a/a",
+    "mix_etanol_pct": "67,07%",
     "oferta_total": "33,72 bi L (-3,56% a/a)"
   },
   "agenda_semanal": {
     "segunda": "—",
     "terca": "—",
-    "quarta": "Acompanhar anúncios Petrobras; pressão cambial com dólar em R$ 5,03",
-    "quinta": "—",
-    "sexta": "ANP divulga preço semanal; monitorar fechamento Ormuz"
+    "quarta": "—",
+    "quinta": "Negociações EUA-Irã em fase final; monitoramento de fluxos Estreito de Ormuz",
+    "sexta": "ANP divulga levantamentos; ANP mantém fiscalização combustíveis"
   },
   "acoes_dia": [
-    "<b>Revise estoque:</b> Com Petrobras bloqueando importações há 97 dias (diesel) e 54 dias (gasolina), valide nível de abastecimento para próximas 2–3 semanas. Risco de desabastecimento segue elevado.",
-    "<b>Ajuste margem:</b> Defasagem em 41% gasolina e 31% diesel abre oportunidade de reajuste se Petrobras romper bloqueio. Monitore comunicados oficiais diariamente.",
-    "<b>Acompanhe Ormuz:</b> Volatilidade de petróleo acima de US$ 100/bbl deve persistir. Negocie com distribuidores prazos de contrato em cenário de risco geopolítico."
+    "<b>Compre diesel on-spec:</b> janelas fechadas há 97 dias; oferta local reduzida. Negocie volumes imediatamente com transportistas para evitar falta.",
+    "<b>Monitore Petrobras:</b> defasagem persiste (31% diesel, 41% gasolina). Reajuste anunciado liberaria R$ 1,12/L diesel e R$ 1,03/L gasolina à paridade.",
+    "<b>Ative E30/B15:</b> mandatos vigentes. Revise estoques e checklist ANP para conformidade; próximas misturas (E32/B16) em discussão até 2026."
   ],
   "radar": [
-    "<b>Geopolítica Oriente Médio:</b> Fechamento Ormuz sustenta pressão em Brent acima de US$ 111/bbl. Negociações EUA-Irã em impasse — qualquer escalada dispara novo spike.",
-    "<b>Bloqueio Petrobras:</b> 97 dias sem importação diesel e 54 dias gasolina encarecem oportunidade de fornecedores alternativos. Abicom projeta R$ 1,12/L de aumento potencial diesel; pressão política sobre reajuste cresce.",
-    "<b>Safra 2026/27 Acelerada:</b> Primeira quinzena abril moagem +19,67% a/a; etanol domina mix (67%). Pressão para queda de preço etanol nos próximos meses — acompanhe competitividade frente gasolina nos postos."
+    "<b>Oriente Médio:</b> negociações Trump-Irã em avanço; acordo removeria bloqueios do Estreito de Ormuz. Cenário positivo reduziria pressão petrolífera, mas reposicionamento logístico levará 2 meses.",
+    "<b>Petrobras crítica:</b> bloqueio importações mantém defasagem em patamar insustentável. Reajuste iminente ou politicamente travado; impasse afeta cadeia inteira.",
+    "<b>Safra 2026/27 em ritmo:</b> <cite index=\"38-11\">moagem início abril 2026 alcançou 19,56 milhões de toneladas, aumento de 19,67%</cite>. Etanol dominará mix (67%+); oferta maior levará pressão de preços para H2 2026."
   ],
-  "resumo_editorial": "<p class=\"lead\">Brent ultrapassa US$ 111/bbl em contexto de fechamento prolongado do Estreito de Ormuz e impasse nas negociações EUA-Irã. Volatilidade elevada sustenta preços globais. No Brasil, Petrobras mantém postura defensiva: 97 dias sem importação diesel, 54 sem gasolina, e defasagem em 41% (gasolina) e 31% (diesel) — R$ 1,03/L e R$ 1,12/L de pressão acumulada. O sinal é claro: nenhuma importação prevista até reajuste oficial.</p><p>Foco do setor agora volta-se à safra 2026/27, que iniciou acelerada (moagem +19,67% a/a em abril). Etanol domina o mix (67% da cana), sinalizando queda potencial nos próximos meses — competitividade do hidratado vs. E30 nos postos será decisória. Focus elevou Selic para 13,25% e IPCA para 4,92% (décima alta consecutiva), acima do teto da meta. Câmbio recua para R$ 5,03, alívio marginal.</p><p>Revendedor deve: (1) revisar estoque diesel/gasolina para 2–3 semanas; (2) monitorar Petrobras diariamente — qualquer anúncio de reajuste abre janela de oportunidade; (3) acompanhar Ormuz: novo pico geopolítico catapulta Brent acima de US$ 115/bbl em horas. Margem permanece apertada; diferencial de preço importação vs. preço interno é oportunidade, não certeza.</p>",
+  "resumo_editorial": "<p class=\"lead\">Petróleo recua em esperança de paz entre EUA e Irã, com Brent caindo para US$ 105–106/bbl. Defasagem Petrobras permanece crítica: gasolina em 41% e diesel em 31%, com bloqueio de importações atingindo 97 dias no diesel e 54 na gasolina. Mandatos E30 e B15 seguem operando normalmente desde agosto 2025.</p><p>Câmbio enxuta (USD/BRL 5,03 ▼), Selic eleva-se conforme Focus projetava, e IPCA modesto (0,67% em abril). Safra 2025/26 encerrada com 611,15 Mt (-1,73% a/a) e 33,72 bi L etanol (-3,56% a/a); novo ciclo inicia robusto (19,56 Mt em primeira quinzena abril, +19,67%).</p><p>Revendedores devem securitizar diesel on-spec imediatamente; janelas fechadas inviabilizam importação privada. Acompanhe sinais de reajuste Petrobras (R$ 1,12/L diesel, R$ 1,03/L gasolina ao nível PPI) e monitorar Oriente Médio para confirmação de alívio de oferta global.</p>",
   "cepea": {
     "hidratado_sp": "a confirmar",
     "anidro_sp": "a confirmar",
     "ultima_atualizacao_iso": "2026-05-18",
     "ultima_atualizacao_label": "seg 18/mai"
   },
-  "_comentario": "Gerado automaticamente em 2026-05-20T23:42:56.601Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
+  "_comentario": "Gerado automaticamente em 2026-05-21T08:55:37.918Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
   "decisao": {
-    "data_label": "Quarta · 20 mai 2026",
+    "data_label": "Quinta · 21 mai 2026",
     "base": "ABICOM + custo distribuidora (monitor de preços) + Brent/câmbio",
     "disclaimer": "Essa não é uma recomendação de compra, apenas uma sugestão baseada num modelo educacional.",
     "fuels": [
@@ -128,7 +128,7 @@
         "verdict": "buy",
         "label": "COMPRE AGORA",
         "emoji": "🔴",
-        "score": 90,
+        "score": 73,
         "spark": [
           100,
           8,
@@ -151,11 +151,11 @@
           },
           {
             "dir": "up",
-            "text": "Brent subindo — pressão no custo de reposição"
+            "text": "Petrobras anunciou que não vai importar — defasagem deve persistir"
           },
           {
-            "dir": "up",
-            "text": "Petrobras anunciou que não vai importar — defasagem deve persistir"
+            "dir": "down",
+            "text": "Custo distribuidora <b>-2,7%</b> (caindo)"
           }
         ]
       },
@@ -165,7 +165,7 @@
         "verdict": "buy",
         "label": "COMPRE AGORA",
         "emoji": "🔴",
-        "score": 94,
+        "score": 77,
         "spark": [
           78,
           94,
@@ -188,11 +188,11 @@
           },
           {
             "dir": "up",
-            "text": "Brent subindo — pressão no custo de reposição"
+            "text": "Petrobras anunciou que não vai importar — defasagem deve persistir"
           },
           {
-            "dir": "up",
-            "text": "Petrobras anunciou que não vai importar — defasagem deve persistir"
+            "dir": "down",
+            "text": "Custo distribuidora <b>-2,8%</b> (caindo)"
           }
         ]
       },
@@ -202,7 +202,7 @@
         "verdict": "buy",
         "label": "COMPRE AGORA",
         "emoji": "🔴",
-        "score": 100,
+        "score": 97,
         "spark": [
           47,
           8,
@@ -229,7 +229,7 @@
           },
           {
             "dir": "up",
-            "text": "Brent subindo — pressão no custo de reposição"
+            "text": "Petrobras anunciou que não vai importar — defasagem deve persistir"
           }
         ]
       },
@@ -239,7 +239,7 @@
         "verdict": "wait",
         "label": "PODE ESPERAR",
         "emoji": "🟢",
-        "score": 10,
+        "score": 0,
         "spark": [
           100,
           39,
@@ -250,15 +250,15 @@
         "reasons": [
           {
             "dir": "up",
-            "text": "Brent subindo — pressão no custo de reposição"
-          },
-          {
-            "dir": "up",
             "text": "Petrobras anunciou que não vai importar — defasagem deve persistir"
           },
           {
             "dir": "down",
             "text": "Custo distribuidora <b>-15,9%</b> (caindo)"
+          },
+          {
+            "dir": "down",
+            "text": "Brent em queda — alivia custo"
           },
           {
             "dir": "down",
