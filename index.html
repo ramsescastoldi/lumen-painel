@@ -152,6 +152,38 @@ a{color:inherit;text-decoration:none}
 .dwhy .up{color:var(--down)}.dwhy .dn{color:var(--up)}.dwhy .fl{color:var(--text-2)}
 .decisao-foot{margin-top:18px;font-size:11.5px;color:var(--text-3);position:relative;z-index:1;border-top:1px solid rgba(255,255,255,.05);padding-top:13px;line-height:1.55}
 
+/* CALCULADORA DE OPORTUNIDADE R$ */
+.calc{background:linear-gradient(160deg,#13243A 0%,#0B1320 100%);border:1px solid var(--gold-line);border-radius:18px;padding:22px 26px;position:relative;overflow:hidden}
+.calc::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.012) 0,rgba(255,255,255,.012) 1px,transparent 1px,transparent 14px);pointer-events:none}
+.calc-h{display:flex;align-items:center;gap:12px;margin-bottom:2px;position:relative;z-index:1}
+.calc-h .ico{font-size:22px}
+.calc-h h2{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0;flex:1}
+.calc-cfg{background:rgba(201,168,76,.08);border:1px solid var(--gold-line);color:var(--gold-soft);font-size:11px;letter-spacing:.06em;padding:6px 12px;border-radius:8px;cursor:pointer;font-family:inherit;font-weight:500}
+.calc-cfg:hover{background:rgba(201,168,76,.16)}
+.calc-sub{font-size:12.5px;color:var(--text-2);margin-bottom:16px;position:relative;z-index:1}
+.calc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;position:relative;z-index:1}
+@media(max-width:760px){.calc-grid{grid-template-columns:1fr}}
+.ccard{padding:14px 16px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);border-radius:12px}
+.ccard.has-value{border-color:rgba(123,183,128,.35);background:linear-gradient(180deg,rgba(123,183,128,.08),rgba(123,183,128,.02))}
+.ccard .cf-name{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-2);font-weight:600;margin-bottom:6px}
+.ccard .cf-eq{font-size:11.5px;color:var(--text-3);margin-bottom:8px}
+.ccard .cf-rs{font-weight:300;font-size:26px;color:var(--up);letter-spacing:-.02em;font-feature-settings:"tnum" 1}
+.ccard .cf-rs.empty{color:var(--text-3);font-size:16px}
+.calc-total{margin-top:16px;padding-top:14px;border-top:1px dashed rgba(255,255,255,.07);display:flex;justify-content:space-between;align-items:baseline;font-size:13px;color:var(--text-2);letter-spacing:.06em;text-transform:uppercase;position:relative;z-index:1}
+.calc-total b{font-size:28px;font-weight:300;color:var(--gold);letter-spacing:-.02em;font-feature-settings:"tnum" 1}
+.calc-foot{margin-top:12px;font-size:11px;color:var(--text-3);position:relative;z-index:1;line-height:1.5}
+.calc-modal{position:fixed;inset:0;background:rgba(11,19,32,.85);display:none;align-items:center;justify-content:center;z-index:9999;padding:20px;backdrop-filter:blur(4px)}
+.calc-modal.open{display:flex}
+.calc-modal-inner{background:linear-gradient(180deg,#13243A,#0B1320);border:1px solid var(--gold-line);border-radius:14px;padding:24px;max-width:420px;width:100%}
+.calc-modal h3{color:var(--gold);font-size:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin:0 0 14px}
+.calc-modal label{display:block;font-size:11px;color:var(--text-2);letter-spacing:.08em;text-transform:uppercase;margin:12px 0 4px;font-weight:500}
+.calc-modal input{width:100%;padding:10px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;color:var(--text);font-family:inherit;font-size:15px;font-feature-settings:"tnum" 1;box-sizing:border-box}
+.calc-modal input:focus{outline:none;border-color:var(--gold-line-strong)}
+.calc-modal-btns{display:flex;gap:10px;margin-top:18px}
+.calc-modal-btns button{flex:1;padding:11px;border-radius:8px;border:none;font-family:inherit;font-weight:600;cursor:pointer;font-size:13px;letter-spacing:.04em}
+.calc-modal-btns .save{background:var(--gold);color:#0B1320}
+.calc-modal-btns .cancel{background:rgba(255,255,255,.06);color:var(--text-2)}
+
 /* SPARKLINE mini-gráfico de tendência (últimos ~15 dias) nos cards */
 .spark-mini{display:block;height:28px;width:100%;margin-top:6px;opacity:.85}
 .spark-mini svg{width:100%;height:100%;display:block}
@@ -414,6 +446,34 @@ footer b{color:var(--text-2);font-weight:600}
       <div class="decisao-foot" id="decisaoFoot">—</div>
     </div>
   </section>
+
+  <!-- 0b. CALCULADORA DE OPORTUNIDADE R$ -->
+  <section class="col-12" id="calcSec" style="display:none">
+    <div class="calc">
+      <div class="calc-h">
+        <span class="ico">💰</span>
+        <h2>Quanto vale seu estoque hoje</h2>
+        <button class="calc-cfg" onclick="_openCalcCfg()">⚙️ Meu posto</button>
+      </div>
+      <div class="calc-sub">Se o reajuste anunciado pela ABICOM vier, seu estoque atual vale a mais:</div>
+      <div class="calc-grid" id="calcGrid"></div>
+      <div class="calc-total"><span>Total potencial</span><b id="calcTotal">—</b></div>
+      <div class="calc-foot">Estimativa educacional baseada no <i>potencial de aumento</i> publicado pela ABICOM × volume do seu estoque. Não é recomendação de compra.</div>
+    </div>
+  </section>
+  <div class="calc-modal" id="calcModal" onclick="if(event.target===this)_closeCalcCfg()">
+    <div class="calc-modal-inner">
+      <h3>⚙️ Configurar meu posto</h3>
+      <p style="font-size:12.5px;color:var(--text-2);margin:0 0 10px;line-height:1.5">Informe seus volumes médios de estoque por combustível. Salvo neste navegador.</p>
+      <label>Gasolina (L)</label><input type="number" id="cfgGas" min="0" step="500" />
+      <label>Diesel S10 (L)</label><input type="number" id="cfgDS10" min="0" step="500" />
+      <label>Diesel S500 (L)</label><input type="number" id="cfgDS500" min="0" step="500" />
+      <div class="calc-modal-btns">
+        <button class="cancel" onclick="_closeCalcCfg()">Cancelar</button>
+        <button class="save" onclick="_saveCalcCfg()">Salvar</button>
+      </div>
+    </div>
+  </div>
 
   <!-- 1. MANCHETE PRINCIPAL (col-12) -->
   <section class="col-12">
@@ -783,6 +843,80 @@ const DATA = {
   ];
   const tplOne = it => `<span><span class="sym">${it[0]}</span><span class="v">${it[1]}</span><span class="${it[3]}">${it[2]}</span></span>`;
   $("tickerTrack").innerHTML = tickerItems.map(tplOne).join("") + tickerItems.map(tplOne).join("");
+
+  // ===== Calculadora de Oportunidade R$ =====
+  // Lê potencial de aumento ABICOM × volume do estoque do membro (localStorage).
+  // Se reajuste anunciado vier, mostra quanto cada combustível vale a mais.
+  const CALC_DEFAULTS = { gasolina: 15000, diesel_s10: 10000, diesel_s500: 5000 };
+  function _calcVolumes() {
+    try {
+      const raw = localStorage.getItem("lumen_volumes");
+      if (raw) { const v = JSON.parse(raw); return { ...CALC_DEFAULTS, ...v }; }
+    } catch {}
+    return { ...CALC_DEFAULTS };
+  }
+  function _parseRs(s) {
+    if (s == null) return null;
+    const m = String(s).replace(/[Rr]\$\s*/, "").replace(",", ".").match(/-?\d+(\.\d+)?/);
+    return m ? parseFloat(m[0]) : null;
+  }
+  function _fmtRs(v) {
+    return "R$ " + v.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  }
+  function _renderCalc() {
+    const vols = _calcVolumes();
+    const pGas = _parseRs(ab.potencial_aumento_rs_gasolina);
+    const pDie = _parseRs(ab.potencial_aumento_rs_diesel);
+    const items = [
+      { key: "gasolina", nome: "⛽ Gasolina", vol: vols.gasolina, pot: pGas },
+      { key: "diesel_s10", nome: "🚚 Diesel S10", vol: vols.diesel_s10, pot: pDie },
+      { key: "diesel_s500", nome: "🚛 Diesel S500", vol: vols.diesel_s500, pot: pDie }
+    ];
+    let total = 0;
+    let anyValue = false;
+    const cards = items.map(it => {
+      if (it.pot && it.pot > 0 && it.vol > 0) {
+        const eco = it.vol * it.pot;
+        total += eco;
+        anyValue = true;
+        const volStr = it.vol.toLocaleString("pt-BR");
+        return `<div class="ccard has-value">
+          <div class="cf-name">${it.nome}</div>
+          <div class="cf-eq">${volStr} L × R$ ${it.pot.toFixed(2).replace(".", ",")}/L</div>
+          <div class="cf-rs">+${_fmtRs(eco)}</div>
+        </div>`;
+      }
+      return `<div class="ccard">
+        <div class="cf-name">${it.nome}</div>
+        <div class="cf-eq">${it.vol.toLocaleString("pt-BR")} L (sem potencial calculado hoje)</div>
+        <div class="cf-rs empty">—</div>
+      </div>`;
+    }).join("");
+    const sec = $("calcSec");
+    if (!anyValue) { if (sec) sec.style.display = "none"; return; }
+    if (sec) sec.style.display = "";
+    $("calcGrid").innerHTML = cards;
+    $("calcTotal").textContent = "+" + _fmtRs(total);
+  }
+  window._openCalcCfg = function () {
+    const v = _calcVolumes();
+    $("cfgGas").value = v.gasolina;
+    $("cfgDS10").value = v.diesel_s10;
+    $("cfgDS500").value = v.diesel_s500;
+    $("calcModal").classList.add("open");
+  };
+  window._closeCalcCfg = function () { $("calcModal").classList.remove("open"); };
+  window._saveCalcCfg = function () {
+    const v = {
+      gasolina: Math.max(0, parseInt($("cfgGas").value, 10) || 0),
+      diesel_s10: Math.max(0, parseInt($("cfgDS10").value, 10) || 0),
+      diesel_s500: Math.max(0, parseInt($("cfgDS500").value, 10) || 0)
+    };
+    localStorage.setItem("lumen_volumes", JSON.stringify(v));
+    _closeCalcCfg();
+    _renderCalc();
+  };
+  _renderCalc();
 
   // ===== Sparklines (mini-gráfico de tendência) =====
   // Lê history.json (rolling 30 dias) e desenha um SVG de linha pequeno em cada card chave.

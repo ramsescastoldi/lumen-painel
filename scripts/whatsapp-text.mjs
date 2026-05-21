@@ -60,6 +60,37 @@ if (ab.defasagem_gasolina_pct || ab.defasagem_diesel_pct)
   push(`🚢 Defasagem ABICOM — gasolina ${ab.defasagem_gasolina_pct || "—"} / diesel ${ab.defasagem_diesel_pct || "—"}`);
 push();
 
+// ---- CALCULADORA DE OPORTUNIDADE (volumes padrão de mercado) ----
+function _rs(s) {
+  if (s == null) return null;
+  const m = String(s).replace(/[Rr]\$\s*/, "").replace(",", ".").match(/-?\d+(\.\d+)?/);
+  return m ? parseFloat(m[0]) : null;
+}
+function _fmt(v) { return "R$ " + v.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, "."); }
+const VOLS = { gasolina: 15000, diesel_s10: 10000, diesel_s500: 5000 };
+const pGas = _rs(ab.potencial_aumento_rs_gasolina);
+const pDie = _rs(ab.potencial_aumento_rs_diesel);
+const oppLines = [];
+let oppTotal = 0;
+if (pGas && pGas > 0) { const e = VOLS.gasolina * pGas; oppTotal += e; oppLines.push(`⛽ Gasolina (${VOLS.gasolina.toLocaleString("pt-BR")}L) — vale *+${_fmt(e)}*`); }
+if (pDie && pDie > 0) {
+  const e10 = VOLS.diesel_s10 * pDie; oppTotal += e10;
+  const e500 = VOLS.diesel_s500 * pDie; oppTotal += e500;
+  oppLines.push(`🚚 Diesel S10 (${VOLS.diesel_s10.toLocaleString("pt-BR")}L) — vale *+${_fmt(e10)}*`);
+  oppLines.push(`🚛 Diesel S500 (${VOLS.diesel_s500.toLocaleString("pt-BR")}L) — vale *+${_fmt(e500)}*`);
+}
+if (oppLines.length) {
+  push(HR);
+  push(`💰 *Quanto vale seu estoque hoje*`);
+  push(`Se o reajuste anunciado vier, vai render a mais:`);
+  push();
+  oppLines.forEach(l => push(l));
+  push();
+  push(`Total potencial: *+${_fmt(oppTotal)}*`);
+  push(`_Estimativa com volumes padrão de mercado — ajuste o seu no painel ⚙️_`);
+  push();
+}
+
 // ---- AÇÕES DO DIA ----
 const acoes = (d.acoes_dia || []).filter(Boolean);
 if (acoes.length) {
