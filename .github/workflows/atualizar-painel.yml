@@ -38,16 +38,21 @@ jobs:
           npm install pg@8 --no-save --silent || echo "⚠️ pg não instalou — decisao roda em modo degradado"
           node scripts/decisao.mjs
 
+      - name: Histórico — snapshot diário (rolling 30 dias)
+        env:
+          TZ: America/Cuiaba
+        run: node scripts/historico.mjs
+
       - name: Commitar mudanças (se houver)
         run: |
           git config user.name "Bot Lumen Painel"
           git config user.email "bot@lumenposto.com"
-          if git diff --quiet data.json; then
-            echo "ℹ️  Nenhuma mudança em data.json — nada a commitar"
+          if git diff --quiet data.json history.json; then
+            echo "ℹ️  Nenhuma mudança — nada a commitar"
             exit 0
           fi
           DATE_BR=$(TZ=America/Cuiaba date +"%d/%m/%Y %H:%M")
-          git add data.json
+          git add data.json history.json
           git commit -m "📊 painel diário automático — $DATE_BR"
           # Race-safe push: se outro run commitou antes, faz rebase e tenta de novo
           for i in 1 2 3; do

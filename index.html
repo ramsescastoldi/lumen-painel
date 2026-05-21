@@ -152,6 +152,13 @@ a{color:inherit;text-decoration:none}
 .dwhy .up{color:var(--down)}.dwhy .dn{color:var(--up)}.dwhy .fl{color:var(--text-2)}
 .decisao-foot{margin-top:18px;font-size:11.5px;color:var(--text-3);position:relative;z-index:1;border-top:1px solid rgba(255,255,255,.05);padding-top:13px;line-height:1.55}
 
+/* SPARKLINE mini-gráfico de tendência (últimos ~15 dias) nos cards */
+.spark-mini{display:block;height:28px;width:100%;margin-top:6px;opacity:.85}
+.spark-mini svg{width:100%;height:100%;display:block}
+.spark-mini .spark-line{fill:none;stroke:rgba(201,168,76,.55);stroke-width:1.5}
+.spark-mini .spark-dot{fill:var(--gold)}
+.spark-mini.empty{display:none}
+
 /* HERO MANCHETE */
 .manchete{padding:28px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;
   background:
@@ -469,11 +476,13 @@ footer b{color:var(--text-2);font-weight:600}
         <div class="name">Brent</div>
         <div class="val big sm" id="brentVal">—</div>
         <div class="sub"><span class="delta down" id="brentDelta">—</span></div>
+        <div class="spark-mini" id="sparkBrent"></div>
       </div>
       <div class="metric">
         <div class="name">WTI</div>
         <div class="val big sm" id="wtiVal">—</div>
         <div class="sub"><span class="delta down" id="wtiDelta">—</span></div>
+        <div class="spark-mini" id="sparkWti"></div>
       </div>
     </div>
     <div class="note red" id="petroleoResumo">—</div>
@@ -485,10 +494,12 @@ footer b{color:var(--text-2);font-weight:600}
       <div class="metric" style="text-align:left">
         <div class="name">Gasolina A</div>
         <div class="big xl" style="color:var(--down)" id="abicomGasolina">—</div>
+        <div class="spark-mini" id="sparkDefGas"></div>
       </div>
       <div class="metric" style="text-align:left">
         <div class="name">Diesel S-10</div>
         <div class="big xl" style="color:var(--down)" id="abicomDiesel">—</div>
+        <div class="spark-mini" id="sparkDefDie"></div>
       </div>
     </div>
     <div class="lbl" style="margin-top:18px">Dias sem reajuste Petrobras</div>
@@ -508,8 +519,8 @@ footer b{color:var(--text-2);font-weight:600}
   <section class="card col-3">
     <div class="card-h"><div class="ico">💵</div><h2>Moedas</h2><span class="src">BCB</span></div>
     <div class="mgrid c2">
-      <div class="metric"><div class="name">USD/BRL</div><div class="val" id="usdbrlVal">—</div><div class="sub"><span class="delta down" id="usdbrlDelta">—</span></div></div>
-      <div class="metric"><div class="name">EUR/BRL</div><div class="val" id="eurbrlVal">—</div><div class="sub"><span class="delta down" id="eurbrlDelta">—</span></div></div>
+      <div class="metric"><div class="name">USD/BRL</div><div class="val" id="usdbrlVal">—</div><div class="sub"><span class="delta down" id="usdbrlDelta">—</span></div><div class="spark-mini" id="sparkUsd"></div></div>
+      <div class="metric"><div class="name">EUR/BRL</div><div class="val" id="eurbrlVal">—</div><div class="sub"><span class="delta down" id="eurbrlDelta">—</span></div><div class="spark-mini" id="sparkEur"></div></div>
     </div>
   </section>
 
@@ -772,6 +783,34 @@ const DATA = {
   ];
   const tplOne = it => `<span><span class="sym">${it[0]}</span><span class="v">${it[1]}</span><span class="${it[3]}">${it[2]}</span></span>`;
   $("tickerTrack").innerHTML = tickerItems.map(tplOne).join("") + tickerItems.map(tplOne).join("");
+
+  // ===== Sparklines (mini-gráfico de tendência) =====
+  // Lê history.json (rolling 30 dias) e desenha um SVG de linha pequeno em cada card chave.
+  function renderSpark(elId, key, days) {
+    const el = $(elId);
+    if (!el) return;
+    const values = days.map(d => d[key]).filter(v => typeof v === "number");
+    if (values.length < 3) { el.classList.add("empty"); return; }
+    const last = values.slice(-15);
+    const mn = Math.min(...last), mx = Math.max(...last), span = mx - mn || 1;
+    const W = 100, H = 30, padY = 3;
+    const pts = last.map((v, i) => {
+      const x = (i / (last.length - 1)) * W;
+      const y = H - padY - ((v - mn) / span) * (H - 2 * padY);
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    }).join(" ");
+    const lx = W, ly = H - padY - ((last.at(-1) - mn) / span) * (H - 2 * padY);
+    el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"><polyline class="spark-line" points="${pts}"/><circle class="spark-dot" cx="${lx}" cy="${ly.toFixed(1)}" r="2.2"/></svg>`;
+  }
+  fetch("history.json?v=" + Date.now()).then(r => r.ok ? r.json() : null).then(hist => {
+    if (!hist || !Array.isArray(hist.days)) return;
+    renderSpark("sparkBrent", "brent", hist.days);
+    renderSpark("sparkWti", "wti", hist.days);
+    renderSpark("sparkUsd", "usdbrl", hist.days);
+    renderSpark("sparkEur", "eurbrl", hist.days);
+    renderSpark("sparkDefGas", "def_gas", hist.days);
+    renderSpark("sparkDefDie", "def_die", hist.days);
+  }).catch(() => {});
 })();
 </script>
 </body>
