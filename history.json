@@ -144,18 +144,18 @@
       "eurbrl": 5.845,
       "selic": 14.5,
       "ipca": 0.67,
-      "def_gas": null,
-      "def_die": null,
-      "dias_gas": null,
-      "dias_die": null,
-      "pot_gas": null,
-      "pot_die": null,
+      "def_gas": 41,
+      "def_die": 31,
+      "dias_gas": 54,
+      "dias_die": 97,
+      "pot_gas": 1.03,
+      "pot_die": 1.12,
       "cepea_hid": null,
       "cepea_ani": null,
       "decisao": {
-        "gasolina": 10,
-        "diesel_s10": 10,
-        "diesel_s500": 30,
+        "gasolina": 90,
+        "diesel_s10": 94,
+        "diesel_s500": 100,
         "etanol": 10
       }
     }

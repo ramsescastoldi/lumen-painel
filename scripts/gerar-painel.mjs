@@ -350,6 +350,28 @@ function parseJSON(text) {
       }
     }
 
+    // CARRY-FORWARD: se o Haiku marcou um campo crítico como "a confirmar" mas o
+    // data.json anterior tinha valor real, mantém o valor anterior. ABICOM, mandatos
+    // e safra mudam pouco dia-a-dia; preservar evita regressão silenciosa do painel.
+    function _isMissing(v) {
+      if (v == null) return true;
+      const s = String(v).toLowerCase().trim();
+      return s === "" || s.includes("a confirmar") || s === "0";
+    }
+    function _carry(blockName, fields) {
+      const newBlk = newData[blockName] || (newData[blockName] = {});
+      const oldBlk = currentData[blockName] || {};
+      for (const f of fields) {
+        if (_isMissing(newBlk[f]) && !_isMissing(oldBlk[f])) {
+          newBlk[f] = oldBlk[f];
+          console.log(`  ↩ carry-forward ${blockName}.${f}: ${oldBlk[f]}`);
+        }
+      }
+    }
+    _carry("abicom", ["defasagem_gasolina_pct","defasagem_diesel_pct","dias_sem_ajuste_gasolina","dias_sem_ajuste_diesel","potencial_aumento_rs_gasolina","potencial_aumento_rs_diesel"]);
+    _carry("mandatos", ["anidro_na_gasolina_pct","b100_no_diesel_pct"]);
+    _carry("safra_etanol", ["moagem","var_anual","mix_etanol_pct","oferta_total"]);
+
     // FORÇA os números oficiais do BCB (Haiku não inventa câmbio/Selic/IPCA)
     if (fatos.hasData) {
       const f = fatos.out;

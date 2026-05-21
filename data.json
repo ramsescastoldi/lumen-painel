@@ -46,12 +46,12 @@
     "resumo": "Petróleo rebota com perspectivas de trégua Irã-EUA; queda maior que esperada nos estoques dos EUA fornece piso. Ofertas ainda apertadas no Oriente Médio mantêm preços elevados apesar de esperança de normalização. Mercado permanece volátil e sensível a notícias diplomáticas."
   },
   "abicom": {
-    "defasagem_gasolina_pct": "a confirmar",
-    "defasagem_diesel_pct": "a confirmar",
-    "dias_sem_ajuste_gasolina": 0,
-    "dias_sem_ajuste_diesel": 0,
-    "potencial_aumento_rs_gasolina": "a confirmar",
-    "potencial_aumento_rs_diesel": "a confirmar",
+    "defasagem_gasolina_pct": "41%",
+    "defasagem_diesel_pct": "31%",
+    "dias_sem_ajuste_gasolina": 54,
+    "dias_sem_ajuste_diesel": 97,
+    "potencial_aumento_rs_gasolina": "R$ 1,03/L",
+    "potencial_aumento_rs_diesel": "R$ 1,12/L",
     "sinal_petrobras": "nao_importa"
   },
   "moedas": {
@@ -125,10 +125,10 @@
       {
         "key": "gasolina",
         "nome": "⛽ Gasolina",
-        "verdict": "wait",
-        "label": "PODE ESPERAR",
-        "emoji": "🟢",
-        "score": 10,
+        "verdict": "buy",
+        "label": "COMPRE AGORA",
+        "emoji": "🔴",
+        "score": 90,
         "spark": [
           100,
           8,
@@ -139,29 +139,33 @@
         "reasons": [
           {
             "dir": "up",
+            "text": "Potencial de aumento <b>R$ 1,03/L</b> pra alcançar paridade (ABICOM)"
+          },
+          {
+            "dir": "up",
+            "text": "Defasagem ABICOM <b>41%</b> (alta)"
+          },
+          {
+            "dir": "up",
+            "text": "<b>54 dias</b> sem importação"
+          },
+          {
+            "dir": "up",
             "text": "Brent subindo — pressão no custo de reposição"
           },
           {
             "dir": "up",
             "text": "Petrobras anunciou que não vai importar — defasagem deve persistir"
-          },
-          {
-            "dir": "down",
-            "text": "Custo distribuidora <b>-2,7%</b> (caindo)"
-          },
-          {
-            "dir": "down",
-            "text": "Dólar em queda — alivia importação"
           }
         ]
       },
       {
         "key": "diesel_s10",
         "nome": "🚚 Diesel S10",
-        "verdict": "wait",
-        "label": "PODE ESPERAR",
-        "emoji": "🟢",
-        "score": 10,
+        "verdict": "buy",
+        "label": "COMPRE AGORA",
+        "emoji": "🔴",
+        "score": 94,
         "spark": [
           78,
           94,
@@ -172,29 +176,33 @@
         "reasons": [
           {
             "dir": "up",
+            "text": "Potencial de aumento <b>R$ 1,12/L</b> pra alcançar paridade (ABICOM)"
+          },
+          {
+            "dir": "up",
+            "text": "Defasagem ABICOM <b>31%</b> (zona de atenção)"
+          },
+          {
+            "dir": "up",
+            "text": "<b>97 dias</b> de janelas fechadas (Petrobras sem importar há muito)"
+          },
+          {
+            "dir": "up",
             "text": "Brent subindo — pressão no custo de reposição"
           },
           {
             "dir": "up",
             "text": "Petrobras anunciou que não vai importar — defasagem deve persistir"
-          },
-          {
-            "dir": "down",
-            "text": "Custo distribuidora <b>-2,8%</b> (caindo)"
-          },
-          {
-            "dir": "down",
-            "text": "Dólar em queda — alivia importação"
           }
         ]
       },
       {
         "key": "diesel_s500",
         "nome": "🚛 Diesel S500",
-        "verdict": "wait",
-        "label": "PODE ESPERAR",
-        "emoji": "🟢",
-        "score": 30,
+        "verdict": "buy",
+        "label": "COMPRE AGORA",
+        "emoji": "🔴",
+        "score": 100,
         "spark": [
           47,
           8,
@@ -205,19 +213,23 @@
         "reasons": [
           {
             "dir": "up",
+            "text": "Potencial de aumento <b>R$ 1,12/L</b> pra alcançar paridade (ABICOM)"
+          },
+          {
+            "dir": "up",
+            "text": "Defasagem ABICOM <b>31%</b> (zona de atenção)"
+          },
+          {
+            "dir": "up",
+            "text": "<b>97 dias</b> de janelas fechadas (Petrobras sem importar há muito)"
+          },
+          {
+            "dir": "up",
             "text": "Custo distribuidora <b>+1,2%</b> (leve)"
           },
           {
             "dir": "up",
             "text": "Brent subindo — pressão no custo de reposição"
-          },
-          {
-            "dir": "up",
-            "text": "Petrobras anunciou que não vai importar — defasagem deve persistir"
-          },
-          {
-            "dir": "down",
-            "text": "Dólar em queda — alivia importação"
           }
         ]
       },
