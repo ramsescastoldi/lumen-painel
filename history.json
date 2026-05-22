@@ -159,8 +159,8 @@
       "date": "2026-05-22",
       "brent": 104.52,
       "wti": 98.87,
-      "usdbrl": 5.0077,
-      "eurbrl": 5.8034,
+      "usdbrl": 5.014,
+      "eurbrl": 5.8182,
       "selic": 14.5,
       "ipca": 0.67,
       "def_gas": 41,
@@ -172,10 +172,10 @@
       "cepea_hid": null,
       "cepea_ani": null,
       "decisao": {
-        "gasolina": 90,
-        "diesel_s10": 94,
-        "diesel_s500": 94,
-        "etanol": 10
+        "gasolina": 98,
+        "diesel_s10": 100,
+        "diesel_s500": 100,
+        "etanol": 18
       }
     }
   ]
