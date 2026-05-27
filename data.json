@@ -1,49 +1,49 @@
 {
   "meta": {
-    "date_iso": "2026-05-26",
-    "date_label": "Terça · 26 mai 2026",
-    "last_update": "16:13"
+    "date_iso": "2026-05-27",
+    "date_label": "Quarta · 27 mai 2026",
+    "last_update": "06:55"
   },
   "manchete": {
     "principal": {
-      "severity": "red",
-      "status_emoji": "🔴",
-      "severity_label": "Crítico",
-      "titulo": "Brent sobe 3% com novos ataques EUA-Irã; defasagem alcança 88% em gasolina; reajuste iminente na bomba"
+      "severity": "yellow",
+      "status_emoji": "🟡",
+      "severity_label": "Atenção",
+      "titulo": "Brent recua enquanto negociações EUA-Irã ganham novo ritmo; defasagem gasolina mantém máxima de 88%"
     },
     "secundarias": [
       {
         "categoria": "Mercado",
-        "titulo": "WTI recua 4% enquanto Brent sobe; divergência reflete incerteza geopolítica e estrutural no setor petrolífero",
+        "titulo": "Ceasefire talks avançam com possível acordo em dias; volatilidade no crude persiste devido a Hormuz",
         "severity": "yellow",
         "status_emoji": "🟡"
       },
       {
         "categoria": "Combustíveis",
-        "titulo": "Defasagem gasolina atinge máximo histórico de 88%; potencial aumento de R$ 2,22/L para paridade internacional",
+        "titulo": "Petrobras mantém 112 dias sem importar diesel e 69 dias sem gasolina; reajuste suspenso apesar da defasagem",
         "severity": "red",
         "status_emoji": "🔴"
       },
       {
         "categoria": "Política",
-        "titulo": "Safra etanol 2026/27 explode em produção (moagem +19,67%); mix etanol domina com 67% da cana destinada a biocombustível",
-        "severity": "green",
-        "status_emoji": "🟢"
+        "titulo": "Focus eleva Selic para 13,25% em 2026 e IPCA para 4,92%; mercado precifica juros altos por mais tempo",
+        "severity": "yellow",
+        "status_emoji": "🟡"
       }
     ]
   },
   "petroleo": {
     "brent": {
-      "val": "US$ 98,11",
-      "delta": "▲ +0,89%",
-      "dir": "up"
-    },
-    "wti": {
-      "val": "US$ 92,60",
-      "delta": "▼ -4,00%",
+      "val": "US$ 99,18",
+      "delta": "▼ -0,41%",
       "dir": "down"
     },
-    "resumo": "Brent rebote após novos ataques EUA-Irã em plataformas e sítios de mísseis no Irã. Negociações EUA-Irã sobre ceasefire de 2 meses mantêm mercado volátil, mas esperança de acordo desidrata demanda. WTI cai 4% por insensibilidade a suprimento doméstico; déficit de Hormuz reduz impacto."
+    "wti": {
+      "val": "a confirmar",
+      "delta": "a confirmar",
+      "dir": "flat"
+    },
+    "resumo": "Brent estagnou próximo de US$ 99/bbl enquanto mercado paira entre otimismo diplomático (negociações EUA-Irã prosseguem) e risco geopolítico. A volatilidade reflete discussões sobre reabertura de Hormuz e levantamento de bloqueios. Revendedores seguem à mercê da incerteza; reajustes Petrobras continuam congelados apesar da defasagem estrutural."
   },
   "abicom": {
     "defasagem_gasolina_pct": "88%",
@@ -52,17 +52,17 @@
     "dias_sem_ajuste_diesel": 112,
     "potencial_aumento_rs_gasolina": "R$ 2,22/L",
     "potencial_aumento_rs_diesel": "R$ 1,87/L",
-    "sinal_petrobras": "nenhum"
+    "sinal_petrobras": "nao_importa"
   },
   "moedas": {
     "usdbrl": {
       "val": "R$ 5,0211",
-      "delta": "▲ +0,21%",
+      "delta": "▲ up",
       "dir": "up"
     },
     "eurbrl": {
       "val": "R$ 5,8350",
-      "delta": "▲ +0,31%",
+      "delta": "▲ up",
       "dir": "up"
     }
   },
@@ -89,36 +89,36 @@
   "safra_etanol": {
     "moagem": "19,56 Mt",
     "var_anual": "+19,67% a/a",
-    "mix_etanol_pct": "67,07%",
+    "mix_etanol_pct": "67%",
     "oferta_total": "1,23 bi L (+33,32% a/a)"
   },
   "agenda_semanal": {
-    "segunda": "Boletim Focus semanal (previsões Selic/IPCA)",
-    "terca": "Cotações petróleo e câmbio diários; Divulgação ABICOM defasagem combustíveis",
-    "quarta": "—",
+    "segunda": "—",
+    "terca": "—",
+    "quarta": "Negociações EUA-Irã avançam; expectativa de novo round de discussões",
     "quinta": "—",
-    "sexta": "Divulgação ANP (volumes, preços) e Petrobras (comunicados)"
+    "sexta": "Divulgação dados ANP; eventos UNICA safra 2026/27"
   },
   "acoes_dia": [
-    "<b>Monitorar janelas de importação:</b> Gasolina fecha há 69 dias; diesel há 112. Risco iminente de desabastecimento em regiões dependentes de importação se Petrobras não reajustar. Priorize diálogo com distribuidora.",
-    "<b>Revalidar mix E30/B15 nos tanques:</b> Estoque de gasolina com teor fora da faixa 29%–31% etanol e diesel B com anomalias pode gerar multa ANP. Teste amostras-testemunha de cada fornecedor.",
-    "<b>Aproveitar queda etanol safra 2026/27:</b> Moagem acelerada (+19,67%) reduz preço na usina (previsão repasse em 2–3 semanas). Clientes com frota flex tendem a migrar para hidratado; prepare promoção."
+    "<b>Revise preços:</b> Apesar da defasagem máxima (gasolina 88%, diesel 52%), Petrobras segue sem reajustar. Antecipe movimentos do mercado livre e refinarias.",
+    "<b>Monitore Hormuz:</b> Negociações EUA-Irã prosseguem. Se acordo prosperar, expectativa de alívio na volatilidade do Brent em 24–48h.",
+    "<b>Prepare estoque etanol:</b> Safra 2026/27 inicia com moagem +19,67% e mix 67% para biocombustível. E30 consolida demanda de anidro (+1,5 bi L/ano)."
   ],
   "radar": [
-    "<b>Defasagem gasolina em máxima histórica (88%):</b> Petrobras sob pressão máxima para reajustar. Qualquer gatilho (nova alta petróleo, Copom, câmbio) pode disparar reajuste de R$ 2,22/L em horas.",
-    "<b>Geopolítica EUA-Irã volátil:</b> Negociações avançam, mas novos ataques dos EUA mantêm Brent acima de US$ 98. Próximas 72h decisivas: acordo fechado = petróleo despenca; escalada = Brent para US$ 110+.",
-    "<b>Safra etanol em ritmo máximo (67% etanol, 33% açúcar):</b> Moagem quinzenal acumula +19,67%. Previsão trimestral: 38,42 bi L etanol total. Pressão de preço na usina cria oportunidade curta para revendedor colocar etanol a preço competitivo."
+    "<b>Ceasefire EUA-Irã:</b> Diplomacia avança, mas militarização persiste. Rubio aponta possível conclusão em 'vários dias'. Implicação direta: próximo patamar de Brent pode cair para USD 85–90 se acordo prosperar.",
+    "<b>Defasagem estrutural Petrobras:</b> Gasolina em máxima de 88% (R$ 2,22/L de potencial) e diesel em 52% (R$ 1,87/L). 112 dias sem diesel importado, 69 dias sem gasolina. Sinal: nenhuma importação prevista. Risco: mercado livre ganha espaço se reajuste continuar suspenso.",
+    "<b>Safra etanol em aceleração:</b> Primeira quinzena de abril registrou moagem +19,67% (19,56 Mt); etanol responde por 67% do mix. Estoque ofertado sobe com E30 consolidado. Movimento favorável para oferta interna de anidro até fim do ano."
   ],
-  "resumo_editorial": "<p class=\"lead\"><b>Terça crítica:</b> Brent rebate 0,89% após ataques EUA-Irã, mas mercado de combustível no Brasil atinge ponto de inflexão. Defasagem gasolina Petrobras dispara para 88% — máxima histórica — com potencial de reajuste de R$ 2,22/L. Diesel segue preso há 112 dias sem importação; risco iminente de faltas em polos abastecidos por importação.</p><p>Câmbio segue firme (USD/BRL R$ 5,02, EUR/BRL R$ 5,84) e juros continuam acima do previsto pelo Focus (Selic 14,50%, previsão fim-ano 13,25%). Inflação desacelera (IPCA 0,67% mês), mas expectativa Focus para 2026 sobe para 4,92%, sinalizando pressão residual nos próximos meses.</p><p><b>Oportunidade etanol:</b> Safra 2026/27 explode com moagem +19,67% na quinzena (19,56 Mt). Mix produção favorece etanol (67% da cana), criando oferta robusta e pressão de preço na usina. Revendedor deve preparar para repasse de queda em 2–3 semanas, aproveitando competitividade contra gasolina (se Petrobras reajustar, hidratado fica ainda mais atrativo).</p>",
+  "resumo_editorial": "<p class=\"lead\">Quarta-feira de estabilização relativa. Brent recua 0,41% para USD 99,18 enquanto negociadores EUA-Irã movem diálogos rumo a possível ceasefire. No mercado doméstico, Petrobras segue paralisado apesar de defasagem gasolina em máximo histórico (88%). A safra de etanol 2026/27 arranca em ritmo acelerado, sinalizando segurança de oferta interna.</p><p>Foco triplo: (1) Diplomacia global — fechamento de acordo na próxima semana pode descomprimir Brent para USD 85–90; (2) Defasagem estrutural — sem sinais de reajuste iminente Petrobras, mercado livre e refinarias ganham terreno; (3) Biocombustível — moagem +19,67% e mix etanol 67% confirmam transição E30 consolidada, com anidro respondendo por demanda crescente.</p><p>Revendedores: antecipem spillover doméstico de qualquer alívio em Brent (24–48h); revisite mix de fontes (Petrobras vs. Mataripe vs. importações); e traga estoques etanol para destaque — consumidor começa a reconhecer vantagem competitiva do combustível em início de safra.</p>",
   "cepea": {
     "hidratado_sp": "R$ 1,3746/L",
     "anidro_sp": "R$ 1,5259/L",
     "ultima_atualizacao_iso": "2026-05-25",
     "ultima_atualizacao_label": "seg 25/mai"
   },
-  "_comentario": "Gerado automaticamente em 2026-05-26T18:13:46.073Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
+  "_comentario": "Gerado automaticamente em 2026-05-27T08:55:40.938Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
   "decisao": {
-    "data_label": "Terça · 26 mai 2026",
+    "data_label": "Quarta · 27 mai 2026",
     "base": "ABICOM + custo distribuidora (monitor de preços) + Brent/câmbio",
     "disclaimer": "Essa não é uma recomendação de compra, apenas uma sugestão baseada num modelo educacional.",
     "fuels": [
@@ -155,7 +155,7 @@
           },
           {
             "dir": "up",
-            "text": "Brent subindo — pressão no custo de reposição"
+            "text": "Dólar subindo — encarece importação"
           }
         ]
       },
@@ -192,7 +192,7 @@
           },
           {
             "dir": "up",
-            "text": "Brent subindo — pressão no custo de reposição"
+            "text": "Dólar subindo — encarece importação"
           }
         ]
       },
@@ -238,7 +238,7 @@
         "verdict": "wait",
         "label": "PODE ESPERAR",
         "emoji": "🟢",
-        "score": 26,
+        "score": 1,
         "spark": [
           22,
           100,
@@ -249,19 +249,19 @@
         "reasons": [
           {
             "dir": "up",
-            "text": "Brent subindo — pressão no custo de reposição"
-          },
-          {
-            "dir": "up",
             "text": "Dólar subindo — encarece importação"
           },
           {
             "dir": "up",
-            "text": "Petrobras anunciou reajuste iminente"
+            "text": "Petrobras anunciou que não vai importar — defasagem deve persistir"
           },
           {
             "dir": "down",
             "text": "Custo distribuidora <b>-22,3%</b> (caindo)"
+          },
+          {
+            "dir": "down",
+            "text": "Brent em queda — alivia custo"
           },
           {
             "dir": "flat",
