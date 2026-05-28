@@ -233,10 +233,10 @@
     },
     {
       "date": "2026-05-28",
-      "brent": 96.3,
-      "wti": 90.69,
-      "usdbrl": 5.0579,
-      "eurbrl": 5.8828,
+      "brent": 96.57,
+      "wti": 92,
+      "usdbrl": 5.0517,
+      "eurbrl": 5.8847,
       "selic": 14.5,
       "ipca": 0.67,
       "def_gas": 88,
@@ -251,7 +251,7 @@
         "gasolina": 100,
         "diesel_s10": 100,
         "diesel_s500": 100,
-        "etanol": 18
+        "etanol": 14
       }
     }
   ]

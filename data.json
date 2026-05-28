@@ -2,31 +2,31 @@
   "meta": {
     "date_iso": "2026-05-28",
     "date_label": "Quinta · 28 mai 2026",
-    "last_update": "06:55"
+    "last_update": "16:42"
   },
   "manchete": {
     "principal": {
       "severity": "yellow",
       "status_emoji": "🟡",
       "severity_label": "Atenção",
-      "titulo": "Brent sobe 2,13% com negociações EUA-Irã travadas; defasagem Petrobras mantém 88% na gasolina e potencial de R$ 2,22/L"
+      "titulo": "Brent sobe 2,41% com escalada EUA-Irã; gasolina acumula 88% de defasagem e potencial de R$ 2,22/L apesar de adesão Petrobras a subsídio"
     },
     "secundarias": [
       {
         "categoria": "Mercado",
-        "titulo": "Petróleo recupera terreno com sinais de cessar-fogo no Oriente Médio; Brent cotado a US$ 96,30",
+        "titulo": "Petróleo volta a superar US$ 96/bbl com tensões geopolíticas no Golfo; negociações EUA-Irã permanecem paralisadas",
         "severity": "yellow",
         "status_emoji": "🟡"
       },
       {
         "categoria": "Combustíveis",
-        "titulo": "Abicom alerta: diesel com defasagem de 52% e janelas de importação fechadas há 112 dias para diesel",
+        "titulo": "Diesel mantém 52% de defasagem com janelas fechadas há 112 dias; potencial aumento de R$ 1,87/L evidencia sustentabilidade limitada do subsídio",
         "severity": "red",
         "status_emoji": "🔴"
       },
       {
         "categoria": "Política",
-        "titulo": "Safra 2026/27 inicia com foco em etanol; mix alcança 61,84% com 60,46 Mt moída até 1º/mai",
+        "titulo": "Safra 2026/27 abre com foco em etanol: mix alcança 61,84% vs. 54,77% no ciclo anterior; oferta doméstica reforça segurança energética",
         "severity": "green",
         "status_emoji": "🟢"
       }
@@ -34,16 +34,16 @@
   },
   "petroleo": {
     "brent": {
-      "val": "US$ 96,30",
-      "delta": "▲ +2,13%",
+      "val": "US$ 96,57",
+      "delta": "▲ +2,41%",
       "dir": "up"
     },
     "wti": {
-      "val": "US$ 90,69",
-      "delta": "▼ -3,41%",
-      "dir": "down"
+      "val": "US$ 92,00",
+      "delta": "▲ +2,14%",
+      "dir": "up"
     },
-    "resumo": "<cite index=\"6-1\">Brent subiu para 96,30 USD/Bbl em 28 de maio, recuperando perdas</cite>. <cite index=\"6-3\">Preços sobem enquanto negociações entre EUA e Irã permanecem travadas sobre questões-chave</cite>. Pressão moderada mantém o barril volátil."
+    "resumo": "Brent saltou para US$ 96,57 após renovadas hostilidades entre EUA e Irã no Golfo Pérsico. Negociações permanecem travadas em questões-chave: Irã reclama controle do Estreito de Ormuz e preservação nuclear. Apesar da escalada, preços acompanham segunda queda semanal com expectativa de eventual acordo."
   },
   "abicom": {
     "defasagem_gasolina_pct": "88%",
@@ -52,32 +52,32 @@
     "dias_sem_ajuste_diesel": 112,
     "potencial_aumento_rs_gasolina": "R$ 2,22/L",
     "potencial_aumento_rs_diesel": "R$ 1,87/L",
-    "sinal_petrobras": "nao_importa"
+    "sinal_petrobras": "mp_subsidio"
   },
   "moedas": {
     "usdbrl": {
-      "val": "R$ 5,0579",
-      "delta": "▲ +0,15%",
-      "dir": "up"
+      "val": "R$ 5,0517",
+      "delta": "▼ -0,24%",
+      "dir": "down"
     },
     "eurbrl": {
-      "val": "R$ 5,8828",
-      "delta": "▲ +0,18%",
+      "val": "R$ 5,8847",
+      "delta": "▲ +0,28%",
       "dir": "up"
     }
   },
   "juros": {
     "selic": {
       "val": "14,50% a.a.",
-      "delta": "• mantida",
-      "dir": "flat"
+      "delta": "▼ -0,25 p.p. (de 14,75% em 17/jun)",
+      "dir": "down"
     },
     "previsao_focus": "13,25% (fim 2026)"
   },
   "inflacao": {
     "ipca": {
       "val": "0,67% (mês)",
-      "delta": "▼ vs. mês anterior",
+      "delta": "▼ vs. mês anterior (0,88% em março)",
       "dir": "down"
     },
     "previsao_focus": "4,92% (2026)"
@@ -87,36 +87,36 @@
     "b100_no_diesel_pct": "15%"
   },
   "safra_etanol": {
-    "moagem": "60,46 Mt",
-    "var_anual": "+19,67% (vs. abr/25)",
+    "moagem": "19,56 Mt",
+    "var_anual": "+19,67% (1ª quinzena abr/26)",
     "mix_etanol_pct": "61,84%",
     "oferta_total": "3,29 bi L (+71,84% a/a)"
   },
   "agenda_semanal": {
-    "segunda": "—",
+    "segunda": "Boletim Focus semanal (expectativas macro)",
     "terca": "—",
     "quarta": "—",
-    "quinta": "UNICA divulga dados quinzenais safra 2026/27 (38 usinas retomam operações)",
-    "sexta": "ANP divulga preços combustíveis"
+    "quinta": "Divulgação ANP combustíveis; acompanhamento tensões Oriente Médio",
+    "sexta": "Relatório semanal ANP; expectativa repercussão subsídio combustíveis"
   },
   "acoes_dia": [
-    "<b>Monitorar defasagem acelerada:</b> Diesel a 52% de defasagem com 112 dias sem importação. Reavaliar preços em bomba e alerta para possível movimentação de Petrobras nas próximas semanas.",
-    "<b>Aproveitar competitividade do etanol:</b> Mix de safra em 61,84% favorece oferta. Com etanol hidratado economicamente vantajoso em 232 cidades (ANP), reforce promoção do combustível verde.",
-    "<b>Acompanhar negociações Oriente Médio:</b> Brent recuperado a US$ 96,30. Qualquer escalada afeta preços internacionais dentro de 5-7 dias; manter radar ligado em notícias geopolíticas."
+    "<b>Revise mix de compra de combustíveis:</b> Com gasolina 88% defasada e diesel 52%, negocie com distribuidoras prazos estendidos. Janelas de importação fechadas (69 e 112 dias) sinalizam volatilidade. Adesão Petrobras ao subsídio (MP 1.358) pode gerar reajustes pontuais—monitore comunicados oficiais.",
+    "<b>Proteja margem em estoque:</b> Escassez potencial de importações e defasagens crescentes exigem posicionamento defensivo. Documente custos atuais (PTAX 5,0517) para simulações de reajuste. Brent acima de US$ 96 pressiona paridades internacionais.",
+    "<b>Reforce qualidade operacional:</b> E30 e B15 em vigor desde ago/25. Confirm testes de teor de etanol/biodiesel e drenagem de tanques (B15 exige semanal). Mix etanol 61,84% na safra reduz risco de desabastecimento mas aumenta volatilidade de preços hidratado."
   ],
   "radar": [
-    "<b>Defasagem em alerta:</b> <cite index=\"11-1\">Gasolina com defasagem de 88% nas refinarias Petrobras, indicando potencial alta de R$ 2,22/L</cite>. Revendedor deve estar preparado para reajuste iminente.",
-    "<b>Safra acelerada favorece etanol:</b> <cite index=\"32-2,32-6\">238 usinas operam no Centro-Sul; moagem acumulada até 1º/mai atingiu 60,46 Mt, 19,67% acima do ano anterior</cite>. Oferta robusta mantém preços competitivos.",
-    "<b>Câmbio em alta moderada:</b> USD/BRL em R$ 5,0579 (+0,15% vs. ontem) e EUR/BRL em R$ 5,8828. Dólar forte pressiona custos de importação; acompanhe Focus do BC para revisões."
+    "<b>Geopolítica + Supply Chain:</b> Escalada EUA-Irã impacta Estreito de Ormuz (~20% do petróleo global). Negociações travadas. Risco: oscilação Brent US$ 90–100 nas próximas semanas. Impacto direto: paridade importação diesel/gasolina.",
+    "<b>Defasagem Estrutural:</b> Gasolina 88% + diesel 52% defasados. Petrobras aderiu a subsídio (MP), não abandou PPI. Modelo híbrido cria incerteza: reajustes podem vir em bloco ou pontuais. Janelas fechadas (69/112 dias) reduzem oferta importada.",
+    "<b>Etanol em Alta no Mix:</b> Safra 2026/27 abre com 61,84% de mix etanol (vs. 54,77% anterior). Produção 2025/26 (-3,56%) fechada; nova safra (+33% em fabricação) oferece segurança. Preços hidratado devem ceder nas próximas semanas conforme repasse usina→bomba."
   ],
-  "resumo_editorial": "<p class=\"lead\"><cite index=\"6-1\">Brent sobe 2,13% para US$ 96,30 em 28 de maio</cite>, recuperando perdas em meio a negociações travadas entre EUA e Irã. No mercado doméstico, a defasagem Petrobras em gasolina alcança níveis críticos de 88% com potencial de alta de R$ 2,22/L, enquanto o diesel permanece 52% abaixo da paridade com 112 dias sem importação. A Petrobras mantém postura de não importação, sinalizando possível reajuste de forma concentrada nas próximas semanas.</p><p><cite index=\"32-2,32-6\">A safra 2026/27 iniciou com 238 usinas operando e moagem de 60,46 Mt até 1º/maio, avanço de 19,67% frente ao ano passado</cite>. O mix de etanol chega a 61,84%, consolidando prioridade industrial no biocombustível. <cite index=\"32-16,32-17\">Na última semana (17-23/mai), ANP apurou etanol com preço abaixo da paridade técnica em 232 municípios, com todos os estados monitorados (SP, PR, GO, MT, MS) registrando vantagem econômica para o hidratado frente à gasolina</cite>. Revendedor deve capitalizar momentum do etanol com margens competitivas.</p><p>Agenda operacional da semana: quinta traz divulgação UNICA de dados quinzenais; sexta, ANP publica preços de combustíveis. Câmbio permanece pressionado (USD/BRL R$ 5,0579) e inflação de maio mantém pressão sobre expectativas 2026 (Focus: 4,92% IPCA). Recomendação: revisar portfólio de preços de bomba, validar mix de oferta diesel/gasolina/etanol conforme paridades, e preparar comunicação aos clientes flex sobre atratividade do hidratado. Vigiar notícias Oriente Médio 24h.</p>",
+  "resumo_editorial": "<p class=\"lead\">Quinta-feira tensa nos mercados: Brent pulou 2,41% para US$ 96,57 com novas hostilidades EUA-Irã no Golfo Pérsico, enquanto defasagens Petrobras atingem recordes (gasolina 88%, diesel 52%). A adesão da estatal ao programa de subsídio federal (MP 1.358, maio) oferece algum alívio institucional, mas não resolve o hiato estrutural de R$ 2,22/L (gasolina) e R$ 1,87/L (diesel) em relação à paridade importação. Negociações Washington-Teerã permanecem paralisadas.</p><p>Cambial segue estável (USD 5,0517, -0,24% vs. ontem) e inflação esperada em 4,92% para 2026 (Focus). Banco Central reduziu Selic para 14,50% (reunião 17 de junho) com expectativa Focus de 13,25% ao fim do ano. Mandatos E30/B15 plenamente vigentes desde agosto/2025; nenhuma alteração regulatória nova anunciada.</p><p>No setor sucroenergético, a safra 2026/27 abriu com forte momentum etanoleiro: moagem 19,56 Mt (+19,67%), produção total 1,23 bi litros (+33,32%), mix etanol 61,84% vs. 54,77% no ciclo anterior. Essa oferta reforça segurança doméstica e pressiona preços do hidratado para baixo nas próximas semanas. Recomendação: monitore comunicados Petrobras sobre timing de reajustes (subsídio mitiga volatilidade, mas não a elimina); confira conformidade operacional E30/B15; negocie prazos com distribuidoras aproveitando incerteza geopolítica.</p>",
   "cepea": {
     "hidratado_sp": "R$ 1,3746/L",
     "anidro_sp": "R$ 1,5259/L",
     "ultima_atualizacao_iso": "2026-05-25",
     "ultima_atualizacao_label": "seg 25/mai"
   },
-  "_comentario": "Gerado automaticamente em 2026-05-28T08:55:40.997Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
+  "_comentario": "Gerado automaticamente em 2026-05-28T18:42:37.976Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
   "decisao": {
     "data_label": "Quinta · 28 mai 2026",
     "base": "ABICOM + custo distribuidora (monitor de preços) + Brent/câmbio",
@@ -241,7 +241,7 @@
         "verdict": "wait",
         "label": "PODE ESPERAR",
         "emoji": "🟢",
-        "score": 18,
+        "score": 14,
         "spark": [
           33,
           100,
@@ -257,15 +257,15 @@
           },
           {
             "dir": "up",
-            "text": "Dólar subindo — encarece importação"
-          },
-          {
-            "dir": "up",
-            "text": "Petrobras anunciou que não vai importar — defasagem deve persistir"
+            "text": "MP/subsídio anunciada — sinal de que o reajuste vem (governo se preparando)"
           },
           {
             "dir": "down",
             "text": "Custo distribuidora <b>-26,2%</b> (caindo)"
+          },
+          {
+            "dir": "down",
+            "text": "Dólar em queda — alivia importação"
           },
           {
             "dir": "flat",
