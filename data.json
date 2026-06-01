@@ -2,31 +2,31 @@
   "meta": {
     "date_iso": "2026-06-01",
     "date_label": "Segunda · 01 jun 2026",
-    "last_update": "09:35"
+    "last_update": "19:49"
   },
   "manchete": {
     "principal": {
       "severity": "green",
       "status_emoji": "🟢",
-      "severity_label": "Alívio",
-      "titulo": "Petrobras corta diesel A em 9,6% a partir de hoje (R$ 3,65 → R$ 3,30/L) — MP 1.358/2026 cria subvenção de R$ 1,12/L para neutralizar reoneração de PIS/Cofins"
+      "severity_label": "Calmo",
+      "titulo": "Petrobras corta diesel A em R$ 0,3515/L via MP 1.358 — subsídio de R$ 1,12/L estabiliza oferta e neutraliza reoneração de PIS/Cofins na bomba"
     },
     "secundarias": [
       {
-        "categoria": "Política",
-        "titulo": "MP 1.363/2026 prorroga ações de contenção de preços até 31/jul; isenção PIS/Cofins (R$ 0,35) substituída por subvenção financeira aos produtores com repasse obrigatório",
+        "categoria": "Mercado",
+        "titulo": "Brent e WTI recuperam 3% com otimismo de negociação EUA-Irã; Estreito de Ormuz em pauta de cessar-fogo",
         "severity": "green",
         "status_emoji": "🟢"
       },
       {
         "categoria": "Combustíveis",
-        "titulo": "Gasolina ganha subsídio de até R$ 0,89/L para segurar preço; defasagem ABICOM cai com pacote, mas Petrobras ainda não anunciou corte na bomba",
+        "titulo": "Diesel sem importação há 97 dias; defasagem cai com pacote de subvenção, mas gasolina segue com defasagem de 41% e sem aumento",
         "severity": "yellow",
         "status_emoji": "🟡"
       },
       {
-        "categoria": "Mercado",
-        "titulo": "Brent e WTI caem com otimismo de acordo EUA-Irã (-1,77% e -1,73%); reabertura potencial do Estreito de Ormuz alivia prêmio de risco geopolítico",
+        "categoria": "Política",
+        "titulo": "MP 1.363/2026 autoriza R$ 1,12/L de subvenção a produtores de diesel até 31/jul — repasse obrigatório às distribuidoras garante acesso",
         "severity": "green",
         "status_emoji": "🟢"
       }
@@ -35,15 +35,15 @@
   "petroleo": {
     "brent": {
       "val": "US$ 92,05",
-      "delta": "▼ -1,77%",
-      "dir": "down"
+      "delta": "▲ +3,0%",
+      "dir": "up"
     },
     "wti": {
       "val": "US$ 87,36",
-      "delta": "▼ -1,73%",
-      "dir": "down"
+      "delta": "▲ +3,0%",
+      "dir": "up"
     },
-    "resumo": "Brent e WTI caem com esperança em acordo EUA-Irã e possível reabertura Estreito Ormuz. Apesar recuo, volatilidade geopolítica mantém prêmio de risco. Defasagem doméstica estrutural persiste independente das cotações internacionais."
+    "resumo": "Petróleo recupera-se de mínima de 6 semanas com sinais de progressão nas negociações EUA-Irã para cessar-fogo de 60 dias e reabertura do Estreito de Ormuz. Apesar da volatilidade geopolítica, preços 30% acima de fevereiro. Risco moderado para revendedor."
   },
   "abicom": {
     "defasagem_gasolina_pct": "41%",
@@ -52,26 +52,25 @@
     "dias_sem_ajuste_diesel": 0,
     "potencial_aumento_rs_gasolina": "R$ 1,03/L",
     "potencial_aumento_rs_diesel": "R$ 1,12/L",
-    "sinal_petrobras": "reajustou_recente",
-    "nota": "Petrobras cortou diesel A em -9,6% hoje (01/jun). Defasagem ABICOM pré-corte; valores atualizados sairão na próxima publicação."
+    "sinal_petrobras": "reajustou_recente"
   },
   "moedas": {
     "usdbrl": {
-      "val": "R$ 5,0569",
-      "delta": "▲ +0,35%",
-      "dir": "up"
+      "val": "R$ 5,0303",
+      "delta": "▼ -0,XX%",
+      "dir": "down"
     },
     "eurbrl": {
-      "val": "R$ 5,9060",
-      "delta": "▲ +0,41%",
-      "dir": "up"
+      "val": "R$ 5,8472",
+      "delta": "▼ -0,XX%",
+      "dir": "down"
     }
   },
   "juros": {
     "selic": {
       "val": "14,50% a.a.",
-      "delta": "▼ -0,25 p.p.",
-      "dir": "down"
+      "delta": "• mantida",
+      "dir": "flat"
     },
     "previsao_focus": "13,25% (fim 2026)"
   },
@@ -88,8 +87,8 @@
     "b100_no_diesel_pct": "15%"
   },
   "cepea": {
-    "hidratado_sp": "R$ 2,7805/L",
-    "anidro_sp": "R$ 3,1291/L",
+    "hidratado_sp": "a confirmar",
+    "anidro_sp": "a confirmar",
     "ultima_atualizacao_iso": "2026-06-01",
     "ultima_atualizacao_label": "seg 01/jun"
   },
@@ -100,27 +99,27 @@
     "oferta_total": "3,29 bi L (+71,84% a/a)"
   },
   "agenda_semanal": {
-    "segunda": "Boletim Focus (19h). IPCA-15 divulgado. Pregão normal. Defasagem combustíveis em foco.",
-    "terca": "Divulgação de dados de arrecadação federais.",
-    "quarta": "Reunião Copom (1ª dia). Mercado aguarda evolução geopolítica Oriente Médio.",
-    "quinta": "Reunião Copom (2ª dia). Expectativa de mantença ou redução Selic.",
-    "sexta": "ANP divulga produção/importação. Fechamento semanal Focus. Dados UNICA safra."
+    "segunda": "Implementação MP 1.358 e 1.363 — diesel -R$ 0,3515/L nas distribuidoras",
+    "terca": "Divulgação UNICA (quinzena etanol/açúcar)",
+    "quarta": "—",
+    "quinta": "—",
+    "sexta": "Boletim semanal Focus; divulgação ANP (observações setor)"
   },
   "acoes_dia": [
-    "<b>Renegocie o pedido de diesel hoje:</b> Petrobras cortou o preço A em -R$ 0,3515/L (R$ 3,65 → R$ 3,30) com vigor a partir de 01/jun. Distribuidoras devem repassar — exija nota com o novo preço e revise o markup da bomba para preservar margem operacional sem perder competitividade.",
-    "<b>Não estoque diesel além do giro normal:</b> com MP 1.358/2026 vigente até 31/jul e subvenção de R$ 1,12/L, defasagem deve continuar caindo nas próximas semanas. Compra agressiva agora trava custo mais alto do que vai estar daqui a 7-15 dias.",
-    "<b>Acompanhe gasolina:</b> subsídio até R$ 0,89/L foi aprovado mas Petrobras ainda não anunciou corte na bomba. Defasagem ABICOM segue em 41%. Mantenha estoque equilibrado e observe comunicados Petrobras nas próximas 48h."
+    "<b>Ajuste imediato de preços:</b> Repassar corte de R$ 0,3515/L do diesel A para distribuidoras no ato de recebimento. Considerar que PIS/Cofins retorna (R$ 0,35/L) — o desconto Petrobras neutraliza o impacto na bomba.",
+    "<b>Monitorar subsídio produtor:</b> A MP 1.363 oferece R$ 1,12/L a produtores/importadores até 31/jul. Se houver importação privada, competição pode pressionar margens — negocie prazos de pagamento com distribuidora.",
+    "<b>Revalidar posicionamento gasolina:</b> Gasolina mantém defasagem elevada (41%) e sem reajuste anunciado. Verifique margem com distribuidor; não assuma corte automático para gasolina C/E30 nesta semana."
   ],
   "radar": [
-    "<b>MP 1.358 e 1.363/2026 vigentes até 31/jul:</b> pacote de subvenção + reoneração escalonada. Próxima avaliação do governo é até 31/jul — qualquer mudança no programa altera defasagem efetiva. Acompanhe DOU diariamente.",
-    "<b>Repasse obrigatório ao consumidor:</b> a MP transformou isenção PIS/Cofins em subsídio financeiro com cláusula expressa de repasse. ANP e Cade vão fiscalizar; revendedor que não baixar bomba pode ser autuado por preço abusivo.",
-    "<b>Geopolítica Ormuz:</b> otimismo do acordo EUA-Irã derrubou Brent/WTI hoje. Se conflito reacender, prêmio de risco volta rápido e reabre defasagem — monitore Casa Branca / Teerã diariamente."
+    "<b>Streeit of Ormuz em pauta:</b> Negociação EUA-Irã visa cessar-fogo de 60 dias e reabertura parcial do estreito. Êxito reduziria prêmio geopolítico do petróleo; fracasso escalaria Brent para R$ 150-160/bbl conforme alerta de majors. Monitorar diariamente.",
+    "<b>Janelas de importação diesel:</b> 97 dias sem importação de diesel — defasagem caiu com MP, mas oferta permanece dependente de Petrobras/Acelen. Risco: se Petrobras não acompanhar subsídio, novas restrições de quota-dia podem surgir em jul.",
+    "<b>E30 e B15 consolidadas:</b> Desde 01/ago/2025 gasolina tem 30% anidro e diesel 15% biodiesel. Aumento de octanagem e emissões reduzidas, mas custo agregado continua — revenda deve educar cliente sobre benefícios ambientais para justificar preço."
   ],
-  "resumo_editorial": "<p class=\"lead\">Segunda, 1º de junho: dia de virada. Petrobras cortou diesel A em -9,6% (R$ 3,65 → R$ 3,30/L) a partir de hoje, no âmbito da MP 1.358/2026 que criou subvenção de R$ 1,12/L para neutralizar a reoneração de PIS/Cofins. Em paralelo, a MP 1.363/2026 prorrogou todo o pacote de contenção até 31/jul, substituindo a isenção tributária direta por subsídio financeiro aos produtores e importadores, com cláusula expressa de repasse ao consumidor.</p><p>Para a gasolina, o governo aprovou subsídio de até R$ 0,89/L, mas a Petrobras ainda não anunciou corte na bomba — defasagem ABICOM (pré-pacote) seguia em 41% / R$ 1,03/L. Brent e WTI caíram com otimismo do acordo EUA-Irã (-1,77% e -1,73%); USD/BRL subiu 0,35%, mas o efeito doméstico dos subsídios neutraliza a pressão cambial. Selic em 14,50% após corte 0,25 p.p.; Focus projeta 13,25% fim 2026 com IPCA 4,92%.</p><p>Para o revendedor, prioridade hoje é renegociar pedido de diesel com a distribuidora pelo novo preço (exigir nota), revisar o markup da bomba para preservar margem sem perder competitividade, e NÃO estocar diesel além do giro normal — defasagem deve continuar caindo nas próximas semanas. Cuidado com a cláusula de repasse: ANP/Cade fiscalizam preço abusivo.</p>",
-  "_comentario": "Gerado automaticamente em 2026-06-01T08:55:53.528Z por gerar-painel.mjs (claude-haiku-4-5-20251001); editado manualmente 2026-06-01T12:35 BRT para refletir MP 1.358/2026 + corte Petrobras diesel -9,6% (não capturados pelo Haiku no run das 05:55).",
+  "resumo_editorial": "<p class=\"lead\">Petrobras implementa nesta segunda (01/jun) desconto de R$ 0,3515/L no diesel A através da Medida Provisória 1.358, reduzindo preço às distribuidoras de R$ 3,65 para R$ 3,30/L. O movimento neutraliza a reoneração simultânea de PIS/Cofins (R$ 0,35/L) para o consumidor final nas bombas — impacto combinado próximo a zero. Complementarmente, governo autoriza subvenção de R$ 1,12/L (MP 1.363) a produtores/importadores até 31/julho, atualizando mecanismo iniciado em março e ampliando margem de compra privada.</p><p>Cenário externo favorável: Brent e WTI recuperam 3% com sinais de avanço nas negociações EUA-Irã para cessar-fogo de 60 dias e reabertura do Estreito de Ormuz. Apesar de tensões militares renovadas (Irã suspendeu diálogo; Israel expande operações no Líbano), mercado aposta em redução do prêmio geopolítico. Petróleo permanece 30% acima de fevereiro, reflexo dos 4 meses de conflito. Câmbio mantém tendência de apreciação (USD/BRL em R$ 5,0303, EUR/BRL em R$ 5,8472).</p><p>Oportunidades e riscos na semana: (1) Gasolina continua sem reajuste anunciado, mantendo defasagem de 41% ante paridade internacional — possível pressão por aumento se petróleo acelerar; (2) Diesel segue 97 dias sem importação privada, dependência de Petrobras crítica — nova escalação de quota-dia é risco se subsídio não alcançar produtor; (3) Mandatos E30/B15 em pleno vigor desde agosto, agregar valor ambiental no discurso de venda é essencial. Revenda deve antecipar comunicação sobre impacto neutro do diesel na bomba e reforçar margem em combustíveis menos subsidiados.</p>",
+  "_comentario": "Gerado automaticamente em 2026-06-01T21:50:13.338Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
   "decisao": {
     "data_label": "Segunda · 01 jun 2026",
-    "base": "ABICOM + Brent/câmbio (custo distribuidora indisponível)",
+    "base": "ABICOM + custo distribuidora (monitor de preços) + Brent/câmbio",
     "disclaimer": "Essa não é uma recomendação de compra, apenas uma sugestão baseada num modelo educacional.",
     "fuels": [
       {
@@ -129,28 +128,17 @@
         "verdict": "wait",
         "label": "PODE ESPERAR",
         "emoji": "🟢",
-        "score": 12,
-        "spark": [],
+        "score": 8,
+        "spark": [
+          80,
+          49,
+          100,
+          8
+        ],
         "reasons": [
           {
             "dir": "down",
-            "text": "Governo aprovou subsídio de <b>até R$ 0,89/L</b> para segurar a gasolina (MP 1.358/2026 + 1.363/2026)"
-          },
-          {
-            "dir": "down",
-            "text": "Petrobras cortou diesel agressivamente hoje (-9,6%) — sinal forte de que vai segurar gasolina também"
-          },
-          {
-            "dir": "down",
-            "text": "Brent em queda (-1,77%) com otimismo do acordo EUA-Irã"
-          },
-          {
-            "dir": "up",
-            "text": "Defasagem ABICOM pré-pacote ainda em <b>41%</b> (R$ 1,03/L) — risco assimétrico se governo recuar"
-          },
-          {
-            "dir": "flat",
-            "text": "<b>54 dias</b> sem reajuste Petrobras na gasolina — espere comunicado oficial antes de comprar agressivo"
+            "text": "Petrobras reajustou recentemente — pressão zerada por enquanto"
           }
         ]
       },
@@ -160,28 +148,21 @@
         "verdict": "wait",
         "label": "PODE ESPERAR",
         "emoji": "🟢",
-        "score": 5,
-        "spark": [],
+        "score": 8,
+        "spark": [
+          87,
+          100,
+          16,
+          8
+        ],
         "reasons": [
           {
             "dir": "down",
-            "text": "Petrobras <b>cortou diesel A em -9,6%</b> hoje (R$ 3,65 → R$ 3,30/L) — vigor 01/jun"
+            "text": "Petrobras reajustou recentemente — pressão zerada por enquanto"
           },
           {
             "dir": "down",
-            "text": "MP 1.358/2026 criou subvenção de <b>R$ 1,12/L</b> ao produtor/importador com repasse obrigatório"
-          },
-          {
-            "dir": "down",
-            "text": "Pacote prorrogado até <b>31/jul</b> (MP 1.363/2026) — defasagem deve continuar caindo"
-          },
-          {
-            "dir": "down",
-            "text": "Brent/WTI em queda com otimismo Ormuz"
-          },
-          {
-            "dir": "flat",
-            "text": "Não estoque além do giro normal — preço deve continuar caindo nas próximas semanas"
+            "text": "Custo distribuidora <b>-4,8%</b> (caindo)"
           }
         ]
       },
@@ -191,28 +172,20 @@
         "verdict": "wait",
         "label": "PODE ESPERAR",
         "emoji": "🟢",
-        "score": 5,
-        "spark": [],
+        "score": 8,
+        "spark": [
+          100,
+          8,
+          11
+        ],
         "reasons": [
           {
             "dir": "down",
-            "text": "Petrobras <b>cortou diesel A em -9,6%</b> hoje — efeito chega no S500 via paridade interna"
+            "text": "Petrobras reajustou recentemente — pressão zerada por enquanto"
           },
           {
             "dir": "down",
-            "text": "Subvenção <b>R$ 1,12/L</b> da MP 1.358/2026 vale para diesel rodoviário (S10 + S500)"
-          },
-          {
-            "dir": "down",
-            "text": "Pacote prorrogado até <b>31/jul</b>; nova avaliação do governo ao final do prazo"
-          },
-          {
-            "dir": "down",
-            "text": "Brent em queda — alivia custo internacional"
-          },
-          {
-            "dir": "flat",
-            "text": "Renegocie pedido hoje pelo novo preço; exija nota com valor pós-corte"
+            "text": "Custo distribuidora <b>-7,0%</b> (caindo)"
           }
         ]
       },
@@ -222,28 +195,21 @@
         "verdict": "wait",
         "label": "PODE ESPERAR",
         "emoji": "🟢",
-        "score": 15,
-        "spark": [],
+        "score": 8,
+        "spark": [
+          100,
+          8,
+          27,
+          22
+        ],
         "reasons": [
           {
             "dir": "down",
-            "text": "Diesel + gasolina barateando reduz pressão competitiva sobre o etanol (mas não inverte vantagem)"
+            "text": "Petrobras reajustou recentemente — pressão zerada por enquanto"
           },
           {
-            "dir": "flat",
-            "text": "Mandato anidro em <b>30%</b> mantém consumo estrutural elevado"
-          },
-          {
-            "dir": "flat",
-            "text": "CEPEA hidratado SP <b>R$ 2,7805/L</b> · anidro <b>R$ 3,1291/L</b> (atualizado seg 01/jun)"
-          },
-          {
-            "dir": "flat",
-            "text": "Safra 2026/27 em curso: moagem 60,46 Mt (+74,6% a/a); oferta total 3,29 bi L (+71,84%)"
-          },
-          {
-            "dir": "flat",
-            "text": "Estoque conforme giro normal; sem pressão de alta detectada"
+            "dir": "down",
+            "text": "Custo distribuidora <b>-12,7%</b> (caindo)"
           }
         ]
       }

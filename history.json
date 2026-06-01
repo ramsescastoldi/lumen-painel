@@ -273,23 +273,23 @@
       "date": "2026-06-01",
       "brent": 92.05,
       "wti": 87.36,
-      "usdbrl": 5.0569,
-      "eurbrl": 5.906,
+      "usdbrl": 5.0303,
+      "eurbrl": 5.8472,
       "selic": 14.5,
       "ipca": 0.67,
       "def_gas": 41,
       "def_die": 31,
       "dias_gas": 54,
-      "dias_die": 97,
+      "dias_die": null,
       "pot_gas": 1.03,
       "pot_die": 1.12,
-      "cepea_hid": 2.7805,
-      "cepea_ani": 3.1291,
+      "cepea_hid": null,
+      "cepea_ani": null,
       "decisao": {
-        "gasolina": 88,
-        "diesel_s10": 85,
-        "diesel_s500": 85,
-        "etanol": 1
+        "gasolina": 8,
+        "diesel_s10": 8,
+        "diesel_s500": 8,
+        "etanol": 8
       }
     }
   ]
