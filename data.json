@@ -1,32 +1,32 @@
 {
   "meta": {
-    "date_iso": "2026-05-29",
-    "date_label": "Sexta · 29 mai 2026",
-    "last_update": "16:40"
+    "date_iso": "2026-06-01",
+    "date_label": "Segunda · 01 jun 2026",
+    "last_update": "06:55"
   },
   "manchete": {
     "principal": {
       "severity": "red",
       "status_emoji": "🔴",
       "severity_label": "Crítico",
-      "titulo": "Petróleo cai 1,65% com esperança em acordo EUA-Irã; defasagem diesel persiste acima de 30% e janelas importação fechadas há 100+ dias"
+      "titulo": "Defasagem diesel ultrapassa 30% com janelas importação fechadas 100+ dias; Brent recua mas pressão cambial mantém PPI acima de R$ 1,12/L"
     },
     "secundarias": [
       {
         "categoria": "Mercado",
-        "titulo": "Brent recua para US$ 91,17/bbl com negociações travadas; volatilidade continua elevada em Ormuz",
+        "titulo": "Petróleo WTI cai com otimismo acordo EUA-Irã; volatilidade Ormuz continua pressionando oferta global",
         "severity": "yellow",
         "status_emoji": "🟡"
       },
       {
         "categoria": "Combustíveis",
-        "titulo": "E30 já implementado com sucesso; E32 em pauta CNPE com 61,84% do mix etanol na safra 2026/27",
-        "severity": "green",
-        "status_emoji": "🟢"
+        "titulo": "E30 já consolidado em mercado; defasagem gasolina em 41% mantém revendedores com margens comprimidas",
+        "severity": "red",
+        "status_emoji": "🔴"
       },
       {
         "categoria": "Política",
-        "titulo": "Focus prevê Selic a 13,25% fim 2026 e IPCA 4,92%; inflação segue acima do teto com pressões combustíveis",
+        "titulo": "Focus eleva Selic para 13,25% fim 2026 com IPCA em 4,92%; inflação combustíveis pressiona meta de inflação",
         "severity": "yellow",
         "status_emoji": "🟡"
       }
@@ -34,42 +34,42 @@
   },
   "petroleo": {
     "brent": {
-      "val": "US$ 91,17",
-      "delta": "▼ -1,65%",
+      "val": "US$ 92,05",
+      "delta": "▼ -1,77%",
       "dir": "down"
     },
     "wti": {
-      "val": "US$ 87,59",
-      "delta": "▼ -1,41%",
+      "val": "US$ 87,36",
+      "delta": "▼ -1,73%",
       "dir": "down"
     },
-    "resumo": "Petróleo cai na sexta com esperança de acordo EUA-Irã, mas cenário permanece volátil. Fechamento de Ormuz continua impedindo normalização. Pressão sobre defasagem combustíveis persiste apesar da queda."
+    "resumo": "Brent e WTI caem com esperança em acordo EUA-Irã e possível reabertura Estreito Ormuz. Apesar recuo, volatilidade geopolítica mantém prêmio de risco. Defasagem doméstica estrutural persiste independente das cotações internacionais."
   },
   "abicom": {
-    "defasagem_gasolina_pct": "3%",
-    "defasagem_diesel_pct": "15%",
-    "dias_sem_ajuste_gasolina": 269,
-    "dias_sem_ajuste_diesel": 269,
-    "potencial_aumento_rs_gasolina": "R$ 2,22/L",
-    "potencial_aumento_rs_diesel": "R$ 0,50/L",
+    "defasagem_gasolina_pct": "41%",
+    "defasagem_diesel_pct": "31%",
+    "dias_sem_ajuste_gasolina": 54,
+    "dias_sem_ajuste_diesel": 97,
+    "potencial_aumento_rs_gasolina": "R$ 1,03/L",
+    "potencial_aumento_rs_diesel": "R$ 1,12/L",
     "sinal_petrobras": "nenhum"
   },
   "moedas": {
     "usdbrl": {
       "val": "R$ 5,0569",
-      "delta": "▲ variação positiva",
+      "delta": "▲ +0,35%",
       "dir": "up"
     },
     "eurbrl": {
       "val": "R$ 5,9060",
-      "delta": "▲ variação positiva",
+      "delta": "▲ +0,41%",
       "dir": "up"
     }
   },
   "juros": {
     "selic": {
       "val": "14,50% a.a.",
-      "delta": "▼ redução de 0,25 p.p.",
+      "delta": "▼ -0,25 p.p.",
       "dir": "down"
     },
     "previsao_focus": "13,25% (fim 2026)"
@@ -86,6 +86,12 @@
     "anidro_na_gasolina_pct": "30%",
     "b100_no_diesel_pct": "15%"
   },
+  "cepea": {
+    "hidratado_sp": "R$ 2,7805/L",
+    "anidro_sp": "R$ 3,1291/L",
+    "ultima_atualizacao_iso": "2026-06-01",
+    "ultima_atualizacao_label": "seg 01/jun"
+  },
   "safra_etanol": {
     "moagem": "60,46 Mt",
     "var_anual": "+74,6% a/a",
@@ -93,32 +99,26 @@
     "oferta_total": "3,29 bi L (+71,84% a/a)"
   },
   "agenda_semanal": {
-    "segunda": "Focus Banco Central (previsões Focus — publicação semanal).",
-    "terca": "—",
-    "quarta": "—",
-    "quinta": "—",
-    "sexta": "Relatório ANP combustíveis; acompanhamento moagem UNICA safra 2026/27."
+    "segunda": "Boletim Focus (19h). IPCA-15 divulgado. Pregão normal. Defasagem combustíveis em foco.",
+    "terca": "Divulgação de dados de arrecadação federais.",
+    "quarta": "Reunião Copom (1ª dia). Mercado aguarda evolução geopolítica Oriente Médio.",
+    "quinta": "Reunião Copom (2ª dia). Expectativa de mantença ou redução Selic.",
+    "sexta": "ANP divulga produção/importação. Fechamento semanal Focus. Dados UNICA safra."
   },
   "acoes_dia": [
-    "<b>Monitorar aprovação E32:</b> Portaria CNPE pode sair sem aviso prévio. Demanda extra 1 bilhão L etanol anidro/ano. Posicione contratos de fornecimento imediatamente.",
-    "<b>Ajustar margens diesel/gasolina:</b> Defasagem persistente acima de 30% com 100+ dias janelas fechadas. Avalie mix estoque; não espere reajuste Petrobras no curto prazo.",
-    "<b>Acompanhar câmbio USD/BRL:</b> PTAX sobe para R$ 5,0569 (alta). Impacta custo diesel importado. Revise preços formação margem se PPI global continuar firme."
+    "<b>Confirme estoques diesel:</b> com janelas fechadas 97 dias, reforce planejamento de abastecimento e antecipe pedidos para evitar ruptura. Marque reunião com distribuidora.",
+    "<b>Revise margens e preços bomba:</b> defasagem 41% gasolina / 31% diesel reduz lucratividade. Considere revisão de markup operacional para manter cobertura custo-mercado.",
+    "<b>Monitore IPCA-15 e Focus semanal:</b> Selic em alta (13,25% previsto) pressiona custo capital. Avalie impacto em financiamento de estoques e fluxo caixa."
   ],
   "radar": [
-    "<b>Ormuz: acordo EUA-Irã em negociação:</b> Esperança de reabertura de Estreito reduz preço petróleo. Mas incerteza persiste — Trump ainda não aprovou. Volatilidade deve continuar.",
-    "<b>Safra etanol em ritmo acelerado:</b> Moagem acumula 60,46 Mt (+74,6% vs safra anterior). Mix 61,84% para etanol vs 54,77% ano passado. Competitividade etanol nas bombas (64,5% menor que gasolina) sustenta demanda.",
-    "<b>Inflação e juros pressionam fluxo caixa:</b> IPCA 2026 Focus sobe para 4,92% — acima teto. Selic prevista 13,25% fim 2026. Combustíveis pressionados por câmbio + defasagem estrutural. Revendedor enfrenta compressão margem."
+    "<b>Geopolítica Ormuz:</b> se acordo EUA-Irã se consolidar, reabertura estreito alinha oferta e reduz volatilidade. Acompanhe comunicados diários; qualquer sinal positivo pressiona petróleo para baixo.",
+    "<b>Ciclo Selic em transição:</b> BC reduziu 0,25 p.p. última reunião; Focus projeta 13,25% fim 2026. Juros altos aumentam custo financiamento; defasagem estrutural limita repassse.",
+    "<b>Inflação combustíveis vs. meta:</b> IPCA 4,92% (Focus 2026) acima do teto 4,50%; gasolina E30 pressiona para baixo (+R$ 0,20/L estimado), mas diesel B15 pode elevar custos transportes."
   ],
-  "resumo_editorial": "<p class=\"lead\">Sexta de esperança geopolítica, mas realidade operacional persiste áspera para revendedor. Petróleo cai 1,65% com sinais de trégua EUA-Irã, levando Brent a US$ 91,17. Mas defasagem diesel mantém-se estrutural — 269+ dias sem abertura de janelas de importação, bloqueando importações. Câmbio sobe (USD 5,0569), elevando custos. Safra etanol dispara com moagem acumulada de 60,46 Mt e mix 61,84%, reforçando segurança energética e competitividade nas bombas.</p><p>Juros pressionam: Selic em 14,50%, Focus prevê 13,25% fim 2026. IPCA 2026 sobe a 4,92%, acima do teto da meta. Essa combinação (câmbio, inflação, juros elevados) comprime margem de revendedor em todos os combustíveis. E32 continua em pauta CNPE — aprovação iminente traria 1 bilhão L demanda anidro. Mandatos já estão em 30% etanol, 15% biodiesel.</p><p>Ação: revendedor deve (1) antecipar aprovação E32 e revisar contratos etanol; (2) não contar com reajuste Petrobras curto prazo — defasagem é política de margem, não erro; (3) ajustar precificação combustíveis para câmbio e juros, mantendo vigilância em negociações Ormuz que podem voltar a pressionar petróleo.</p>",
-  "cepea": {
-    "hidratado_sp": "R$ 1,3746/L",
-    "anidro_sp": "R$ 1,5259/L",
-    "ultima_atualizacao_iso": "2026-05-25",
-    "ultima_atualizacao_label": "seg 25/mai"
-  },
-  "_comentario": "Gerado automaticamente em 2026-05-29T18:41:17.294Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
+  "resumo_editorial": "<p class=\"lead\">Segunda, 1º de junho: petróleo cai com esperança em acordo Ormuz, mas defasagem doméstica segue crítica. Diesel sem reajuste há 97 dias com janelas importação fechadas; gasolina, 41% defasada. Selic recua a 14,50%, mas Focus eleva para 13,25% fim 2026 com IPCA em 4,92%, acima do teto meta. USD/BRL sobe a R$ 5,0569 (+0,35%), reforçando pressão na paridade de importação.</p><p>Abicom aponta potencial de alta R$ 1,12/L diesel e R$ 1,03/L gasolina para alcançar PPI. E30 consolidado desde agosto/2025 com mandato 30% anidro; E32 em pauta CNPE. Cepea registra hidratado R$ 2,7805/L e anidro R$ 3,1291/L (dados 27/mai). Mercado aguarda Boletim Focus semanal e Copom (qua-qui); Ormuz continua monitorado como gatilho para volatilidade petróleo.</p><p>Revendedores enfrentam compressão margens em ambos combustíveis. Prioridade: confirmar estoques diesel (risco ruptura), revisar preços bomba (cobertura custo) e monitorar IPCA-15 + Selic + negociações EUA-Irã como drivers próximas 48-72h.</p>",
+  "_comentario": "Gerado automaticamente em 2026-06-01T08:55:53.528Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
   "decisao": {
-    "data_label": "Sexta · 29 mai 2026",
+    "data_label": "Segunda · 01 jun 2026",
     "base": "ABICOM + custo distribuidora (monitor de preços) + Brent/câmbio",
     "disclaimer": "Essa não é uma recomendação de compra, apenas uma sugestão baseada num modelo educacional.",
     "fuels": [
@@ -128,23 +128,25 @@
         "verdict": "buy",
         "label": "COMPRE AGORA",
         "emoji": "🔴",
-        "score": 76,
+        "score": 88,
         "spark": [
-          8,
+          80,
+          49,
           100,
-          71,
-          68,
-          50,
-          27
+          8
         ],
         "reasons": [
           {
             "dir": "up",
-            "text": "Potencial de aumento <b>R$ 2,22/L</b> pra alcançar paridade (ABICOM)"
+            "text": "Potencial de aumento <b>R$ 1,03/L</b> pra alcançar paridade (ABICOM)"
           },
           {
             "dir": "up",
-            "text": "<b>269 dias</b> de janelas fechadas (Petrobras sem importar há muito)"
+            "text": "Defasagem ABICOM <b>41%</b> (alta)"
+          },
+          {
+            "dir": "up",
+            "text": "<b>54 dias</b> sem importação"
           },
           {
             "dir": "up",
@@ -153,10 +155,6 @@
           {
             "dir": "up",
             "text": "Petrobras anunciou que não vai importar — defasagem deve persistir"
-          },
-          {
-            "dir": "down",
-            "text": "Custo distribuidora <b>-0,7%</b> (queda leve)"
           }
         ]
       },
@@ -166,23 +164,25 @@
         "verdict": "buy",
         "label": "COMPRE AGORA",
         "emoji": "🔴",
-        "score": 67,
+        "score": 85,
         "spark": [
-          88,
-          88,
-          63,
+          87,
           100,
-          8,
-          48
+          16,
+          8
         ],
         "reasons": [
           {
             "dir": "up",
-            "text": "Potencial de aumento <b>R$ 0,50/L</b> (zona de atenção)"
+            "text": "Potencial de aumento <b>R$ 1,12/L</b> pra alcançar paridade (ABICOM)"
           },
           {
             "dir": "up",
-            "text": "<b>269 dias</b> de janelas fechadas (Petrobras sem importar há muito)"
+            "text": "Defasagem ABICOM <b>31%</b> (zona de atenção)"
+          },
+          {
+            "dir": "up",
+            "text": "<b>97 dias</b> de janelas fechadas (Petrobras sem importar há muito)"
           },
           {
             "dir": "up",
@@ -191,10 +191,6 @@
           {
             "dir": "up",
             "text": "Petrobras anunciou que não vai importar — defasagem deve persistir"
-          },
-          {
-            "dir": "down",
-            "text": "Custo distribuidora <b>-1,7%</b> (queda leve)"
           }
         ]
       },
@@ -204,22 +200,24 @@
         "verdict": "buy",
         "label": "COMPRE AGORA",
         "emoji": "🔴",
-        "score": 67,
+        "score": 85,
         "spark": [
-          8,
-          70,
           100,
-          19,
-          24
+          8,
+          11
         ],
         "reasons": [
           {
             "dir": "up",
-            "text": "Potencial de aumento <b>R$ 0,50/L</b> (zona de atenção)"
+            "text": "Potencial de aumento <b>R$ 1,12/L</b> pra alcançar paridade (ABICOM)"
           },
           {
             "dir": "up",
-            "text": "<b>269 dias</b> de janelas fechadas (Petrobras sem importar há muito)"
+            "text": "Defasagem ABICOM <b>31%</b> (zona de atenção)"
+          },
+          {
+            "dir": "up",
+            "text": "<b>97 dias</b> de janelas fechadas (Petrobras sem importar há muito)"
           },
           {
             "dir": "up",
@@ -228,10 +226,6 @@
           {
             "dir": "up",
             "text": "Petrobras anunciou que não vai importar — defasagem deve persistir"
-          },
-          {
-            "dir": "down",
-            "text": "Custo distribuidora <b>-1,9%</b> (queda leve)"
           }
         ]
       },
@@ -243,12 +237,10 @@
         "emoji": "🟢",
         "score": 1,
         "spark": [
-          33,
           100,
-          92,
-          22,
-          31,
-          8
+          8,
+          27,
+          22
         ],
         "reasons": [
           {
@@ -261,7 +253,7 @@
           },
           {
             "dir": "down",
-            "text": "Custo distribuidora <b>-26,2%</b> (caindo)"
+            "text": "Custo distribuidora <b>-12,7%</b> (caindo)"
           },
           {
             "dir": "down",
