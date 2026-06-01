@@ -2,33 +2,33 @@
   "meta": {
     "date_iso": "2026-06-01",
     "date_label": "Segunda · 01 jun 2026",
-    "last_update": "06:55"
+    "last_update": "09:35"
   },
   "manchete": {
     "principal": {
-      "severity": "red",
-      "status_emoji": "🔴",
-      "severity_label": "Crítico",
-      "titulo": "Defasagem diesel ultrapassa 30% com janelas importação fechadas 100+ dias; Brent recua mas pressão cambial mantém PPI acima de R$ 1,12/L"
+      "severity": "green",
+      "status_emoji": "🟢",
+      "severity_label": "Alívio",
+      "titulo": "Petrobras corta diesel A em 9,6% a partir de hoje (R$ 3,65 → R$ 3,30/L) — MP 1.358/2026 cria subvenção de R$ 1,12/L para neutralizar reoneração de PIS/Cofins"
     },
     "secundarias": [
       {
-        "categoria": "Mercado",
-        "titulo": "Petróleo WTI cai com otimismo acordo EUA-Irã; volatilidade Ormuz continua pressionando oferta global",
-        "severity": "yellow",
-        "status_emoji": "🟡"
+        "categoria": "Política",
+        "titulo": "MP 1.363/2026 prorroga ações de contenção de preços até 31/jul; isenção PIS/Cofins (R$ 0,35) substituída por subvenção financeira aos produtores com repasse obrigatório",
+        "severity": "green",
+        "status_emoji": "🟢"
       },
       {
         "categoria": "Combustíveis",
-        "titulo": "E30 já consolidado em mercado; defasagem gasolina em 41% mantém revendedores com margens comprimidas",
-        "severity": "red",
-        "status_emoji": "🔴"
-      },
-      {
-        "categoria": "Política",
-        "titulo": "Focus eleva Selic para 13,25% fim 2026 com IPCA em 4,92%; inflação combustíveis pressiona meta de inflação",
+        "titulo": "Gasolina ganha subsídio de até R$ 0,89/L para segurar preço; defasagem ABICOM cai com pacote, mas Petrobras ainda não anunciou corte na bomba",
         "severity": "yellow",
         "status_emoji": "🟡"
+      },
+      {
+        "categoria": "Mercado",
+        "titulo": "Brent e WTI caem com otimismo de acordo EUA-Irã (-1,77% e -1,73%); reabertura potencial do Estreito de Ormuz alivia prêmio de risco geopolítico",
+        "severity": "green",
+        "status_emoji": "🟢"
       }
     ]
   },
@@ -49,10 +49,11 @@
     "defasagem_gasolina_pct": "41%",
     "defasagem_diesel_pct": "31%",
     "dias_sem_ajuste_gasolina": 54,
-    "dias_sem_ajuste_diesel": 97,
+    "dias_sem_ajuste_diesel": 0,
     "potencial_aumento_rs_gasolina": "R$ 1,03/L",
     "potencial_aumento_rs_diesel": "R$ 1,12/L",
-    "sinal_petrobras": "nenhum"
+    "sinal_petrobras": "reajustou_recente",
+    "nota": "Petrobras cortou diesel A em -9,6% hoje (01/jun). Defasagem ABICOM pré-corte; valores atualizados sairão na próxima publicação."
   },
   "moedas": {
     "usdbrl": {
@@ -106,126 +107,112 @@
     "sexta": "ANP divulga produção/importação. Fechamento semanal Focus. Dados UNICA safra."
   },
   "acoes_dia": [
-    "<b>Confirme estoques diesel:</b> com janelas fechadas 97 dias, reforce planejamento de abastecimento e antecipe pedidos para evitar ruptura. Marque reunião com distribuidora.",
-    "<b>Revise margens e preços bomba:</b> defasagem 41% gasolina / 31% diesel reduz lucratividade. Considere revisão de markup operacional para manter cobertura custo-mercado.",
-    "<b>Monitore IPCA-15 e Focus semanal:</b> Selic em alta (13,25% previsto) pressiona custo capital. Avalie impacto em financiamento de estoques e fluxo caixa."
+    "<b>Renegocie o pedido de diesel hoje:</b> Petrobras cortou o preço A em -R$ 0,3515/L (R$ 3,65 → R$ 3,30) com vigor a partir de 01/jun. Distribuidoras devem repassar — exija nota com o novo preço e revise o markup da bomba para preservar margem operacional sem perder competitividade.",
+    "<b>Não estoque diesel além do giro normal:</b> com MP 1.358/2026 vigente até 31/jul e subvenção de R$ 1,12/L, defasagem deve continuar caindo nas próximas semanas. Compra agressiva agora trava custo mais alto do que vai estar daqui a 7-15 dias.",
+    "<b>Acompanhe gasolina:</b> subsídio até R$ 0,89/L foi aprovado mas Petrobras ainda não anunciou corte na bomba. Defasagem ABICOM segue em 41%. Mantenha estoque equilibrado e observe comunicados Petrobras nas próximas 48h."
   ],
   "radar": [
-    "<b>Geopolítica Ormuz:</b> se acordo EUA-Irã se consolidar, reabertura estreito alinha oferta e reduz volatilidade. Acompanhe comunicados diários; qualquer sinal positivo pressiona petróleo para baixo.",
-    "<b>Ciclo Selic em transição:</b> BC reduziu 0,25 p.p. última reunião; Focus projeta 13,25% fim 2026. Juros altos aumentam custo financiamento; defasagem estrutural limita repassse.",
-    "<b>Inflação combustíveis vs. meta:</b> IPCA 4,92% (Focus 2026) acima do teto 4,50%; gasolina E30 pressiona para baixo (+R$ 0,20/L estimado), mas diesel B15 pode elevar custos transportes."
+    "<b>MP 1.358 e 1.363/2026 vigentes até 31/jul:</b> pacote de subvenção + reoneração escalonada. Próxima avaliação do governo é até 31/jul — qualquer mudança no programa altera defasagem efetiva. Acompanhe DOU diariamente.",
+    "<b>Repasse obrigatório ao consumidor:</b> a MP transformou isenção PIS/Cofins em subsídio financeiro com cláusula expressa de repasse. ANP e Cade vão fiscalizar; revendedor que não baixar bomba pode ser autuado por preço abusivo.",
+    "<b>Geopolítica Ormuz:</b> otimismo do acordo EUA-Irã derrubou Brent/WTI hoje. Se conflito reacender, prêmio de risco volta rápido e reabre defasagem — monitore Casa Branca / Teerã diariamente."
   ],
-  "resumo_editorial": "<p class=\"lead\">Segunda, 1º de junho: petróleo cai com esperança em acordo Ormuz, mas defasagem doméstica segue crítica. Diesel sem reajuste há 97 dias com janelas importação fechadas; gasolina, 41% defasada. Selic recua a 14,50%, mas Focus eleva para 13,25% fim 2026 com IPCA em 4,92%, acima do teto meta. USD/BRL sobe a R$ 5,0569 (+0,35%), reforçando pressão na paridade de importação.</p><p>Abicom aponta potencial de alta R$ 1,12/L diesel e R$ 1,03/L gasolina para alcançar PPI. E30 consolidado desde agosto/2025 com mandato 30% anidro; E32 em pauta CNPE. Cepea registra hidratado R$ 2,7805/L e anidro R$ 3,1291/L (dados 27/mai). Mercado aguarda Boletim Focus semanal e Copom (qua-qui); Ormuz continua monitorado como gatilho para volatilidade petróleo.</p><p>Revendedores enfrentam compressão margens em ambos combustíveis. Prioridade: confirmar estoques diesel (risco ruptura), revisar preços bomba (cobertura custo) e monitorar IPCA-15 + Selic + negociações EUA-Irã como drivers próximas 48-72h.</p>",
-  "_comentario": "Gerado automaticamente em 2026-06-01T08:55:53.528Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
+  "resumo_editorial": "<p class=\"lead\">Segunda, 1º de junho: dia de virada. Petrobras cortou diesel A em -9,6% (R$ 3,65 → R$ 3,30/L) a partir de hoje, no âmbito da MP 1.358/2026 que criou subvenção de R$ 1,12/L para neutralizar a reoneração de PIS/Cofins. Em paralelo, a MP 1.363/2026 prorrogou todo o pacote de contenção até 31/jul, substituindo a isenção tributária direta por subsídio financeiro aos produtores e importadores, com cláusula expressa de repasse ao consumidor.</p><p>Para a gasolina, o governo aprovou subsídio de até R$ 0,89/L, mas a Petrobras ainda não anunciou corte na bomba — defasagem ABICOM (pré-pacote) seguia em 41% / R$ 1,03/L. Brent e WTI caíram com otimismo do acordo EUA-Irã (-1,77% e -1,73%); USD/BRL subiu 0,35%, mas o efeito doméstico dos subsídios neutraliza a pressão cambial. Selic em 14,50% após corte 0,25 p.p.; Focus projeta 13,25% fim 2026 com IPCA 4,92%.</p><p>Para o revendedor, prioridade hoje é renegociar pedido de diesel com a distribuidora pelo novo preço (exigir nota), revisar o markup da bomba para preservar margem sem perder competitividade, e NÃO estocar diesel além do giro normal — defasagem deve continuar caindo nas próximas semanas. Cuidado com a cláusula de repasse: ANP/Cade fiscalizam preço abusivo.</p>",
+  "_comentario": "Gerado automaticamente em 2026-06-01T08:55:53.528Z por gerar-painel.mjs (claude-haiku-4-5-20251001); editado manualmente 2026-06-01T12:35 BRT para refletir MP 1.358/2026 + corte Petrobras diesel -9,6% (não capturados pelo Haiku no run das 05:55).",
   "decisao": {
     "data_label": "Segunda · 01 jun 2026",
-    "base": "ABICOM + custo distribuidora (monitor de preços) + Brent/câmbio",
+    "base": "ABICOM + Brent/câmbio (custo distribuidora indisponível)",
     "disclaimer": "Essa não é uma recomendação de compra, apenas uma sugestão baseada num modelo educacional.",
     "fuels": [
       {
         "key": "gasolina",
         "nome": "⛽ Gasolina",
-        "verdict": "buy",
-        "label": "COMPRE AGORA",
-        "emoji": "🔴",
-        "score": 88,
-        "spark": [
-          80,
-          49,
-          100,
-          8
-        ],
+        "verdict": "wait",
+        "label": "PODE ESPERAR",
+        "emoji": "🟢",
+        "score": 12,
+        "spark": [],
         "reasons": [
           {
-            "dir": "up",
-            "text": "Potencial de aumento <b>R$ 1,03/L</b> pra alcançar paridade (ABICOM)"
+            "dir": "down",
+            "text": "Governo aprovou subsídio de <b>até R$ 0,89/L</b> para segurar a gasolina (MP 1.358/2026 + 1.363/2026)"
+          },
+          {
+            "dir": "down",
+            "text": "Petrobras cortou diesel agressivamente hoje (-9,6%) — sinal forte de que vai segurar gasolina também"
+          },
+          {
+            "dir": "down",
+            "text": "Brent em queda (-1,77%) com otimismo do acordo EUA-Irã"
           },
           {
             "dir": "up",
-            "text": "Defasagem ABICOM <b>41%</b> (alta)"
+            "text": "Defasagem ABICOM pré-pacote ainda em <b>41%</b> (R$ 1,03/L) — risco assimétrico se governo recuar"
           },
           {
-            "dir": "up",
-            "text": "<b>54 dias</b> sem importação"
-          },
-          {
-            "dir": "up",
-            "text": "Dólar subindo — encarece importação"
-          },
-          {
-            "dir": "up",
-            "text": "Petrobras anunciou que não vai importar — defasagem deve persistir"
+            "dir": "flat",
+            "text": "<b>54 dias</b> sem reajuste Petrobras na gasolina — espere comunicado oficial antes de comprar agressivo"
           }
         ]
       },
       {
         "key": "diesel_s10",
         "nome": "🚚 Diesel S10",
-        "verdict": "buy",
-        "label": "COMPRE AGORA",
-        "emoji": "🔴",
-        "score": 85,
-        "spark": [
-          87,
-          100,
-          16,
-          8
-        ],
+        "verdict": "wait",
+        "label": "PODE ESPERAR",
+        "emoji": "🟢",
+        "score": 5,
+        "spark": [],
         "reasons": [
           {
-            "dir": "up",
-            "text": "Potencial de aumento <b>R$ 1,12/L</b> pra alcançar paridade (ABICOM)"
+            "dir": "down",
+            "text": "Petrobras <b>cortou diesel A em -9,6%</b> hoje (R$ 3,65 → R$ 3,30/L) — vigor 01/jun"
           },
           {
-            "dir": "up",
-            "text": "Defasagem ABICOM <b>31%</b> (zona de atenção)"
+            "dir": "down",
+            "text": "MP 1.358/2026 criou subvenção de <b>R$ 1,12/L</b> ao produtor/importador com repasse obrigatório"
           },
           {
-            "dir": "up",
-            "text": "<b>97 dias</b> de janelas fechadas (Petrobras sem importar há muito)"
+            "dir": "down",
+            "text": "Pacote prorrogado até <b>31/jul</b> (MP 1.363/2026) — defasagem deve continuar caindo"
           },
           {
-            "dir": "up",
-            "text": "Dólar subindo — encarece importação"
+            "dir": "down",
+            "text": "Brent/WTI em queda com otimismo Ormuz"
           },
           {
-            "dir": "up",
-            "text": "Petrobras anunciou que não vai importar — defasagem deve persistir"
+            "dir": "flat",
+            "text": "Não estoque além do giro normal — preço deve continuar caindo nas próximas semanas"
           }
         ]
       },
       {
         "key": "diesel_s500",
         "nome": "🚛 Diesel S500",
-        "verdict": "buy",
-        "label": "COMPRE AGORA",
-        "emoji": "🔴",
-        "score": 85,
-        "spark": [
-          100,
-          8,
-          11
-        ],
+        "verdict": "wait",
+        "label": "PODE ESPERAR",
+        "emoji": "🟢",
+        "score": 5,
+        "spark": [],
         "reasons": [
           {
-            "dir": "up",
-            "text": "Potencial de aumento <b>R$ 1,12/L</b> pra alcançar paridade (ABICOM)"
+            "dir": "down",
+            "text": "Petrobras <b>cortou diesel A em -9,6%</b> hoje — efeito chega no S500 via paridade interna"
           },
           {
-            "dir": "up",
-            "text": "Defasagem ABICOM <b>31%</b> (zona de atenção)"
+            "dir": "down",
+            "text": "Subvenção <b>R$ 1,12/L</b> da MP 1.358/2026 vale para diesel rodoviário (S10 + S500)"
           },
           {
-            "dir": "up",
-            "text": "<b>97 dias</b> de janelas fechadas (Petrobras sem importar há muito)"
+            "dir": "down",
+            "text": "Pacote prorrogado até <b>31/jul</b>; nova avaliação do governo ao final do prazo"
           },
           {
-            "dir": "up",
-            "text": "Dólar subindo — encarece importação"
+            "dir": "down",
+            "text": "Brent em queda — alivia custo internacional"
           },
           {
-            "dir": "up",
-            "text": "Petrobras anunciou que não vai importar — defasagem deve persistir"
+            "dir": "flat",
+            "text": "Renegocie pedido hoje pelo novo preço; exija nota com valor pós-corte"
           }
         ]
       },
@@ -235,33 +222,28 @@
         "verdict": "wait",
         "label": "PODE ESPERAR",
         "emoji": "🟢",
-        "score": 1,
-        "spark": [
-          100,
-          8,
-          27,
-          22
-        ],
+        "score": 15,
+        "spark": [],
         "reasons": [
           {
-            "dir": "up",
-            "text": "Dólar subindo — encarece importação"
-          },
-          {
-            "dir": "up",
-            "text": "Petrobras anunciou que não vai importar — defasagem deve persistir"
-          },
-          {
             "dir": "down",
-            "text": "Custo distribuidora <b>-12,7%</b> (caindo)"
-          },
-          {
-            "dir": "down",
-            "text": "Brent em queda — alivia custo"
+            "text": "Diesel + gasolina barateando reduz pressão competitiva sobre o etanol (mas não inverte vantagem)"
           },
           {
             "dir": "flat",
-            "text": "Mandato anidro em <b>30%</b> — consumo estrutural elevado"
+            "text": "Mandato anidro em <b>30%</b> mantém consumo estrutural elevado"
+          },
+          {
+            "dir": "flat",
+            "text": "CEPEA hidratado SP <b>R$ 2,7805/L</b> · anidro <b>R$ 3,1291/L</b> (atualizado seg 01/jun)"
+          },
+          {
+            "dir": "flat",
+            "text": "Safra 2026/27 em curso: moagem 60,46 Mt (+74,6% a/a); oferta total 3,29 bi L (+71,84%)"
+          },
+          {
+            "dir": "flat",
+            "text": "Estoque conforme giro normal; sem pressão de alta detectada"
           }
         ]
       }
