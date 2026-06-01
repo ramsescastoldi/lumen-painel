@@ -158,12 +158,27 @@ Sua manchete principal DEVE ser sobre fato novo (últimas 12–24h). Se cenário
 __FATOS__
 Para os blocos \`moedas\`, \`juros\` e \`inflacao\` use EXATAMENTE os números acima (vindos da API do Banco Central). NÃO gaste web_search com câmbio/Selic/IPCA.
 
-## INDICADORES A PESQUISAR (use web_search — até 5 buscas, em ORDEM, parando se já tiver dados suficientes)
-1. "Brent WTI petróleo cotação hoje ${isoDate}"
-2. "Abicom defasagem Petrobras diesel gasolina ${isoDate} dias janelas fechadas potencial aumento R$/L"  ← **CRÍTICO**: extraia (a) % defasagem (ambos combustíveis), (b) dias sem importação/janelas fechadas (ambos), (c) **potencial de aumento em R$/L** que a Petrobras precisaria subir pra alcançar a paridade (ABICOM publica isso, ex: "R$ 1,12/L diesel"), (d) detecte sinal: Petrobras anunciou que NÃO vai importar → "nao_importa"; tem MP de subsídio → "mp_subsidio"; reajuste anunciado/iminente → "reajuste_anunciado"; Petrobras acabou de reajustar (últimos 7 dias) → "reajustou_recente"; senão → "nenhum". Coloca em \`sinal_petrobras\`
-3. "mandato anidro etanol gasolina E30 B15 biodiesel diesel ${isoDate} CNPE ANP" ← extraia % anidro na gasolina E % B100 no diesel
-4. "Focus Banco Central Brasil expectativa Selic IPCA 2026 boletim semanal" ← extraia previsão Focus para Selic fim 2026 e IPCA 2026
-${isMonday ? '5. "CEPEA ESALQ etanol hidratado anidro SP usina + UNICA safra moagem mix Centro-Sul ${isoDate}"' : '5. notícia principal do dia + UNICA safra etanol mix (combine numa busca só)'}
+## INDICADORES A PESQUISAR (use web_search — até 6 buscas, em ORDEM, parando se já tiver dados suficientes)
+
+1. **🚨 BREAKING — POLÍTICA DE PREÇOS PETROBRAS / MP / DECRETO DAS ÚLTIMAS 72H** (sempre fazer, ANTES de qualquer outra busca):
+   Query sugerida: "Petrobras reajuste preço diesel gasolina hoje OR ontem ${meses[brtNow.getMonth()]} ${brtNow.getFullYear()} OR MP medida provisória combustível subsídio DOU ${meses[brtNow.getMonth()]} ${brtNow.getFullYear()} OR isenção PIS Cofins combustível"
+   **OBJETIVO**: detectar qualquer movimento recente do governo/Petrobras que afete o sinal_petrobras. Procure especificamente:
+   - Petrobras subiu/cortou preço de venda às distribuidoras nos últimos 7 dias → \`sinal_petrobras\`: "reajustou_recente"
+   - MP nova criou subvenção/subsídio a produtores ou importadores → \`sinal_petrobras\`: "mp_subsidio"
+   - Petrobras anunciou que NÃO vai importar / janelas fechadas → \`sinal_petrobras\`: "nao_importa"
+   - Reajuste anunciado/iminente mas ainda não em vigor → \`sinal_petrobras\`: "reajuste_anunciado"
+   - Nada relevante encontrado → \`sinal_petrobras\`: "nenhum"
+   **IMPORTANTE**: Se identificar reajuste/MP do dia, REFLITA o fato na \`manchete.principal\` (esse é o lead do dia). NUNCA marque "nenhum" sem fazer essa busca. Cite a referência (ex: "MP 1.358/2026") na manchete e no resumo_editorial.
+
+2. "Brent WTI petróleo cotação hoje ${isoDate}"
+
+3. "Abicom defasagem Petrobras diesel gasolina ${isoDate} dias janelas fechadas potencial aumento R$/L" ← extraia (a) % defasagem (ambos combustíveis), (b) dias sem importação/janelas fechadas (ambos), (c) potencial de aumento em R$/L pra paridade (ABICOM publica, ex: "R$ 1,12/L diesel"). **Para \`dias_sem_ajuste_*\`: se a busca #1 detectou \`reajustou_recente\`, ZERE \`dias_sem_ajuste_diesel\` (ou _gasolina, conforme o combustível reajustado).**
+
+4. "mandato anidro etanol gasolina E30 B15 biodiesel diesel ${isoDate} CNPE ANP" ← extraia % anidro na gasolina E % B100 no diesel
+
+5. "Focus Banco Central Brasil expectativa Selic IPCA 2026 boletim semanal" ← extraia previsão Focus para Selic fim 2026 e IPCA 2026
+
+${isMonday ? '6. "CEPEA ESALQ etanol hidratado anidro SP usina + UNICA safra moagem mix Centro-Sul ${isoDate}"' : '6. notícia principal do dia + UNICA safra etanol mix (combine numa busca só)'}
 
 ${isMonday ? "" : `## ⚠️ CEPEA HERDADO — NÃO PESQUISAR
 Hoje não é segunda-feira. O bloco \`cepea\` será **herdado automaticamente** do data.json atual. **Não inclua o campo \`cepea\` no seu JSON de saída.** O script vai mesclar:
@@ -177,7 +192,7 @@ ${JSON.stringify(cepeaHerdado, null, 2)}
 - **manchete.principal**: 1 frase forte, severity coerente com o fato
 - **manchete.secundarias**: SEMPRE 3 itens, um de cada categoria ["Mercado", "Combustíveis", "Política"]
 - **petroleo**: brent + wti + resumo curto (2–3 frases). Não cite analistas longamente.
-- **abicom**: % defasagem (gasolina e diesel), dias sem importação/janelas fechadas, **potencial_aumento_rs_***: quanto a Petrobras precisaria subir em R$/L pra alcançar paridade (ABICOM publica explicitamente). Detecte \`sinal_petrobras\` (uma das opções listadas na pesquisa #2)
+- **abicom**: % defasagem (gasolina e diesel), dias sem importação/janelas fechadas, **potencial_aumento_rs_***: quanto a Petrobras precisaria subir em R$/L pra alcançar paridade (ABICOM publica explicitamente). \`sinal_petrobras\` deve refletir o que foi descoberto na busca #1 (BREAKING). Se a busca #1 retornou MP/reajuste novo: NUNCA marque "nenhum". Se a busca não trouxe nada do dia/semana e a manchete da edição anterior também não menciona MP/reajuste: pode marcar "nenhum"
 - **moedas**: USD/BRL e EUR/BRL apenas. Cotação + variação dia.
 - **juros**: Selic atual + variação + previsão Focus para fim do ano
 - **inflacao**: IPCA mais recente + variação + previsão Focus
@@ -309,7 +324,7 @@ function parseJSON(text) {
     const fatos = await fetchFatosBCB();
     console.log(fatos.hasData ? "✓ BCB ok:\n" + fatos.block : "⚠️  BCB indisponível — fallback web_search");
     const systemFinal = SYSTEM_PROMPT.replace("__FATOS__", fatos.block);
-    const maxUses = fatos.hasData ? 5 : 7; // bumped 3→5 em 2026-05-20 pq tinha muito "a confirmar" (dias_sem_ajuste, mandatos, Focus, safra)
+    const maxUses = fatos.hasData ? 6 : 8; // bumped 5→6 em 2026-06-01 pra acomodar a busca dedicada "breaking — política Petrobras/MP últimas 72h" (sinal_petrobras estava ficando "nenhum" mesmo quando havia MP nova)
 
     console.log(`🤖 Chamando Claude (${MODEL}) — max_uses=${maxUses}, max_tokens=6000...`);
     const t0 = Date.now();
@@ -371,6 +386,23 @@ function parseJSON(text) {
     _carry("abicom", ["defasagem_gasolina_pct","defasagem_diesel_pct","dias_sem_ajuste_gasolina","dias_sem_ajuste_diesel","potencial_aumento_rs_gasolina","potencial_aumento_rs_diesel"]);
     _carry("mandatos", ["anidro_na_gasolina_pct","b100_no_diesel_pct"]);
     _carry("safra_etanol", ["moagem","var_anual","mix_etanol_pct","oferta_total"]);
+
+    // SANITY CHECK sinal_petrobras: se Haiku marcou "nenhum"/"" mas a manchete
+    // OU resumo_editorial mencionam MP/reajuste/subsídio, é um sinal forte de
+    // que ele perdeu o evento. Log um warning bem visível pra próxima manutenção.
+    {
+      const sinal = String(newData.abicom?.sinal_petrobras || "").toLowerCase().trim();
+      const textoCheck = (
+        (newData.manchete?.principal?.titulo || "") + " " +
+        (newData.manchete?.secundarias || []).map(s => s.titulo).join(" ") + " " +
+        (newData.resumo_editorial || "")
+      ).toLowerCase();
+      const indicios = /\b(mp|medida provis[óo]ria|m\.p\.)\s*[\d\.]+|subv[eê]nc|subs[íi]dio.*combust|petrobras.*(corta|cortou|reduz|reduziu|reajust|sob[eo]|aument)|reajust.*(diesel|gasolina)|isen[çc][ãa]o.*pis/.test(textoCheck);
+      if ((sinal === "" || sinal === "nenhum") && indicios) {
+        console.log("⚠️  ALERTA: sinal_petrobras='" + (sinal || "vazio") + "' mas manchete/resumo mencionam MP/reajuste/subsídio. Haiku PROVAVELMENTE perdeu o evento. Verifique.");
+        console.log("   Trecho relevante:", textoCheck.slice(0, 240));
+      }
+    }
 
     // FORÇA os números oficiais do BCB (Haiku não inventa câmbio/Selic/IPCA)
     if (fatos.hasData) {
