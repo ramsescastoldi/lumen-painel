@@ -291,11 +291,11 @@
     {
       "date": "2026-06-02",
       "brent": 94.58,
-      "wti": 91.82,
+      "wti": 92.07,
       "usdbrl": 5.0303,
       "eurbrl": null,
       "selic": 14.5,
-      "ipca": 0.67,
+      "ipca": null,
       "def_gas": 41,
       "def_die": 31,
       "dias_gas": 54,
