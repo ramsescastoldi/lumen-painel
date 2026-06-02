@@ -1,10 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-03-01",
-      "ipca": 0.88
-    },
-    {
       "date": "2026-04-01",
       "ipca": 0.67
     },
@@ -290,6 +286,29 @@
         "diesel_s10": 8,
         "diesel_s500": 8,
         "etanol": 8
+      }
+    },
+    {
+      "date": "2026-06-02",
+      "brent": 94.58,
+      "wti": 91.82,
+      "usdbrl": 5.0303,
+      "eurbrl": null,
+      "selic": 14.5,
+      "ipca": 0.67,
+      "def_gas": 41,
+      "def_die": 31,
+      "dias_gas": 54,
+      "dias_die": null,
+      "pot_gas": 1.03,
+      "pot_die": 1.12,
+      "cepea_hid": null,
+      "cepea_ani": null,
+      "decisao": {
+        "gasolina": 77,
+        "diesel_s10": 53,
+        "diesel_s500": 60,
+        "etanol": 0
       }
     }
   ]
