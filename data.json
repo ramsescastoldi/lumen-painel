@@ -6,27 +6,27 @@
   },
   "manchete": {
     "principal": {
-      "severity": "yellow",
-      "status_emoji": "🟡",
-      "severity_label": "Atenção",
-      "titulo": "Brent cai 0,86% a US$ 96,97; tensões EUA-Irã seguem imprimindo volatilidade ao ciclo de preços, com Petrobras mantendo subsídio MP 1.363/2026 via mecanismo de compra de desconto nas distribuidoras"
+      "severity": "green",
+      "status_emoji": "🟢",
+      "severity_label": "Alívio",
+      "titulo": "Defasagem ABICOM despenca para 38% diesel / 41% gasolina (R$ 1,20 e R$ 1,04/L) após corte Petrobras 01/jun + subvenção MP 1.358/2026; janelas fechadas voltam a abrir"
     },
     "secundarias": [
       {
-        "categoria": "Mercado",
-        "titulo": "Defasagem mantém-se elevada (diesel 58%, gasolina 48%); janelas fechadas há 83+ dias limitam importação",
-        "severity": "red",
-        "status_emoji": "🔴"
-      },
-      {
         "categoria": "Combustíveis",
-        "titulo": "E30 e B15 completam 10 meses em vigor (desde 01/ago/2025); etanol ganha força com mix em 61,84% e safra 2026/27 acelerando (+123% moagem vs ano anterior)",
+        "titulo": "Petrobras reajustou ambos os combustíveis na última semana: gasolina +R$ 0,48/L em 29/mai (6 dias atrás) e diesel -R$ 0,35/L em 01/jun (3 dias atrás)",
         "severity": "green",
         "status_emoji": "🟢"
       },
       {
         "categoria": "Política",
-        "titulo": "MP 1.363/2026 (subsídio R$ 1,12/L diesel) mantém escudo ativo; Petrobras segue sem reajuste nas distribuidoras apesar de subsídio já em vigor desde 02/jun",
+        "titulo": "MP 1.363/2026 mantém o subsídio R$ 1,12/L diesel ativo até 31/jul; mecanismo de desconto direto nas notas fiscais às distribuidoras opera desde 02/jun",
+        "severity": "yellow",
+        "status_emoji": "🟡"
+      },
+      {
+        "categoria": "Mercado",
+        "titulo": "Brent recua a US$ 96,97 (-0,86%) com negociações EUA-Irã avançando lento; volatilidade em Ormuz mantém prêmio de risco geopolítico no curto prazo",
         "severity": "yellow",
         "status_emoji": "🟡"
       }
@@ -46,13 +46,14 @@
     "resumo": "Brent fecha abaixo de US$ 97, pressionado por realização de lucros e sinais de negociação entre EUA-Irã, apesar dos riscos geopolíticos no Estreito de Ormuz. Inventários de crude americano caem pela 6ª semana consecutiva, dando suporte aos preços. Volatilidade persiste enquanto conflito no Oriente Médio permanece sem resolução."
   },
   "abicom": {
-    "defasagem_gasolina_pct": "48%",
-    "defasagem_diesel_pct": "58%",
-    "dias_sem_ajuste_gasolina": 40,
-    "dias_sem_ajuste_diesel": 0,
-    "potencial_aumento_rs_gasolina": "R$ 1,70/L",
-    "potencial_aumento_rs_diesel": "R$ 2,52/L",
-    "sinal_petrobras": "mp_subsidio"
+    "defasagem_gasolina_pct": "41%",
+    "defasagem_diesel_pct": "38%",
+    "dias_sem_ajuste_gasolina": 6,
+    "dias_sem_ajuste_diesel": 3,
+    "potencial_aumento_rs_gasolina": "R$ 1,04/L",
+    "potencial_aumento_rs_diesel": "R$ 1,20/L",
+    "sinal_petrobras": "reajustou_recente",
+    "fonte": "ABICOM PPI 03/06/2026 (boletim oficial) — Petrobras reajustou gasolina +R$ 0,48/L em 29/05 e cortou diesel -9,6% em 01/06"
   },
   "moedas": {
     "usdbrl": {
@@ -100,138 +101,118 @@
     "sexta": "ANP divulga relatório semanal de abastecimento"
   },
   "acoes_dia": [
-    "<b>Acompanhe subsídio diesel (MP 1.363/2026):</b> Mecanismo ativo desde 02/jun. Petrobras passou a descontar R$ 1,12/L diretamente nas notas fiscais às distribuidoras. Confirme se sua distribuidora já reflete o benefício no preço de aquisição.",
-    "<b>Renegocie volumes com fornecedores:</b> Defasagem persistente (diesel 58%, gasolina 48%) mantém margens apertadas. Janelas fechadas há 83+ dias sugerem importação improvável. Trabalhe demanda vs. oferta Petrobras.",
-    "<b>Monitore tendência etanol:</b> Safra 2026/27 acelera (moagem +123% na 2ª quinzena de abril). E30 + mix favorável mantêm etanol competitivo nas bombas (61,7% de vantagem em SP). Revise mix de vendas se houver oportunidade de margem."
+    "<b>Confirme repasse do subsídio diesel na nota fiscal:</b> MP 1.363/2026 obriga distribuidoras a repassarem R$ 1,12/L de subvenção desde 02/jun. ANP/Cade fiscalizam preço abusivo. Exija nota com valor pós-corte e revise markup da bomba.",
+    "<b>Não estoque diesel além do giro normal:</b> defasagem ABICOM caiu de 58% (abril) pra 38% (03/jun) com corte Petrobras + subvenção. Tendência segue de queda até nova avaliação do governo (até 31/jul). Estoque grande agora trava custo mais alto do que vai estar em 2-3 semanas.",
+    "<b>Acompanhe gasolina:</b> reajuste +R$ 0,48/L da Petrobras (29/mai) reduziu pressão mas defasagem ainda em 41% / R$ 1,04. Subsídio R$ 0,89/L cobre parte. Sem janela aberta pra novo reajuste no curto prazo."
   ],
   "radar": [
-    "<b>Geopolítica Oriente Médio:</b> Negociações EUA-Irã seguem ativas mas incertas. Qualquer escalada impacta fluxo no Estreito de Ormuz (20% do petróleo global). Volatilidade pode retornar rapidamente ao ciclo de preços.",
-    "<b>Defasagem acumulada sem solução anunciada:</b> Diesel a 58% abaixo do PPI e gasolina a 48% criam pressão latente por reajuste Petrobras. Subsídio MP 1.363 cobre diesel parcialmente, mas gasolina segue desprotegida além do subsídio R$ 0,44/L.",
-    "<b>Safra etanol em ritmo robusto:</b> Moagem acumulada (60,46 Mt até 01/mai) e mix em 61,84% sinalizam oferta confortável de anidro para E30 até fim de ano. Preços competitivos tendem a pressionar margem bruta do biodiesel."
+    "<b>MP 1.358 e 1.363/2026 vigentes até 31/jul:</b> pacote de subvenção R$ 1,12/L diesel + subsídio R$ 0,89/L gasolina. Próxima avaliação do governo é até 31/jul — qualquer mudança altera defasagem efetiva.",
+    "<b>Repasse obrigatório ao consumidor:</b> a MP transformou isenção PIS/Cofins em subsídio financeiro com cláusula expressa de repasse. ANP e Cade fiscalizam; revendedor que não baixar bomba pode ser autuado por preço abusivo.",
+    "<b>Geopolítica Ormuz:</b> negociações EUA-Irã derrubaram Brent pra US$ 96,97. Se conflito reacender, prêmio de risco volta rápido e reabre defasagem — monitore Casa Branca / Teerã diariamente."
   ],
-  "resumo_editorial": "<p class=\"lead\"><strong>O Brent recua a US$ 96,97 nesta quinta, pressionado por realização de lucros enquanto negociações entre EUA e Irã avançam em ritmo lento.</strong> Apesar da volatilidade geopolítica persistente, as tensões no Estreito de Ormuz seguem como guarda-chuva de suporte ao petróleo. No mercado doméstico, a MP 1.363/2026 está em plena execução: desde 02 de junho, Petrobras desconta R$ 1,12/L nas faturas de diesel às distribuidoras, operacionalizando o subsídio federal e mantendo preços nas distribuidoras nominalmente inalterados — um mecanismo de \"escudo financeiro\" que protege o abastecimento mas não resolve a defasagem estrutural.</p><p>A defasagem permanece em patamares críticos: diesel a 58% abaixo do PPI (potencial de alta de R$ 2,52/L) e gasolina a 48% defasada (R$ 1,70/L de margem acumulada desde 27/jan/2026). Com as janelas de importação fechadas há 83 dias na média e sem perspectiva de reabertura, a dependência de oferta Petrobras se acentua. O subsídio ao diesel limita a pressão imediata, mas a gasolina continua sob tensão latente — o subsídio de R$ 0,44/L cobre apenas parcialmente a defasagem. Simultaneamente, a safra de cana 2026/27 inicia com impulso robusto: moagem acumulada de 60,46 Mt (até 01/mai) marca alta de 74,6% a/a, mix em 61,84% para etanol, e oferta total de 3,29 bi L de etanol (+71,84% a/a até maio).</p><p><strong>Ação para o dia:</strong> Revise contatos com distribuidoras para confirmar se o desconto do subsídio diesel (R$ 1,12/L) já está sendo descontado nas notas fiscais. No caso da gasolina, mantenha diálogo com fornecedores sobre oportunidades de compra, já que margens seguem comprimidas. Acompanhe dados de etanol: com safra acelerando e competitividade confirmada (61,7% de vantagem de preço em SP), considere rebalancear mix de vendas se houver espaço de margem.</p>",
+  "resumo_editorial": "<p class=\"lead\"><strong>Defasagem ABICOM despenca com Petrobras reajustando ambos os combustíveis na última semana e MP 1.358/2026 aplicando subvenção de R$ 1,12/L ao diesel.</strong> Boletim oficial ABICOM PPI 03/06/2026 mostra defasagem do diesel em 38% (R$ 1,20/L) e gasolina em 41% (R$ 1,04/L), patamares bem abaixo dos 58% / 48% (R$ 2,52 e R$ 1,70/L) que vigoraram em abril com Brent acima de US$ 108.</p><p>Petrobras se mexeu duas vezes nos últimos 7 dias: gasolina A subiu R$ 0,48/L em 29/mai (6 dias) e diesel A foi cortado em R$ 0,3515/L em 01/jun (3 dias), de R$ 3,65 → R$ 3,30. O corte do diesel veio no âmbito da MP 1.358/2026 que criou subvenção de R$ 1,12/L para produtores e importadores. MP 1.363/2026 prorrogou todo o pacote até 31/jul. Brent em US$ 96,97 (-0,86%) com otimismo do acordo EUA-Irã reforça o alívio. USD em R$ 5,0415 ainda exerce alguma pressão na paridade.</p><p><strong>Para o revendedor:</strong> exija nota com novo preço do diesel pelo subsídio repassado (ANP/Cade fiscalizam). NÃO estoque diesel acima do giro normal — tendência segue de queda até nova avaliação do governo. Sobre gasolina: reajuste já foi feito, subsídio R$ 0,89/L cobre parte da defasagem residual, sem janela aberta pra novo reajuste no curto prazo. Etanol: safra 2026/27 em ritmo robusto (moagem +74,6% a/a), mantém competitividade nas bombas.</p>",
   "cepea": {
     "hidratado_sp": "a confirmar",
     "anidro_sp": "a confirmar",
     "ultima_atualizacao_iso": "2026-06-01",
     "ultima_atualizacao_label": "seg 01/jun"
   },
-  "_comentario": "Gerado automaticamente em 2026-06-04T11:42:10.348Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
+  "_comentario": "Gerado automaticamente em 2026-06-04T11:42:10.348Z por gerar-painel.mjs (claude-haiku-4-5-20251001); editado manualmente em 2026-06-04T13:00 BRT para corrigir defasagem ABICOM (Haiku puxou números de abril com Brent US$ 108 — boletim oficial ABICOM 03/06 mostra 38% diesel / 41% gasolina, R$ 1,20 e R$ 1,04/L). Reajustes Petrobras: gasolina +R$ 0,48 em 29/mai, diesel -R$ 0,35 em 01/jun.",
   "decisao": {
     "data_label": "Quinta · 04 jun 2026",
-    "base": "ABICOM + custo distribuidora (monitor de preços) + Brent/câmbio",
+    "base": "ABICOM + Brent/câmbio (custo distribuidora indisponível)",
     "disclaimer": "Essa não é uma recomendação de compra, apenas uma sugestão baseada num modelo educacional.",
     "fuels": [
       {
         "key": "gasolina",
         "nome": "⛽ Gasolina",
-        "verdict": "buy",
-        "label": "COMPRE AGORA",
-        "emoji": "🔴",
-        "score": 85,
-        "spark": [
-          75,
-          100,
-          18,
-          8,
-          30,
-          19
-        ],
+        "verdict": "wait",
+        "label": "PODE ESPERAR",
+        "emoji": "🟢",
+        "score": 12,
+        "spark": [],
         "reasons": [
           {
-            "dir": "up",
-            "text": "Potencial de aumento <b>R$ 1,70/L</b> pra alcançar paridade (ABICOM)"
+            "dir": "down",
+            "text": "Petrobras reajustou gasolina <b>+R$ 0,48/L em 29/mai</b> — só 6 dias atrás, ciclo de aumento já feito"
+          },
+          {
+            "dir": "down",
+            "text": "Governo aprovou subsídio de <b>até R$ 0,89/L</b> para segurar gasolina (MP 1.358/2026 + 1.363/2026)"
+          },
+          {
+            "dir": "down",
+            "text": "Brent em queda (-0,86%, US$ 96,97) com otimismo do acordo EUA-Irã"
           },
           {
             "dir": "up",
-            "text": "Defasagem ABICOM <b>48%</b> (alta)"
+            "text": "Defasagem ABICOM 03/06: <b>41% / R$ 1,04/L</b> — ainda existe, mas caiu de R$ 1,70 visto em abril"
           },
           {
-            "dir": "up",
-            "text": "<b>40 dias</b> sem importação"
-          },
-          {
-            "dir": "up",
-            "text": "Dólar subindo — encarece importação"
-          },
-          {
-            "dir": "up",
-            "text": "MP/subsídio anunciada — sinal de que o reajuste vem (governo se preparando)"
+            "dir": "flat",
+            "text": "Próxima janela só após 31/jul (fim do pacote MP) ou nova alta do Brent"
           }
         ]
       },
       {
         "key": "diesel_s10",
         "nome": "🚚 Diesel S10",
-        "verdict": "buy",
-        "label": "COMPRE AGORA",
-        "emoji": "🔴",
-        "score": 93,
-        "spark": [
-          100,
-          8,
-          29,
-          63,
-          96,
-          54
-        ],
+        "verdict": "wait",
+        "label": "PODE ESPERAR",
+        "emoji": "🟢",
+        "score": 5,
+        "spark": [],
         "reasons": [
           {
-            "dir": "up",
-            "text": "Potencial de aumento <b>R$ 2,52/L</b> pra alcançar paridade (ABICOM)"
+            "dir": "down",
+            "text": "Petrobras <b>cortou diesel A em -R$ 0,3515/L em 01/jun</b> (R$ 3,65 → R$ 3,30) — só 3 dias atrás"
           },
           {
-            "dir": "up",
-            "text": "Defasagem ABICOM <b>58%</b> (alta)"
+            "dir": "down",
+            "text": "MP 1.358/2026 criou subvenção de <b>R$ 1,12/L</b> ao produtor/importador com repasse obrigatório"
           },
           {
-            "dir": "up",
-            "text": "Custo distribuidora <b>+1,7%</b> (leve)"
+            "dir": "down",
+            "text": "Defasagem ABICOM 03/06 caiu pra <b>38% / R$ 1,20/L</b> (era 58% / R$ 2,52 em abril)"
           },
           {
-            "dir": "up",
-            "text": "Dólar subindo — encarece importação"
+            "dir": "down",
+            "text": "Pacote MP prorrogado até <b>31/jul</b>; tendência segue de queda"
           },
           {
-            "dir": "up",
-            "text": "MP/subsídio anunciada — sinal de que o reajuste vem (governo se preparando)"
+            "dir": "flat",
+            "text": "Não estoque acima do giro — preço pode cair mais nas próximas 2-3 semanas"
           }
         ]
       },
       {
         "key": "diesel_s500",
         "nome": "🚛 Diesel S500",
-        "verdict": "buy",
-        "label": "COMPRE AGORA",
-        "emoji": "🔴",
-        "score": 100,
-        "spark": [
-          8,
-          61,
-          96,
-          95,
-          100
-        ],
+        "verdict": "wait",
+        "label": "PODE ESPERAR",
+        "emoji": "🟢",
+        "score": 5,
+        "spark": [],
         "reasons": [
           {
-            "dir": "up",
-            "text": "Potencial de aumento <b>R$ 2,52/L</b> pra alcançar paridade (ABICOM)"
+            "dir": "down",
+            "text": "Petrobras <b>cortou diesel A em -9,6% em 01/jun</b> — efeito chega no S500 via paridade interna"
           },
           {
-            "dir": "up",
-            "text": "Defasagem ABICOM <b>58%</b> (alta)"
+            "dir": "down",
+            "text": "Subvenção R$ 1,12/L da MP 1.358 vale para diesel rodoviário (S10 + S500)"
           },
           {
-            "dir": "up",
-            "text": "Custo distribuidora <b>+6,1%</b> (subindo forte)"
+            "dir": "down",
+            "text": "Defasagem ABICOM caiu pra 38% / R$ 1,20 (era 58% / R$ 2,52 em abril)"
           },
           {
-            "dir": "up",
-            "text": "Dólar subindo — encarece importação"
+            "dir": "down",
+            "text": "Brent em queda — alivia custo internacional"
           },
           {
-            "dir": "up",
-            "text": "MP/subsídio anunciada — sinal de que o reajuste vem (governo se preparando)"
+            "dir": "flat",
+            "text": "Renegocie pedido hoje pelo novo preço; exija nota com valor pós-corte"
           }
         ]
       },
@@ -241,35 +222,28 @@
         "verdict": "wait",
         "label": "PODE ESPERAR",
         "emoji": "🟢",
-        "score": 5,
-        "spark": [
-          100,
-          9,
-          18,
-          38,
-          9,
-          8
-        ],
+        "score": 15,
+        "spark": [],
         "reasons": [
           {
-            "dir": "up",
-            "text": "Dólar subindo — encarece importação"
-          },
-          {
-            "dir": "up",
-            "text": "MP/subsídio anunciada — sinal de que o reajuste vem (governo se preparando)"
-          },
-          {
             "dir": "down",
-            "text": "Custo distribuidora <b>-13,1%</b> (caindo)"
-          },
-          {
-            "dir": "down",
-            "text": "Brent em queda — alivia custo"
+            "text": "Diesel + gasolina barateando reduz pressão competitiva sobre o etanol"
           },
           {
             "dir": "flat",
-            "text": "Mandato anidro em <b>30%</b> — consumo estrutural elevado"
+            "text": "Mandato anidro em <b>30%</b> (E30) mantém consumo estrutural elevado"
+          },
+          {
+            "dir": "flat",
+            "text": "Safra 2026/27 em ritmo robusto: moagem <b>+74,6% a/a</b>; mix etanol 61,84%; oferta total 3,29 bi L (+71,84%)"
+          },
+          {
+            "dir": "flat",
+            "text": "CEPEA da última segunda: hidratado SP R$ 2,7805/L · anidro R$ 3,1291/L (próximo dado seg 08/jun)"
+          },
+          {
+            "dir": "flat",
+            "text": "Estoque conforme giro normal; sem pressão de alta detectada"
           }
         ]
       }
