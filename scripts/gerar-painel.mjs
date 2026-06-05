@@ -387,6 +387,107 @@ function parseJSON(text) {
     _carry("mandatos", ["anidro_na_gasolina_pct","b100_no_diesel_pct"]);
     _carry("safra_etanol", ["moagem","var_anual","mix_etanol_pct","oferta_total"]);
 
+    // SANITY CHECK ANTI-REGRESSÃO da defasagem ABICOM:
+    // Se Haiku trouxer defasagem MAIS ALTA do que a anterior enquanto dias_sem_ajuste
+    // é baixo (reajuste recente), é forte indício de que ele puxou notícia antiga
+    // como se fosse atual. Fato real: defasagem só pode aumentar significativamente
+    // se Brent disparou >15% ou USD disparou >10% no dia (eventos raros). Caso
+    // contrário, rollback pro valor anterior + warning.
+    //
+    // Este check foi adicionado em 2026-06-04 após 2 incidentes seguidos: Haiku
+    // do dia 01/jun marcou sinal=nenhum perdendo MP 1.358; Haiku do dia 04/jun
+    // trouxe defasagem 58%/48% (números de abril) enquanto Petrobras tinha
+    // reajustado diesel -9,6% em 01/jun e gasolina +R$0,48 em 29/mai.
+    function _pctNum(s) {
+      if (s == null) return null;
+      const m = String(s).replace(",", ".").match(/-?\d+(\.\d+)?/);
+      return m ? parseFloat(m[0]) : null;
+    }
+    function _rsNum(s) {
+      if (s == null) return null;
+      const m = String(s).replace(/[Rr]\$\s*/, "").replace(",", ".").match(/-?\d+(\.\d+)?/);
+      return m ? parseFloat(m[0]) : null;
+    }
+    function _antiRegressao(combust) {
+      const newAb = newData.abicom || {};
+      const oldAb = currentData.abicom || {};
+      const diasField = combust === "diesel" ? "dias_sem_ajuste_diesel" : "dias_sem_ajuste_gasolina";
+      const defField = combust === "diesel" ? "defasagem_diesel_pct" : "defasagem_gasolina_pct";
+      const potField = combust === "diesel" ? "potencial_aumento_rs_diesel" : "potencial_aumento_rs_gasolina";
+      const dias = Number(newAb[diasField] ?? oldAb[diasField] ?? 999);
+      const novaDef = _pctNum(newAb[defField]);
+      const antigaDef = _pctNum(oldAb[defField]);
+      const novoRs = _rsNum(newAb[potField]);
+      const antigoRs = _rsNum(oldAb[potField]);
+      // Regra 1: reajuste muito recente (≤3 dias) E defasagem subiu → suspeitíssimo
+      // Regra 2: reajuste recente (≤7 dias) E defasagem subiu >10pp → muito suspeito
+      // Regra 3: reajuste recente (≤7 dias) E potencial R$/L subiu >R$ 0,40 → suspeito
+      if (novaDef != null && antigaDef != null && dias <= 3 && novaDef > antigaDef + 2) {
+        console.log(`⚠️  ANTI-REGRESSÃO ${combust}: defasagem nova ${novaDef}% > antiga ${antigaDef}% mas reajuste foi há ${dias} dias. ROLLBACK pra ${antigaDef}%.`);
+        newAb[defField] = oldAb[defField];
+        if (novoRs != null && antigoRs != null && novoRs > antigoRs + 0.10) {
+          newAb[potField] = oldAb[potField];
+          console.log(`   ↩ potencial R$/L ${combust} também: ${novoRs} → ${antigoRs}`);
+        }
+        return;
+      }
+      if (novaDef != null && antigaDef != null && dias <= 7 && novaDef > antigaDef + 10) {
+        console.log(`⚠️  ANTI-REGRESSÃO ${combust}: defasagem nova ${novaDef}% > antiga ${antigaDef}% +10pp mas reajuste foi há ${dias} dias. ROLLBACK.`);
+        newAb[defField] = oldAb[defField];
+        if (novoRs != null && antigoRs != null && novoRs > antigoRs + 0.30) newAb[potField] = oldAb[potField];
+        return;
+      }
+      if (novoRs != null && antigoRs != null && dias <= 7 && novoRs > antigoRs + 0.40) {
+        console.log(`⚠️  ANTI-REGRESSÃO ${combust}: potencial R$/L nova R$ ${novoRs} > antiga R$ ${antigoRs} +0,40 mas reajuste foi há ${dias} dias. ROLLBACK potencial.`);
+        newAb[potField] = oldAb[potField];
+      }
+    }
+    // ORDEM IMPORTA: primeiro normalizamos dias_sem_ajuste (sinal mais confiável,
+    // vem do data.json carregado), depois usamos o valor corrigido como referência
+    // pra anti-regressão das defasagens. Se dias for absurdo, marca o combustível
+    // como "suspeito" — qualquer aumento na defasagem dele dispara rollback total.
+    const _diasSuspeito = { diesel: false, gasolina: false };
+    function _antiRegressaoDias(combust) {
+      const newAb = newData.abicom || {};
+      const oldAb = currentData.abicom || {};
+      const field = combust === "diesel" ? "dias_sem_ajuste_diesel" : "dias_sem_ajuste_gasolina";
+      const novo = Number(newAb[field]);
+      const antigo = Number(oldAb[field]);
+      if (!isFinite(novo) || !isFinite(antigo)) return;
+      if (novo === 0) return; // reset legítimo
+      if (novo <= antigo + 3) return;
+      console.log(`⚠️  ANTI-REGRESSÃO dias_sem_ajuste_${combust}: nova ${novo} > antiga ${antigo} +3 (delta absurdo). Mantém antiga+1 = ${antigo + 1}.`);
+      newAb[field] = antigo + 1;
+      _diasSuspeito[combust] = true; // combustível inteiro vira suspeito
+    }
+    _antiRegressaoDias("diesel");
+    _antiRegressaoDias("gasolina");
+
+    _antiRegressao("diesel");
+    _antiRegressao("gasolina");
+
+    // Se dias_sem_ajuste foi rejeitado, qualquer AUMENTO na defasagem (mesmo
+    // pequeno) é suspeito — ROLLBACK completo do bloco ABICOM daquele combustível.
+    function _rollbackSeSuspeito(combust) {
+      if (!_diasSuspeito[combust]) return;
+      const newAb = newData.abicom || {};
+      const oldAb = currentData.abicom || {};
+      const defField = combust === "diesel" ? "defasagem_diesel_pct" : "defasagem_gasolina_pct";
+      const potField = combust === "diesel" ? "potencial_aumento_rs_diesel" : "potencial_aumento_rs_gasolina";
+      const novaDef = _pctNum(newAb[defField]); const antigaDef = _pctNum(oldAb[defField]);
+      const novoRs = _rsNum(newAb[potField]); const antigoRs = _rsNum(oldAb[potField]);
+      if (novaDef != null && antigaDef != null && novaDef > antigaDef) {
+        console.log(`⚠️  COMBUSTÍVEL SUSPEITO (${combust}): dias inválido + defasagem subiu (${antigaDef}% → ${novaDef}%). ROLLBACK total.`);
+        newAb[defField] = oldAb[defField];
+      }
+      if (novoRs != null && antigoRs != null && novoRs > antigoRs) {
+        console.log(`   ↩ potencial ${combust}: R$ ${novoRs} → R$ ${antigoRs}`);
+        newAb[potField] = oldAb[potField];
+      }
+    }
+    _rollbackSeSuspeito("diesel");
+    _rollbackSeSuspeito("gasolina");
+
     // SANITY CHECK sinal_petrobras: se Haiku marcou "nenhum"/"" mas a manchete
     // OU resumo_editorial mencionam MP/reajuste/subsídio, é um sinal forte de
     // que ele perdeu o evento. Log um warning bem visível pra próxima manutenção.
