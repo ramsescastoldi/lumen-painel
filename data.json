@@ -1,79 +1,78 @@
 {
   "meta": {
-    "date_iso": "2026-06-05",
-    "date_label": "Sexta · 05 jun 2026",
-    "last_update": "09:53"
+    "date_iso": "2026-06-08",
+    "date_label": "Segunda · 08 jun 2026",
+    "last_update": "06:55"
   },
   "manchete": {
     "principal": {
-      "severity": "yellow",
-      "status_emoji": "🟡",
-      "severity_label": "Atenção",
-      "titulo": "Petrobras reajusta diesel em R$ 1,12/L via MP 1.363; defasagem gasolina em 41% mantém pressão por novo ajuste"
+      "severity": "red",
+      "status_emoji": "🔴",
+      "severity_label": "Crítico",
+      "titulo": "Brent salta 4,93% a US$ 97,68/bbl em retaliação Israel-Irã; MP 1.363 libera subsídio diesel R$ 1,12/L enquanto defasagem diesel mantém 60% vs importado"
     },
     "secundarias": [
       {
         "categoria": "Mercado",
-        "titulo": "Brent sobe 0,23% a US$ 95,25/bbl com ceasefire Israel-Líbano em discussão; prêmio geopolítico sustém cotação acima de US$ 95",
-        "severity": "yellow",
-        "status_emoji": "🟡"
+        "titulo": "Escalada geopolítica Oriente Médio eleva prêmio de risco no petróleo; Estreito Hormuz sob ameaça mantém preços acima de US$ 95/bbl",
+        "severity": "red",
+        "status_emoji": "🔴"
       },
       {
         "categoria": "Combustíveis",
-        "titulo": "E30 e B15 consolidados; safra etanol 2026/27 avança com moagem 60,46 Mt (+74,6% a/a) e mix 61,84% — etanol competitivo a 64,5% vs gasolina",
+        "titulo": "E30 e B15 consolidados; safra 2026/27 moagem +3 a 4% (625-630 Mt) com mix etanol 61,84%; etanol competitivo a 64,5% vs gasolina",
         "severity": "green",
         "status_emoji": "🟢"
       },
       {
         "categoria": "Política",
-        "titulo": "MP 1.358 e MP 1.363 mantêm subsídios diesel; Selic em 13,25% (fin 2026) e IPCA Focus 5,09% pressiona inflação 12ª semana",
-        "severity": "red",
-        "status_emoji": "🔴"
+        "titulo": "MP 1.363/2026 (30/mai) operacionaliza subsídio diesel R$ 1,12/L via PIS/Cofins; Petrobras reajustou gasolina +R$ 0,48/L (29/mai) com subvenção R$ 0,44/L",
+        "severity": "yellow",
+        "status_emoji": "🟡"
       }
     ]
   },
   "petroleo": {
     "brent": {
-      "val": "US$ 95,25",
-      "delta": "▲ +0,23%",
+      "val": "US$ 97,68",
+      "delta": "▲ +4,93%",
       "dir": "up"
     },
     "wti": {
-      "val": "US$ 92,89",
-      "delta": "▼ -3,28%",
-      "dir": "down"
+      "val": "US$ 93,45",
+      "delta": "▲ +3,80%",
+      "dir": "up"
     },
-    "resumo": "Brent mantém-se acima de US$ 95 suportado por incerteza geopolítica (Irã-EUA, Israel-Líbano). WTI cede 3,28% na semana, mas volatilidade regional sustém prêmio de risco. Estoques EUA caem 6ª semana consecutiva, oferecendo suporte."
+    "resumo": "<cite index=\"6-1\">Brent subiu para US$ 97,68/bbl em 8 de junho (+4,93%)</cite>, impulsionado por tensões no Oriente Médio. <cite index=\"6-3\">Irã e Israel trocaram ataques aéreos, ameaçando negociações de cessar-fogo de 60 dias de Trump</cite>. <cite index=\"6-6\">O fechamento do Estreito de Hormuz fornece suporte contínuo aos preços</cite>, mantendo cotações acima de paridade defensiva."
   },
   "abicom": {
-    "defasagem_gasolina_pct": "41%",
+    "defasagem_gasolina_pct": "48%",
     "defasagem_diesel_pct": "31%",
     "dias_sem_ajuste_gasolina": 7,
     "dias_sem_ajuste_diesel": 4,
-    "potencial_aumento_rs_gasolina": "R$ 1,03/L",
+    "potencial_aumento_rs_gasolina": "R$ 1,26/L",
     "potencial_aumento_rs_diesel": "R$ 1,12/L",
-    "sinal_petrobras": "reajustou_recente",
-    "fonte": "Petrobras reajustou gasolina +R$ 0,48/L em 29/05/2026 (7 dias) e cortou diesel -9,6% em 01/06/2026 (4 dias). Sanity check anti-regressão (commit 2fe4fda) entra em vigor no próximo run automático segunda 08/jun 05:55."
+    "sinal_petrobras": "reajustou_recente"
   },
   "moedas": {
     "usdbrl": {
-      "val": "R$ 5,0415",
-      "delta": "▲ +0,12%",
+      "val": "R$ 5,1244",
+      "delta": "▲ +0,05%",
       "dir": "up"
     },
     "eurbrl": {
-      "val": "R$ 5,8512",
-      "delta": "▲ +0,35%",
+      "val": "R$ 5,9100",
+      "delta": "▲ +0,07%",
       "dir": "up"
     }
   },
   "juros": {
     "selic": {
       "val": "14,50% a.a.",
-      "delta": "• mantida",
-      "dir": "flat"
+      "delta": "▲ +0,25 p.p. (17/jun meta para 14,50%)",
+      "dir": "up"
     },
-    "previsao_focus": "13,25% (fin 2026)"
+    "previsao_focus": "13,25% (fim 2026)"
   },
   "inflacao": {
     "ipca": {
@@ -81,46 +80,46 @@
       "delta": "▼ vs. mês anterior",
       "dir": "down"
     },
-    "previsao_focus": "5,09% (2026)"
+    "previsao_focus": "4,92% (2026)"
   },
   "mandatos": {
     "anidro_na_gasolina_pct": "30%",
     "b100_no_diesel_pct": "15%"
   },
+  "cepea": {
+    "hidratado_sp": "a confirmar",
+    "anidro_sp": "a confirmar",
+    "ultima_atualizacao_iso": "2026-06-08",
+    "ultima_atualizacao_label": "seg 08/jun"
+  },
   "safra_etanol": {
     "moagem": "60,46 Mt",
-    "var_anual": "+74,6% a/a",
+    "var_anual": "+3,0% a +4,0% a/a",
     "mix_etanol_pct": "61,84%",
     "oferta_total": "3,29 bi L (+71,84% a/a)"
   },
   "agenda_semanal": {
-    "segunda": "Focus divulgado (Selic, IPCA, câmbio) — expectativa inflacionária 12ª semana alta",
+    "segunda": "Boletim Focus semanal; escalada geopolítica Oriente Médio pressiona petróleo",
     "terca": "—",
     "quarta": "—",
     "quinta": "—",
-    "sexta": "ANP divulga dados semanais preços de bomba; UNICA publica quinzena de moagem (até 15/jun)"
+    "sexta": "IPCA parcial; ANP divulgações semanais"
   },
   "acoes_dia": [
-    "<b>Monitorar reajuste diesel:</b> Petrobras implementou R$ 1,12/L de aumento via MP 1.363 a partir de 02/jun. Confirme se distribuidor já repassou à sua bomba; impacto estimado R$ 0,06–0,12/L no diesel B15 final.",
-    "<b>Revisar estratégia gasolina:</b> Defasagem 41% sinaliza novo reajuste próximo. Estoque etanol competitivo a 64,5% vs gasolina pode acelerar migração. Considere mix de oferta E30/gasolina.",
-    "<b>Acompanhar Focus inflação:</b> IPCA 5,09% (previsão 2026) e Selic 13,25% mantêm cenário custoso. Hedge cambial (USD 5,04/BRL) pode proteger margens."
+    "<b>Hedging cambial:</b> Dólar em R$ 5,1244 (alta). Avaliar travamentos de exportação e margens de importação de combustíveis com preço PPI elevado (diesel PPI em R$ 2,18/L acima de Petrobras).",
+    "<b>Monitorar MP 1.363:</b> Subsídio diesel R$ 1,12/L está operacionalizado desde 02/jun. Verificar recebimento de compensação fiscal via ANP em fluxo de caixa.",
+    "<b>Estoques B15/E30:</b> Mandatos consolidados desde 01/ago/2025. Revisar conformidade de teores em recebimento e amostragem-testemunha (B15 requer atenção drenagem de tanque)."
   ],
   "radar": [
-    "<b>Diesel: corte recente Petrobras (-9,6%) + subvenção MP 1.358 (R$ 1,12/L) em vigor:</b> 4 dias após o ajuste em 01/jun (R$ 3,65 → R$ 3,30). Defasagem caiu para 31%. Pacote vigente até 31/jul — não estoque acima do giro normal.",
-    "<b>Inflação persistente freio para Selic:</b> Focus aponta IPCA 5,09% (2026), 12ª alta consecutiva. Selic mantém-se em 13,25%, acima da meta, amortecendo consumo interno e impactando demanda por combustíveis.",
-    "<b>Safra etanol em ritmo acelerado:</b> Moagem 60,46 Mt (até 01/mai), +74,6% a/a. Mix 61,84% etanol privilegia biocombustível. Competitividade nas bombas (64,5% vs gasolina) acelera substituição — oportunidade para revendedor adaptar mix de vendas."
+    "<b>Geopolítica Oriente Médio:</b> <cite index=\"6-3\">Irã e Israel trocaram mísseis, com risco de fracasso de negociações de cessar-fogo</cite>. Petróleo pode sustentar acima de US$ 95/bbl enquanto incerteza persistir.",
+    "<b>Defasagem Petrobras persistente:</b> <cite index=\"15-4,15-5\">Diesel ainda 60% mais barato; gasolina com 50% de defasagem</cite>. <cite index=\"15-6\">Para paridade PPI: diesel +R$ 2,18/L, gasolina +R$ 1,26/L</cite>. Risco novo reajuste se pressão defasagem se aprofundar.",
+    "<b>Safra 2026/27 alcooleira:</b> <cite index=\"38-1,38-2,38-3\">Usinas focam etanol; cotações recuaram 14% em maio com aumento oferta</cite>. E30 (+1,5 bi L/ano demanda) sustém competitividade do etanol vs gasolina (64,5% paridade)."
   ],
-  "resumo_editorial": "<p class=\"lead\"><b>Sexta de cenário estabilizado: ambos combustíveis tiveram reajuste Petrobras na última semana.</b> Gasolina A subiu R$ 0,48/L em 29/mai (7 dias) e diesel A foi cortado em R$ 0,3515/L em 01/jun (4 dias). MP 1.358/2026 + MP 1.363/2026 vigentes até 31/jul mantêm subvenção de R$ 1,12/L para diesel e subsídio de até R$ 0,89/L para gasolina, com cláusula obrigatória de repasse ao consumidor (ANP/Cade fiscalizam).</p><p>Defasagem ABICOM segue alta mas em queda: diesel em 31% (R$ 1,12/L) e gasolina em 41% (R$ 1,03/L), bem abaixo dos 58%/48% vistos em abril com Brent acima de US$ 108. Brent agora em US$ 95,25 (+0,23%) com discussões de ceasefire Israel-Líbano somando ao otimismo do acordo EUA-Irã. USD em R$ 5,0415 ainda exerce alguma pressão na paridade. Selic em 14,50% após corte 0,25 p.p. recente; Focus 13,25% fim 2026 com IPCA 5,09% — cenário inflacionário ainda apertado.</p><p><b>Para o revendedor:</b> reajuste já foi feito nos dois combustíveis — não tem janela aberta pra novo reajuste no curto prazo. Confirme repasse do subsídio na nota fiscal do diesel. NÃO estoque diesel acima do giro normal (defasagem ainda pode cair mais até 31/jul). Etanol: safra 2026/27 em ritmo robusto (moagem +74,6% a/a) mantém competitividade nas bombas — considere mix E30/gasolina conforme demanda regional.</p>",
-  "cepea": {
-    "hidratado_sp": "a confirmar",
-    "anidro_sp": "a confirmar",
-    "ultima_atualizacao_iso": "2026-06-01",
-    "ultima_atualizacao_label": "seg 01/jun"
-  },
-  "_comentario": "Gerado automaticamente em 2026-06-05T11:53:59.147Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
+  "resumo_editorial": "<p class=\"lead\"><cite index=\"6-1\">Brent subiu 4,93% a US$ 97,68/bbl em 08/jun</cite> após escalada entre Irã e Israel, enquanto <cite index=\"22-1,22-2\">Petrobras adere a subsídio diesel R$ 1,12/L conforme MP 1.363/2026 de 30/mai</cite>. Defasagem combustíveis permanece crítica: <cite index=\"15-4,15-5\">diesel 60% abaixo, gasolina 50% abaixo vs exterior</cite>.</p><p>No fronte fiscal-monetário, Selic mantida em meta 14,50% (17/jun) com previsão Focus 13,25% fim 2026; IPCA 0,67% (último dado) e projeção 4,92% para 2026. <cite index=\"26-1\">E30 e B15 consolidados desde 01/ago/2025</cite>; safra 2026/27 antecipa moagem +3-4% com usinas priorizando etanol. Câmbio sobe a R$ 5,1244 (+0,05%), refletindo risco geopolítico global.</p><p>Recomendação: revise posições cambiais em combustíveis importados (PPI elevado limita janelas de importação); confirme fluxo compensação MP 1.363 via ANP; monitore adesão B15 em tanques (drenagem semanal obrigatória). Próximo catalyst: confirmação escalação Irã-Israel e nova decisão Banco Central (meta Selic 17/jun).</p>",
+  "_comentario": "Gerado automaticamente em 2026-06-08T08:55:44.661Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
   "decisao": {
-    "data_label": "Sexta · 05 jun 2026",
-    "base": "ABICOM + Brent/câmbio (custo distribuidora indisponível)",
+    "data_label": "Segunda · 08 jun 2026",
+    "base": "ABICOM + custo distribuidora (monitor de preços) + Brent/câmbio",
     "disclaimer": "Essa não é uma recomendação de compra, apenas uma sugestão baseada num modelo educacional.",
     "fuels": [
       {
@@ -130,11 +129,23 @@
         "label": "PODE ESPERAR",
         "emoji": "🟢",
         "score": 8,
-        "spark": [],
+        "spark": [
+          83,
+          100,
+          8,
+          46,
+          52,
+          55,
+          40
+        ],
         "reasons": [
           {
             "dir": "down",
             "text": "Petrobras reajustou recentemente — pressão zerada por enquanto"
+          },
+          {
+            "dir": "down",
+            "text": "Custo distribuidora <b>-1,5%</b> (caindo)"
           }
         ]
       },
@@ -145,7 +156,14 @@
         "label": "PODE ESPERAR",
         "emoji": "🟢",
         "score": 8,
-        "spark": [],
+        "spark": [
+          98,
+          34,
+          8,
+          51,
+          100,
+          68
+        ],
         "reasons": [
           {
             "dir": "down",
@@ -160,7 +178,13 @@
         "label": "PODE ESPERAR",
         "emoji": "🟢",
         "score": 8,
-        "spark": [],
+        "spark": [
+          8,
+          12,
+          73,
+          100,
+          62
+        ],
         "reasons": [
           {
             "dir": "down",
@@ -175,11 +199,22 @@
         "label": "PODE ESPERAR",
         "emoji": "🟢",
         "score": 8,
-        "spark": [],
+        "spark": [
+          100,
+          8,
+          30,
+          26,
+          13,
+          31
+        ],
         "reasons": [
           {
             "dir": "down",
             "text": "Petrobras reajustou recentemente — pressão zerada por enquanto"
+          },
+          {
+            "dir": "down",
+            "text": "Custo distribuidora <b>-12,0%</b> (caindo)"
           }
         ]
       }
