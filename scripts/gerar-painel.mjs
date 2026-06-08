@@ -387,6 +387,38 @@ function parseJSON(text) {
     _carry("mandatos", ["anidro_na_gasolina_pct","b100_no_diesel_pct"]);
     _carry("safra_etanol", ["moagem","var_anual","mix_etanol_pct","oferta_total"]);
 
+    // INCREMENTO AUTO de dias_sem_ajuste por delta de dias decorridos:
+    // Bug 08/jun: Haiku trouxe os MESMOS dias do data.json anterior (7 e 4 herdados
+    // do meu fix 05/jun) — passou pelo carry-forward e pelo sanity check porque
+    // o valor estava "consistente". Mas é segunda 08/jun, o painel não rodou no
+    // FDS — então deveria ter incrementado +3 dias automaticamente (gas 7→10, die 4→7).
+    //
+    // Esta função detecta: se data_iso atual > data_iso anterior E dias_sem_ajuste
+    // veio igual ou menor que o anterior E não é reset (≠0) → bump por delta de dias.
+    function _incrementarDiasPorDelta(field) {
+      const newAb = newData.abicom || (newData.abicom = {});
+      const oldAb = currentData.abicom || {};
+      const novoDias = Number(newAb[field]);
+      const antigoDias = Number(oldAb[field]);
+      if (!isFinite(novoDias) || !isFinite(antigoDias)) return;
+      if (novoDias === 0) return; // reset legítimo (reajuste hoje)
+      const novoIso = newData.meta?.date_iso || isoDate;
+      const antigoIso = currentData.meta?.date_iso;
+      if (!novoIso || !antigoIso) return;
+      const deltaMs = Date.parse(novoIso + "T00:00:00Z") - Date.parse(antigoIso + "T00:00:00Z");
+      if (!isFinite(deltaMs) || deltaMs <= 0) return;
+      const deltaDias = Math.round(deltaMs / 86400000);
+      if (deltaDias <= 0) return;
+      // Se Haiku entregou valor IGUAL ou MENOR que o anterior, ele esqueceu de incrementar
+      if (novoDias <= antigoDias) {
+        const corrigido = antigoDias + deltaDias;
+        console.log(`  ⏩ incremento auto ${field}: ${novoDias} → ${corrigido} (delta ${deltaDias} dia(s) desde ${antigoIso})`);
+        newAb[field] = corrigido;
+      }
+    }
+    _incrementarDiasPorDelta("dias_sem_ajuste_gasolina");
+    _incrementarDiasPorDelta("dias_sem_ajuste_diesel");
+
     // SANITY CHECK ANTI-REGRESSÃO da defasagem ABICOM:
     // Se Haiku trouxer defasagem MAIS ALTA do que a anterior enquanto dias_sem_ajuste
     // é baixo (reajuste recente), é forte indício de que ele puxou notícia antiga
