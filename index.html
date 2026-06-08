@@ -653,6 +653,26 @@ footer b{color:var(--text-2);font-weight:600}
     <ul class="agenda-week" id="agendaWeek"></ul>
   </section>
 
+  <!-- 5.5. REFINARIAS — comparativo diesel S-10 (col-12) -->
+  <section class="card col-12">
+    <div class="card-h"><div class="ico">🏭</div><h2>Refinarias — preço diesel S-10</h2><span class="src" id="refSrc">—</span></div>
+    <div style="overflow-x:auto;margin-top:6px">
+      <table style="width:100%;border-collapse:collapse;font-size:13px">
+        <thead>
+          <tr style="border-bottom:1px solid var(--line, #1c2d44)">
+            <th style="text-align:left;padding:8px 10px;font-weight:600;color:var(--muted, #8b9cb3)">Refinaria</th>
+            <th style="text-align:left;padding:8px 10px;font-weight:600;color:var(--muted, #8b9cb3)">Região</th>
+            <th style="text-align:right;padding:8px 10px;font-weight:600;color:var(--muted, #8b9cb3)">R$/L</th>
+            <th style="text-align:right;padding:8px 10px;font-weight:600;color:var(--muted, #8b9cb3)">vs. Petrobras</th>
+            <th style="text-align:left;padding:8px 10px;font-weight:600;color:var(--muted, #8b9cb3)">Último reajuste</th>
+          </tr>
+        </thead>
+        <tbody id="refinariasBody"></tbody>
+      </table>
+    </div>
+    <p class="muted" style="font-size:11.5px;margin-top:10px">Preço de venda da refinaria às distribuidoras. Petrobras = referência nacional. Acelen e BRAVA = refinarias privadas (Nordeste).</p>
+  </section>
+
   <!-- 6. RESUMO ECONÔMICO (col-9) + VERIMO (col-3) -->
   <section class="card col-9">
     <div class="card-h"><div class="ico">📝</div><h2>Resumo econômico do dia</h2><span class="src">Editorial · Ramsés Castoldi</span></div>
@@ -807,6 +827,21 @@ const DATA = {
   $("safraVar").className = "delta " + ((sf.var_anual||"").startsWith("-") ? "down" : "up");
   $("safraMix").textContent = sf.mix_etanol_pct || "—";
   $("safraOferta").textContent = sf.oferta_total || "—";
+
+  // Refinarias
+  const rf = DATA.refinarias || {};
+  $("refSrc").textContent = rf.produto || "—";
+  $("refinariasBody").innerHTML = (rf.items||[]).map(it=>{
+    const isPetro = (it.nome||"").toLowerCase().includes("petrobras");
+    const deltaCls = isPetro ? "muted" : "delta up";
+    return `<tr style="border-bottom:1px solid var(--line, #1c2d44)">
+      <td style="padding:8px 10px"><b>${it.nome||"—"}</b></td>
+      <td style="padding:8px 10px;color:var(--muted, #8b9cb3)">${it.regiao||"—"}</td>
+      <td style="padding:8px 10px;text-align:right;font-variant-numeric:tabular-nums">${it.preco_rs_l||"—"}</td>
+      <td style="padding:8px 10px;text-align:right;font-variant-numeric:tabular-nums" class="${deltaCls}">${it.delta_vs_petrobras||"—"}</td>
+      <td style="padding:8px 10px;font-size:12px;color:var(--muted, #8b9cb3)">${it.ultimo_reajuste||"—"}</td>
+    </tr>`;
+  }).join("");
 
   // Agenda semanal
   const ag = DATA.agenda_semanal || {};

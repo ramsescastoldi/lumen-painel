@@ -99,6 +99,34 @@
     "mix_etanol_pct": "61,84%",
     "oferta_total": "3,29 bi L (+71,84% a/a)"
   },
+  "refinarias": {
+    "produto": "Diesel S-10 (R$/L às distribuidoras)",
+    "data_referencia": "2026-06-08",
+    "items": [
+      {
+        "nome": "Petrobras",
+        "regiao": "Nacional",
+        "preco_rs_l": "R$ 3,30/L",
+        "delta_vs_petrobras": "—",
+        "ultimo_reajuste": "01/06/2026 (corte -9,6%)"
+      },
+      {
+        "nome": "Acelen (Mataripe)",
+        "regiao": "BA",
+        "preco_rs_l": "R$ 5,74/L",
+        "delta_vs_petrobras": "+R$ 2,44/L (+74%)",
+        "ultimo_reajuste": "07/05/2026 · próximo programado 14/06/2026 (-2,2%)"
+      },
+      {
+        "nome": "BRAVA (Clara Camarão)",
+        "regiao": "RN",
+        "preco_rs_l": "a confirmar (S-500 em R$ 4,98/L)",
+        "delta_vs_petrobras": "a confirmar",
+        "ultimo_reajuste": "22/05/2026"
+      }
+    ],
+    "fonte": "Sites Petrobras/Acelen/BRAVA + ANP + imprensa local; valores R$/L na distribuidora"
+  },
   "agenda_semanal": {
     "segunda": "Abertura Brent +4,93% retaliação Israel-Irã; MP 1.363 prorrogada até 31/jul subsídio diesel R$ 1,12/L",
     "terca": "—",

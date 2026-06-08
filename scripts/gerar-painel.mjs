@@ -111,6 +111,16 @@ const structureExample = JSON.stringify({
     mix_etanol_pct: "XX,XX%",
     oferta_total: "X,XX bi L (+/-X% a/a)"
   },
+  refinarias: {
+    produto: "Diesel S-10 (R$/L às distribuidoras)",
+    data_referencia: isoDate,
+    items: [
+      { nome: "Petrobras", regiao: "Nacional", preco_rs_l: "R$ X,XX/L", delta_vs_petrobras: "—", ultimo_reajuste: "DD/MM/AAAA (movimento)" },
+      { nome: "Acelen (Mataripe)", regiao: "BA", preco_rs_l: "R$ X,XX/L", delta_vs_petrobras: "+R$ X,XX/L (+XX%)", ultimo_reajuste: "DD/MM/AAAA (movimento) · próximo programado DD/MM/AAAA (% reajuste)" },
+      { nome: "BRAVA (Clara Camarão)", regiao: "RN", preco_rs_l: "R$ X,XX/L", delta_vs_petrobras: "+R$ X,XX/L (+XX%)", ultimo_reajuste: "DD/MM/AAAA (movimento)" }
+    ],
+    fonte: "Sites Petrobras/Acelen/BRAVA + ANP + imprensa local"
+  },
   agenda_semanal: {
     segunda: "evento principal ou — se vazio",
     terca: "evento principal ou —",
@@ -180,6 +190,15 @@ Para os blocos \`moedas\`, \`juros\` e \`inflacao\` use EXATAMENTE os números a
 
 ${isMonday ? '6. "CEPEA ESALQ etanol hidratado anidro SP usina + UNICA safra moagem mix Centro-Sul ${isoDate}"' : '6. notícia principal do dia + UNICA safra etanol mix (combine numa busca só)'}
 
+7. **Preços nas refinarias (Petrobras + Acelen Mataripe + BRAVA Clara Camarão) — Diesel S-10 R$/L**:
+   Query sugerida: "preço diesel S-10 refinaria Petrobras Acelen Mataripe BRAVA Clara Camarão R$/L distribuidora ${meses[brtNow.getMonth()]} ${brtNow.getFullYear()}"
+   Objetivo: alimentar o bloco \`refinarias.items\` com o preço VIGENTE de diesel S-10 em R$/L às distribuidoras em cada uma das 3 refinarias + data do último reajuste de cada.
+   - **Petrobras**: preço diesel A nas refinarias (não confundir com diesel B15 ao consumidor). Após corte de 01/06/2026 ficou em R$ 3,30/L.
+   - **Acelen (Mataripe-BA)**: refinaria privada. Tipicamente +70-80% acima da Petrobras pelo preço de mercado. Acompanhe site oficial e imprensa local da Bahia.
+   - **BRAVA (Clara Camarão-RN)**: refinaria privada do RN. Reajustes semanais às quintas-feiras. Acompanhe Tribuna do Norte e Portal N10.
+   - Calcule \`delta_vs_petrobras\` automaticamente: (preço_refinaria - preço_petrobras) e percentual.
+   - Se não conseguir confirmar o preço VIGENTE de uma refinaria, use "a confirmar" no \`preco_rs_l\` daquele item.
+
 ${isMonday ? "" : `## ⚠️ CEPEA HERDADO — NÃO PESQUISAR
 Hoje não é segunda-feira. O bloco \`cepea\` será **herdado automaticamente** do data.json atual. **Não inclua o campo \`cepea\` no seu JSON de saída.** O script vai mesclar:
 \`\`\`json
@@ -198,6 +217,7 @@ ${JSON.stringify(cepeaHerdado, null, 2)}
 - **inflacao**: IPCA mais recente + variação + previsão Focus
 - **mandatos**: % anidro na gasolina (ex "30%") e % B100 no diesel (ex "15%"). Pesquise se houve mudança recente.
 - **safra_etanol**: moagem, variação anual, mix etanol, oferta total
+- **refinarias**: SEMPRE 3 items na MESMA ORDEM (Petrobras, Acelen Mataripe, BRAVA Clara Camarão), produto fixo "Diesel S-10 (R$/L às distribuidoras)". \`delta_vs_petrobras\` da Petrobras é sempre "—". Pros outros 2, calcule o delta absoluto (\`+R$ X,XX/L\`) e percentual (\`+XX%\`) em relação à Petrobras. Se não conseguir confirmar preço atual, use "a confirmar" no \`preco_rs_l\`
 - **agenda_semanal**: síntese por dia da SEMANA ATUAL (seg, ter, qua, qui, sex). UMA frase curta por dia. "—" se nada relevante. Eventos: Focus (toda 2ª), IPCA/IPCA-15, Copom (quando houver), UNICA (quinzenas), ANP (sex), reuniões geopolíticas relevantes, divulgações Petrobras.
 - **acoes_dia**: 3 ações operacionais para o dono de posto HOJE. HTML com <b>. Cada uma 1–2 frases.
 - **radar**: 3 temas de impacto do dia. HTML com <b>. Cada um 1–2 frases.
@@ -324,7 +344,7 @@ function parseJSON(text) {
     const fatos = await fetchFatosBCB();
     console.log(fatos.hasData ? "✓ BCB ok:\n" + fatos.block : "⚠️  BCB indisponível — fallback web_search");
     const systemFinal = SYSTEM_PROMPT.replace("__FATOS__", fatos.block);
-    const maxUses = fatos.hasData ? 6 : 8; // bumped 5→6 em 2026-06-01 pra acomodar a busca dedicada "breaking — política Petrobras/MP últimas 72h" (sinal_petrobras estava ficando "nenhum" mesmo quando havia MP nova)
+    const maxUses = fatos.hasData ? 7 : 9; // bumped 6→7 em 2026-06-08 pra acomodar busca de preços nas refinarias (Petrobras + Acelen + BRAVA, diesel S-10 R$/L)
 
     console.log(`🤖 Chamando Claude (${MODEL}) — max_uses=${maxUses}, max_tokens=6000...`);
     const t0 = Date.now();
@@ -386,6 +406,29 @@ function parseJSON(text) {
     _carry("abicom", ["defasagem_gasolina_pct","defasagem_diesel_pct","dias_sem_ajuste_gasolina","dias_sem_ajuste_diesel","potencial_aumento_rs_gasolina","potencial_aumento_rs_diesel"]);
     _carry("mandatos", ["anidro_na_gasolina_pct","b100_no_diesel_pct"]);
     _carry("safra_etanol", ["moagem","var_anual","mix_etanol_pct","oferta_total"]);
+
+    // Carry-forward INTELIGENTE pra refinarias.items: se Haiku não confirmou
+    // o preço (veio "a confirmar"/"0"/empty), mantém o do data.json anterior.
+    // Preserva também o nome/região/ultimo_reajuste já existentes.
+    if (Array.isArray(currentData.refinarias?.items)) {
+      newData.refinarias = newData.refinarias || {};
+      newData.refinarias.items = newData.refinarias.items || [];
+      for (const oldItem of currentData.refinarias.items) {
+        const newItem = newData.refinarias.items.find(it => it?.nome === oldItem.nome);
+        if (!newItem) {
+          // Haiku esqueceu de incluir essa refinaria — clona inteira do anterior
+          newData.refinarias.items.push({ ...oldItem });
+          console.log(`  ↩ carry-forward refinaria ${oldItem.nome} (Haiku omitiu)`);
+          continue;
+        }
+        for (const f of ["preco_rs_l", "delta_vs_petrobras", "ultimo_reajuste", "regiao"]) {
+          if (_isMissing(newItem[f]) && !_isMissing(oldItem[f])) {
+            newItem[f] = oldItem[f];
+            console.log(`  ↩ carry-forward refinaria ${oldItem.nome}.${f}: ${oldItem[f]}`);
+          }
+        }
+      }
+    }
 
     // INCREMENTO AUTO de dias_sem_ajuste por delta de dias decorridos:
     // Bug 08/jun: Haiku trouxe os MESMOS dias do data.json anterior (7 e 4 herdados
