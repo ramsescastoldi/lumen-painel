@@ -2,33 +2,33 @@
   "meta": {
     "date_iso": "2026-06-09",
     "date_label": "Terça · 09 jun 2026",
-    "last_update": "06:55"
+    "last_update": "09:49"
   },
   "manchete": {
     "principal": {
       "severity": "yellow",
       "status_emoji": "🟡",
       "severity_label": "Atenção",
-      "titulo": "Brent cai para US$ 92,94/bbl; Focus de 08/jun projeta Selic 13,50% e IPCA 5,11% em 2026 — pressão inflacionária mantém janelas importação fechadas"
+      "titulo": "Brent cai para US$ 92,94/bbl em contexto de ceasefire frágil; Selic avança para 13,50% em 2026 — pressão inflacionária mantém defasagem combustíveis acima de 50%"
     },
     "secundarias": [
       {
         "categoria": "Mercado",
-        "titulo": "Expectativa de juros mais altos em 2026 pressiona demanda por investimentos em refinarias e importações",
+        "titulo": "Focus (08/jun) projeta Selic 13,50% fim 2026 e IPCA 5,11% — expectativa de juros elevados pressiona investimentos em refinarias",
         "severity": "yellow",
         "status_emoji": "🟡"
       },
       {
         "categoria": "Combustíveis",
-        "titulo": "Defasagem diesel 31% (R$ 1,12/L potencial aumento); gasolina 41% (R$ 1,03/L) — MP 1.358/1.363 contém repasses até 31/jul",
+        "titulo": "Defasagem diesel 52% (112 dias janelas fechadas); gasolina 88% (69 dias sem importação) — potencial aumento R$ 1,87/L diesel e R$ 2,22/L gasolina se equiparar PPI",
         "severity": "red",
         "status_emoji": "🔴"
       },
       {
         "categoria": "Política",
-        "titulo": "Medidas provisórias mantêm subsídios: diesel R$ 1,12/L + gasolina até R$ 0,89/L até fim de julho",
-        "severity": "green",
-        "status_emoji": "🟢"
+        "titulo": "MP 1.363/2026 mantém subvenção R$ 1,12/L diesel até 31/jul; Petrobras implementou desconto R$ 0,3515/L (01/jun) — subsídio governo mitiga repasse à bomba",
+        "severity": "yellow",
+        "status_emoji": "🟡"
       }
     ]
   },
@@ -39,45 +39,45 @@
       "dir": "down"
     },
     "wti": {
-      "val": "US$ 89,64",
+      "val": "US$ 91,43",
       "delta": "▼ -1,82%",
       "dir": "down"
     },
-    "resumo": "Brent segue em trajetória de recuo após esperança de acordo EUA-Irã reduzir tensão no Estreito de Ormuz, apesar de obstáculos nas negociações. Defasagem elevada nas refinarias brasileiras mantém janelas de importação fechadas para diesel (97 dias) e gasolina (54 dias)."
+    "resumo": "Petróleo cede com ceasefire frágil entre Israel e Irã. Brent oscila na faixa de US$ 91–94/bbl. Demanda global desacelera (importações China em mínima de 10 anos). Defasagem Petrobras permanece crítica: diesel 52%, gasolina 88% abaixo PPI — janelas importação fechadas há 112 dias diesel, 69 dias gasolina."
   },
   "abicom": {
     "defasagem_gasolina_pct": "41%",
-    "defasagem_diesel_pct": "31%",
-    "dias_sem_ajuste_gasolina": 11,
+    "defasagem_diesel_pct": "52%",
+    "dias_sem_ajuste_gasolina": 12,
     "dias_sem_ajuste_diesel": 8,
     "potencial_aumento_rs_gasolina": "R$ 1,03/L",
-    "potencial_aumento_rs_diesel": "R$ 1,12/L",
+    "potencial_aumento_rs_diesel": "R$ 1,87/L",
     "sinal_petrobras": "mp_subsidio"
   },
   "moedas": {
     "usdbrl": {
       "val": "R$ 5,1695",
-      "delta": "▲ +0,35%",
+      "delta": "▲ +0,34%",
       "dir": "up"
     },
     "eurbrl": {
       "val": "R$ 5,9682",
-      "delta": "▲ +0,49%",
+      "delta": "▲ +0,57%",
       "dir": "up"
     }
   },
   "juros": {
     "selic": {
       "val": "14,50% a.a.",
-      "delta": "• mantida",
-      "dir": "flat"
+      "delta": "▲ (próxima decisão 17/jun)",
+      "dir": "up"
     },
     "previsao_focus": "13,50% (fim 2026)"
   },
   "inflacao": {
     "ipca": {
       "val": "0,67% (mês)",
-      "delta": "▼ down vs. mês anterior",
+      "delta": "▼ vs. mês anterior",
       "dir": "down"
     },
     "previsao_focus": "5,11% (2026)"
@@ -101,7 +101,7 @@
         "regiao": "Nacional",
         "preco_rs_l": "R$ 3,30/L",
         "delta_vs_petrobras": "—",
-        "ultimo_reajuste": "01/06/2026 (corte -R$ 0,35/L)"
+        "ultimo_reajuste": "01/06/2026 (desconto -R$ 0,3515/L via MP 1.358)"
       },
       {
         "nome": "Acelen (Mataripe)",
@@ -118,33 +118,33 @@
         "ultimo_reajuste": "22/05/2026"
       }
     ],
-    "fonte": "Sites Petrobras/Acelen/BRAVA + ANP + imprensa local (último dado confirmado: 14/05/2026)"
+    "fonte": "Petrobras (oficial), Acelen, BRAVA, ANP, imprensa regional"
   },
   "agenda_semanal": {
-    "segunda": "Focus Banco Central (previsões Selic, IPCA, dólar) — segunda semanal",
-    "terca": "Dados Focus elevam Selic para 13,50% e IPCA para 5,11% em 2026",
+    "segunda": "Focus Banco Central (semanal) — última divulgação projetou Selic 13,50% e IPCA 5,11%",
+    "terca": "—",
     "quarta": "—",
-    "quinta": "UNICA (dados quinzena anterior, safra etanol mix); Acelen/BRAVA (reajustes típicos quinta) — a confirmar",
-    "sexta": "ANP (síntese semanal preços combustíveis); possível leilão importação diesel"
+    "quinta": "CNPE (quando pautado) — discussão B16/E32 aguardando testes técnicos",
+    "sexta": "ANP — divulgação semanal indicadores abastecimento"
   },
   "acoes_dia": [
-    "<b>Acompanhe os preços de reabastecimento em Mataripe:</b> Acelen operou em R$ 5,57/L diesel S-10 na última quinta (14/05); verifique se houve reajuste de quinta (hoje ou próximas horas). A defasagem de R$ 2,27/L em relação à Petrobras mantém pressão na importação.",
-    "<b>Prepare planejamento de fluxo de caixa:</b> Com Selic projetada em 13,50% fim-ano (Focus 08/jun) e IPCA acelerado (5,11% 2026), custos financeiros e margens em compressão. Revise capital de giro para estoque e hedge.",
-    "<b>Monitore janelas de importação nas próximas 48h:</b> 97 dias sem fechar contratos de diesel; queda de Brent (US$ 92,94) pode abrir oportunidade pontual se preço interno subir acima de PPI (Petrobras sinalizando política de negociação direta, não PPI)."
+    "<b>Monitorar MP 1.363/2026:</b> Subvenção diesel R$ 1,12/L vigente até 31/jul. Acompanhe DOU e comunicados Petrobras para eventuais ajustes nas datas de reajuste.",
+    "<b>Revise margens diesel/gasolina:</b> Defasagem crítica (diesel 52%, gasolina 88%) mantém potencial reajuste elevado. Cálculo de Petrobras para pariidade: +R$ 1,87/L diesel, +R$ 2,22/L gasolina.",
+    "<b>Safra etanol em ritmo acelerado:</b> Moagem +74,6% a/a até 01/05; mix 61,84% favorece etanol. Demanda doméstica forte — E30 contribui. Acompanhe preços e competitividade nas bombas."
   ],
   "radar": [
-    "<b>Brent em queda e Ormuz com esperança:</b> Recuo de -1,39% para US$ 92,94/bbl reflete otimismo com negociações EUA-Irã, apesar de Hezbollah e Israel ainda tensionarem a região. Vigilância sobre qualquer revés nas conversas.",
-    "<b>Defasagem crítica mantém importações engessadas:</b> Diesel com 97 dias de janela fechada e 31% de defasagem; gasolina 54 dias fechada e 41% defasagem. Sem novo reajuste Petrobras, risco de falta pontual aumenta em julho/agosto.",
-    "<b>Inflação e juros mais altos para 2026 comprimem rentabilidade:</b> Focus de 08/jun elevou Selic para 13,50% (de 13,25%) e IPCA para 5,11% (de 5,09%); terceira alta consecutiva. Margens de distribuição e revenda em pressão contínua."
+    "<b>Geopolítica Oriente Médio:</b> Ceasefire Israel–Irã/Hezbollah frágil. Reabertura Estreito Ormuz temporária até 22/abr. Recuperação petróleo limitada; mercado aguarda definição antes de novos movimentos.",
+    "<b>Pressão inflacionária 2026:</b> Focus mantém IPCA 5,11% em 2026 + Selic 13,50%. Custo de capital elevado afeta planos de capex refinarias privadas e importadores. Viabilidade econômica combustíveis importados reduzida.",
+    "<b>Janelas importação fechadas:</b> Diesel 112 dias, gasolina 69 dias. Defasagem extrema desincentiva importadores. Risco de desabastecimento pontual se Petrobras não aumentar (subsídio ainda mitiga repasse). Acompanhe sinalizações próximas semanas."
   ],
-  "resumo_editorial": "<p class=\"lead\">Nesta terça, 09 de junho, o cenário combustíveis flutua entre optimismo e apreensão. Brent recua 1,39% para US$ 92,94/bbl em sinal de progresso nas negociações EUA-Irã sobre Ormuz; WTI cai 1,82%. Porém, <b>defasagem crítica persiste</b>: diesel 31% (97 dias sem importação) e gasolina 41% (54 dias sem importar) — potencial de alta de R$ 1,12/L e R$ 1,03/L respectivamente, segundo Abicom. Petrobras mantém política de negociação direta (não PPI), blindada pelas MPs 1.358/1.363 até 31/julho.</p><p>A edição anterior (08/jun) registrou reajuste gasolina de +R$ 0,48/L em 29/mai (10 dias atrás) e corte diesel de -R$ 0,35/L em 01/jun (7 dias atrás). Hoje, <b>nenhum novo sinal de movimento imediato</b> na Petrobras, apesar de Brent volátil. Acelen mantém Mataripe em R$ 5,57/L diesel S-10 (corte de 2,2% em 14/mai), operando +R$ 2,27/L (+68,8%) acima da Petrobras. BRAVA Clara Camarão (RN) segue em revisão.</p><p><b>Prioridade operacional:</b> O Boletim Focus de 08/06 elevou projeção Selic para 13,50% (fim 2026, de 13,25%) e IPCA para 5,11% (2026, de 5,09%), terceira semana de alta. Juros estruturais mais altos comprimem margens de capital de giro. Safra etanol 2026/27 segue robusta (+74,6% moagem a/a, mix 61,84%, oferta 3,29 bi L até 01/05), compensando pressão em combustíveis fósseis. Monitore quinta-feira para reajustes de Acelen/BRAVA e sexta para síntese ANP.</p>",
+  "resumo_editorial": "<p class=\"lead\">O Brent recua para US$ 92,94/bbl em cenário de ceasefire frágil no Oriente Médio, enquanto domesticamente a pressão inflacionária avança: Focus (08/jun) projeta Selic a 13,50% e IPCA a 5,11% para 2026. A defasagem combustíveis permanece crítica — diesel em 52% (112 dias sem importação), gasolina em 88% (69 dias fechado) — com potencial de aumento de até R$ 1,87/L diesel e R$ 2,22/L gasolina para atingir paridade internacional. A MP 1.363/2026 estende subvenção diesel de R$ 1,12/L até 31 de julho, mitigando repasses à bomba, enquanto Petrobras implementou desconto de R$ 0,3515/L em 01/06/2026.</p><p>O mercado permanece em compasso de espera: expectativa de juros elevados no fim de 2026 desincentiva investimentos em refinarias privadas e importação de combustíveis. Acelen (Mataripe-BA) e BRAVA (Clara Camarão-RN) acompanham a dinâmica internacional, mas com margens comprimidas. A safra etanol 2026/27 avança em ritmo acelerado (+74,6% moagem até 01/05), com mix de 61,84% favorecendo o biocombustível em contexto de E30 em vigor desde ago/2025.</p><p><b>Ação imediata para postos:</b> revise margens diesel/gasolina considerando o diferencial defasagem vs. potencial reajuste futuro. Acompanhe comunicados Petrobras sobre prazos MP 1.363 e eventual sinalização de novos aumentos após 31/jul. Monitore competitividade etanol nas bombas — demanda doméstica forte sustenta mix elevado. Cenário persiste tenso até definição geopolítica e/ou decisão de política de preços da estatal.</p>",
   "cepea": {
     "hidratado_sp": "a confirmar",
     "anidro_sp": "a confirmar",
     "ultima_atualizacao_iso": "2026-06-08",
     "ultima_atualizacao_label": "seg 08/jun"
   },
-  "_comentario": "Gerado automaticamente em 2026-06-09T08:55:56.531Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
+  "_comentario": "Gerado automaticamente em 2026-06-09T11:50:17.686Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
   "decisao": {
     "data_label": "Terça · 09 jun 2026",
     "base": "ABICOM + custo distribuidora (monitor de preços) + Brent/câmbio",
@@ -196,7 +196,7 @@
         "verdict": "buy",
         "label": "COMPRE AGORA",
         "emoji": "🔴",
-        "score": 81,
+        "score": 93,
         "spark": [
           98,
           34,
@@ -209,11 +209,11 @@
         "reasons": [
           {
             "dir": "up",
-            "text": "Potencial de aumento <b>R$ 1,12/L</b> pra alcançar paridade (ABICOM)"
+            "text": "Potencial de aumento <b>R$ 1,87/L</b> pra alcançar paridade (ABICOM)"
           },
           {
             "dir": "up",
-            "text": "Defasagem ABICOM <b>31%</b> (zona de atenção)"
+            "text": "Defasagem ABICOM <b>52%</b> (alta)"
           },
           {
             "dir": "up",
@@ -235,7 +235,7 @@
         "verdict": "buy",
         "label": "COMPRE AGORA",
         "emoji": "🔴",
-        "score": 98,
+        "score": 100,
         "spark": [
           8,
           12,
@@ -247,11 +247,11 @@
         "reasons": [
           {
             "dir": "up",
-            "text": "Potencial de aumento <b>R$ 1,12/L</b> pra alcançar paridade (ABICOM)"
+            "text": "Potencial de aumento <b>R$ 1,87/L</b> pra alcançar paridade (ABICOM)"
           },
           {
             "dir": "up",
-            "text": "Defasagem ABICOM <b>31%</b> (zona de atenção)"
+            "text": "Defasagem ABICOM <b>52%</b> (alta)"
           },
           {
             "dir": "up",
