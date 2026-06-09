@@ -98,8 +98,22 @@ jobs:
             --arg workflow "lumen-painel-diario" \
             --rawfile wa_text wa-text.txt \
             '{status:$status,date:$date,date_label:$date_label,time:$time,manchete:$manchete,workflow:$workflow,wa_text:$wa_text}')
-          curl -s -X POST "$N8N_NOTIFY_URL" \
+          # Fix 2026-06-09: webhook nao chegava no n8n mas script reportava success.
+          # Causa: curl sem timeout + `|| true` mascarava falha silenciosamente.
+          # Mesmo padrao do bug newsletter (commit bc3f68a no lumen-newsletter).
+          # Retry: 5x com backoff de 30s, conexao+TLS em 20s, chamada total em 60s.
+          curl -fsS -X POST "$N8N_NOTIFY_URL" \
             -H "Content-Type: application/json" \
-            -d "$PAYLOAD" || true
+            -d "$PAYLOAD" \
+            --connect-timeout 20 \
+            --max-time 60 \
+            --retry 5 \
+            --retry-delay 30 \
+            --retry-all-errors
+          STATUS=$?
+          if [ $STATUS -ne 0 ]; then
+            echo "::error::Webhook n8n falhou apos 5 tentativas (exit $STATUS). Disparar manualmente: curl -X POST -H 'Content-Type: application/json' -d '<payload>' '$N8N_NOTIFY_URL'"
+            exit $STATUS
+          fi
           echo ""
           echo "✓ n8n notificado (com versão WhatsApp)"
