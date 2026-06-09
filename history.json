@@ -1,11 +1,6 @@
 {
   "days": [
     {
-      "date": "2026-04-27",
-      "usdbrl": 4.97,
-      "eurbrl": 5.8303
-    },
-    {
       "date": "2026-04-28",
       "usdbrl": 4.9878,
       "eurbrl": 5.8432
@@ -382,6 +377,29 @@
         "diesel_s10": 98,
         "diesel_s500": 100,
         "etanol": 22
+      }
+    },
+    {
+      "date": "2026-06-09",
+      "brent": 92.94,
+      "wti": 89.64,
+      "usdbrl": 5.1695,
+      "eurbrl": 5.9682,
+      "selic": 14.5,
+      "ipca": 0.67,
+      "def_gas": 41,
+      "def_die": 31,
+      "dias_gas": 11,
+      "dias_die": 8,
+      "pot_gas": 1.03,
+      "pot_die": 1.12,
+      "cepea_hid": null,
+      "cepea_ani": null,
+      "decisao": {
+        "gasolina": 80,
+        "diesel_s10": 81,
+        "diesel_s500": 98,
+        "etanol": 5
       }
     }
   ]
