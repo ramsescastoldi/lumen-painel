@@ -361,6 +361,7 @@ footer b{color:var(--text-2);font-weight:600}
       if(r.ok){
         localStorage.setItem('painel_session',r.session_token);
         localStorage.setItem('painel_session_exp',r.expires);
+        _logAccess(_phone);
         _unlock();
       }else{err.textContent='[' + (r.reason||'?') + '] ' + (r.message||'Código inválido');}
     }catch(e){err.textContent='FETCH ERRO: '+(e.message||e.toString());console.error('Auth fetch error',e);}
@@ -377,6 +378,11 @@ footer b{color:var(--text-2);font-weight:600}
     if(g)g.remove();if(c)c.remove();
     document.body.classList.remove('locked');
   }
+  function _logAccess(phone){
+    if(!phone)return;
+    try{localStorage.setItem('painel_phone',phone);}catch(e){}
+    try{fetch(N8N+'/webhook/painel-log-access',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({phone:phone}),keepalive:true}).catch(()=>{});}catch(e){}
+  }
   (async function(){
     const s=localStorage.getItem('painel_session');
     if(!s){return;}
@@ -384,7 +390,7 @@ footer b{color:var(--text-2);font-weight:600}
     if(exp&&exp>Date.now()){
       try{
         const r=await fetch(N8N+'/webhook/painel-check-session',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({session_token:s})}).then(r=>r.json());
-        if(r.ok){_unlock();return;}
+        if(r.ok){_logAccess(r.phone||localStorage.getItem('painel_phone'));_unlock();return;}
       }catch(e){}
     }
     localStorage.removeItem('painel_session');
