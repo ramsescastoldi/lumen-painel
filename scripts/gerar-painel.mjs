@@ -120,6 +120,11 @@ const structureExample = JSON.stringify({
     mix_etanol_pct: "XX,XX%",
     oferta_total: "X,XX bi L (+/-X% a/a)"
   },
+  midia_setor: {
+    sentimento: "pressao_alta|neutro|pressao_baixa",
+    n_materias: 0,
+    resumo: "1 frase: o que a imprensa do setor está dizendo sobre preços nos últimos 5 dias"
+  },
   refinarias: {
     produto: "Diesel S-10 (R$/L às distribuidoras)",
     data_referencia: isoDate,
@@ -212,7 +217,15 @@ Para os blocos \`moedas\`, \`juros\` e \`inflacao\` use EXATAMENTE os números a
 
 ${isMonday ? '6. "CEPEA ESALQ etanol hidratado anidro SP usina + UNICA safra moagem mix Centro-Sul ${isoDate}"' : '6. notícia principal do dia + UNICA safra etanol mix (combine numa busca só)'}
 
-7. **Preços nas refinarias (Petrobras + Acelen Mataripe + BRAVA Clara Camarão) — Diesel S-10 R$/L**:
+7. **🗞️ MÍDIA DO SETOR — últimos 5 dias (sentimento de preços)**:
+   Query sugerida: "previsão reajuste combustível gasolina diesel preço próximos dias análise" (notícias recentes, máx 5 dias)
+   Objetivo: preencher \`midia_setor\`. Classifique o conjunto das matérias DOS ÚLTIMOS 5 DIAS:
+   - Maioria aponta alta iminente/pressão de reajuste → \`sentimento\`: "pressao_alta"
+   - Maioria aponta corte/subsídio/estabilidade prolongada → \`sentimento\`: "pressao_baixa"
+   - Dividido ou sem cobertura relevante → \`sentimento\`: "neutro"
+   Informe \`n_materias\` (quantas matérias relevantes encontrou) e \`resumo\` (1 frase). NÃO conte matérias com mais de 5 dias.
+
+8. **Preços nas refinarias (Petrobras + Acelen Mataripe + BRAVA Clara Camarão) — Diesel S-10 R$/L**:
    Query sugerida: "preço diesel S-10 refinaria Petrobras Acelen Mataripe BRAVA Clara Camarão R$/L distribuidora ${meses[brtNow.getMonth()]} ${brtNow.getFullYear()}"
    Objetivo: alimentar o bloco \`refinarias.items\` com o preço VIGENTE de diesel S-10 em R$/L às distribuidoras em cada uma das 3 refinarias + data do último reajuste de cada.
    - **Petrobras**: preço diesel A nas refinarias (não confundir com diesel B15 ao consumidor). Após corte de 01/06/2026 ficou em R$ 3,30/L.
@@ -240,6 +253,7 @@ ${JSON.stringify(cepeaHerdado, null, 2)}
 - **mandatos**: % anidro na gasolina (ex "30%") e % B100 no diesel (ex "15%"). Pesquise se houve mudança recente.
 - **safra_etanol**: moagem, variação anual, mix etanol, oferta total
 - **refinarias**: SEMPRE 3 items na MESMA ORDEM (Petrobras, Acelen Mataripe, BRAVA Clara Camarão), produto fixo "Diesel S-10 (R$/L às distribuidoras)". \`delta_vs_petrobras\` da Petrobras é sempre "—". Pros outros 2, calcule o delta absoluto (\`+R$ X,XX/L\`) e percentual (\`+XX%\`) em relação à Petrobras. Se não conseguir confirmar preço atual, use "a confirmar" no \`preco_rs_l\`
+- **midia_setor**: sentimento agregado da imprensa do setor sobre PREÇOS nos últimos 5 dias (busca #7). Campos: \`sentimento\` (pressao_alta/neutro/pressao_baixa), \`n_materias\`, \`resumo\` (1 frase). É input do motor de decisão — seja conservador: na dúvida, "neutro"
 - **agenda_semanal**: síntese por dia da SEMANA ATUAL (seg, ter, qua, qui, sex). UMA frase curta por dia. "—" se nada relevante. Eventos: Focus (toda 2ª), IPCA/IPCA-15, Copom (quando houver), UNICA (quinzenas), ANP (sex), reuniões geopolíticas relevantes, divulgações Petrobras.
 - **acoes_dia**: 3 ações operacionais para o dono de posto HOJE. HTML com <b>. Cada uma 1–2 frases.
 - **radar**: 3 temas de impacto do dia. HTML com <b>. Cada um 1–2 frases.
@@ -366,7 +380,7 @@ function parseJSON(text) {
     const fatos = await fetchFatosBCB();
     console.log(fatos.hasData ? "✓ BCB ok:\n" + fatos.block : "⚠️  BCB indisponível — fallback web_search");
     const systemFinal = SYSTEM_PROMPT.replace("__FATOS__", fatos.block);
-    const maxUses = fatos.hasData ? 7 : 9; // bumped 6→7 em 2026-06-08 pra acomodar busca de preços nas refinarias (Petrobras + Acelen + BRAVA, diesel S-10 R$/L)
+    const maxUses = fatos.hasData ? 8 : 10; // bumped 7→8 em 2026-06-10 pra acomodar a busca de mídia do setor (sentimento 5 dias — input do motor de decisão v3)
 
     console.log(`🤖 Chamando Claude (${MODEL}) — max_uses=${maxUses}, max_tokens=6000...`);
     const t0 = Date.now();
@@ -428,6 +442,13 @@ function parseJSON(text) {
     _carry("abicom", ["defasagem_gasolina_pct","defasagem_diesel_pct","dias_sem_ajuste_gasolina","dias_sem_ajuste_diesel","potencial_aumento_rs_gasolina","potencial_aumento_rs_diesel"]);
     _carry("mandatos", ["anidro_na_gasolina_pct","b100_no_diesel_pct"]);
     _carry("safra_etanol", ["moagem","var_anual","mix_etanol_pct","oferta_total"]);
+
+    // Carry-forward midia_setor: se Haiku não preencheu, herda o de ontem
+    // (janela é de 5 dias — sentimento de ontem ainda vale como aproximação).
+    if (!newData.midia_setor?.sentimento && currentData.midia_setor?.sentimento) {
+      newData.midia_setor = currentData.midia_setor;
+      console.log("  ↩ carry-forward midia_setor (Haiku não preencheu)");
+    }
 
     // Carry-forward INTELIGENTE pra refinarias.items: se Haiku não confirmou
     // o preço (veio "a confirmar"/"0"/empty), mantém o do data.json anterior.

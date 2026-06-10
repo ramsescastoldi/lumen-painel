@@ -163,26 +163,19 @@ a{color:inherit;text-decoration:none}
 .calc-sub{font-size:12.5px;color:var(--text-2);margin-bottom:16px;position:relative;z-index:1}
 .calc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;position:relative;z-index:1}
 @media(max-width:760px){.calc-grid{grid-template-columns:1fr}}
-.ccard{padding:14px 16px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);border-radius:12px}
-.ccard.has-value{border-color:rgba(123,183,128,.35);background:linear-gradient(180deg,rgba(123,183,128,.08),rgba(123,183,128,.02))}
-.ccard .cf-name{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-2);font-weight:600;margin-bottom:6px}
-.ccard .cf-eq{font-size:11.5px;color:var(--text-3);margin-bottom:8px}
-.ccard .cf-rs{font-weight:300;font-size:26px;color:var(--up);letter-spacing:-.02em;font-feature-settings:"tnum" 1}
-.ccard .cf-rs.empty{color:var(--text-3);font-size:16px}
 .calc-total{margin-top:16px;padding-top:14px;border-top:1px dashed rgba(255,255,255,.07);display:flex;justify-content:space-between;align-items:baseline;font-size:13px;color:var(--text-2);letter-spacing:.06em;text-transform:uppercase;position:relative;z-index:1}
 .calc-total b{font-size:28px;font-weight:300;color:var(--gold);letter-spacing:-.02em;font-feature-settings:"tnum" 1}
 .calc-foot{margin-top:12px;font-size:11px;color:var(--text-3);position:relative;z-index:1;line-height:1.5}
-.calc-modal{position:fixed;inset:0;background:rgba(11,19,32,.85);display:none;align-items:center;justify-content:center;z-index:9999;padding:20px;backdrop-filter:blur(4px)}
-.calc-modal.open{display:flex}
-.calc-modal-inner{background:linear-gradient(180deg,#13243A,#0B1320);border:1px solid var(--gold-line);border-radius:14px;padding:24px;max-width:420px;width:100%}
-.calc-modal h3{color:var(--gold);font-size:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin:0 0 14px}
-.calc-modal label{display:block;font-size:11px;color:var(--text-2);letter-spacing:.08em;text-transform:uppercase;margin:12px 0 4px;font-weight:500}
-.calc-modal input{width:100%;padding:10px 12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;color:var(--text);font-family:inherit;font-size:15px;font-feature-settings:"tnum" 1;box-sizing:border-box}
-.calc-modal input:focus{outline:none;border-color:var(--gold-line-strong)}
-.calc-modal-btns{display:flex;gap:10px;margin-top:18px}
-.calc-modal-btns button{flex:1;padding:11px;border-radius:8px;border:none;font-family:inherit;font-weight:600;cursor:pointer;font-size:13px;letter-spacing:.04em}
-.calc-modal-btns .save{background:var(--gold);color:#0B1320}
-.calc-modal-btns .cancel{background:rgba(255,255,255,.06);color:var(--text-2)}
+.anp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;position:relative;z-index:1}
+@media(max-width:760px){.anp-grid{grid-template-columns:1fr}}
+.anp-card{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:14px 16px}
+.anp-card .t{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px}
+.anp-card .nome{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-2);font-weight:600}
+.anp-card .ult{font-size:19px;font-weight:300;color:var(--text);font-feature-settings:"tnum" 1}
+.anp-card .var{font-size:11.5px;font-feature-settings:"tnum" 1;letter-spacing:.04em}
+.anp-card .var.up{color:var(--red, #e25f5f)}
+.anp-card .var.down{color:var(--green, #4fae7c)}
+.anp-card svg{display:block;width:100%;height:84px;margin-top:8px}
 
 /* SPARKLINE mini-gráfico de tendência (últimos ~15 dias) nos cards */
 .spark-mini{display:block;height:28px;width:100%;margin-top:6px;opacity:.85}
@@ -447,33 +440,19 @@ footer b{color:var(--text-2);font-weight:600}
     </div>
   </section>
 
-  <!-- 0b. CALCULADORA DE OPORTUNIDADE R$ -->
-  <section class="col-12" id="calcSec" style="display:none">
+  <!-- 0b. PREÇOS ANP POR PRODUTO (série semanal desde 01/01/2026) -->
+  <section class="col-12" id="anpChartsSec">
     <div class="calc">
       <div class="calc-h">
-        <span class="ico">💰</span>
-        <h2>Quanto vale seu estoque hoje</h2>
-        <button class="calc-cfg" onclick="_openCalcCfg()">⚙️ Meu posto</button>
+        <span class="ico">📈</span>
+        <h2>Preço médio na bomba — ANP, semana a semana</h2>
+        <span class="src" id="anpChartsUpd">—</span>
       </div>
-      <div class="calc-sub">Se o reajuste anunciado pela ABICOM vier, seu estoque atual vale a mais:</div>
-      <div class="calc-grid" id="calcGrid"></div>
-      <div class="calc-total"><span>Total potencial</span><b id="calcTotal">—</b></div>
-      <div class="calc-foot">Estimativa educacional baseada no <i>potencial de aumento</i> publicado pela ABICOM × volume do seu estoque. Não é recomendação de compra.</div>
+      <div class="calc-sub">Média Brasil de revenda (R$/L) desde janeiro/2026 · fonte oficial ANP/SHPC</div>
+      <div class="anp-grid" id="anpCharts"></div>
+      <div class="calc-foot">Linha = média semanal nacional de todas as coletas ANP. Marcadores ▲▼ = variação acumulada no ano. Dados atualizados semanalmente junto com o painel.</div>
     </div>
   </section>
-  <div class="calc-modal" id="calcModal" onclick="if(event.target===this)_closeCalcCfg()">
-    <div class="calc-modal-inner">
-      <h3>⚙️ Configurar meu posto</h3>
-      <p style="font-size:12.5px;color:var(--text-2);margin:0 0 10px;line-height:1.5">Informe seus volumes médios de estoque por combustível. Salvo neste navegador.</p>
-      <label>Gasolina (L)</label><input type="number" id="cfgGas" min="0" step="500" />
-      <label>Diesel S10 (L)</label><input type="number" id="cfgDS10" min="0" step="500" />
-      <label>Diesel S500 (L)</label><input type="number" id="cfgDS500" min="0" step="500" />
-      <div class="calc-modal-btns">
-        <button class="cancel" onclick="_closeCalcCfg()">Cancelar</button>
-        <button class="save" onclick="_saveCalcCfg()">Salvar</button>
-      </div>
-    </div>
-  </div>
 
   <!-- 1. MANCHETE PRINCIPAL (col-12) -->
   <section class="col-12">
@@ -732,11 +711,14 @@ const DATA = {
         const ar = r.dir==='up'?'▲':r.dir==='down'?'▼':'•';
         return `<div class="row"><span class="arrow ${cl}">${ar}</span> <span>${r.text}</span></div>`;
       }).join("");
+      const conf = (typeof f.confianca_pct === "number")
+        ? `<div class="dscore"><span>confiança da decisão</span><span>${f.confianca_pct}%</span></div>` : "";
       return `<div class="dcard ${f.verdict}">
         <div class="dfuel">${f.nome}</div>
         <div class="dverdict"><span class="dot">${f.emoji}</span><span class="label">${f.label}</span></div>
         <div class="dbar"><i style="width:${f.score}%"></i></div>
         <div class="dscore"><span>pressão de reajuste</span><span>${f.score}/100</span></div>
+        ${conf}
         ${spark}
         <div class="dwhy">${reasons}</div>
       </div>`;
@@ -879,79 +861,61 @@ const DATA = {
   const tplOne = it => `<span><span class="sym">${it[0]}</span><span class="v">${it[1]}</span><span class="${it[3]}">${it[2]}</span></span>`;
   $("tickerTrack").innerHTML = tickerItems.map(tplOne).join("") + tickerItems.map(tplOne).join("");
 
-  // ===== Calculadora de Oportunidade R$ =====
-  // Lê potencial de aumento ABICOM × volume do estoque do membro (localStorage).
-  // Se reajuste anunciado vier, mostra quanto cada combustível vale a mais.
-  const CALC_DEFAULTS = { gasolina: 15000, diesel_s10: 10000, diesel_s500: 5000 };
-  function _calcVolumes() {
+  // ===== Gráficos ANP por produto (série semanal desde 01/01/2026) =====
+  // Lê anp-historico.json (média semanal Brasil, mantido por scripts/anp-historico.mjs)
+  // e desenha 1 line-chart SVG por produto, logo abaixo da Decisão do Dia.
+  (async function renderAnpCharts() {
+    const grid = $("anpCharts");
+    if (!grid) return;
+    let hist;
     try {
-      const raw = localStorage.getItem("lumen_volumes");
-      if (raw) { const v = JSON.parse(raw); return { ...CALC_DEFAULTS, ...v }; }
-    } catch {}
-    return { ...CALC_DEFAULTS };
-  }
-  function _parseRs(s) {
-    if (s == null) return null;
-    const m = String(s).replace(/[Rr]\$\s*/, "").replace(",", ".").match(/-?\d+(\.\d+)?/);
-    return m ? parseFloat(m[0]) : null;
-  }
-  function _fmtRs(v) {
-    return "R$ " + v.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-  }
-  function _renderCalc() {
-    const vols = _calcVolumes();
-    const pGas = _parseRs(ab.potencial_aumento_rs_gasolina);
-    const pDie = _parseRs(ab.potencial_aumento_rs_diesel);
-    const items = [
-      { key: "gasolina", nome: "⛽ Gasolina", vol: vols.gasolina, pot: pGas },
-      { key: "diesel_s10", nome: "🚚 Diesel S10", vol: vols.diesel_s10, pot: pDie },
-      { key: "diesel_s500", nome: "🚛 Diesel S500", vol: vols.diesel_s500, pot: pDie }
+      const r = await fetch("anp-historico.json?t=" + Date.now());
+      hist = await r.json();
+    } catch { grid.innerHTML = '<div class="anp-card"><div class="nome">Série ANP indisponível no momento</div></div>'; return; }
+    const upd = $("anpChartsUpd");
+    if (upd && hist.atualizado_em) upd.textContent = "atualizado " + new Date(hist.atualizado_em).toLocaleDateString("pt-BR");
+    const PROD = [
+      { key: "gasolina",    nome: "⛽ Gasolina" },
+      { key: "etanol",      nome: "🌱 Etanol" },
+      { key: "diesel_s10",  nome: "🚚 Diesel S10" },
+      { key: "diesel_s500", nome: "🚛 Diesel S500" },
     ];
-    let total = 0;
-    let anyValue = false;
-    const cards = items.map(it => {
-      if (it.pot && it.pot > 0 && it.vol > 0) {
-        const eco = it.vol * it.pot;
-        total += eco;
-        anyValue = true;
-        const volStr = it.vol.toLocaleString("pt-BR");
-        return `<div class="ccard has-value">
-          <div class="cf-name">${it.nome}</div>
-          <div class="cf-eq">${volStr} L × R$ ${it.pot.toFixed(2).replace(".", ",")}/L</div>
-          <div class="cf-rs">+${_fmtRs(eco)}</div>
-        </div>`;
-      }
-      return `<div class="ccard">
-        <div class="cf-name">${it.nome}</div>
-        <div class="cf-eq">${it.vol.toLocaleString("pt-BR")} L (sem potencial calculado hoje)</div>
-        <div class="cf-rs empty">—</div>
+    const fmtBR = v => "R$ " + v.toFixed(2).replace(".", ",");
+    const fmtMes = s => { const m = ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"]; const d = new Date(s + "T12:00:00Z"); return d.getUTCDate() + "/" + m[d.getUTCMonth()]; };
+    grid.innerHTML = PROD.map(p => {
+      const serie = (hist.produtos?.[p.key] || []).filter(it => it.s >= "2026-01-01");
+      if (serie.length < 2) return `<div class="anp-card"><div class="t"><span class="nome">${p.nome}</span><span class="ult">—</span></div></div>`;
+      const vals = serie.map(it => it.p);
+      const mn = Math.min(...vals), mx = Math.max(...vals);
+      const span = (mx - mn) || 0.01;
+      const W = 560, H = 84, PADL = 4, PADR = 46, PADT = 8, PADB = 14;
+      const iw = W - PADL - PADR, ih = H - PADT - PADB;
+      const x = i => PADL + (i / (serie.length - 1)) * iw;
+      const y = v => PADT + (1 - (v - mn) / span) * ih;
+      const pts = vals.map((v, i) => `${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(" ");
+      const first = vals[0], last = vals[vals.length - 1];
+      const varPct = ((last - first) / first) * 100;
+      const varCls = varPct >= 0.05 ? "up" : varPct <= -0.05 ? "down" : "";
+      const varTxt = (varPct >= 0 ? "▲ +" : "▼ ") + varPct.toFixed(1).replace(".", ",") + "% no ano";
+      const cor = varPct >= 0 ? "#e25f5f" : "#4fae7c";
+      const lastX = x(serie.length - 1), lastY = y(last);
+      // grade horizontal (3 linhas) + labels min/max + datas início/fim
+      return `<div class="anp-card">
+        <div class="t"><span class="nome">${p.nome}</span><span class="ult">${fmtBR(last)}</span></div>
+        <div class="var ${varCls}">${varTxt} · mín ${fmtBR(mn)} · máx ${fmtBR(mx)}</div>
+        <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-label="Série semanal ANP ${p.nome}">
+          <line x1="${PADL}" y1="${y(mx)}" x2="${W - PADR}" y2="${y(mx)}" stroke="rgba(255,255,255,.07)" stroke-width="1"/>
+          <line x1="${PADL}" y1="${y((mn + mx) / 2)}" x2="${W - PADR}" y2="${y((mn + mx) / 2)}" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+          <line x1="${PADL}" y1="${y(mn)}" x2="${W - PADR}" y2="${y(mn)}" stroke="rgba(255,255,255,.07)" stroke-width="1"/>
+          <polyline points="${pts}" fill="none" stroke="${cor}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="${lastX}" cy="${lastY}" r="3" fill="${cor}"/>
+          <text x="${lastX + 6}" y="${lastY + 4}" font-size="11" fill="${cor}" font-family="inherit">${last.toFixed(2).replace(".", ",")}</text>
+          <text x="${PADL}" y="${H - 2}" font-size="9" fill="rgba(255,255,255,.35)">${fmtMes(serie[0].s)}</text>
+          <text x="${W - PADR}" y="${H - 2}" font-size="9" fill="rgba(255,255,255,.35)" text-anchor="end">${fmtMes(serie[serie.length - 1].s)}</text>
+        </svg>
       </div>`;
     }).join("");
-    const sec = $("calcSec");
-    if (!anyValue) { if (sec) sec.style.display = "none"; return; }
-    if (sec) sec.style.display = "";
-    $("calcGrid").innerHTML = cards;
-    $("calcTotal").textContent = "+" + _fmtRs(total);
-  }
-  window._openCalcCfg = function () {
-    const v = _calcVolumes();
-    $("cfgGas").value = v.gasolina;
-    $("cfgDS10").value = v.diesel_s10;
-    $("cfgDS500").value = v.diesel_s500;
-    $("calcModal").classList.add("open");
-  };
-  window._closeCalcCfg = function () { $("calcModal").classList.remove("open"); };
-  window._saveCalcCfg = function () {
-    const v = {
-      gasolina: Math.max(0, parseInt($("cfgGas").value, 10) || 0),
-      diesel_s10: Math.max(0, parseInt($("cfgDS10").value, 10) || 0),
-      diesel_s500: Math.max(0, parseInt($("cfgDS500").value, 10) || 0)
-    };
-    localStorage.setItem("lumen_volumes", JSON.stringify(v));
-    _closeCalcCfg();
-    _renderCalc();
-  };
-  _renderCalc();
+  })();
 
   // ===== Sparklines (mini-gráfico de tendência) =====
   // Lê history.json (rolling 30 dias) e desenha um SVG de linha pequeno em cada card chave.

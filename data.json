@@ -154,8 +154,8 @@
   "_comentario": "Gerado automaticamente em 2026-06-10T12:10:57.847Z por gerar-painel.mjs (claude-haiku-4-5-20251001); manchete corrigida manualmente 10/jun ~10h BRT (Haiku alucinou 'reajuste diesel R$ 0,38/L' que é notícia de março/2026; resumo dizia 'primeiro reajuste em 312 dias' contradizendo o próprio painel). Seed do _manchetes_recentes pra rotação.",
   "decisao": {
     "data_label": "Quarta · 10 jun 2026",
-    "base": "ABICOM + custo distribuidora (monitor de preços) + Brent/câmbio",
-    "disclaimer": "Essa não é uma recomendação de compra, apenas uma sugestão baseada num modelo educacional.",
+    "base": "ABICOM + ANP histórico + Brent 5d + refinarias + mídia do setor",
+    "disclaimer": "Essa não é uma recomendação de compra, apenas uma sugestão baseada num modelo educacional. A confiança reflete a convergência dos sinais — reajustes da Petrobras têm componente político imprevisível.",
     "fuels": [
       {
         "key": "gasolina",
@@ -165,21 +165,28 @@
         "emoji": "🟢",
         "score": 8,
         "spark": [
-          83,
-          100,
+          90,
+          14,
+          13,
+          11,
           8,
-          17,
-          52,
-          55,
-          55,
-          43
+          100,
+          99,
+          95,
+          93,
+          92
         ],
         "reasons": [
           {
             "dir": "down",
             "text": "Petrobras reajustou recentemente — pressão zerada por enquanto"
+          },
+          {
+            "dir": "down",
+            "text": "Preço de bomba ANP <b>-0,6%</b> nas últimas 4 semanas"
           }
-        ]
+        ],
+        "confianca_pct": 90
       },
       {
         "key": "diesel_s10",
@@ -189,20 +196,28 @@
         "emoji": "🟢",
         "score": 8,
         "spark": [
-          98,
-          34,
-          8,
-          28,
           100,
-          16,
-          68
+          45,
+          38,
+          24,
+          8,
+          80,
+          75,
+          71,
+          69,
+          65
         ],
         "reasons": [
           {
             "dir": "down",
             "text": "Petrobras reajustou recentemente — pressão zerada por enquanto"
+          },
+          {
+            "dir": "down",
+            "text": "Preço de bomba ANP <b>-1,1%</b> nas últimas 4 semanas"
           }
-        ]
+        ],
+        "confianca_pct": 90
       },
       {
         "key": "diesel_s500",
@@ -212,19 +227,28 @@
         "emoji": "🟢",
         "score": 8,
         "spark": [
-          8,
-          12,
-          51,
           100,
-          45,
-          68
+          50,
+          39,
+          22,
+          8,
+          73,
+          67,
+          60,
+          57,
+          51
         ],
         "reasons": [
           {
             "dir": "down",
             "text": "Petrobras reajustou recentemente — pressão zerada por enquanto"
+          },
+          {
+            "dir": "down",
+            "text": "Preço de bomba ANP <b>-1,9%</b> nas últimas 4 semanas"
           }
-        ]
+        ],
+        "confianca_pct": 90
       },
       {
         "key": "etanol",
@@ -235,12 +259,15 @@
         "score": 8,
         "spark": [
           100,
+          28,
+          27,
+          18,
           8,
-          30,
-          12,
-          13,
-          68,
-          30
+          91,
+          81,
+          70,
+          60,
+          55
         ],
         "reasons": [
           {
@@ -249,9 +276,10 @@
           },
           {
             "dir": "down",
-            "text": "Custo distribuidora <b>-4,7%</b> (caindo)"
+            "text": "Preço de bomba ANP <b>-3,2%</b> nas últimas 4 semanas"
           }
-        ]
+        ],
+        "confianca_pct": 90
       }
     ]
   }
