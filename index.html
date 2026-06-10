@@ -144,6 +144,13 @@ a{color:inherit;text-decoration:none}
 .dscore{display:flex;justify-content:space-between;font-size:10.5px;color:var(--text-3);letter-spacing:.05em}
 .dtrend{display:flex;align-items:flex-end;gap:3px;height:30px}
 .dtrend span{flex:1;background:rgba(201,168,76,.25);border-radius:2px 2px 0 0;min-height:3px}
+.cen{border-top:1px dashed rgba(255,255,255,.07);padding-top:10px;display:flex;flex-direction:column;gap:6px}
+.cen-chips{display:flex;flex-wrap:wrap;gap:5px}
+.cen-chip{font-size:10px;letter-spacing:.02em;padding:3px 7px;border-radius:6px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:var(--text-2);white-space:nowrap;cursor:default}
+.cen-chip.up{color:#e8907f;border-color:rgba(227,106,90,.3)}
+.cen-chip.dn{color:#7BB780;border-color:rgba(123,183,128,.3)}
+.cen-chip.fl{color:var(--text-3)}
+.cen-ok{font-size:10.5px;letter-spacing:.03em}
 .dwhy{font-size:12.5px;line-height:1.5;color:var(--text);border-top:1px dashed rgba(255,255,255,.07);padding-top:11px}
 .dwhy .row{display:flex;align-items:flex-start;gap:7px;margin-bottom:5px}
 .dwhy .row:last-child{margin-bottom:0}
@@ -701,8 +708,11 @@ const DATA = {
   const dec = DATA.decisao;
   const decSec = $("decisaoSec");
   if (dec && dec.fuels && dec.fuels.length) {
-    $("decisaoSub").textContent = [dec.data_label, dec.base].filter(Boolean).join(" · ");
+    $("decisaoSub").innerHTML = [dec.data_label].filter(Boolean).join(" · ")
+      + (dec.base_fossil ? `<br><span style="font-size:11px;color:var(--text-3)">Fósseis: ${dec.base_fossil} · Etanol: ${dec.base_etanol}</span>` : (dec.base ? ` · ${dec.base}` : ""));
     $("decisaoFoot").innerHTML = `🔴 <b style="color:var(--down)">Compre agora</b> = reajuste provável, trave o preço atual · 🟡 <b style="color:var(--warn)">Atenção</b> = pressão subindo, monitore · 🟢 <b style="color:var(--up)">Pode esperar</b> = sem pressão de alta.<br>` + (dec.disclaimer || "");
+    const _ar = d => d === "up" ? "↑" : d === "down" ? "↓" : "•";
+    const _arcl = d => d === "up" ? "up" : d === "down" ? "dn" : "fl";
     $("decisaoGrid").innerHTML = dec.fuels.map(f => {
       const sp = f.spark || [];
       const spark = sp.length ? `<div class="dtrend">${sp.map((h,i)=>`<span style="height:${h}%${i===sp.length-1?';background:var(--gold)':''}"></span>`).join("")}</div>` : "";
@@ -713,12 +723,23 @@ const DATA = {
       }).join("");
       const conf = (typeof f.confianca_pct === "number")
         ? `<div class="dscore"><span>confiança da decisão</span><span>${f.confianca_pct}%</span></div>` : "";
+      // Linha de COERÊNCIA: os fatores do cenário + se a decisão faz sentido
+      let cenarioHtml = "";
+      if (f.cenario && Array.isArray(f.cenario.fatores) && f.cenario.fatores.length) {
+        const chips = f.cenario.fatores.map(c =>
+          `<span class="cen-chip ${_arcl(c.dir)}" title="${(c.txt||'').replace(/"/g,'&quot;')}">${c.nome} ${_ar(c.dir)}</span>`).join("");
+        const okTxt = f.cenario.coerente === false
+          ? `<span style="color:var(--warn)">⚠ sinais divergentes — confira</span>`
+          : `<span style="color:var(--text-3)">decisão coerente com o cenário</span>`;
+        cenarioHtml = `<div class="cen"><div class="cen-chips">${chips}</div><div class="cen-ok">${okTxt}</div></div>`;
+      }
       return `<div class="dcard ${f.verdict}">
         <div class="dfuel">${f.nome}</div>
         <div class="dverdict"><span class="dot">${f.emoji}</span><span class="label">${f.label}</span></div>
         <div class="dbar"><i style="width:${f.score}%"></i></div>
-        <div class="dscore"><span>pressão de reajuste</span><span>${f.score}/100</span></div>
+        <div class="dscore"><span>pressão de ${f.key==='etanol'?'preço':'reajuste'}</span><span>${f.score}/100</span></div>
         ${conf}
+        ${cenarioHtml}
         ${spark}
         <div class="dwhy">${reasons}</div>
       </div>`;

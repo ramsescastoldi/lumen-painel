@@ -154,8 +154,9 @@
   "_comentario": "Gerado automaticamente em 2026-06-10T12:10:57.847Z por gerar-painel.mjs (claude-haiku-4-5-20251001); manchete corrigida manualmente 10/jun ~10h BRT (Haiku alucinou 'reajuste diesel R$ 0,38/L' que é notícia de março/2026; resumo dizia 'primeiro reajuste em 312 dias' contradizendo o próprio painel). Seed do _manchetes_recentes pra rotação.",
   "decisao": {
     "data_label": "Quarta · 10 jun 2026",
-    "base": "ABICOM + ANP histórico + Brent 5d + refinarias + mídia do setor",
-    "disclaimer": "Essa não é uma recomendação de compra, apenas uma sugestão baseada num modelo educacional. A confiança reflete a convergência dos sinais — reajustes da Petrobras têm componente político imprevisível.",
+    "base_fossil": "barril (Brent 5d) + defasagem ABICOM + mídia + repasse distribuidoras/ANP",
+    "base_etanol": "ciclo de safra + ESALQ/CEPEA + safra de milho + mídia sucroenergética",
+    "disclaimer": "Não é recomendação de compra — modelo educacional. A confiança reflete a convergência dos sinais (máx 97%). Reajuste da Petrobras e clima da safra têm componente imprevisível.",
     "fuels": [
       {
         "key": "gasolina",
@@ -164,6 +165,28 @@
         "label": "PODE ESPERAR",
         "emoji": "🟢",
         "score": 8,
+        "confianca_pct": 90,
+        "cenario": {
+          "resumo": "Reajuste recente ↓ · Defasagem ↑ · Barril • → faz sentido ESPERAR",
+          "coerente": true,
+          "fatores": [
+            {
+              "nome": "Reajuste recente",
+              "dir": "down",
+              "txt": "Petrobras já se mexeu — cooldown"
+            },
+            {
+              "nome": "Defasagem",
+              "dir": "up",
+              "txt": "41% / 14d (residual)"
+            },
+            {
+              "nome": "Barril",
+              "dir": "flat",
+              "txt": "Brent -2,9% em 5d"
+            }
+          ]
+        },
         "spark": [
           90,
           14,
@@ -179,14 +202,13 @@
         "reasons": [
           {
             "dir": "down",
-            "text": "Petrobras reajustou recentemente — pressão zerada por enquanto"
+            "text": "Petrobras reajustou recentemente — sem janela pra novo reajuste no curto prazo"
           },
           {
-            "dir": "down",
-            "text": "Preço de bomba ANP <b>-0,6%</b> nas últimas 4 semanas"
+            "dir": "up",
+            "text": "Defasagem ABICOM <b>41%</b> ainda existe, mas reajuste recente segura novo movimento"
           }
-        ],
-        "confianca_pct": 90
+        ]
       },
       {
         "key": "diesel_s10",
@@ -195,6 +217,28 @@
         "label": "PODE ESPERAR",
         "emoji": "🟢",
         "score": 8,
+        "confianca_pct": 90,
+        "cenario": {
+          "resumo": "Reajuste recente ↓ · Defasagem • · Barril • → faz sentido ESPERAR",
+          "coerente": true,
+          "fatores": [
+            {
+              "nome": "Reajuste recente",
+              "dir": "down",
+              "txt": "Petrobras já se mexeu — cooldown"
+            },
+            {
+              "nome": "Defasagem",
+              "dir": "flat",
+              "txt": "31% / 10d (residual)"
+            },
+            {
+              "nome": "Barril",
+              "dir": "flat",
+              "txt": "Brent -2,9% em 5d"
+            }
+          ]
+        },
         "spark": [
           100,
           45,
@@ -210,14 +254,17 @@
         "reasons": [
           {
             "dir": "down",
-            "text": "Petrobras reajustou recentemente — pressão zerada por enquanto"
+            "text": "Petrobras reajustou recentemente — sem janela pra novo reajuste no curto prazo"
+          },
+          {
+            "dir": "flat",
+            "text": "Defasagem ABICOM <b>31%</b> ainda existe, mas reajuste recente segura novo movimento"
           },
           {
             "dir": "down",
-            "text": "Preço de bomba ANP <b>-1,1%</b> nas últimas 4 semanas"
+            "text": "Preço de bomba ANP <b>-1,1%</b> em 4 semanas — sem repasse de alta"
           }
-        ],
-        "confianca_pct": 90
+        ]
       },
       {
         "key": "diesel_s500",
@@ -226,6 +273,28 @@
         "label": "PODE ESPERAR",
         "emoji": "🟢",
         "score": 8,
+        "confianca_pct": 90,
+        "cenario": {
+          "resumo": "Reajuste recente ↓ · Defasagem • · Barril • → faz sentido ESPERAR",
+          "coerente": true,
+          "fatores": [
+            {
+              "nome": "Reajuste recente",
+              "dir": "down",
+              "txt": "Petrobras já se mexeu — cooldown"
+            },
+            {
+              "nome": "Defasagem",
+              "dir": "flat",
+              "txt": "31% / 10d (residual)"
+            },
+            {
+              "nome": "Barril",
+              "dir": "flat",
+              "txt": "Brent -2,9% em 5d"
+            }
+          ]
+        },
         "spark": [
           100,
           50,
@@ -241,14 +310,17 @@
         "reasons": [
           {
             "dir": "down",
-            "text": "Petrobras reajustou recentemente — pressão zerada por enquanto"
+            "text": "Petrobras reajustou recentemente — sem janela pra novo reajuste no curto prazo"
+          },
+          {
+            "dir": "flat",
+            "text": "Defasagem ABICOM <b>31%</b> ainda existe, mas reajuste recente segura novo movimento"
           },
           {
             "dir": "down",
-            "text": "Preço de bomba ANP <b>-1,9%</b> nas últimas 4 semanas"
+            "text": "Preço de bomba ANP <b>-1,9%</b> em 4 semanas — sem repasse de alta"
           }
-        ],
-        "confianca_pct": 90
+        ]
       },
       {
         "key": "etanol",
@@ -256,7 +328,34 @@
         "verdict": "wait",
         "label": "PODE ESPERAR",
         "emoji": "🟢",
-        "score": 8,
+        "score": 0,
+        "confianca_pct": 81,
+        "cenario": {
+          "resumo": "Safra cana ↓ · ESALQ ↓ · Safra milho • · Mídia • → faz sentido ESPERAR",
+          "coerente": true,
+          "fatores": [
+            {
+              "nome": "Safra cana",
+              "dir": "down",
+              "txt": "pico de safra (oferta alta)"
+            },
+            {
+              "nome": "ESALQ",
+              "dir": "down",
+              "txt": "-3,2%"
+            },
+            {
+              "nome": "Safra milho",
+              "dir": "flat",
+              "txt": "sem dado"
+            },
+            {
+              "nome": "Mídia",
+              "dir": "flat",
+              "txt": "sem cobertura"
+            }
+          ]
+        },
         "spark": [
           100,
           28,
@@ -271,15 +370,26 @@
         ],
         "reasons": [
           {
-            "dir": "down",
-            "text": "Petrobras reajustou recentemente — pressão zerada por enquanto"
+            "dir": "up",
+            "text": "Moagem <b>-11,8%</b> a/a — safra menor reduz oferta"
           },
           {
             "dir": "down",
-            "text": "Preço de bomba ANP <b>-3,2%</b> nas últimas 4 semanas"
+            "text": "Pico de safra (jun–set) — oferta abundante de cana, etanol cede"
+          },
+          {
+            "dir": "down",
+            "text": "ESALQ/CEPEA hidratado <b>-3,2%</b> (ANP revenda (proxy ESALQ)) — produtor cedendo"
+          },
+          {
+            "dir": "flat",
+            "text": "Mix em <b>50%</b> p/ etanol (equilibrado)"
+          },
+          {
+            "dir": "flat",
+            "text": "Mandato anidro em <b>30%</b> — consumo estrutural sustenta demanda"
           }
-        ],
-        "confianca_pct": 90
+        ]
       }
     ]
   }
