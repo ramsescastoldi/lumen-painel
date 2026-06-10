@@ -6,10 +6,10 @@
   },
   "manchete": {
     "principal": {
-      "severity": "yellow",
-      "status_emoji": "🟡",
-      "severity_label": "Atenção",
-      "titulo": "Petrobras reajusta diesel em R$ 0,38/L com subsídio federal mitiga repasse; Selic eleva para 13,50% fim 2026 — ceasefire frágil no Oriente Médio mantém Brent em US$ 94/bbl"
+      "severity": "green",
+      "status_emoji": "🟢",
+      "severity_label": "Alívio",
+      "titulo": "Trégua Irã×Israel derruba petróleo pela 2ª sessão seguida e tira pressão de reajuste; com MPs vigentes até 31/jul, semana abre SEM gatilho de alta pro revendedor"
     },
     "secundarias": [
       {
@@ -128,7 +128,7 @@
     "sexta": "ANP divulga relatório semanal de preços nas bombas; UNICA publica dados safra etanol quinzenal"
   },
   "acoes_dia": [
-    "<b>Revise margens diesel:</b> Com MP 1.358 e 1.363 vigentes até 31/jul, subvenção federal R$ 0,35/L mitiga repasse de reajuste Petrobras (R$ 0,38/L). Negocie com fornecedor margem líquida e monitore renovação da subvenção em junho.",
+    "<b>Revise margens diesel:</b> Com MP 1.358 e 1.363 vigentes até 31/jul (subvenção R$ 1,12/L com repasse obrigatório), confirme na nota fiscal o preço pós-corte de 01/jun (R$ 3,30/L Petrobras). Negocie margem líquida com a distribuidora e monitore renovação da subvenção perto de 31/jul.",
     "<b>Acompanhe defasagem gasolina-diesel:</b> Gasolina 41% defasada (54 dias janelas fechadas); diesel 31% (97 dias). Petrobras pode subir gasolina R$ 1,03/L e diesel R$ 1,12/L para equiparar PPI. Prepare previsão de reajuste.",
     "<b>Otimize mix combustíveis:</b> Etanol hidratado está 67,8% mais barato que gasolina nas bombas (média BR). Revise oferta de E30 no pós e destaque competitividade para clientes flex-fuel como ação defensiva contra alta diesel."
   ],
@@ -137,14 +137,21 @@
     "<b>Juros tendem a permanecer altos por mais tempo:</b> Focus elevou Selic para 13,50% (fim 2026) após estabilidade. IPCA 2026 sobe para 5,11%. Custo de captação para revendedor pressiona fluxo de caixa; revise prazos com fornecedores e refinancie débitos.",
     "<b>Safra etanol 2025/26 em retração (-11,85% a/a); E30 apoiará demanda 2026/27:</b> Moagem acumula queda; mix 49,99% açucareiro. Safra 2026/27 inicia com 71% do mix para etanol. Etanol hidratado oferece margem defensiva; incentive rotatividade em bombas."
   ],
-  "resumo_editorial": "<p class=\"lead\">O Painel de hoje registra reajuste histórico da Petrobras em diesel (R$ 0,38/L, primeiro desde maio de 2025, após 312 dias sem movimento) aliviado pela MP 1.358 e 1.363 que mantêm subvenção federal R$ 0,35/L até 31/jul. Resultado: cliente revendedor absorve R$ +0,06/L líquido nas bombas, mitigado pelo subsídio e desoneração de PIS/Cofins do governo. Cenário de petróleo cai com trégua frágil Irã-Israel (Brent US$ 94,15, -1,39%), mas Ormuz permanece bloqueada, sustentando piso de preços acima de US$ 90/bbl.</p><p>Mercado de combustíveis segue sob pressão defasagem: gasolina 41% defasada (R$ 1,03/L de potencial aumento para PPI), diesel 31% (R$ 1,12/L). Janelas de importação fechadas 54 dias (gasolina) e 97 dias (diesel) indicam que Petrobras prioriza negociações diretas vs. paridade internacional. Macroeconomia aperta: Focus elevou Selic para 13,50% (fim 2026) e IPCA 2026 para 5,11%. Custo de capital permanece elevado por mais tempo, pressionando fluxo de caixa do revendedor.</p><p>Ação recomendada: (1) Negocie imediatamente com distribuidor/Petrobras para confirmar repasse integral da MP 1.358/1.363 (subsídio R$ 0,35/L + desoneração PIS/Cofins); (2) Monitore potencial reajuste gasolina (Petrobras pode subir R$ 1,03/L em novo movimento); (3) Revise oferta de E30 (etanol 67,8% mais barato que gasolina) como tática defensiva para incrementar ticket médio e volume em bomba. Próxima atualização: sexta 13/jun (ANP preços semanais + UNICA safra).</p>",
+  "resumo_editorial": "<p class=\"lead\"><strong>Quarta de trégua: petróleo cai pela 2ª sessão seguida com o cessar-fogo frágil entre Irã e Israel se sustentando.</strong> Brent recua 1,39% a US$ 94,15/bbl e WTI cede 1,82% a US$ 91,41. Ormuz segue sob restrição — o que mantém um piso acima de US$ 90 — mas a direção da semana é de alívio: OPEC+ confirmou +188k bbl/dia em julho e a demanda chinesa segue fraca. Para o revendedor, o recado é simples: nenhum gatilho de reajuste no curto prazo.</p><p>No mercado doméstico, Petrobras reajustou os dois combustíveis há menos de duas semanas (gasolina +R$ 0,48/L em 29/mai; diesel -R$ 0,35/L em 01/jun) e as MPs 1.358/1.363 mantêm subvenção de R$ 1,12/L no diesel e subsídio de até R$ 0,89/L na gasolina até 31/jul, com repasse obrigatório fiscalizado por ANP/Cade. Defasagem ABICOM segue em queda. No macro, o Focus de segunda elevou Selic fim-2026 para 13,50% e IPCA para 5,11% — custo de capital alto continua sendo o principal vilão do fluxo de caixa.</p><p><strong>Para o revendedor:</strong> confirme o repasse da subvenção na nota fiscal do diesel, mantenha estoque no giro normal (sem gatilho de alta, comprar agressivo agora só trava capital caro a Selic 14,50%) e aproveite a competitividade do etanol nas bombas. Atenção sexta: ANP publica síntese semanal e UNICA divulga quinzena da safra.</p>",
   "cepea": {
     "hidratado_sp": "a confirmar",
     "anidro_sp": "a confirmar",
     "ultima_atualizacao_iso": "2026-06-08",
     "ultima_atualizacao_label": "seg 08/jun"
   },
-  "_comentario": "Gerado automaticamente em 2026-06-10T12:10:57.847Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
+  "_manchetes_recentes": [
+    "Brent avança 0,23% a US$ 95,25/bbl; defasagem ABICOM mantém-se em 38% diesel/41% gasolina com janelas fechadas há 3+ meses",
+    "Brent salta 4,93% a US$ 97,68/bbl em retaliação Israel-Irã; MP 1.363 libera subsídio diesel R$ 1,12/L enquanto defasagem diesel mantém 60% vs importado",
+    "Brent cai para US$ 92,94/bbl; Focus de 08/jun projeta Selic 13,50% e IPCA 5,11% em 2026 — pressão inflacionária mantém janelas importação fechadas",
+    "Brent oscila em US$ 94,15/bbl com ceasefire frágil; defasagem diesel mantém-se acima de 52% e pressiona reajuste — Focus eleva Selic a 13,50%",
+    "Trégua Irã×Israel derruba petróleo pela 2ª sessão seguida e tira pressão de reajuste; com MPs vigentes até 31/jul, semana abre SEM gatilho de alta pro revendedor"
+  ],
+  "_comentario": "Gerado automaticamente em 2026-06-10T12:10:57.847Z por gerar-painel.mjs (claude-haiku-4-5-20251001); manchete corrigida manualmente 10/jun ~10h BRT (Haiku alucinou 'reajuste diesel R$ 0,38/L' que é notícia de março/2026; resumo dizia 'primeiro reajuste em 312 dias' contradizendo o próprio painel). Seed do _manchetes_recentes pra rotação.",
   "decisao": {
     "data_label": "Quarta · 10 jun 2026",
     "base": "ABICOM + custo distribuidora (monitor de preços) + Brent/câmbio",

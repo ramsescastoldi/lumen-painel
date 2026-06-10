@@ -40,6 +40,15 @@ const previousSecundarias = (currentData.manchete?.secundarias || [])
   .slice(0, 5);
 const previousDateIso = currentData.meta?.date_iso || "";
 
+// Histórico ROLLING das últimas 7 manchetes (anti-repetição estrutural, 2026-06-10).
+// O Haiku via só a manchete de ontem e "não repetir" não impedia repetir a ESTRUTURA:
+// 5 dias seguidos de manchete abrindo com "Brent <número>". Agora a lista inteira
+// vai pro prompt como proibida, e o JS mantém o rolling após cada run.
+const manchetesRecentes = [
+  ...(Array.isArray(currentData._manchetes_recentes) ? currentData._manchetes_recentes : []),
+  ...(previousManchete && !(currentData._manchetes_recentes || []).includes(previousManchete) ? [previousManchete] : [])
+].slice(-7);
+
 // Data de hoje em BRT
 const now = new Date();
 const brtNow = new Date(now.toLocaleString("en-US", { timeZone: "America/Sao_Paulo" }));
@@ -156,13 +165,26 @@ const SYSTEM_PROMPT = `Você é o editor-chefe do Lumen Posto Club. Gere o JSON 
 5. Severity: "red" (crítico/alerta), "yellow" (atenção), "green" (calmo/positivo)
 6. **NÃO REPETIR manchete anterior** — busque o que mudou nas últimas 24h
 
-## ⛔ MANCHETE DA EDIÇÃO ANTERIOR (${previousDateIso}) — NÃO REPETIR
-Principal anterior:
-> "${previousManchete}"
-Secundárias anteriores:
+## ⛔ MANCHETES DOS ÚLTIMOS DIAS — PROIBIDO REPETIR TEMA E ESTRUTURA
+${manchetesRecentes.map((m, i) => `${i + 1}. "${m}"`).join("\n")}
+Secundárias de ontem (também não repetir):
 ${previousSecundarias.map(s => `> "${s}"`).join("\n")}
 
-Sua manchete principal DEVE ser sobre fato novo (últimas 12–24h). Se cenário não mudou, escolha ângulo diferente.
+## 📰 REGRAS EDITORIAIS DA MANCHETE PRINCIPAL (novas 2026-06-10 — INVIOLÁVEIS)
+
+A manchete é uma NOTÍCIA (fato novo das últimas 24h), não um RESUMO DE INDICADORES. O leitor é dono de posto que abre o painel todo dia — se a manchete parece a de ontem, o painel perde credibilidade.
+
+1. **PROIBIDO abrir a manchete com cotação de Brent/WTI.** Cotação já tem bloco próprio. ÚNICA exceção: movimento ≥5% no dia ou recorde histórico (aí a variação É a notícia).
+2. **PROIBIDO manchete de "estado contínuo"** (defasagem que segue alta, janelas que seguem fechadas, MP que segue vigente, Selic que segue X). Estado não é notícia. Só vira manchete se MUDOU nas últimas 24h.
+3. **Hierarquia de impacto pro dono de posto** (escolha o item MAIS ALTO que tiver fato novo nas últimas 24h):
+   a. Reajuste/anúncio Petrobras ou refinaria privada (Acelen/BRAVA) EM VIGOR ou anunciado HOJE/ONTEM
+   b. MP/decreto/lei nova OU mudança em programa vigente (prorrogação, corte, fim de subsídio)
+   c. Decisão CNPE/ANP/Confaz nova (mandato, tributo, fiscalização, leilão)
+   d. Evento de mercado excepcional (Brent ±5%, USD ±2%, evento geopolítico NOVO — não a continuação do de ontem)
+   e. Evento setorial: greve, desabastecimento, operação contra adulteração, dado ANP/UNICA recém-publicado com surpresa
+   f. Se NADA novo: ângulo OPERACIONAL pro revendedor (ex: "Semana abre sem gatilho de reajuste; foco em margem e giro") — nunca reciclar a estrutura de ontem
+4. **Use a data da fonte.** Se a notícia mais forte que você achou tem mais de 48h, ela NÃO pode ser manchete como se fosse de hoje (foi assim que um reajuste de março virou manchete falsa em junho). Confirme a data antes de promover a manchete.
+5. As 3 secundárias seguem a mesma regra: priorize fato novo, proíba clone das de ontem.
 
 ## ✅ FATOS CONFIRMADOS (fonte oficial Banco Central — USE EXATAMENTE, NÃO PESQUISAR)
 __FATOS__
@@ -590,6 +612,93 @@ function parseJSON(text) {
       if (f.ipca) { newData.inflacao = newData.inflacao || {}; newData.inflacao.ipca = { ...(newData.inflacao.ipca||{}), val: f.ipca.val, dir: f.ipca.dir }; }
       console.log("  ✓ Câmbio/Selic/IPCA sobrescritos com dados oficiais do BCB");
     }
+
+    // ===== ANTI-REPETIÇÃO DE MANCHETE (2026-06-10) =====
+    // Mede similaridade Jaccard (palavras ≥4 letras) entre a manchete nova e as
+    // últimas 7. Se ≥0,5 com qualquer uma, pede pro Haiku regerar SÓ a manchete
+    // numa mini-call SEM web_search (barata, ~R$0,02) usando o contexto já gerado.
+    function _palavras(s) {
+      return new Set(String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
+        .replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter(w => w.length >= 4));
+    }
+    function _jaccard(a, b) {
+      const A = _palavras(a), B = _palavras(b);
+      if (!A.size || !B.size) return 0;
+      let inter = 0;
+      for (const w of A) if (B.has(w)) inter++;
+      return inter / (A.size + B.size - inter);
+    }
+    // Heurística estrutural: manchete que ABRE com cotação (Brent/WTI/petróleo)
+    // é o padrão viciado que se repetiu 5 dias seguidos. Só é permitida se o
+    // movimento for ≥5% (aí a variação É a notícia).
+    function _abreComCotacao(s) {
+      const primeira = String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
+        .trim().split(/\s+/)[0] || "";
+      return ["brent", "wti", "petroleo"].includes(primeira);
+    }
+    function _temMovimentoForte(s) {
+      // Só conta % nos primeiros 40 chars (variação da cotação na abertura).
+      // Sem esse corte, "…Selic em 13,50%" no fim da manchete liberava o padrão viciado.
+      const matches = String(s).slice(0, 40).match(/(\d+[.,]?\d*)\s*%/g) || [];
+      return matches.some(m => parseFloat(m.replace(",", ".")) >= 5);
+    }
+    function _mancheteRepetida(titulo) {
+      let max = 0, qual = "";
+      for (const m of manchetesRecentes) {
+        const j = _jaccard(titulo, m);
+        if (j > max) { max = j; qual = m; }
+      }
+      if (max >= 0.45) return { repetiu: true, score: max, qual, motivo: "jaccard" };
+      if (_abreComCotacao(titulo) && !_temMovimentoForte(titulo) && manchetesRecentes.some(_abreComCotacao)) {
+        return { repetiu: true, score: max, qual: "(padrão estrutural: abre com cotação, sem movimento ≥5%)", motivo: "estrutura" };
+      }
+      return { repetiu: false, score: max, qual, motivo: "" };
+    }
+    async function _regerarManchete() {
+      const r = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: { "x-api-key": API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" },
+        body: JSON.stringify({
+          model: MODEL,
+          max_tokens: 500,
+          system: `Você é editor-chefe de painel diário pra donos de posto de combustível. Reescreva APENAS a manchete principal. Regras: (1) é PROIBIDO repetir tema/estrutura de qualquer manchete da lista proibida; (2) PROIBIDO abrir com cotação Brent/WTI; (3) manchete = fato novo das últimas 24h OU ângulo operacional novo pro revendedor; (4) não fabricar fatos — use somente o que está no contexto. Responda APENAS com JSON: {"severity":"red|yellow|green","status_emoji":"🔴|🟡|🟢","severity_label":"Crítico|Atenção|Alívio","titulo":"..."}`,
+          messages: [{
+            role: "user",
+            content: `MANCHETES PROIBIDAS:\n${manchetesRecentes.map(m => `- "${m}"`).join("\n")}\n- "${newData.manchete.principal.titulo}" (sua tentativa, repetiu estrutura)\n\nCONTEXTO DO DIA (use APENAS estes fatos):\nSecundárias: ${JSON.stringify((newData.manchete.secundarias || []).map(s => s.titulo))}\nResumo: ${String(newData.resumo_editorial || "").replace(/<[^>]+>/g, " ").slice(0, 900)}\nSinal Petrobras: ${newData.abicom?.sinal_petrobras}\n\nGere a manchete nova.`
+          }]
+        })
+      });
+      if (!r.ok) throw new Error(`mini-call manchete: HTTP ${r.status}`);
+      const body = await r.json();
+      const txt = (body.content || []).filter(b => b.type === "text").map(b => b.text).join("");
+      return parseJSON(txt);
+    }
+    {
+      const check = _mancheteRepetida(newData.manchete?.principal?.titulo || "");
+      if (check.repetiu) {
+        console.log(`⚠️  MANCHETE REPETIDA (Jaccard ${check.score.toFixed(2)} vs "${check.qual.slice(0, 70)}..."). Regenerando...`);
+        try {
+          const nova = await _regerarManchete();
+          if (nova?.titulo) {
+            const recheck = _mancheteRepetida(nova.titulo);
+            if (!recheck.repetiu) {
+              newData.manchete.principal = { ...newData.manchete.principal, ...nova };
+              console.log(`  ✓ Manchete regenerada: "${nova.titulo.slice(0, 90)}..."`);
+            } else {
+              console.log(`  ⚠️ Regeneração TAMBÉM repetiu (${recheck.score.toFixed(2)}). Mantendo a primeira. Revisar manualmente.`);
+            }
+          }
+        } catch (e) {
+          console.log(`  ⚠️ Mini-call falhou (${e.message}). Mantendo manchete original.`);
+        }
+      } else {
+        console.log(`  ✓ Manchete inédita (Jaccard máx ${check.score.toFixed(2)} vs últimas ${manchetesRecentes.length})`);
+      }
+    }
+
+    // Mantém o rolling de manchetes (últimas 7) pro próximo run
+    newData._manchetes_recentes = [...manchetesRecentes, newData.manchete?.principal?.titulo || ""]
+      .filter(Boolean).slice(-7);
 
     // Comentário interno (deletado no build)
     newData._comentario = `Gerado automaticamente em ${new Date().toISOString()} por gerar-painel.mjs (${MODEL})`;
