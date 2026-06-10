@@ -406,18 +406,18 @@
       "selic": 14.5,
       "ipca": 0.67,
       "def_gas": 41,
-      "def_die": 52,
-      "dias_gas": 13,
-      "dias_die": 9,
+      "def_die": 31,
+      "dias_gas": 14,
+      "dias_die": 10,
       "pot_gas": 1.03,
       "pot_die": 1.12,
       "cepea_hid": null,
       "cepea_ani": null,
       "decisao": {
-        "gasolina": 77,
-        "diesel_s10": 85,
-        "diesel_s500": 100,
-        "etanol": 0
+        "gasolina": 8,
+        "diesel_s10": 8,
+        "diesel_s500": 8,
+        "etanol": 8
       }
     }
   ]
