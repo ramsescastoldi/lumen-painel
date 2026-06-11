@@ -2,31 +2,31 @@
   "meta": {
     "date_iso": "2026-06-11",
     "date_label": "Quinta · 11 jun 2026",
-    "last_update": "06:55"
+    "last_update": "10:33"
   },
   "manchete": {
     "principal": {
       "severity": "yellow",
       "status_emoji": "🟡",
       "severity_label": "Atenção",
-      "titulo": "Escalada Iran-EUA reduz pressão no petróleo; Brent oscila em US$ 93,50 com Ormuz bloqueada mas perspectivas de trégua amenizam risco"
+      "titulo": "Escalada Irã-EUA pressiona Brent acima de US$ 93; Petrobras mantém subsídio diesel vigente até 31/julho ampando estabilidade no revendedor"
     },
     "secundarias": [
       {
         "categoria": "Mercado",
-        "titulo": "Estoque de petróleo bruto dos EUA cai 7,2 Mi bbl (7ª semana seguida); volatilidade contida por esperança de negociação",
+        "titulo": "Brent oscila em torno de US$ 93,50/bbl com volatilidade geopolítica; defasagem diesel em ~31% e gasolina em ~41% com potencial de reajuste de até R$ 1,12/L e R$ 1,03/L",
         "severity": "yellow",
         "status_emoji": "🟡"
       },
       {
         "categoria": "Combustíveis",
-        "titulo": "Defasagem diesel mantém 31% e gasolina 41% com janelas fechadas 97 e 54 dias; MPs vigentes até 31/jul amparam revendedor até fim do mês",
-        "severity": "yellow",
-        "status_emoji": "🟡"
+        "titulo": "Diesel S-10 nos postos cai para R$ 7,12/L; Petrobras mantém subsídios (MP 1.358 + 1.363 até 31/julho) sem gatilho de reajuste esperado antes",
+        "severity": "green",
+        "status_emoji": "🟢"
       },
       {
         "categoria": "Política",
-        "titulo": "MP 1.358 e 1.363 subvenciones diesel R$ 0,35/L + R$ 1,12/L (produtores/importadores) mantêm piso até 31/julho; sem reajuste Petrobras esperado antes",
+        "titulo": "MP 1.363 mantém subvenção R$ 1,12/L a produtores/importadores diesel até 31/julho; mandatos E30 (30% anidro) e B15 (15% biodiesel) vigentes desde 01/agosto/2025",
         "severity": "green",
         "status_emoji": "🟢"
       }
@@ -39,17 +39,17 @@
       "dir": "up"
     },
     "wti": {
-      "val": "US$ 89,71",
-      "delta": "▲ +1,71%",
-      "dir": "up"
+      "val": "US$ 92,00",
+      "delta": "a confirmar",
+      "dir": "flat"
     },
-    "resumo": "Petróleo recupera ganhos após EUA completar ataques ao Irã, amenizando temores de escalada. Ormuz segue bloqueada, mas sinais de negociação sustentam preços; estoques americanos caem 7ª semana consecutiva sem alívio significativo à volatilidade."
+    "resumo": "Brent oscila em torno de US$ 93,50/bbl com tensão geopolítica Irã-EUA mantendo Estreito de Ormuz sob pressão. Estoques de petróleo dos EUA caem pela 7ª semana consecutiva (-7,2 Mi bbl), sustentando preços acima de US$ 90. Perspectivas de negociação de trégua amenizam risco imediato, mas mercado segue volátil."
   },
   "abicom": {
     "defasagem_gasolina_pct": "41%",
     "defasagem_diesel_pct": "31%",
-    "dias_sem_ajuste_gasolina": 15,
-    "dias_sem_ajuste_diesel": 11,
+    "dias_sem_ajuste_gasolina": 16,
+    "dias_sem_ajuste_diesel": 12,
     "potencial_aumento_rs_gasolina": "R$ 1,03/L",
     "potencial_aumento_rs_diesel": "R$ 1,12/L",
     "sinal_petrobras": "mp_subsidio"
@@ -57,12 +57,12 @@
   "moedas": {
     "usdbrl": {
       "val": "R$ 5,1763",
-      "delta": "▲ +0,46%",
+      "delta": "▲ +0,57%",
       "dir": "up"
     },
     "eurbrl": {
       "val": "R$ 5,9791",
-      "delta": "▲ +0,56%",
+      "delta": "▲ +0,65%",
       "dir": "up"
     }
   },
@@ -77,7 +77,7 @@
   "inflacao": {
     "ipca": {
       "val": "0,67% (mês)",
-      "delta": "▼ vs. mês anterior",
+      "delta": "▼ -0,06 p.p. vs. mês anterior",
       "dir": "down"
     },
     "previsao_focus": "5,11% (2026)"
@@ -88,23 +88,23 @@
   },
   "safra_etanol": {
     "moagem": "60,46 Mt",
-    "var_anual": "+19,67% (1ª quinzena abr vs. abr25)",
+    "var_anual": "-4,82%",
     "mix_etanol_pct": "61,84%",
-    "oferta_total": "3,29 bi L (+71,84% acumulado 2026/27)"
+    "oferta_total": "40,69 bi L (+8,5% a/a projeção 2026/27)"
   },
   "safra_milho": {
-    "tendencia": "alta_oferta",
-    "nota": "Etanol de milho cresceu 12,21% acumulado (safra 26/27); Centro-Oeste expande capacidade com 10 fábricas dedicadas + 8 flex, amortecendo pressão etanol total."
+    "tendencia": "baixa_oferta",
+    "nota": "Safrinha 2025/26 revisada para 109,1 Mi t com perdas climáticas parciais no Paraná e MS; clima seco e La Niña pressionam; Centro-Oeste com umidade adequada mantém etanol de milho em expansão (+12,3% projeção 2026/27)."
   },
   "midia_setor": {
     "sentimento": "neutro",
     "n_materias": 2,
-    "resumo": "Imprensa monitora ceasefire Irã-Israel e dados de estoque EUA; sem sinal de reajuste iminente Petrobras antes de 31/jul; mercado aguarda Focus semanal."
+    "resumo": "Pressão contida com MP 1.363 amparando precços até 31/julho; Petrobras sinaliza possível reajuste gasolina, mas etanol competitivo reduz urgência; ultimas 72h sem reajuste anunciado."
   },
   "midia_etanol": {
     "sentimento": "pressao_alta",
-    "n_materias": 3,
-    "resumo": "Safra 2026/27 robuusta com moagem +19,67% e etanol +71,84% acumulado; usinas priorizam etanol com mix 61,84%; oferta confortável reduz pressão de preços em bombas."
+    "n_materias": 4,
+    "resumo": "Safra 2026/27 com oferta recorde (40,69 bi L) impulsiona demanda; etanol de milho +12,3% com Centro-Oeste dominando produção; mix etanol/cana favorável; preços dependem concorrência com gasolina e comportamento fóssil."
   },
   "refinarias": {
     "produto": "Diesel S-10 (R$/L às distribuidoras)",
@@ -115,7 +115,7 @@
         "regiao": "Nacional",
         "preco_rs_l": "R$ 3,30/L",
         "delta_vs_petrobras": "—",
-        "ultimo_reajuste": "01/06/2026 (corte R$ 0,35/L subsídio)"
+        "ultimo_reajuste": "01/06/2026 (corte -R$ 0,35/L via MP 1.358)"
       },
       {
         "nome": "Acelen (Mataripe)",
@@ -132,26 +132,26 @@
         "ultimo_reajuste": "30/04/2026 (aumento R$ 0,3196/L no S-500)"
       }
     ],
-    "fonte": "Petrobras (oficial 01/jun), Acelen (28/mai), ANP, imprensa local RN"
+    "fonte": "Petrobras (comunicado oficial 01/06/2026); Acelen/BRAVA (imprensa local BA/RN + ANP)"
   },
   "agenda_semanal": {
-    "segunda": "—",
+    "segunda": "Focus Banco Central (08/jun) elevou Selic 2026 para 13,50% e IPCA para 5,11%",
     "terca": "—",
     "quarta": "—",
-    "quinta": "Possível reajuste BRAVA Clara Camarão (padrão semanal quinta)",
-    "sexta": "Divulgação ANP de preços de bomba (semana 05-11 jun)"
+    "quinta": "CNPE reunião (data a confirmar) — decisões sobre mandatos B16/E32 em aberto",
+    "sexta": "ANP divulga síntese semanal de preços (edição 24/26)"
   },
   "acoes_dia": [
-    "<b>Sincronize margem com custo Petrobras:</b> Com diesel a R$ 3,30/L e defasagem de 31%, a janela para importação segue fechada até 31/jul. Monitore Acelen (Mataripe) e BRAVA em reajustes semanais para calibrar markup.",
-    "<b>Priorize giro de etanol e hidratado:</b> Safra 2026/27 robuusta (+71,84% acumulado); e-commerce de etanol em alta com paridade favorável vs. gasolina em 232 municípios (ANP/mai). Oferta confortável reduz risco de falta.",
-    "<b>Monitore Ormuz e Focus semanal (segunda):</b> Escalada Iran-EUA amenizada, mas bloqueio persiste. Focus de 08/jun projeta Selic 13,50% fim 2026 e IPCA 5,11%; pressão inflacionária mantém MPs até 31/jul em vigor — sem alerta de mudança antes."
+    "<b>Monitore subsidio diesel até 31/julho:</b> com MP 1.363 vigente e Petrobras sem reajuste anunciado para hoje/amanhã, semana abre sem gatilho de alta. Aproveite margem com estabilidade — avalie mix de volumes com giro.",
+    "<b>Preparar para reajuste gasolina:</b> presidente Petrobras sinalizou reajuste 'já já' (frase de 12/junho); acompanhe daily a Bolsa de Valores, cotações de etanol (competidor direto) e sinais de abertura de janelas de importação.",
+    "<b>Atenção a operações em Ormuz:</b> escalada Irã-EUA mantém Estreito bloqueado; qualquer abertura de tráfego ou novo ataque pode virar volatilidade de até ±5% no Brent em minutos — revise política interna de hedge."
   ],
   "radar": [
-    "<b>Trégua frágil reduz pânico, mas Ormuz segue bloqueada:</b> EUA completou ataques; Irã negocia. Brent oscila US$ 93-94/bbl; tráfego marítimo sinaliza leve melhora mas risco persiste. Vigilância máxima nas próximas 72h para movimentos geopolíticos.",
-    "<b>Defasagem mantém-se em patamares críticos (diesel 31%, gasolina 41%):</b> MPs cobrem até 31/jul; Abicom avalia reajuste Petrobras improvável antes do fim do subsídio. Revendedor tem piso garantido.",
-    "<b>Safra 2026/27 em trajetória robusta — etanol cresce 71,84%, milho +12,21%:</b> Usinas priorizam biocombustível (mix 61,84%); oferta confortável. Preço hidratado cai em 232 municípios; movimento favorável ao consumidor."
+    "<b>Geopolítica domina petróleo:</b> ataques Irã-EUA continuam com Ormuz bloqueada; esperança em trégua ameniza risco, mas próxima escalada pode levar Brent a US$ 100+.",
+    "<b>Defasagem mantém pressão estrutural:</b> diesel 31% e gasolina 41% abaixo do mercado — PPI em R$ 1,12/L (diesel) e R$ 1,03/L (gasolina) deixam janelas fechadas. Reajuste Petrobras é questão de tempo, não de se.",
+    "<b>Safra etanol recorde ampara substituição:</b> projeção 40,69 bi L (+8,5%), com etanol de milho +12,3% no Centro-Oeste. Oferta farta reduz pressão na gasolina em curto prazo, mas não freia defasagem fóssil."
   ],
-  "resumo_editorial": "<p class=\"lead\">A escalada Iran-EUA se ameniza após EUA completar ataques ao Irã, reduzindo o pânico do mercado de petróleo. Brent oscila em torno de US$ 93,50 (+0,43%), com esperanças de retomada de negociações contendo pressão de alta. O Estreito de Ormuz permanece bloqueado, mas sinais de aumento de tráfego marítimo suavizam a volatilidade. No Brasil, a defasagem de preços mantém-se em patamares críticos: diesel a 31% abaixo dos importados (potencial +R$ 1,12/L) e gasolina a 41% (potencial +R$ 1,03/L). As Medidas Provisórias 1.358 e 1.363 cobrem com subsídios até 31 de julho, deixando o revendedor sem risco de reajuste Petrobras antes dessa data.</p><p>No fronte cambial e de juros, o USD/BRL sobe para R$ 5,1763 (+0,46%) e a Selic mantém-se em 14,50%. O Focus (08/jun) projeta Selic em 13,50% ao fim de 2026 e IPCA em 5,11%, sinalizando ambiente de juros altos por mais tempo. A inflação medida do mês (0,67% em 01/abr) desacelerou face ao mês anterior, mas a pressão em serviços e bens industrializados persiste. A safra sucroenergética 2026/27 segue robusta: moagem acumulada de 60,46 Mt (+19,67%), mix de etanol em 61,84%, produção total de 3,29 bi L (+71,84%). Etanol de milho cresce 12,21%, oferecendo alívio estrutural ao preço do biocombustível. Em 232 municípios, o etanol hidratado já opera abaixo da paridade técnica com gasolina.</p><p>O revendedor abre o dia com segurança de preço até 31/julho, margem protegida pela defasagem crônica e subsídios governamentais. Prioridade: sincronizar markup com dinâmica de Acelen (Mataripe) e BRAVA (reajustes semanais quinta) e monitorar etanol hidratado, cuja oferta robusta e paridade favorável atraem consumidores flex-fuel. Vigilância geopolítica mantém-se máxima nas próximas 72h.</p>",
+  "resumo_editorial": "<p class=\"lead\">Quinta-feira (11/jun) abre com petróleo oscilante em torno de US$ 93,50/bbl — tentativa de trégua Irã-EUA alivia pressão geopolítica, mas Estreito de Ormuz segue bloqueado e estoques americanos caem pela 7ª semana. Subsidios diesel via MP 1.363 (até 31/julho) mantêm Petrobras sem gatilho de reajuste HOJE, criando janela de estabilidade para o revendedor. Defasagem estrutural (diesel 31%, gasolina 41%) segue pressão de fundo — reajuste Petrobras iminente, especialmente em gasolina, onde presidente sinalizou movimento.</p><p>Mandatos E30 (30% anidro) e B15 (15% biodiesel) vigentes desde agosto/2025 amortizam pressão fóssil com oferta recorde de etanol 2026/27 projetada em 40,69 bilhões de litros. Etanol de milho sobe +12,3% no Centro-Oeste, reduzindo vulnerabilidade de curto prazo — mas formação de preços segue refém de combustível fóssil. Juros em 14,50% (Copom 29/abril) com Focus elevando projeção 2026 para 13,50%; inflação (IPCA 0,67% mensal, 5,11% 2026) segue pressão.</p><p><b>Para o dono de posto:</b> semana abre SEM gatilho de reajuste alto, mas pressão se acumula — foco em margem com giro enquanto subsídios amparam estabilidade. Acompanhe diariamente sinais de abertura gasolina e prepare operações para volatilidade se trégua Irã-EUA desmoronar. Etanol forte oferece hedge natural contra diesel caro.</p>",
   "cepea": {
     "hidratado_sp": "a confirmar",
     "anidro_sp": "a confirmar",
@@ -164,9 +164,10 @@
     "Brent cai para US$ 92,94/bbl; Focus de 08/jun projeta Selic 13,50% e IPCA 5,11% em 2026 — pressão inflacionária mantém janelas importação fechadas",
     "Brent oscila em US$ 94,15/bbl com ceasefire frágil; defasagem diesel mantém-se acima de 52% e pressiona reajuste — Focus eleva Selic a 13,50%",
     "Trégua Irã×Israel derruba petróleo pela 2ª sessão seguida e tira pressão de reajuste; com MPs vigentes até 31/jul, semana abre SEM gatilho de alta pro revendedor",
-    "Escalada Iran-EUA reduz pressão no petróleo; Brent oscila em US$ 93,50 com Ormuz bloqueada mas perspectivas de trégua amenizam risco"
+    "Escalada Iran-EUA reduz pressão no petróleo; Brent oscila em US$ 93,50 com Ormuz bloqueada mas perspectivas de trégua amenizam risco",
+    "Escalada Irã-EUA pressiona Brent acima de US$ 93; Petrobras mantém subsídio diesel vigente até 31/julho ampando estabilidade no revendedor"
   ],
-  "_comentario": "Gerado automaticamente em 2026-06-11T08:55:57.399Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
+  "_comentario": "Gerado automaticamente em 2026-06-11T12:34:13.161Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
   "decisao": {
     "data_label": "Quinta · 11 jun 2026",
     "base_fossil": "barril (Brent 5d) + defasagem ABICOM + mídia + repasse distribuidoras/ANP + custo distribuidora",
@@ -188,12 +189,12 @@
             {
               "nome": "Defasagem",
               "dir": "up",
-              "txt": "41% / 15d"
+              "txt": "41% / 16d"
             },
             {
               "nome": "Barril",
               "dir": "flat",
-              "txt": "Brent -2,9% em 5d"
+              "txt": "Brent -1,8% em 5d"
             },
             {
               "nome": "Mídia",
@@ -261,12 +262,12 @@
             {
               "nome": "Defasagem",
               "dir": "flat",
-              "txt": "31% / 11d"
+              "txt": "31% / 12d"
             },
             {
               "nome": "Barril",
               "dir": "flat",
-              "txt": "Brent -2,9% em 5d"
+              "txt": "Brent -1,8% em 5d"
             },
             {
               "nome": "Mídia",
@@ -334,12 +335,12 @@
             {
               "nome": "Defasagem",
               "dir": "flat",
-              "txt": "31% / 11d"
+              "txt": "31% / 12d"
             },
             {
               "nome": "Barril",
               "dir": "flat",
-              "txt": "Brent -2,9% em 5d"
+              "txt": "Brent -1,8% em 5d"
             },
             {
               "nome": "Mídia",
@@ -399,9 +400,9 @@
         "label": "PODE ESPERAR",
         "emoji": "🟢",
         "score": 0,
-        "confianca_pct": 80,
+        "confianca_pct": 65,
         "cenario": {
-          "resumo": "Safra cana ↓ · ESALQ ↓ · Safra milho ↓ · Mídia ↑ → faz sentido ESPERAR",
+          "resumo": "Safra cana ↓ · ESALQ ↓ · Safra milho ↑ · Mídia ↑ → faz sentido ESPERAR",
           "coerente": true,
           "fatores": [
             {
@@ -416,8 +417,8 @@
             },
             {
               "nome": "Safra milho",
-              "dir": "down",
-              "txt": "alta oferta"
+              "dir": "up",
+              "txt": "oferta apertada"
             },
             {
               "nome": "Mídia",
@@ -441,7 +442,11 @@
         "reasons": [
           {
             "dir": "up",
-            "text": "Mídia sucroenergética (5 dias): <b>pressão de alta</b> em 3 matérias"
+            "text": "Safra de milho apertada — menos etanol de milho, pressão de alta (Safrinha 2025/26 revisada para 109,1 Mi t com perdas climáticas parciais no Paraná e MS; clima seco e La Niña pressionam; Centro-Oeste com umidade adequada mantém etanol de milho em expansão (+12,3% projeção 2026/27).)"
+          },
+          {
+            "dir": "up",
+            "text": "Mídia sucroenergética (5 dias): <b>pressão de alta</b> em 4 matérias"
           },
           {
             "dir": "down",
@@ -453,15 +458,11 @@
           },
           {
             "dir": "down",
-            "text": "Moagem <b>+19,7%</b> a/a — safra maior amplia oferta"
-          },
-          {
-            "dir": "down",
             "text": "ESALQ/CEPEA hidratado <b>-3,2%</b> (ANP revenda (proxy ESALQ)) — produtor cedendo"
           },
           {
-            "dir": "down",
-            "text": "Safra de milho com alta oferta — etanol de milho amortece preços (Etanol de milho cresceu 12,21% acumulado (safra 26/27); Centro-Oeste expande capacidade com 10 fábricas dedicadas + 8 flex, amortecendo pressão etanol total.)"
+            "dir": "flat",
+            "text": "Mandato anidro em <b>30%</b> — consumo estrutural sustenta demanda"
           }
         ]
       }
