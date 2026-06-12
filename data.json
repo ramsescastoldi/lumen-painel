@@ -2,31 +2,31 @@
   "meta": {
     "date_iso": "2026-06-12",
     "date_label": "Sexta · 12 jun 2026",
-    "last_update": "06:55"
+    "last_update": "10:08"
   },
   "manchete": {
     "principal": {
       "severity": "green",
       "status_emoji": "🟢",
-      "severity_label": "Alívio",
-      "titulo": "Trégua diplomática EUA-Irã derruba Brent para US$ 89,25/bbl; defasagem diesel em 31% segue protegida por subsídio até julho sem pressão de reajuste"
+      "severity_label": "Calmo",
+      "titulo": "Trégua diplomática EUA-Irã derruba Brent abaixo de US$ 88; MP 1.363 com subsídio diesel até 31/jul mantém revendedor protegido"
     },
     "secundarias": [
       {
         "categoria": "Mercado",
-        "titulo": "Petróleo recua em Nova York com suspensão de ataques EUA à Irã e sinais de negociação diplomática",
-        "severity": "yellow",
-        "status_emoji": "🟡"
+        "titulo": "Petróleo cai 3,26% em 12/jun para US$ 87,43 com sinais de acordo Ormuz; volatilidade recua após pico de crise",
+        "severity": "green",
+        "status_emoji": "🟢"
       },
       {
         "categoria": "Combustíveis",
-        "titulo": "Defasagem diesel persiste em 31% apesar de Brent mais baixo; MP 1.363 com subsídio R$ 1,12/L segue até 31/julho",
+        "titulo": "Defasagem diesel em 31% (R$ 1,12/L potencial aumento); janelas importação fechadas 97 dias; subsídio MP 1.363 segura preços até 31/julho",
         "severity": "yellow",
         "status_emoji": "🟡"
       },
       {
         "categoria": "Política",
-        "titulo": "Safra etanol 2026/27 arranca forte com mix 61,84% e etanol de milho em crescimento 12,21% — CONAB projeta oferta recorde 40,69 bi L",
+        "titulo": "MP 1.363 autoriza subvenção R$ 1,12/L diesel a produtores/importadores; Petrobras aderiu 01/jun com desconto R$ 0,3515/L nas refinarias",
         "severity": "green",
         "status_emoji": "🟢"
       }
@@ -34,16 +34,16 @@
   },
   "petroleo": {
     "brent": {
-      "val": "US$ 89,25",
-      "delta": "▼ -1,25%",
+      "val": "US$ 87,43",
+      "delta": "▼ -3,26%",
       "dir": "down"
     },
     "wti": {
-      "val": "US$ a confirmar",
-      "delta": "▼ queda em linha",
+      "val": "US$ 85,68",
+      "delta": "▼ >-4%",
       "dir": "down"
     },
-    "resumo": "Brent recua para US$ 89,25/bbl em 12/06 após suspensão de ataques EUA à Irã e sinais de possível acordo diplomático. Trégua reduz prêmio geopolítico e alivia pressão de curto prazo no petróleo. Ormuz bloqueada segue como risco residual."
+    "resumo": "Petróleo recua em alívio com avanços diplomáticos EUA-Irã para acordo e reabertura do Estreito de Ormuz. Brent toca mínima de 2 meses abaixo de US$ 88. Risco geopolítico diminui, mas Ormuz segue parcialmente bloqueado com tráfego ainda interrompido."
   },
   "abicom": {
     "defasagem_gasolina_pct": "41%",
@@ -57,12 +57,12 @@
   "moedas": {
     "usdbrl": {
       "val": "R$ 5,1478",
-      "delta": "▼ -0,30%",
+      "delta": "▼ -0,28%",
       "dir": "down"
     },
     "eurbrl": {
       "val": "R$ 5,9277",
-      "delta": "▼ -0,28%",
+      "delta": "▼ -0,36%",
       "dir": "down"
     }
   },
@@ -88,23 +88,23 @@
   },
   "safra_etanol": {
     "moagem": "60,46 Mt",
-    "var_anual": "+74,6% a/a (até 01/05/26)",
+    "var_anual": "+74,6% a/a",
     "mix_etanol_pct": "61,84%",
     "oferta_total": "40,69 bi L (+8,5% a/a, CONAB projeta)"
   },
   "safra_milho": {
     "tendencia": "alta_oferta",
-    "nota": "Etanol de milho cresce 12,21% até 01/05 no Centro-Sul; Centro-Oeste mantém-se como principal produtor; clima favorável e novas destilarias no Nordeste ampliam oferta total estimada em 11,43 bi L (+12,3%)."
+    "nota": "Etanol de milho acumula +12,21% a/a até 01/mai; cresce como amortecedor de preço no Centro-Oeste."
   },
   "midia_setor": {
-    "sentimento": "neutro",
-    "n_materias": 2,
-    "resumo": "Imprensa fóssil acompanha trégua Irã e recuo de Brent; MP 1.363 com subsídio mitiga gatilho de reajuste; defasagem diesel segue pressionada mas sem movimento Petrobras esperado antes de 31/julho."
+    "sentimento": "pressao_baixa",
+    "n_materias": 3,
+    "resumo": "Imprensa aponta alívio com queda Brent e trégua diplomática; subsídio MP 1.363 segura preços até fim de julho."
   },
   "midia_etanol": {
     "sentimento": "pressao_alta",
-    "n_materias": 5,
-    "resumo": "Cobertura forte sobre safra 2026/27 robusto: moagem forte em abril (+123% anual), mix 61,84% priorizando etanol, CONAB projeta recorde 40,69 bi L; etanol de milho em expansão 12,3%; pressão favorável para demanda interna."
+    "n_materias": 2,
+    "resumo": "Safra 2026/27 acelera com moagem forte; etanol competitivo nas bombas; mix 61,84% prioriza etanol."
   },
   "refinarias": {
     "produto": "Diesel S-10 (R$/L às distribuidoras)",
@@ -115,14 +115,14 @@
         "regiao": "Nacional",
         "preco_rs_l": "R$ 3,30/L",
         "delta_vs_petrobras": "—",
-        "ultimo_reajuste": "01/06/2026 (corte R$ 0,35/L via MP 1.358)"
+        "ultimo_reajuste": "01/06/2026 (desconto R$ 0,3515/L via MP 1.358+1.363)"
       },
       {
         "nome": "Acelen (Mataripe)",
         "regiao": "BA",
         "preco_rs_l": "R$ 5,18/L",
         "delta_vs_petrobras": "+R$ 1,88/L (+56,97%)",
-        "ultimo_reajuste": "segundo quinzena de junho (reajustes semanais às quintas)"
+        "ultimo_reajuste": "28/05/2026 (-7% diesel S-10)"
       },
       {
         "nome": "BRAVA (Clara Camarão)",
@@ -132,26 +132,26 @@
         "ultimo_reajuste": "30/04/2026 (aumento R$ 0,3196/L no S-500)"
       }
     ],
-    "fonte": "Petrobras (oficial 01/06/2026); Acelen/BRAVA (sites, imprensa regional)"
+    "fonte": "Petrobras (01/jun), Acelen/imprensa BA (28/mai), BRAVA/imprensa local"
   },
   "agenda_semanal": {
-    "segunda": "Focus Banco Central (previsões Selic/IPCA/câmbio semana)",
-    "terca": "—",
+    "segunda": "Focus semanal do BC com previsões Selic/IPCA",
+    "terca": "Acompanhar preços refinarias (Acelen reavalia quintas-feiras)",
     "quarta": "—",
-    "quinta": "Possível reajuste Acelen Mataripe (padrão quinzenal quinta)",
-    "sexta": "ANP divulga preços postos; UNICA pode publicar dados quinzenais etanol"
+    "quinta": "Acelen publica novos preços diesel/gasolina Mataripe",
+    "sexta": "ANP divulga preços postos (semana 09-15 jun); possível movimento diplomático EUA-Irã"
   },
   "acoes_dia": [
-    "<b>Acompanhe Irã-EUA:</b> trégua em discussão reduz prêmio geopolítico do petróleo. Qualquer notícia sobre Ormuz, ataques retomados ou colapso de negociação impacta Brent e reajuste futuro. Prepare comunicação com revendedor.",
-    "<b>Defasagem diesel segue 31%:</b> com Brent em US$ 89, importação continua desinteressante. MP 1.363 (subsídio R$ 1,12/L) e MP 1.358 mantêm estabilidade até 31/julho. Sem gatilho de reajuste esperado esta semana.",
-    "<b>Safra etanol acelerada:</b> moagem +74,6%, mix 61,84% já aponta priorização etanol. Etanol de milho cresce 12,3%. Aproveite competitividade do hidratado e acompanhe formação de preço na bomba conforme oferta avança."
+    "<b>Comunicar revendedores:</b> MP 1.363 com subsídio diesel R$ 1,12/L (produtores/importadores) está ativa até 31/julho. Petrobras aderiu 01/jun com desconto refinaria. Acompanhe boletim MPF para possível prorrogação.",
+    "<b>Monitorar defasagem:</b> 31% diesel e 41% gasolina seguem protegidas por subsídio e janelas fechadas (importação não é viável). Se trégua Ormuz se consolidar, vigilância para pressão de queda nas próximas 2 semanas.",
+    "<b>Safra etanol em ritmo:</b> Moagem +74,6% a/a; mix 61,84% prioriza etanol; milho cresce 12,21%. Etanol competitivo nas bombas segue atraindo demanda."
   ],
   "radar": [
-    "<b>Geopolítica Irã-EUA:</b> negociações diplomáticas em curso podem reduzir risco Ormuz bloqueada. Qualquer derrubada reduz prêmio geopolítico do petróleo. Monitorar anúncios Trump e reação mercado.",
-    "<b>Defasagem diesel persiste:</b> janelas fechadas há 97 dias (diesel) e 54 dias (gasolina). Brent em US$ 89 deixa importação desfavorável. Foco em giro e margem até próxima mudança MP/Petrobras.",
-    "<b>Etanol em alta:</b> safra 2026/27 robusto com moagem acelerada (+123% em abril) e priorização etanol (mix 61,84%). CONAB projeta recorde 40,69 bi L. Etanol de milho em expansão (Centro-Oeste). Aproveite janela competitiva."
+    "<b>Trégua diplomática risco:</b> Acordo EUA-Irã ainda carece de aprovação formal; Ormuz segue parcialmente bloqueado; Trump prometeu fechamento no fim de semana — confirmação pode desencadear novo pico de queda ou reversão.",
+    "<b>Defasagem controlada até 31/julho:</b> Subsídio MP 1.363 mais Petrobras adepta 01/jun formam escudo contra reajuste fóssil. Risco: se acordo Ormuz não se consolida, pressão por alta volta em 2 a 3 semanas.",
+    "<b>Etanol acelerado e milho em alta:</b> Safra 2026/27 já com 60,46 Mt moídas (+74,6% a/a); mix 61,84% etanol; etanol milho +12,21% amortece volatilidade — oferta recorde projetada pode limitar preços 2H 2026."
   ],
-  "resumo_editorial": "<p class=\"lead\">Brent cai para US$ 89,25/bbl em 12 de junho com suspensão de ataques norte-americanos à Irã e perspectiva de acordo diplomático. Trump sinalizou possível trégua para fim de semana, reduzindo prêmio geopolítico e aliviando pressão inflacionária. Internamente, defasagem diesel mantém-se em 31% (97 dias sem importação) e gasolina em 41% (54 dias); MP 1.363 com subsídio R$ 1,12/L segue até 31/julho sem gatilho de reajuste à vista.</p><p>Nos indicadores macroeconômicos, Selic permanece em 14,50% a.a., com Focus projetando 13,50% para fim de 2026 e IPCA em 5,11% (pressão inflacionária mantém-se). Câmbio recua levemente: USD/BRL em R$ 5,1478 (▼ -0,30%) e EUR/BRL em R$ 5,9277 (▼ -0,28%), refletindo alívio geopolítico.</p><p>Na ponta do etanol, safra 2026/27 arranca forte: moagem de 60,46 Mt até 01/05 (+74,6% a/a), mix etanol em 61,84% priorizando o biocombustível. CONAB projeta oferta total recorde de 40,69 bilhões de litros (+8,5% a/a), incluindo etanol de milho em expansão 12,3% (11,43 bi L projetados). Competitividade do etanol hidratado nos postos segue firme. Atenção: mandatos E30 (30% anidro) e B15 (15% biodiesel) vigentes; qualquer mudança geopolítica que pressione Brent exigirá revisão de subsídios e possível reajuste Petrobras antes de 31/julho.</p>",
+  "resumo_editorial": "<p class=\"lead\">Sexta de alívio para revendedores: petróleo recua 3,26% para US$ 87,43 em esperança de trégua EUA-Irã no Estreito de Ormuz. Sinal diplomático do presidente Trump promete acordo até fim de semana. Defasagem diesel (31%) e gasolina (41%) seguem protegidas pela MP 1.363 com subsídio R$ 1,12/L diesel até 31 de julho — Petrobras aderiu em 01/junho com desconto de R$ 0,3515/L nas refinarias, blindando reajuste ao consumidor por mais 7 semanas.</p><p>Abicom aponta 97 dias com janelas de importação fechadas para diesel e 54 para gasolina; economia externa não vê viabilidade em importar a preços Petrobras. Acelen (Mataripe-BA) mantém diesel S-10 em R$ 5,18/L (queda 7% em 28/mai); BRAVA segue sem atualização; sistema em espera pela confirmação do acordo Ormuz. Se trégua se consolida, Brent pode tocar US$ 80; se falhar, risco de retorno acima de US$ 100 em dias.</p><p>Safra etanol 2026/27 arranca forte com moagem 60,46 Mt acumuladas até 01/mai (+74,6% a/a) e mix 61,84% prioriza etanol — etanol de milho cresce 12,21%, criando amortecedor de preço para todo semestre. Ação: monitorar comunicados MP 1.363 (renovação até 31/jul) e acompanhar reavaliação Acelen quintas-feiras; defasagem controlada abre margem para consolidar margem no revendedor até novo cenário se abrir.</p>",
   "cepea": {
     "hidratado_sp": "a confirmar",
     "anidro_sp": "a confirmar",
@@ -159,15 +159,15 @@
     "ultima_atualizacao_label": "seg 08/jun"
   },
   "_manchetes_recentes": [
-    "Brent salta 4,93% a US$ 97,68/bbl em retaliação Israel-Irã; MP 1.363 libera subsídio diesel R$ 1,12/L enquanto defasagem diesel mantém 60% vs importado",
     "Brent cai para US$ 92,94/bbl; Focus de 08/jun projeta Selic 13,50% e IPCA 5,11% em 2026 — pressão inflacionária mantém janelas importação fechadas",
     "Brent oscila em US$ 94,15/bbl com ceasefire frágil; defasagem diesel mantém-se acima de 52% e pressiona reajuste — Focus eleva Selic a 13,50%",
     "Trégua Irã×Israel derruba petróleo pela 2ª sessão seguida e tira pressão de reajuste; com MPs vigentes até 31/jul, semana abre SEM gatilho de alta pro revendedor",
     "Escalada Iran-EUA reduz pressão no petróleo; Brent oscila em US$ 93,50 com Ormuz bloqueada mas perspectivas de trégua amenizam risco",
     "Escalada Irã-EUA pressiona Brent acima de US$ 93; Petrobras mantém subsídio diesel vigente até 31/julho ampando estabilidade no revendedor",
-    "Trégua diplomática EUA-Irã derruba Brent para US$ 89,25/bbl; defasagem diesel em 31% segue protegida por subsídio até julho sem pressão de reajuste"
+    "Trégua diplomática EUA-Irã derruba Brent para US$ 89,25/bbl; defasagem diesel em 31% segue protegida por subsídio até julho sem pressão de reajuste",
+    "Trégua diplomática EUA-Irã derruba Brent abaixo de US$ 88; MP 1.363 com subsídio diesel até 31/jul mantém revendedor protegido"
   ],
-  "_comentario": "Gerado automaticamente em 2026-06-12T08:55:56.369Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
+  "_comentario": "Gerado automaticamente em 2026-06-12T12:09:23.677Z por gerar-painel.mjs (claude-haiku-4-5-20251001)",
   "decisao": {
     "data_label": "Sexta · 12 jun 2026",
     "base_fossil": "barril (Brent 5d) + defasagem ABICOM + mídia + repasse distribuidoras/ANP + custo distribuidora",
@@ -180,10 +180,10 @@
         "verdict": "warn",
         "label": "ATENÇÃO",
         "emoji": "🟡",
-        "score": 44,
-        "confianca_pct": 72,
+        "score": 38,
+        "confianca_pct": 68,
         "cenario": {
-          "resumo": "Defasagem ↑ · Barril • · Mídia • · Repasse distrib. • · Governo ↓ → faz sentido ATENÇÃO",
+          "resumo": "Defasagem ↑ · Barril ↓ · Mídia ↓ · Repasse distrib. • · Governo • → faz sentido ATENÇÃO",
           "coerente": true,
           "fatores": [
             {
@@ -193,13 +193,13 @@
             },
             {
               "nome": "Barril",
-              "dir": "flat",
-              "txt": "Brent -1,8% em 5d"
+              "dir": "down",
+              "txt": "Brent -8,6% em 5d"
             },
             {
               "nome": "Mídia",
-              "dir": "flat",
-              "txt": "neutra"
+              "dir": "down",
+              "txt": "expectativa de queda"
             },
             {
               "nome": "Repasse distrib.",
@@ -231,15 +231,15 @@
           },
           {
             "dir": "down",
+            "text": "Brent <b>-8,6%</b> em 5 dias — alívio relevante"
+          },
+          {
+            "dir": "down",
             "text": "Dólar em queda — alivia importação"
           },
           {
             "dir": "down",
-            "text": "Governo segurando/baixando preço (MP de subvenção) — pressão de alta contida"
-          },
-          {
-            "dir": "flat",
-            "text": "Mídia do setor (5 dias): sem direção clara"
+            "text": "Mídia do setor (5 dias): <b>expectativa de queda/alívio</b>"
           },
           {
             "dir": "flat",
@@ -250,14 +250,14 @@
       {
         "key": "diesel_s10",
         "nome": "🚚 Diesel S10",
-        "verdict": "warn",
-        "label": "ATENÇÃO",
-        "emoji": "🟡",
-        "score": 35,
-        "confianca_pct": 68,
+        "verdict": "wait",
+        "label": "PODE ESPERAR",
+        "emoji": "🟢",
+        "score": 29,
+        "confianca_pct": 64,
         "cenario": {
-          "resumo": "Defasagem • · Barril • · Mídia • · Repasse distrib. ↓ · Governo ↓ → faz sentido ATENÇÃO",
-          "coerente": true,
+          "resumo": "Defasagem • · Barril ↓ · Mídia ↓ · Repasse distrib. ↓ · Governo • → faz sentido ESPERAR",
+          "coerente": false,
           "fatores": [
             {
               "nome": "Defasagem",
@@ -266,13 +266,13 @@
             },
             {
               "nome": "Barril",
-              "dir": "flat",
-              "txt": "Brent -1,8% em 5d"
+              "dir": "down",
+              "txt": "Brent -8,6% em 5d"
             },
             {
               "nome": "Mídia",
-              "dir": "flat",
-              "txt": "neutra"
+              "dir": "down",
+              "txt": "expectativa de queda"
             },
             {
               "nome": "Repasse distrib.",
@@ -308,15 +308,15 @@
           },
           {
             "dir": "down",
+            "text": "Brent <b>-8,6%</b> em 5 dias — alívio relevante"
+          },
+          {
+            "dir": "down",
             "text": "Dólar em queda — alivia importação"
           },
           {
             "dir": "down",
-            "text": "Preço de bomba ANP <b>-1,1%</b> em 4 semanas (queda leve)"
-          },
-          {
-            "dir": "down",
-            "text": "Governo segurando/baixando preço (MP de subvenção) — pressão de alta contida"
+            "text": "Mídia do setor (5 dias): <b>expectativa de queda/alívio</b>"
           }
         ]
       },
@@ -326,10 +326,10 @@
         "verdict": "warn",
         "label": "ATENÇÃO",
         "emoji": "🟡",
-        "score": 52,
-        "confianca_pct": 72,
+        "score": 46,
+        "confianca_pct": 69,
         "cenario": {
-          "resumo": "Defasagem • · Barril • · Mídia • · Repasse distrib. ↓ · Governo ↓ → faz sentido ATENÇÃO",
+          "resumo": "Defasagem • · Barril ↓ · Mídia ↓ · Repasse distrib. ↓ · Governo • → faz sentido ATENÇÃO",
           "coerente": true,
           "fatores": [
             {
@@ -339,13 +339,13 @@
             },
             {
               "nome": "Barril",
-              "dir": "flat",
-              "txt": "Brent -1,8% em 5d"
+              "dir": "down",
+              "txt": "Brent -8,6% em 5d"
             },
             {
               "nome": "Mídia",
-              "dir": "flat",
-              "txt": "neutra"
+              "dir": "down",
+              "txt": "expectativa de queda"
             },
             {
               "nome": "Repasse distrib.",
@@ -381,15 +381,15 @@
           },
           {
             "dir": "down",
+            "text": "Brent <b>-8,6%</b> em 5 dias — alívio relevante"
+          },
+          {
+            "dir": "down",
             "text": "Dólar em queda — alivia importação"
           },
           {
             "dir": "down",
-            "text": "Preço de bomba ANP <b>-1,9%</b> em 4 semanas (queda leve)"
-          },
-          {
-            "dir": "down",
-            "text": "Governo segurando/baixando preço (MP de subvenção) — pressão de alta contida"
+            "text": "Mídia do setor (5 dias): <b>expectativa de queda/alívio</b>"
           }
         ]
       },
@@ -442,7 +442,7 @@
         "reasons": [
           {
             "dir": "up",
-            "text": "Mídia sucroenergética (5 dias): <b>pressão de alta</b> em 5 matérias"
+            "text": "Mídia sucroenergética (5 dias): <b>pressão de alta</b> em 2 matérias"
           },
           {
             "dir": "down",
@@ -462,7 +462,7 @@
           },
           {
             "dir": "down",
-            "text": "Safra de milho com alta oferta — etanol de milho amortece preços (Etanol de milho cresce 12,21% até 01/05 no Centro-Sul; Centro-Oeste mantém-se como principal produtor; clima favorável e novas destilarias no Nordeste ampliam oferta total estimada em 11,43 bi L (+12,3%).)"
+            "text": "Safra de milho com alta oferta — etanol de milho amortece preços (Etanol de milho acumula +12,21% a/a até 01/mai; cresce como amortecedor de preço no Centro-Oeste.)"
           }
         ]
       }

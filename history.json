@@ -435,8 +435,8 @@
     },
     {
       "date": "2026-06-12",
-      "brent": 89.25,
-      "wti": null,
+      "brent": 87.43,
+      "wti": 85.68,
       "usdbrl": 5.1478,
       "eurbrl": 5.9277,
       "selic": 14.5,
@@ -450,9 +450,9 @@
       "cepea_hid": null,
       "cepea_ani": null,
       "decisao": {
-        "gasolina": 44,
-        "diesel_s10": 35,
-        "diesel_s500": 52,
+        "gasolina": 38,
+        "diesel_s10": 29,
+        "diesel_s500": 46,
         "etanol": 0
       }
     }
